@@ -1,4 +1,4 @@
-Production: https://web3-tweet-generator.vercel.app/
+Try it out: https://web3-tweet-generator.vercel.app/
 
 ---
 
