@@ -1,4 +1,4 @@
-## Try it out yourself
+## Try it:
 
 https://web3-tweet-generator.vercel.app/
 
