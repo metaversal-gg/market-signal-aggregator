@@ -44,6 +44,10 @@ const Home = () => {
           </div>
           <div className="header-subtitle">
             <h2>what do you want to post about? (max output: 1000 characters)</h2>
+
+          </div>
+          <div className="header-subtitle2">
+            <h2>see inspiration from the <a href="https://twitter.com/weavechainweb3">weavechain twitter</a></h2>
           </div>
         </div>
         <div className="prompt-container">
@@ -84,7 +88,7 @@ const Home = () => {
       </div>
 
       <div className="badge-container grow">
-      <a
+        <a
           href="https://buildspace.so/builds/ai-writer"
           target="_blank"
           rel="noreferrer"
