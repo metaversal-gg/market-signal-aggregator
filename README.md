@@ -1,3 +1,9 @@
+## Try it out yourself
+
+https://web3-tweet-generator.vercel.app/
+
+---
+
 ## Quickstart
 
 1. Clone github repository
