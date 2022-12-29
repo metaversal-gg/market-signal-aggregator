@@ -10,7 +10,6 @@ Try it out: https://web3-tweet-generator.vercel.app/
 ```
 cd web3-tweet-generator
 yarn install 
-npm install
 ```
 
 3. Run dev mode
@@ -18,6 +17,8 @@ npm install
 ```
 yarn dev
 ```
+
+4. Open up http://localhost:3000/ in your browser
 
 ---
 
