@@ -52,7 +52,7 @@ const Home = () => {
             placeholder="ex) confidential computing"
             value={userInput}
             onChange={onUserChangedText}
-          />;
+          />
 
           <div className="prompt-buttons">
             <a
@@ -91,7 +91,7 @@ const Home = () => {
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>built with buildspace</p>
+            <p>build with buildspace</p>
           </div>
         </a>
       </div>
