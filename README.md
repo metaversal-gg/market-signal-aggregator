@@ -19,6 +19,8 @@ npm install
 yarn dev
 ```
 
+4. Open up http://localhost:3000/ in your browser
+
 ---
 
 
