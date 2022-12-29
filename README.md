@@ -1,5 +1,3 @@
-## Try it:
-
 https://web3-tweet-generator.vercel.app/
 
 ---
