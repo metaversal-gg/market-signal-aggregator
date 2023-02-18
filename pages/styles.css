@@ -51,7 +51,7 @@ body {
 .header-title h1 {
     width: 100%;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 55px;
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
@@ -59,22 +59,27 @@ body {
 }
 
 .header-subtitle h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1.4em;
     color: rgba(255, 255, 255, 0.75);
 }
 
-.header-subtitle2 h2 {
-    font-size: 18px;
+.header-subtitle h4 {
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 1.0em;
+    font-weight: 200;
+    line-height: 1.4em;
     color: rgba(255, 255, 255, 0.75);
 }
 
-.header-subtitle2 a {
+.header-subtitle a {
+    color: rgb(81, 227, 201);
+    
+}
+
+.header-subtitle-2 a {
     color: rgb(81, 227, 201);
     
 }
