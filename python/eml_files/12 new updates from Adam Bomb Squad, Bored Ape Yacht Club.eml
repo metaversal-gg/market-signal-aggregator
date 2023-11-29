@@ -1,0 +1,1971 @@
+Delivered-To: zile@metaversal.gg
+Received: by 2002:a05:7300:b31a:b0:f4:557a:3a9b with SMTP id ea26csp1346750dyb;
+        Fri, 10 Nov 2023 10:47:32 -0800 (PST)
+X-Received: by 2002:a05:6122:1524:b0:4ab:ebf6:d33a with SMTP id g4-20020a056122152400b004abebf6d33amr8569165vkq.1.1699642051783;
+        Fri, 10 Nov 2023 10:47:31 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1699642051; cv=none;
+        d=google.com; s=arc-20160816;
+        b=yq0fuoDy05ax02++BwHoy1628DlUtGdGlzWDPXNn6jbYEDoWwxEXVWhDsmcarkmqB0
+         34D7XL4USdUKra30patFnmb4WD32mpZ7qu5YO/tuCfc4bpiSL1RmDs94bZESpafFKJv2
+         TeGM23y+aVd+uKzqrhDmhDvxYF/PN6aMPiAckjHdMpyBDALTg76fgTLsb53DOxUaEaXd
+         EineMYWvbKBKUH2U8cx4zRx441SgsI5+MxXuTaEvjvPfPIIR7zGJ7n/QdHWoSF92UV5J
+         EgUkmbnhi/x545rBtB2KzuUq7sqpNyN1dXDOb1oznpWxnWMJMM443Hzn95Jsv8H59MvJ
+         y7VA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=50SWLt4J5HpW6x7aiwzPkcVQFJ/2iaZiiMuSjz6Dnoo=;
+        fh=eU0RSml7k3lOz7wmd33y/vjmWp8z0rVOEaL+HyhN7HM=;
+        b=O/42hhLUGxb8RuGiXvfvMF4wlrxyQ9w8n1Qix/14YCX+n/hZuvkvJ9ecvM0zwrW/Ax
+         rEGOh/JYDy8m0AeFO4Ietd+VF1vvw8+7eBa83/9uRHbcBOYab36XCcHZyrdO3jaVBEPG
+         S/WRB9Hc3LuKTJL+IrtPa4zSlgPohQcsKoJCH87cIQ/mbpISgl9Wgvi9f/oo5EqDfui+
+         JQ/Ktb8HYdH8NNZASetF5HFT3JdQNGNKiwwNuLmMNElWc1e1I94Os29t5hEzaOqmUCqp
+         6sdHZs6n7qFws+XqtEdASa+P3i5tv504XPn0fVSYsOqrR1JsPJWs4ocX3zWiA+wEo1gj
+         jg3A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@metaversal.gg header.s=google header.b=ATmHiDFO;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of jadid@metaversal.gg) smtp.mailfrom=jadid@metaversal.gg
+Return-Path: <jadid@metaversal.gg>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id z21-20020ac5c195000000b004ace8c85196sor28383vkb.6.2023.11.10.10.47.31
+        for <zile@metaversal.gg>
+        (Google Transport Security);
+        Fri, 10 Nov 2023 10:47:31 -0800 (PST)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of jadid@metaversal.gg) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@metaversal.gg header.s=google header.b=ATmHiDFO;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of jadid@metaversal.gg) smtp.mailfrom=jadid@metaversal.gg
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=metaversal.gg; s=google; t=1699642051; x=1700246851; darn=metaversal.gg;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=50SWLt4J5HpW6x7aiwzPkcVQFJ/2iaZiiMuSjz6Dnoo=;
+        b=ATmHiDFORIANErm9dgvUOXPZ+QjGbUjXJ8gFIKEhKvuVRiiRfHeGG6xXxo1jA1JmSa
+         XdnSbq57FUl2DEGE1j5CGF1zGvwkHduEr+X/4cAeg6uee78U8dtmsn0l/jpDSNFFzxJy
+         viV/Sr83Vib91N+Py2SKyuTeN7qh8FbBjwdiaHNdxT+/xnLsBKFjdCEAu/vreGxGsGHW
+         I8gWbeBiVwk2QzKHl/BKNW0Vfdz3oX1kNfHSVP0OnqLvGfQ5B0PUBjq06RAwPlWLaePz
+         hCCMdyd6XF26Ww2tSYHkzYfy8GUXtVsnzxAN6Tvg2iQR+Tc/ydvSCkDDEEQJIQqVPaXH
+         gmQg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1699642051; x=1700246851;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=50SWLt4J5HpW6x7aiwzPkcVQFJ/2iaZiiMuSjz6Dnoo=;
+        b=he/zcrsmOh9lAqRznTOEdPFPiJnzQmtU026vO12JpaTMdU0D4Q+lyP+nVVqRkrCSkG
+         h1a8UbN5ePZandHVlI7mdSBsHnzV8BOa96UERK48RkodeJBJddmbW26e7t+OHKQ7E4ki
+         XRfZFrT30mt2NMlKmcPoWtz21rK1sINMBguk0IfEGbCa+9xoor8TILGdjC/eggGol8tf
+         NbIufqw+R8ViMNxHLN3oej/asRI914lAhyHe98ueVKaMrqA7T82beD4zWWvepr65DDJz
+         ltp7oWlZum15JNeB8l51o2ofyk8llUeH1IsZVSABNS7ZhsYX94JG2rv5fH41WI0dAKXQ
+         u79Q==
+X-Gm-Message-State: AOJu0YzHYZ+Ojlo6kpAsZ6R9OMTm6Ih9YWexFOTeWrcMtGaOIZxjxdR3
+	oI0ca3vO0anCqxO8isMncXW4d3qaprXn556l+PFC3/gY7sfFE/wguA0JxA==
+X-Google-Smtp-Source: AGHT+IHnpr8j7AQrR5hGun7uHoggFr4vLawPAeNTWw0EfprMIumG63CUXusZrVweaJNJOHYmDcxIhTTdQ5TchuiGlY8=
+X-Received: by 2002:a05:6122:10ce:b0:49a:b0be:3a00 with SMTP id
+ l14-20020a05612210ce00b0049ab0be3a00mr5267424vko.8.1699642050695; Fri, 10 Nov
+ 2023 10:47:30 -0800 (PST)
+MIME-Version: 1.0
+References: <FOjN5jlORCmOhyC1CTFuzw@geopod-ismtpd-9>
+In-Reply-To: <FOjN5jlORCmOhyC1CTFuzw@geopod-ismtpd-9>
+From: Jadid Khan <jadid@metaversal.gg>
+Date: Fri, 10 Nov 2023 14:47:16 -0400
+Message-ID: <CAGMKXKFx5ae9dX7Eqm7mwJ8k_DpsSKypv1P91U6KQvyg-8aLVA@mail.gmail.com>
+Subject: Fwd: 12 new updates from Adam Bomb Squad, Bored Ape Yacht Club
+To: Zile Cao <zile@metaversal.gg>
+Content-Type: multipart/alternative; boundary="000000000000ad705e0609d0c041"
+
+--000000000000ad705e0609d0c041
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Bubbles <info@joinbubbles.co>
+Date: Thu, Nov 9, 2023 at 4:33=E2=80=AFPM
+Subject: 12 new updates from Adam Bomb Squad, Bored Ape Yacht Club
+To: Jadid <jadid@metaversal.gg>
+
+
+See the highlights of the day from your favourite NFT projects and
+communities.
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZopTTsdjzUXUMx0bARQc8jZ9M_TP_9vBCaSh33TYIVli94zbbq0ADEm-2FBX=
+EzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2=
+Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctT=
+ISkYmSdWQSjTDCYQW51tzdm5QkV-2Blu-2FTFI1NaaduNu8I5g-2F01Bi-2BOUvh1pEtcmdMqG2=
+4eHaei0YXmTXjJHrAgih4ZGZhZdlbImfJ9WygAmYddd8i0-2F9soZkYLpogONEQEP-2BXPjTvfY=
+sohs-2BS4YfcK1LRgwGaCOTZ8W7bBzNyh8keqhNjQkyBkgoay-2F4gzpDyR30D9g1b1t9Qw9tUk=
+>
+
+Your personalized NFT recap for Thursday, November 9 2023
+
+Hi Jadid =F0=9F=91=8B
+Let=E2=80=99s catch up with the NFT projects and communities on your watchl=
+ist,
+here=E2=80=99s what you might have missed=E2=80=A6 =F0=9F=91=87
+
+Actions waiting for you
+
+You have the following actions waiting for you. The red indicator shows new
+ones.
+
+Total
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TM6jK_9vBCaSh33TYIVli94zbbq0ADEm-2FBX=
+EzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2=
+Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctT=
+ISkYmSdWQSjTDCYQWnJmMUeOBZiFe4gAe7E6-2FT0SO-2BDtOR3GmglLtkqddwPpMKzqzyTIzIn=
+Ww3zgi2ygJmXRJQz654bkgs6JN2D1P6dGlZlYF5SX3KmYrmjGnNou0LHrOxWPeiuBODyBAiz-2F=
+G1MxVRURd4NwcadlHChmIyyu9RsOpW0XPxIPKAX5UG-2BC-2BFwHPXiVlQPWx2asjsvuH>
+
+10
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TMfKm_9vBCaSh33TYIVli94zbbq0ADEm-2FBX=
+EzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2=
+Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctT=
+ISkYmSdWQSjTDCYQWl0Q3Y5ScDBuoyWbqP9iiC8Bo8V5rz4FXzB0J0HMrp7SREeCSC97MvKiIOm=
+D2bO9L56EkPr8tANpDwh6Cok1yyLiuiUZcne2kob1KXvUfpViR5jR4LkENKPnDxb-2FE0b2gor1=
+O7DI7CNX18-2BVYhon2UOJyA0qMXnN-2FKh2ZKK9V2u05re20YS9CMJAgY-2ByKBeja>
+
+Governance
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5ToOez_9vBCaSh33TYIVli94zbbq0ADEm-2FBX=
+EzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2=
+Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctT=
+ISkYmSdWQSjTDCYQWCbQwjbBG9eJ6-2FqzNObpi-2BsIqfakN8BD1Pw0mym5PK6qQVVjCI1d5ZC=
+SfIsKaSdkJaEg9Nec1KFTakG44W-2FLeNojGNpVW1KLBKk1jTg-2BaqVWozY9tr6EHBHCORE0W3=
+Xzubq5JN0-2B0Fl-2B-2FKXx0TszfxzETiOlW72M8hrMbw-2FKmglPQq0jTwGdvKcfkJvfYNKWm=
+>
+
+10
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TvjIX_9vBCaSh33TYIVli94zbbq0ADEm-2FBX=
+EzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2=
+Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctT=
+ISkYmSdWQSjTDCYQWkiTXbpUC-2FX6eP1LACtZTXcmm-2FSS8QanOPDGMKR8-2FRWgdwSVtEwlP=
+q6mqYS4ZLhQ9-2BMxYn1-2FbtXgoCxgKT7jpMp0MHPpX1LqGCcaUVFVRpvO3y80RBhsAUSGTYec=
+Rzz-2FluJYXcRI2URpZOHzMsMnLlsuY-2FqmpeVnCY9BfRInk0-2BJ1HrwXIy4me9WWUVug3yaH=
+>
+
+Updates from your watchlist
+
+Adam Bomb Squad
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZorNK5KrN5HzXW5NPUrVhPQxaDtO0lG0-2FaGoodoBKgEiAw-3D-3D2ETk_9=
+vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0=
+l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx=
+74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWJcBdwpKx7Xug3e3nGrxEK6w2qTF-=
+2BOJiKt-2FxRE5xvmzEoSqECODO78jFLjcbMjWTZvHFBc3WyUQk8wr0aIp93cCVtxSB2lVG6ILe=
+S8FPtDub-2BGBcanfKbhwMvF8NkcBdDfV254ZNF7UiedGGYXUwE-2B-2FNinbYlcvgk-2FSWaEd=
+8cpu1ezvRGryNaxwK4cvvYPHA8>
+Discord announcements: 2 new
+
+@ABS Announcements
+
+Get your Squad ready! The Hundreds X Call of Duty: MWIII has arrived for
+ABS and BBS holders =E2=80=94 check the #=F0=9F=94=93=E3=83=BBearly-access =
+channel to view the
+collection (Must be verified bomb holder to view channel)
+about 22 hours ago
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZorNK5KrN5HzXW5NPUrVhPQxZOV-2BEeNfkKi9JiWjpxQsIf8veas4zTVrNn=
+vStmQWuMc-3DH-NH_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4W=
+MwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4H=
+CwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWCeOX-2Bhxt=
+3AeeLRT6XOA2g3dmU-2BjrarRVumkuFZWMh-2BtMEh-2BtxzfiEo7cOsOXuQNC4CMawuQOs5Bvy=
+KbR9VvQDnEr7Tcg-2Ftl3hNAO5V01XpEEGvxM4xy1yGDRofJPXHtM5WeG743VTSLWWt9TVExwf8=
+BMj6tiH3zxjQIJ-2FMWXOYC-2FDIn-2BUc-2B-2BpHOFNHrHeDdf>
+[image: :AdamSiren:] Hey, Squad![image: :AdamSiren:] @ABS Announcements
+
+We are aware that lots of holders looking for the early access link for the
+COD x The Hundreds collection (more info on that can be found in
+#=F0=9F=93=A2=E3=83=BBabs-announcements ) can't view the #=F0=9F=94=93=E3=
+=83=BBearly-access channel to access
+the link.
+
+*Here's the solution:*
+
+*1)* Go to #=E2=9D=97=E3=83=BBbomb-squad-verified
+
+*2) *Use either Collab.Land or Vulcan to verify your holding of at least
+one BBS or ABS token
+
+*3)* Close...
+about 19 hours ago
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZorNK5KrN5HzXW5NPUrVhPQxZOV-2BEeNfkKi9JiWjpxQsIRJYce71L22yhO=
+kff-2BsZYjKFaIeWEfHN37ttFg-2BZuSm1USlepnphOwCVczmMocCM0EtwhzhSaO6usm-2FPy1l=
+ujVg-3D84DB_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd=
+4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg=
+0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWW2wCsrt4gXbrRtO=
+qopemD7bcHOjvQwZBHYaGW-2B4py1PDVy64AVqvyAaKCGBum2sGENwO1bPEaoH2MBkDd7smh6HB=
+hfQBz5EywgLFBKeI-2FrpXkKzjLYxLxL2GMq9hE22xTxqEkrgS0X8d-2Fl53EVSHwRsRMeTJyTe=
+EvE2temhm8MOrgfVT8HsEmS5-2FuHHplx5E>
+
+Bored Ape Yacht Club
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2F=
+vS-2FPqc9OCeNAAZopTbvMhVgnQwLpA-2BnZFjt2HaoGtq4P5uIKHKYWHT2GJaw-3D-3DUg5p_9=
+vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0=
+l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx=
+74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW9wImirtWLlzqHJ6soV8lRMKM8m6H=
+RqrXCY5L6zIyz7XS7Om3oRY3McCqkX-2B55q-2FWqTYFFg4TOHqETcX-2BDQxufbsZkS3Gwv276=
+68IeI0esZtMo2A1PhL3CU9Agjg1FpnpQ2Abq5YyTvfp-2F9Yi9PN93Ut4xS-2Ba6UFVL-2FCmnx=
+Cf4NMGIErIXGFjAwPjleGoEw-2BR>
+Governance Proposals: 5 new, 5 updated
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-347: Enable DAO-Wide Voting for Working Group Stewards
+ABSTRACT
+
+The purpose of this proposal is to give voting rights back to the broader
+ApeCoinDAO community and its delegations for Working Group Steward
+positions.
+
+The Ape Assembly was established as a Governance Working Group Initiative
+outlined in AIP-239, aiming to facilitate Working Group Steward elections.
+However, with as few as twenty active voters in recent weeks, there are
+growing concerns about the legitimacy that those elections would carry.
+Furthermore, we need Stewards who have...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YGz7GfyH9BUV3yTdoTd272qbA5882j-2FAUTSRk=
+bF0PUhdoOXpIHAhyaeHWvPpO7VKZhxN84K9tHok-2BhygzV3KB-2FrAWUrt-2F5GtUnj0kIuCES=
+As-3DsEi-_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4f=
+zeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0z=
+G1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWwR8b3Mbml7z7NX2Ui=
+LHShlVst0-2BPiBGPjxQlQscjw9os9EZbuYDQ7gOxguPoH4zYNgTkqpCJZ8-2BaDkk3PqbHCmoN=
+1FAijBnmdWzQlvvJV1L7qPZUssu5cCXn0Jp4OuKJTSDeCwwqk-2BrVtM3QEQLn4W2-2BQoEUOKm=
+YyiD9QCJJelyY1xqtDgbVnaeliiHsG2kn>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-356: ApeCoin Papercraft - Resubmission
+ABSTRACT
+
+The project involves creating a papercraft digital model of the Apecoin
+logo. This digital product will include a comprehensive guide/story of
+Apecoin, an enhanced digital papercraft that can be easily printed, as well
+as assembly instructions. Every element will be meticulously designed in
+alignment with the Apecoin brand. Everything will be available through a
+linktree webpage and we will promote it via a new X account
+(@apepapercraft).
+BENEFIT TO APECOIN ECOSYSTEM...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y6l3s68GTlIDioye93-2BQ80EyVHTw9gwY4LNsI=
+aDQzKrLDwj7E-2B-2BAaAho9lBa3-2F1LocSit-2FvaSnOLyGRJ4BmqducJz4PUQoH22mY2ZQUT=
+BDd4-3Dft0f_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd=
+4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg=
+0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWYYb08Ioa3G5Myqd=
+h5QnYg5C8tbX9JMUIluxRbuC2IxLOfPYm3HxNYfpMampiosaE9ubCHQ-2FDAexxCoJ4a8ORdJaL=
+SmMZ3QJ4icB-2Fclp6MzruYCBO9XbjxPH7pg-2BM6B4JHeouuSbwTCn2KytbpBbxlopGvOo4Qe3=
+K1eKVnsAKKosKFj0hkL7IOFxcHYtBMCIn>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-343: Miami ApeCoin eSports Arena Partnership
+ABSTRACT
+
+The proposal is geared towards forming a strategic partnership with ROK
+eSports Arena in Miami, elevating ApeCoin=E2=80=99s profile and fostering W=
+eb3
+gaming awareness. The focus is on titles adopting ApeCoin as in-game
+currency, bridging the gap between traditional and blockchain-based gaming
+landscapes. More about ROK eSports Arena can be found at (
+https://www.rokesports.com/).
+BENEFIT TO APECOIN ECOSYSTEM
+
+This partnership aims to embed ApeCoin within the emerging Web3 gaming...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YaeCy2zHRnwZuGU6e-2BjfgEgeneniMw1dmZ3RB=
+TwbEKLIQvTBTJQZiQE55JnpkGlS4buUgAD3mog4z-2B84VHMt7aSv89pwNHmnC7aLCEzDHkJc-3=
+DOEv__9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTT=
+dVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo=
+6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWPeLbCnZqQeEdTeI2rhyXT=
+MGHkFFL4uSE51lHcDO9nuguf-2BWGPn8wZuhWjCLPw8YdXq-2F-2FwGaHMUfXktF34277JNkn9J=
+xu197YPOWuwufWyUyhh2UbQNt1bpUI4jkm8Uhf3yvBSBhWIaFPvdkqC0-2BJa7ri1Va5-2FiM1t=
+ccMnXagiebVlUsRyEp04mXqMC-2Fu9KVN>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-341: Bored Brewing Marketing $APE to Beer Drinkers
+ABSTRACT
+
+TL;DR - 2 Years of branded advertising on all Bored Brewing Cans & Free
+Beer for $Ape Holders at collaborated community events.
+
+We want to spread the word of ApeCoin by integrating $APE into the
+packaging of our beer. This will include creating an $APE coin beer, QR
+codes on all cans to share information about the DAO and $APE, expanded IP
+with other NFT collections to merge our common interests...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y4D7ikIR-2BFwYOqurlA9SMHQd3MKWZJr4ra4NP=
+8pg49hoOvqSBM3ZytNwri4oZSH9DIyPlms40xrFkKm7aN92-2B05KVUMbRylJwHwCYLmcgA3I-3=
+DCHvT_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTT=
+dVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo=
+6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWRiLRW5fG9lkMAR7RnujmD=
+m2h5Yo5zcZ8sMcj7TQpg2hDRp6opgDw17G1cokz9q-2BbmTUkTdsTHQuS5ldwEqOZq3CzFCyexY=
+O7s2HXVjxJt5Xk-2FaXxI-2B9JVSi-2Bh6qq79XU6YA-2Bc5BqzEDocPGr8OuoqrgfDLwnUE9sg=
+uU7DuAoL-2FXd1i0cH-2F2wIApPVp9kGFSI>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-325: ApecoinDAO & Mocaverse Cross-Community Spaces & Reward Vault
+ABSTRACT
+
+[image: image1]
+
+[image: image2]
+
+[image: image3]
+
+This AIP aims to sponsor MOCA MONDAY Spaces and establish a rewarding vault
+for the community
+
+With MOCA...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y35vorwVzYGOC-2Bqt-2BBNQSH39rEYxl6UHXxO=
+uhph3a85kCvShF4T-2FTnwVTRhK-2BzrA64PzS297wgd3g2j1VhPGCU48jJd0ULQxPED5t479Jq=
+us-3D85tk_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4f=
+zeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0z=
+G1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWFHTTst529QhLEnUpT=
+cbDoZTlzNPAhvxI-2BiwJ-2BfAycf0ttd6Gan6HdJrahVPx7a6cimngB1bwT4O2z7FWJlgrsaoF=
+SI0VTRH4vGNLOYErh7IQlAP5stlPDbUmSCMx5jy4z196-2Bo5-2Fx0IZT7Q6OtbIgreP0pTDbxA=
+qYTpWACxXA-2FSSa57mFROFrUiNe80q-2Bqvw>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-325: ApecoinDAO & Mocaverse Cross-Community Spaces & Reward Vault
+ABSTRACT
+
+[image: image1]
+
+[image: image2]
+
+[image: image3]
+
+This AIP aims to sponsor MOCA MONDAY Spaces and establish a rewarding vault
+for the community
+
+With MOCA...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YE2UqABHgcQHV3K6-2FAXS8v2I5EThbRYUTy0Dc=
+OfoIyR42o7gdj5f5RiJ4cGYLJluUf3Tfg5-2BHS-2F5g0FzDDwpqwPYWeCQTlUpA-2FEGFZbxMG=
+84-3DdfDu_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4f=
+zeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0z=
+G1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWENVr6JDhlZ1tX-2FQ=
+L18M1yAgEh63mQ22WhuCqcYSfdjurBU0nlNffZc-2Fjel1Zdqx6tWM1LNpFX7SR9LuletQSx2Af=
+GPnXV2ST2YwJ2ULnfQIcwZKPdYuwD2OcLklj25rEC9bvj-2FzR98ysH8spFE6sATThxq-2BmZVW=
+10C4uHMVVE2Um5l3FvKXU6cJbcB3AORBk>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-347: Enable DAO-Wide Voting for Working Group Stewards
+ABSTRACT
+
+The purpose of this proposal is to give voting rights back to the broader
+ApeCoinDAO community and its delegations for Working Group Steward
+positions.
+
+The Ape Assembly was established as a Governance Working Group Initiative
+outlined in AIP-239, aiming to facilitate Working Group Steward elections.
+However, with as few as twenty active voters in recent weeks, there are
+growing concerns about the legitimacy that those elections would carry.
+Furthermore, we need Stewards who have...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YYp-2Bg9Ym9I60JW95-2F9V8aU6-2FEGV9QgZva=
+-2BW-2BQtVL9ulOIteCrPDr3fDVGbhM04-2BjkOSCYImgppb-2BXJ5-2BoAyzUPFA89yPdGhjKp=
+mChAeVdKHg-3DiHaI_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4=
+WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4=
+HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWffJERwLuX=
+CSpkvZt-2BlHBceLloOfdXMavu1Ky6YdMtz5YaVPAAAXBAUIOIQleFg-2BoLpRMQrjIU1GwN-2F=
+asOuwhbW4dwqFboJ3YSv1SwAcerT6YelONLLGtPX-2B-2BD4g-2F6bFPVSkJ5Y9Src86aYX6766=
+LtW98ptKnKzp94cFxv7S4-2BABlRYWgAwUYLW65xkFXws6F>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-356: ApeCoin Papercraft - Resubmission
+ABSTRACT
+
+The project involves creating a papercraft digital model of the Apecoin
+logo. This digital product will include a comprehensive guide/story of
+Apecoin, an enhanced digital papercraft that can be easily printed, as well
+as assembly instructions. Every element will be meticulously designed in
+alignment with the Apecoin brand. Everything will be available through a
+linktree webpage and we will promote it via a new X account
+(@apepapercraft).
+BENEFIT TO APECOIN ECOSYSTEM...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Ybqis4Lnw0bBMq3-2B6-2BCcA49VtP16QHDGHYh=
+am5uwKxCA3XY-2B70H5Q5wOiXuHBkLLYH-2F-2FdcGsbwzQ3EJqdZaUdIa30wbXfRCKGDDcAhs9=
+Inuk-3DEshU_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd=
+4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg=
+0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW3qEnX0GbHNRDL7y=
+2HCFOdLNy64-2F403NR6xmUah4W8FMMOgEYEsneT5wT28S6dH1XIxPZIQy6guP-2B8kb3HCZ2LF=
+FEfksS4-2F4CeBtn-2BDF0q5CE7YEOxbtcEXgX8JyaaICOFdjsz-2FFMx5lwlLEen8T3-2BnmwY=
+wLcUG-2BYLGnwiLkybltq11jGbf9T9BmoY41o6-2FDv>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-343: Miami ApeCoin eSports Arena Partnership
+ABSTRACT
+
+The proposal is geared towards forming a strategic partnership with ROK
+eSports Arena in Miami, elevating ApeCoin=E2=80=99s profile and fostering W=
+eb3
+gaming awareness. The focus is on titles adopting ApeCoin as in-game
+currency, bridging the gap between traditional and blockchain-based gaming
+landscapes. More about ROK eSports Arena can be found at (
+https://www.rokesports.com/).
+BENEFIT TO APECOIN ECOSYSTEM
+
+This partnership aims to embed ApeCoin within the emerging Web3 gaming...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YZO5xmqpBJMcSDi3eW2sHiG2pEds6H0R2VfmY57=
+DZcJRdX6icKjm0YE3sa6p8TplCO8cjFkWry6O8keaAABpHDkewGYJw814i7mAPENUDtCw-3DhrX=
+l_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlD=
+pZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMi=
+grx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW7nq0H9XEfJN4l6p83aMTIpr58=
+i20-2F0vNceHJ1BUZdVtXGqVRK52dS0g-2F1ZvpH-2B16AcrlrpP3ePfECqwRf5ghYwg2pJKEjW=
+2feI886EYC2-2F7ReZ95ZcCsqkXYSOYfc5zALOOX0roYOr-2BAZ9C5GdngMwHHFPqZ-2BJYuLu7=
+89TaRHxBGMYdFvs7Jn6jXE6QauNio>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-341: Bored Brewing Marketing $APE to Beer Drinkers
+ABSTRACT
+
+TL;DR - 2 Years of branded advertising on all Bored Brewing Cans & Free
+Beer for $Ape Holders at collaborated community events.
+
+We want to spread the word of ApeCoin by integrating $APE into the
+packaging of our beer. This will include creating an $APE coin beer, QR
+codes on all cans to share information about the DAO and $APE, expanded IP
+with other NFT collections to merge our common interests...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEEx=
+on4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YoGLUxT82OjsSxW5sQ66KPzuDHrocy48O7swicK=
+qcrXdg8kx1ubwWQCsZdElzdBS3P9SoX333psZVJYDfJI7PWfYhSRQlC10EyGF2TeGVtJ0-3D2CY=
+F_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlD=
+pZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMi=
+grx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWLllXnpzNa-2B2oHYhpobKRBYG=
+lq-2Bg7aaHqQ0BzVKxcRYTW-2FUp9QUFjiGvzuXRrv0QjfC1eyTNSUTlSi5FY4-2B2lXi2JtbiN=
+JJGjri3-2Fd1m-2F-2F-2F41Ag-2Fd76n-2FpuQVOueI4Pu9n10hSoFKgd4EHwbXhA0G4sO2FR9=
+qREu-2B7QSi4b4LykmyQyeqcNeoFuO0KEpjNAaM>
+PENDING
+in 6 days
+And that's a wrap! We=E2=80=99ll check in again tomorrow when it=E2=80=99s =
+time for your
+daily recap.
+
+*Interested in more projects and communities?* Select them here
+<http://url9462.joinbubbles.co/ls/click?upn=3DLvhhPJWKMkWFaON4cXP-2Bvr3i8EP=
+i98Z7X6TV3Vv-2F4y-2F0mzJGDfGK9vTVynd6LAFQX2srB-2BT7Eo2Qzk-2F3i5ujwY1K0HCtQS=
+JleOccdbt-2BQEpacgqOXCvHhKtxaopSsDFH2Z-2FM42vhL6G7uHoQdMkLtpr84r0HLF8jxDzTP=
+8qy1ruqr4XxvFqV4L-2BX-2FiIWSJwdIXQCno7P6ghSpijyI0aS5iHTgfI9s1eMhUZmIFs8KOR1=
+tv2zwHolIDJLkbkz1jBW8KbQNgnuBxTvZbfMyzFcuf4WuwYfhiITDNrQgaiZhPK4lJGgkAuvArP=
+e7MWeGWGtp6e4P9NmFLAv95lRcEthGZlXJBo2RM20xxJzjq-2FY7CavLYnq38XfWpC2f59P8o6E=
+zOrxJ6C33pfrggXfzpvtIJ-2BKVH3yJIOSZJhb7pCwn1SclzrXedcA2FGd-2FK-2BU6PyTBNuok=
+p929MiQt75oJeBZ-2F-2BmT2KCxWRn4CqR93pk0OyieKMp68eITAPYsDF7Zu8kng-2FAxEV4MhP=
+GJAAJQGqhIBPSnbbI56OG-2B8MqP2MyJlzDAuqSXVobEfUst6Q3TeKI72y2eWcfiQFqlYkw4DGW=
+5-2FyZ4UqdkULo5B-2B-2FSxm4Uaf5aNjg9YpjCM6JFv9FimPpTYTeB-2BAzW49R2INAMhOi5EC=
+L-2BkxOjXFy80OFYqe7NXe02xxGOB-2FDw3u7UoHEFMKzOnUa9_9vBCaSh33TYIVli94zbbq0AD=
+Em-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1i=
+GeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQma=
+nh03ctTISkYmSdWQSjTDCYQWttgOJvXUH7rIVlR9MS-2B7GtLww8ArIjV3-2BJKmncshRh-2FsJ=
+nc2qD76x2WA9cM5ZzFzrlevjc4iQT0r9Vqzt1MyQGpBKnPZVgLKQ5dwPxRfhRdOQz2g9SkI9H6s=
+8Nx-2FVIPnmIQgoXRWWlZve5GLc-2BKRsC-2FrSMhMlIF50OO4IEbiPoqfPWi3t17oSRRKzejhy=
+zfS>
+to stay in the loop.
+[image: Twitter]
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQH2fE3KUm=
+ocKbuA8LR1TSAZ6qfgXnVcU5Q2M53FsdrUbiUrl_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOx=
+msHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9c=
+CgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkY=
+mSdWQSjTDCYQW-2FIA9GV11SzST1HqwbWntDxiDgzy5cjwsGS-2Fg8Ch4eU5PjIjM-2FpVePiCB=
+BJjzzVXejuvTKvawgGxlv5Y3215RhEPy-2Ffe77zwmntQt1-2BAcJLX-2B2PhpIQvBlaGiOHvNJ=
+Q3hV625dCRLDwLRdqr02OwjtahpoQk7ZefuOdjhIJwIFr8-2BEaD4qlpQwqdJogTUeFwz>
+[image:
+Instagram]
+<http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQOvjIq1HN=
+KENGKR7vLnK93PU4zUeyeEMEZmyFFj-2FsNDUWTw7_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEz=
+OxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy=
+9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTIS=
+kYmSdWQSjTDCYQWVu66WQgP0xluvgzBUR1kGGKCxvpVdnI2kLyxdUgwky27exsl3rxXMSzkAwAK=
+KEDgoWKO-2FZP7u4gGQryv7apExzLCRL-2FNI3rNKNYhXdDbU6bwwcvCZnPmzvU0p-2Fy1tqIHv=
+Rgt1kqpx6EhcJwtodnovO7tQTptwvMWlgvX0lh0yy7QJsJ0WBGKCbTojy-2Frrton>
+
+, ,
+
+Unsubscribe
+<http://url9462.joinbubbles.co/asm/unsubscribe/?user_id=3D26516605&data=3De=
+EUytBXbf0zWBn-Wwf7wC3LRcJ-xYns1viyPIUJn5OVoMDAwdTAwMGz5Rmi1vBQGlbFsBGF6YBP_=
+vVyCQhLtpwEs3GUUFeHwRzAonXkU-KooOLdvu1vEmehkxs6p9lIddIM0zQNA-vFdde1p1CJyRhS=
+3cpZYqj2H6uhiYz3zRVkZauSwzdHcD1yEVwrLzdSR2jk4oZ0PmpPwPf7lbfpJE8gagyfoFrBEWd=
+0zi-Gvb1XDTCH9FQGWuB43u57BmKKbxqXoFjePuJedySLVLtnugRrw8XCVqpToSfqf0ebb5ye5m=
+Ho1ZDlPVEQmuqMqh4QjasoQ-n2EdaQbfGl-hTdgHPvYhJk2nUC4aY6sLNk_XAcefc8J7SkxEik5=
+t7KNwV48vrQidMJz_hofWDTChYAX3iEgPf3MZVQZvCWc5hrElNZj87zV4jsZj04m8b8kWNufgqP=
+gYD-qOwpHWxEqnWZ2W71ZONyGrEmIraXDX6ZMSTSTnxYdkawyFym-iDGlryLKIcHFT20o7RnGAO=
+xK68_cp_prZOSiJeqwujBidDb84-iMTn2tv9QTWA=3D=3D>
+- Unsubscribe Preferences
+<http://url9462.joinbubbles.co/asm/?user_id=3D26516605&data=3DJqlFTIGJfjOHz=
+IrDu8swb9xTnsYoUfW9HRG9UwVFOg1oMDAwdTAwMHAaZXHo-hzIOejr8NBxVRJrh_AO2PzQ6-FC=
+OUSXOdlyr5i108zXhs_GLNbbnU183tXcjFDJ9oljrKJ4AkG17wqt6SnFzHsLFShjtm-VHNI0dBH=
+MBTWd2eG8Y9frWIWs0ODYpsm_GjIvGkzO79OoTJ0WTqi7lbIuIXQakNpXounymDtQFCL34gG2-9=
+Gx4k-Q_-135Rz_CKpvU1Asi5UYnJ2a7-v8czRtQkZ-pUElYFjxBaEuaayql79TSh8o6-m5K-m-P=
+0lJ7XG3DoTksK14HQ4KwoNr7e1ay2H9WThBRbVfFPAcrx9rWd2uGngbj6cg-CQXfj6UByWwc8hV=
+vcdgZE0r2wk-3hlz_rMVmoTRGdmQqkslYHZgJQUFNll5pvd4LobVLxbu92Lw3L8qNoZm_4Sn_s7=
+omm-Pvxo5ARWb8W8QMH0vH-G316bMMRsm0QEWx9HcRYxMmq2i9XjEfAahxBVdCLfpzmYD025JAs=
+Rfd1wt>
+
+--000000000000ad705e0609d0c041
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">---------- Forwarded message ---------<br>From: <strong cla=
+ss=3D"gmail_sendername" dir=3D"auto">Bubbles</strong> <span dir=3D"auto">&l=
+t;<a href=3D"mailto:info@joinbubbles.co">info@joinbubbles.co</a>&gt;</span>=
+<br>Date: Thu, Nov 9, 2023 at 4:33=E2=80=AFPM<br>Subject: 12 new updates fr=
+om Adam Bomb Squad, Bored Ape Yacht Club<br>To: Jadid &lt;<a href=3D"mailto=
+:jadid@metaversal.gg">jadid@metaversal.gg</a>&gt;<br></div><br><br><div cla=
+ss=3D"msg4876844364748175630"><u></u>
+
+   =20
+     =20
+     =20
+     =20
+     =20
+     =20
+     =20
+     =20
+     =20
+   =20
+     =20
+   =20
+    <div>
+      <center class=3D"m_4876844364748175630wrapper">
+        <div>
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%" class=3D"m_4876844364748175630wrapper" bgcolor=3D"#242525">
+            <tbody><tr>
+              <td valign=3D"top" bgcolor=3D"#242525" width=3D"100%">
+                <table width=3D"100%" role=3D"content-container" align=3D"c=
+enter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                  <tbody><tr>
+                    <td width=3D"100%">
+                      <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                        <tbody><tr>
+                          <td>
+                           =20
+                                    <table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%;max-width:600px" align=
+=3D"center">
+                                      <tbody><tr>
+                                        <td role=3D"modules-container" styl=
+e=3D"padding:0px 20px 0px 20px;color:#b7b7b7;text-align:left" bgcolor=3D"#0=
+F1219" width=3D"100%" align=3D"left"><table class=3D"m_4876844364748175630p=
+reheader" role=3D"module" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"100%" style=3D"display:none!important;opacity:0;color:transparent;=
+height:0;width:0">
+    <tbody><tr>
+      <td role=3D"module-content">
+        <p>See the highlights of the day from your favourite NFT projects a=
+nd communities.</p>
+      </td>
+    </tr>
+  </tbody></table><table class=3D"m_4876844364748175630wrapper" role=3D"mod=
+ule" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"table-layout:fixed">
+      <tbody><tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:20px 0px 0px 0p=
+x" valign=3D"top" align=3D"center">
+          <a href=3D"http://url9462.joinbubbles.co/ls/click?upn=3DyZhGP6XJO=
+XFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZopTTsdjzUXUMx0bARQc8jZ9M_TP_9vBCaSh33TY=
+IVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZnt=
+npulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVz=
+NGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW51tzdm5QkV-2Blu-2FTFI1NaaduNu8I5g-2F01=
+Bi-2BOUvh1pEtcmdMqG24eHaei0YXmTXjJHrAgih4ZGZhZdlbImfJ9WygAmYddd8i0-2F9soZkY=
+LpogONEQEP-2BXPjTvfYsohs-2BS4YfcK1LRgwGaCOTZ8W7bBzNyh8keqhNjQkyBkgoay-2F4gz=
+pDyR30D9g1b1t9Qw9tUk" target=3D"_blank"><img class=3D"m_4876844364748175630=
+max-width" border=3D"0" style=3D"display:block;color:#000000;text-decoratio=
+n:none;font-family:Helvetica,arial,sans-serif;font-size:16px" src=3D"http:/=
+/cdn.mcauto-images-production.sendgrid.net/5261b0ff5f6f3334/b485ecb2-b469-4=
+6db-9902-78d5ce51b3ff/3480x1756.png" alt=3D"" width=3D"200" height=3D"101">=
+</a>
+        </td>
+      </tr>
+    </tbody></table><table role=3D"module" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" style=3D"table-layout:fixed">
+      <tbody><tr>
+        <td style=3D"padding:18px 0px 18px 0px;text-align:inherit;line-heig=
+ht:30px" height=3D"100%" valign=3D"top" bgcolor=3D""><div><h2 style=3D"text=
+-align:inherit">Your personalized NFT recap for Thursday, November 9 2023</=
+h2><div></div></div></td>
+      </tr>
+    </tbody></table><table role=3D"module" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" style=3D"table-layout:fixed">
+      <tbody><tr>
+        <td height=3D"100%" valign=3D"top">
+<p>Hi Jadid =F0=9F=91=8B</p>
+<div style=3D"font-family:inherit;text-align:inherit">Let=E2=80=99s catch u=
+p with the NFT projects and communities on your watchlist, here=E2=80=99s w=
+hat you might have missed=E2=80=A6 =F0=9F=91=87 </div>
+<br>
+        </td>
+      </tr>
+    </tbody></table><table role=3D"module" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" style=3D"table-layout:fixed">
+    <tbody>
+      <tr>
+        <td height=3D"100%" valign=3D"top" role=3D"module-content"><u></u>
+
+<h1 style=3D"text-align:inherit"><p style=3D"font-weight:600;font-size:24px=
+;line-height:29px;color:#ffffff">Actions waiting for you</p></h1>
+<h4 style=3D"text-align:inherit"><p style=3D"font-weight:600;color:#a6a6a6"=
+>You have the following actions waiting for you. The red indicator shows ne=
+w ones.</p></h4>
+
+    <div style=3D"display:-ms-flexbox;display:-webkit-flex;display:flex;max=
+-width:300px!important">
+            <div style=3D"width:75px;height:75px;max-width:100%;background-=
+color:#ffffff;margin:8px!important">
+                <p style=3D"margin-top:8px;font-style:normal;font-weight:60=
+0;font-size:12px;line-height:15px;color:#000000;text-align:center">
+                    <a href=3D"http://url9462.joinbubbles.co/ls/click?upn=
+=3DyZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TM6jK=
+_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDp=
+Z0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMig=
+rx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWnJmMUeOBZiFe4gAe7E6-2FT0SO=
+-2BDtOR3GmglLtkqddwPpMKzqzyTIzInWw3zgi2ygJmXRJQz654bkgs6JN2D1P6dGlZlYF5SX3K=
+mYrmjGnNou0LHrOxWPeiuBODyBAiz-2FG1MxVRURd4NwcadlHChmIyyu9RsOpW0XPxIPKAX5UG-=
+2BC-2BFwHPXiVlQPWx2asjsvuH" style=3D"color:#000000;text-decoration:none" ta=
+rget=3D"_blank">
+                        Total
+                    </a>
+                </p>
+                <p style=3D"margin-top:6px;font-style:normal;font-weight:90=
+0;font-size:24px;line-height:29px;text-align:center">
+                    <a href=3D"http://url9462.joinbubbles.co/ls/click?upn=
+=3DyZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TMfKm=
+_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDp=
+Z0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMig=
+rx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWl0Q3Y5ScDBuoyWbqP9iiC8Bo8V=
+5rz4FXzB0J0HMrp7SREeCSC97MvKiIOmD2bO9L56EkPr8tANpDwh6Cok1yyLiuiUZcne2kob1KX=
+vUfpViR5jR4LkENKPnDxb-2FE0b2gor1O7DI7CNX18-2BVYhon2UOJyA0qMXnN-2FKh2ZKK9V2u=
+05re20YS9CMJAgY-2ByKBeja" style=3D"color:#000000;text-decoration:none" targ=
+et=3D"_blank">
+                        10
+                    </a>
+                </p>
+            </div>
+                <div style=3D"width:75px;height:75px;max-width:100%;backgro=
+und-color:#b7b7b7;margin:8px!important">
+                <div style=3D"height:0px">
+                    <div style=3D"background:#e25c5c;width:100%;height:2px"=
+></div>
+                </div>
+                   =20
+                <p style=3D"margin-top:8px;font-style:normal;font-weight:60=
+0;font-size:12px;line-height:15px;color:#000000;text-align:center">
+                    <a href=3D"http://url9462.joinbubbles.co/ls/click?upn=
+=3DyZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5ToOez=
+_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDp=
+Z0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMig=
+rx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWCbQwjbBG9eJ6-2FqzNObpi-2Bs=
+IqfakN8BD1Pw0mym5PK6qQVVjCI1d5ZCSfIsKaSdkJaEg9Nec1KFTakG44W-2FLeNojGNpVW1KL=
+BKk1jTg-2BaqVWozY9tr6EHBHCORE0W3Xzubq5JN0-2B0Fl-2B-2FKXx0TszfxzETiOlW72M8hr=
+Mbw-2FKmglPQq0jTwGdvKcfkJvfYNKWm" style=3D"color:#000000;text-decoration:no=
+ne" target=3D"_blank">
+                        Governance
+                    </a>
+                </p>
+                <p style=3D"margin-top:6px;font-style:normal;font-weight:90=
+0;font-size:24px;line-height:29px;color:#000000;text-align:center">
+                    <a href=3D"http://url9462.joinbubbles.co/ls/click?upn=
+=3DyZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TvjIX=
+_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDp=
+Z0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMig=
+rx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWkiTXbpUC-2FX6eP1LACtZTXcmm=
+-2FSS8QanOPDGMKR8-2FRWgdwSVtEwlPq6mqYS4ZLhQ9-2BMxYn1-2FbtXgoCxgKT7jpMp0MHPp=
+X1LqGCcaUVFVRpvO3y80RBhsAUSGTYecRzz-2FluJYXcRI2URpZOHzMsMnLlsuY-2FqmpeVnCY9=
+BfRInk0-2BJ1HrwXIy4me9WWUVug3yaH" style=3D"color:#000000;text-decoration:no=
+ne" target=3D"_blank">
+                        10
+                    </a>
+                </p>
+            </div>
+   =20
+    </div>
+</td>
+      </tr>
+    </tbody>
+  </table><table role=3D"module" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"table-layout:fixed">
+      <tbody><tr>
+        <td height=3D"100%" valign=3D"top"><u></u>
+
+<h1 style=3D"text-align:inherit;margin-top:36px"><p style=3D"font-weight:60=
+0;font-size:24px;line-height:29px;color:#ffffff">Updates from your watchlis=
+t</p></h1>
+   <h3 style=3D"text-align:inherit"><p><a href=3D"http://url9462.joinbubble=
+s.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZorNK5KrN5H=
+zXW5NPUrVhPQxaDtO0lG0-2FaGoodoBKgEiAw-3D-3D2ETk_9vBCaSh33TYIVli94zbbq0ADEm-=
+2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeu=
+OBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh0=
+3ctTISkYmSdWQSjTDCYQWJcBdwpKx7Xug3e3nGrxEK6w2qTF-2BOJiKt-2FxRE5xvmzEoSqECOD=
+O78jFLjcbMjWTZvHFBc3WyUQk8wr0aIp93cCVtxSB2lVG6ILeS8FPtDub-2BGBcanfKbhwMvF8N=
+kcBdDfV254ZNF7UiedGGYXUwE-2B-2FNinbYlcvgk-2FSWaEd8cpu1ezvRGryNaxwK4cvvYPHA8=
+" target=3D"_blank">Adam Bomb Squad</a><span> </span></p></h3>
+  =20
+        <div style=3D"font-family:inherit;text-align:inherit">Discord annou=
+ncements: 2 new</div>
+        <br>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                                        <div>
+                        @ABS Announcements <br><br>Get your Squad ready! Th=
+e Hundreds X Call of Duty: MWIII has arrived for ABS and BBS holders =E2=80=
+=94 check the #=F0=9F=94=93=E3=83=BBearly-access  channel to view the colle=
+ction (Must be verified bomb holder to view channel)
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                            about 22 hours ago
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZorNK5KrN5HzXW5NPUrVhP=
+QxZOV-2BEeNfkKi9JiWjpxQsIf8veas4zTVrNnvStmQWuMc-3DH-NH_9vBCaSh33TYIVli94zbb=
+q0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjE=
+WZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaK=
+zQmanh03ctTISkYmSdWQSjTDCYQWCeOX-2Bhxt3AeeLRT6XOA2g3dmU-2BjrarRVumkuFZWMh-2=
+BtMEh-2BtxzfiEo7cOsOXuQNC4CMawuQOs5BvyKbR9VvQDnEr7Tcg-2Ftl3hNAO5V01XpEEGvxM=
+4xy1yGDRofJPXHtM5WeG743VTSLWWt9TVExwf8BMj6tiH3zxjQIJ-2FMWXOYC-2FDIn-2BUc-2B=
+-2BpHOFNHrHeDdf" target=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                                        <div>
+                        <img style=3D"width:19px;height:19px" src=3D"https:=
+//cdn.discordapp.com/emojis/915782685123809341.gif" alt=3D":AdamSiren:"> He=
+y, Squad!<img style=3D"width:19px;height:19px" src=3D"https://cdn.discordap=
+p.com/emojis/915782685123809341.gif" alt=3D":AdamSiren:"> @ABS Announcement=
+s <br><br>We are aware that lots of holders looking for the early access li=
+nk for the COD x The Hundreds collection (more info on that can be found in=
+ #=F0=9F=93=A2=E3=83=BBabs-announcements ) can&#39;t view the #=F0=9F=94=93=
+=E3=83=BBearly-access channel to access the link.<br><br><strong>Here&#39;s=
+ the solution:</strong><br><br><strong>1)</strong> Go to #=E2=9D=97=E3=83=
+=BBbomb-squad-verified <br><br><strong>2) </strong>Use either Collab.Land o=
+r Vulcan to verify your holding of at least one BBS or ABS token<br><br><st=
+rong>3)</strong> Close...
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                            about 19 hours ago
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZorNK5KrN5HzXW5NPUrVhP=
+QxZOV-2BEeNfkKi9JiWjpxQsIRJYce71L22yhOkff-2BsZYjKFaIeWEfHN37ttFg-2BZuSm1USl=
+epnphOwCVczmMocCM0EtwhzhSaO6usm-2FPy1lujVg-3D84DB_9vBCaSh33TYIVli94zbbq0ADE=
+m-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iG=
+euOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQman=
+h03ctTISkYmSdWQSjTDCYQWW2wCsrt4gXbrRtOqopemD7bcHOjvQwZBHYaGW-2B4py1PDVy64AV=
+qvyAaKCGBum2sGENwO1bPEaoH2MBkDd7smh6HBhfQBz5EywgLFBKeI-2FrpXkKzjLYxLxL2GMq9=
+hE22xTxqEkrgS0X8d-2Fl53EVSHwRsRMeTJyTeEvE2temhm8MOrgfVT8HsEmS5-2FuHHplx5E" =
+target=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+
+                    </div>
+                </div>
+            </div>
+   =20
+   <h3 style=3D"text-align:inherit"><p><a href=3D"http://url9462.joinbubble=
+s.co/ls/click?upn=3DyZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZopTbvMhVgn=
+QwLpA-2BnZFjt2HaoGtq4P5uIKHKYWHT2GJaw-3D-3DUg5p_9vBCaSh33TYIVli94zbbq0ADEm-=
+2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeu=
+OBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh0=
+3ctTISkYmSdWQSjTDCYQW9wImirtWLlzqHJ6soV8lRMKM8m6HRqrXCY5L6zIyz7XS7Om3oRY3Mc=
+CqkX-2B55q-2FWqTYFFg4TOHqETcX-2BDQxufbsZkS3Gwv27668IeI0esZtMo2A1PhL3CU9Agjg=
+1FpnpQ2Abq5YyTvfp-2F9Yi9PN93Ut4xS-2Ba6UFVL-2FCmnxCf4NMGIErIXGFjAwPjleGoEw-2=
+BR" target=3D"_blank">Bored Ape Yacht Club</a><span> </span></p></h3>
+  =20
+        <div style=3D"font-family:inherit;text-align:inherit">Governance Pr=
+oposals: 5 new, 5 updated</div>
+        <br>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-347: Enable DAO-Wide Voting for Working Gro=
+up Stewards
+                        </div>
+                    <div>
+                        <h5>ABSTRACT</h5>
+<p>The purpose of this proposal is to give voting rights back to the broade=
+r ApeCoinDAO community and its delegations for Working Group Steward positi=
+ons.</p>
+<p>The Ape Assembly was established as a Governance Working Group Initiativ=
+e outlined in AIP-239, aiming to facilitate Working Group Steward elections=
+. However, with as few as twenty active voters in recent weeks, there are g=
+rowing concerns about the legitimacy that those elections would carry. Furt=
+hermore, we need Stewards who have...</p>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+Gz7GfyH9BUV3yTdoTd272qbA5882j-2FAUTSRkbF0PUhdoOXpIHAhyaeHWvPpO7VKZhxN84K9tH=
+ok-2BhygzV3KB-2FrAWUrt-2F5GtUnj0kIuCESAs-3DsEi-_9vBCaSh33TYIVli94zbbq0ADEm-=
+2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeu=
+OBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh0=
+3ctTISkYmSdWQSjTDCYQWwR8b3Mbml7z7NX2UiLHShlVst0-2BPiBGPjxQlQscjw9os9EZbuYDQ=
+7gOxguPoH4zYNgTkqpCJZ8-2BaDkk3PqbHCmoN1FAijBnmdWzQlvvJV1L7qPZUssu5cCXn0Jp4O=
+uKJTSDeCwwqk-2BrVtM3QEQLn4W2-2BQoEUOKmYyiD9QCJJelyY1xqtDgbVnaeliiHsG2kn" ta=
+rget=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-356: ApeCoin Papercraft - Resubmission
+                        </div>
+                    <div>
+                        <h4>ABSTRACT</h4>
+<p>The project involves creating a papercraft digital model of the Apecoin =
+logo. This digital product will include a comprehensive guide/story of Apec=
+oin, an enhanced digital papercraft that can be easily printed, as well as =
+assembly instructions. Every element will be meticulously designed in align=
+ment with the Apecoin brand. Everything will be available through a linktre=
+e webpage and we will promote it via a new X account (@apepapercraft).</p>
+<h4>BENEFIT TO APECOIN ECOSYSTEM...</h4>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+6l3s68GTlIDioye93-2BQ80EyVHTw9gwY4LNsIaDQzKrLDwj7E-2B-2BAaAho9lBa3-2F1LocSi=
+t-2FvaSnOLyGRJ4BmqducJz4PUQoH22mY2ZQUTBDd4-3Dft0f_9vBCaSh33TYIVli94zbbq0ADE=
+m-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iG=
+euOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQman=
+h03ctTISkYmSdWQSjTDCYQWYYb08Ioa3G5Myqdh5QnYg5C8tbX9JMUIluxRbuC2IxLOfPYm3HxN=
+YfpMampiosaE9ubCHQ-2FDAexxCoJ4a8ORdJaLSmMZ3QJ4icB-2Fclp6MzruYCBO9XbjxPH7pg-=
+2BM6B4JHeouuSbwTCn2KytbpBbxlopGvOo4Qe3K1eKVnsAKKosKFj0hkL7IOFxcHYtBMCIn" ta=
+rget=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-343: Miami ApeCoin eSports Arena Partnershi=
+p
+                        </div>
+                    <div>
+                        <h4>ABSTRACT</h4>
+<p>The proposal is geared towards forming a strategic partnership with ROK =
+eSports Arena in Miami, elevating ApeCoin=E2=80=99s profile and fostering W=
+eb3 gaming awareness. The focus is on titles adopting ApeCoin as in-game cu=
+rrency, bridging the gap between traditional and blockchain-based gaming la=
+ndscapes. More about ROK eSports Arena can be found at (<a href=3D"https://=
+www.rokesports.com/" target=3D"_blank">https://www.rokesports.com/</a>).</p=
+>
+<h4>BENEFIT TO APECOIN ECOSYSTEM</h4>
+<p>This partnership aims to embed ApeCoin within the emerging Web3 gaming..=
+.</p>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+aeCy2zHRnwZuGU6e-2BjfgEgeneniMw1dmZ3RBTwbEKLIQvTBTJQZiQE55JnpkGlS4buUgAD3mo=
+g4z-2B84VHMt7aSv89pwNHmnC7aLCEzDHkJc-3DOEv__9vBCaSh33TYIVli94zbbq0ADEm-2FBX=
+EzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2=
+Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctT=
+ISkYmSdWQSjTDCYQWPeLbCnZqQeEdTeI2rhyXTMGHkFFL4uSE51lHcDO9nuguf-2BWGPn8wZuhW=
+jCLPw8YdXq-2F-2FwGaHMUfXktF34277JNkn9Jxu197YPOWuwufWyUyhh2UbQNt1bpUI4jkm8Uh=
+f3yvBSBhWIaFPvdkqC0-2BJa7ri1Va5-2FiM1tccMnXagiebVlUsRyEp04mXqMC-2Fu9KVN" ta=
+rget=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-341: Bored Brewing Marketing $APE to Beer D=
+rinkers
+                        </div>
+                    <div>
+                        <h4>ABSTRACT</h4>
+<p>TL;DR - 2 Years of branded advertising on all Bored Brewing Cans &amp; F=
+ree Beer for $Ape Holders at collaborated community events.</p>
+<p>We want to spread the word of ApeCoin by integrating $APE into the packa=
+ging of our beer. This will include creating an $APE coin beer, QR codes on=
+ all cans to share information about the DAO and $APE, expanded IP with oth=
+er NFT collections to merge our common interests...</p>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+4D7ikIR-2BFwYOqurlA9SMHQd3MKWZJr4ra4NP8pg49hoOvqSBM3ZytNwri4oZSH9DIyPlms40x=
+rFkKm7aN92-2B05KVUMbRylJwHwCYLmcgA3I-3DCHvT_9vBCaSh33TYIVli94zbbq0ADEm-2FBX=
+EzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2=
+Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctT=
+ISkYmSdWQSjTDCYQWRiLRW5fG9lkMAR7RnujmDm2h5Yo5zcZ8sMcj7TQpg2hDRp6opgDw17G1co=
+kz9q-2BbmTUkTdsTHQuS5ldwEqOZq3CzFCyexYO7s2HXVjxJt5Xk-2FaXxI-2B9JVSi-2Bh6qq7=
+9XU6YA-2Bc5BqzEDocPGr8OuoqrgfDLwnUE9sguU7DuAoL-2FXd1i0cH-2F2wIApPVp9kGFSI" =
+target=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-325: ApecoinDAO &amp; Mocaverse Cross-Commu=
+nity Spaces &amp; Reward Vault
+                        </div>
+                    <div>
+                        <h4>ABSTRACT</h4>
+<p><img style=3D"max-width:100%" src=3D"https://global.discourse-cdn.com/ap=
+ecoin/optimized/2X/8/81cd61243215bb89afd817a3bda82e95dc21e3a0_2_1380x776.jp=
+eg" alt=3D"image1"></p>
+<p><img style=3D"max-width:100%" src=3D"https://global.discourse-cdn.com/ap=
+ecoin/optimized/2X/1/1d95bfcef31865438230a79a3c00b32dd1fadf34_2_1380x776.jp=
+eg" alt=3D"image2"></p>
+<p><img style=3D"max-width:100%" src=3D"https://global.discourse-cdn.com/ap=
+ecoin/optimized/2X/9/9511ea4857b4abe478342adad8bb33661f4cdf19_2_1380x776.jp=
+eg" alt=3D"image3"></p>
+<p>This AIP aims to sponsor MOCA MONDAY Spaces and establish a rewarding va=
+ult for the community</p>
+<p>With MOCA...</p>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+35vorwVzYGOC-2Bqt-2BBNQSH39rEYxl6UHXxOuhph3a85kCvShF4T-2FTnwVTRhK-2BzrA64Pz=
+S297wgd3g2j1VhPGCU48jJd0ULQxPED5t479Jqus-3D85tk_9vBCaSh33TYIVli94zbbq0ADEm-=
+2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeu=
+OBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh0=
+3ctTISkYmSdWQSjTDCYQWFHTTst529QhLEnUpTcbDoZTlzNPAhvxI-2BiwJ-2BfAycf0ttd6Gan=
+6HdJrahVPx7a6cimngB1bwT4O2z7FWJlgrsaoFSI0VTRH4vGNLOYErh7IQlAP5stlPDbUmSCMx5=
+jy4z196-2Bo5-2Fx0IZT7Q6OtbIgreP0pTDbxAqYTpWACxXA-2FSSa57mFROFrUiNe80q-2Bqvw=
+" target=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-325: ApecoinDAO &amp; Mocaverse Cross-Commu=
+nity Spaces &amp; Reward Vault
+                        </div>
+                    <div>
+                        <h4>ABSTRACT</h4>
+<p><img style=3D"max-width:100%" src=3D"https://global.discourse-cdn.com/ap=
+ecoin/optimized/2X/8/81cd61243215bb89afd817a3bda82e95dc21e3a0_2_1380x776.jp=
+eg" alt=3D"image1"></p>
+<p><img style=3D"max-width:100%" src=3D"https://global.discourse-cdn.com/ap=
+ecoin/optimized/2X/1/1d95bfcef31865438230a79a3c00b32dd1fadf34_2_1380x776.jp=
+eg" alt=3D"image2"></p>
+<p><img style=3D"max-width:100%" src=3D"https://global.discourse-cdn.com/ap=
+ecoin/optimized/2X/9/9511ea4857b4abe478342adad8bb33661f4cdf19_2_1380x776.jp=
+eg" alt=3D"image3"></p>
+<p>This AIP aims to sponsor MOCA MONDAY Spaces and establish a rewarding va=
+ult for the community</p>
+<p>With MOCA...</p>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+E2UqABHgcQHV3K6-2FAXS8v2I5EThbRYUTy0DcOfoIyR42o7gdj5f5RiJ4cGYLJluUf3Tfg5-2B=
+HS-2F5g0FzDDwpqwPYWeCQTlUpA-2FEGFZbxMG84-3DdfDu_9vBCaSh33TYIVli94zbbq0ADEm-=
+2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeu=
+OBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh0=
+3ctTISkYmSdWQSjTDCYQWENVr6JDhlZ1tX-2FQL18M1yAgEh63mQ22WhuCqcYSfdjurBU0nlNff=
+Zc-2Fjel1Zdqx6tWM1LNpFX7SR9LuletQSx2AfGPnXV2ST2YwJ2ULnfQIcwZKPdYuwD2OcLklj2=
+5rEC9bvj-2FzR98ysH8spFE6sATThxq-2BmZVW10C4uHMVVE2Um5l3FvKXU6cJbcB3AORBk" ta=
+rget=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-347: Enable DAO-Wide Voting for Working Gro=
+up Stewards
+                        </div>
+                    <div>
+                        <h5>ABSTRACT</h5>
+<p>The purpose of this proposal is to give voting rights back to the broade=
+r ApeCoinDAO community and its delegations for Working Group Steward positi=
+ons.</p>
+<p>The Ape Assembly was established as a Governance Working Group Initiativ=
+e outlined in AIP-239, aiming to facilitate Working Group Steward elections=
+. However, with as few as twenty active voters in recent weeks, there are g=
+rowing concerns about the legitimacy that those elections would carry. Furt=
+hermore, we need Stewards who have...</p>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+Yp-2Bg9Ym9I60JW95-2F9V8aU6-2FEGV9QgZva-2BW-2BQtVL9ulOIteCrPDr3fDVGbhM04-2Bj=
+kOSCYImgppb-2BXJ5-2BoAyzUPFA89yPdGhjKpmChAeVdKHg-3DiHaI_9vBCaSh33TYIVli94zb=
+bq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKj=
+EWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJma=
+KzQmanh03ctTISkYmSdWQSjTDCYQWffJERwLuXCSpkvZt-2BlHBceLloOfdXMavu1Ky6YdMtz5Y=
+aVPAAAXBAUIOIQleFg-2BoLpRMQrjIU1GwN-2FasOuwhbW4dwqFboJ3YSv1SwAcerT6YelONLLG=
+tPX-2B-2BD4g-2F6bFPVSkJ5Y9Src86aYX6766LtW98ptKnKzp94cFxv7S4-2BABlRYWgAwUYLW=
+65xkFXws6F" target=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-356: ApeCoin Papercraft - Resubmission
+                        </div>
+                    <div>
+                        <h4>ABSTRACT</h4>
+<p>The project involves creating a papercraft digital model of the Apecoin =
+logo. This digital product will include a comprehensive guide/story of Apec=
+oin, an enhanced digital papercraft that can be easily printed, as well as =
+assembly instructions. Every element will be meticulously designed in align=
+ment with the Apecoin brand. Everything will be available through a linktre=
+e webpage and we will promote it via a new X account (@apepapercraft).</p>
+<h4>BENEFIT TO APECOIN ECOSYSTEM...</h4>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+bqis4Lnw0bBMq3-2B6-2BCcA49VtP16QHDGHYham5uwKxCA3XY-2B70H5Q5wOiXuHBkLLYH-2F-=
+2FdcGsbwzQ3EJqdZaUdIa30wbXfRCKGDDcAhs9Inuk-3DEshU_9vBCaSh33TYIVli94zbbq0ADE=
+m-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iG=
+euOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQman=
+h03ctTISkYmSdWQSjTDCYQW3qEnX0GbHNRDL7y2HCFOdLNy64-2F403NR6xmUah4W8FMMOgEYEs=
+neT5wT28S6dH1XIxPZIQy6guP-2B8kb3HCZ2LFFEfksS4-2F4CeBtn-2BDF0q5CE7YEOxbtcEXg=
+X8JyaaICOFdjsz-2FFMx5lwlLEen8T3-2BnmwYwLcUG-2BYLGnwiLkybltq11jGbf9T9BmoY41o=
+6-2FDv" target=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-343: Miami ApeCoin eSports Arena Partnershi=
+p
+                        </div>
+                    <div>
+                        <h4>ABSTRACT</h4>
+<p>The proposal is geared towards forming a strategic partnership with ROK =
+eSports Arena in Miami, elevating ApeCoin=E2=80=99s profile and fostering W=
+eb3 gaming awareness. The focus is on titles adopting ApeCoin as in-game cu=
+rrency, bridging the gap between traditional and blockchain-based gaming la=
+ndscapes. More about ROK eSports Arena can be found at (<a href=3D"https://=
+www.rokesports.com/" target=3D"_blank">https://www.rokesports.com/</a>).</p=
+>
+<h4>BENEFIT TO APECOIN ECOSYSTEM</h4>
+<p>This partnership aims to embed ApeCoin within the emerging Web3 gaming..=
+.</p>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+ZO5xmqpBJMcSDi3eW2sHiG2pEds6H0R2VfmY57DZcJRdX6icKjm0YE3sa6p8TplCO8cjFkWry6O=
+8keaAABpHDkewGYJw814i7mAPENUDtCw-3DhrXl_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOx=
+msHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9c=
+CgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkY=
+mSdWQSjTDCYQW7nq0H9XEfJN4l6p83aMTIpr58i20-2F0vNceHJ1BUZdVtXGqVRK52dS0g-2F1Z=
+vpH-2B16AcrlrpP3ePfECqwRf5ghYwg2pJKEjW2feI886EYC2-2F7ReZ95ZcCsqkXYSOYfc5zAL=
+OOX0roYOr-2BAZ9C5GdngMwHHFPqZ-2BJYuLu789TaRHxBGMYdFvs7Jn6jXE6QauNio" target=
+=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+                <div style=3D"background:#252526;border-radius:10px;margin-=
+bottom:8px;font-size:14px;color:#b7b7b7;min-height:36px">
+           =20
+
+                <div style=3D"padding:16px;width:100%;width:-moz-available;=
+width:-webkit-fill-available;width:fill-available">
+               =20
+                        <div style=3D"width:100%;display:flex;padding-botto=
+m:16px">
+                            <div style=3D"width:100%;text-align:left">
+                                <div style=3D"display:inline-block;vertical=
+-align:top">
+                                  <img src=3D"https://ipfs.io/ipfs/QmfVZLhH=
+51S1G3UVFRZecXR5KbhS1CQ9RVbpgsqU25YG2C" style=3D"width:40px;height:40px;bor=
+der-radius:100px;object-fit:cover">
+                                </div>
+                               =20
+                                <div style=3D"display:inline-block;padding-=
+left:12px;overflow:hidden;white-space:nowrap">
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:700;font-size:16px;line-height:22px;color:#ffffff;max-width:50%=
+">
+                                    ApeCoin DAO
+                                  </p>
+                                  <p style=3D"margin:0px;font-style:normal;=
+font-weight:400;font-size:12px;line-height:18px;color:#b7b7b7;max-width:50%=
+">
+                                    in about 5 hours
+                                  </p>
+                                </div>
+                               =20
+                            </div>
+                            <div style=3D"text-align:right">
+                                <div>
+                                  <img src=3D"https://snapshot.org/favicon.=
+png" style=3D"width:40px;height:40px;border-radius:100px;object-fit:cover">
+                                </div>
+                            </div>
+                        </div>
+                   =20
+                        <div style=3D"font-style:normal!important;font-weig=
+ht:700!important;font-size:16px!important;line-height:22px!important;color:=
+#ffffff!important">
+                            AIP-341: Bored Brewing Marketing $APE to Beer D=
+rinkers
+                        </div>
+                    <div>
+                        <h4>ABSTRACT</h4>
+<p>TL;DR - 2 Years of branded advertising on all Bored Brewing Cans &amp; F=
+ree Beer for $Ape Holders at collaborated community events.</p>
+<p>We want to spread the word of ApeCoin by integrating $APE into the packa=
+ging of our beer. This will include creating an $APE coin beer, QR codes on=
+ all cans to share information about the DAO and $APE, expanded IP with oth=
+er NFT collections to merge our common interests...</p>
+
+                    </div>
+                    <div class=3D"m_4876844364748175630footer" style=3D"wid=
+th:100%;display:flex;margin-top:24px">
+                        <div style=3D"font-size:12px;color:grey;text-align:=
+left;width:100%">
+                           =20
+                        </div>
+                        <div style=3D"text-align:right;width:100%">
+                            <a href=3D"http://url9462.joinbubbles.co/ls/cli=
+ck?upn=3DyZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y=
+oGLUxT82OjsSxW5sQ66KPzuDHrocy48O7swicKqcrXdg8kx1ubwWQCsZdElzdBS3P9SoX333psZ=
+VJYDfJI7PWfYhSRQlC10EyGF2TeGVtJ0-3D2CYF_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOx=
+msHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9c=
+CgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkY=
+mSdWQSjTDCYQWLllXnpzNa-2B2oHYhpobKRBYGlq-2Bg7aaHqQ0BzVKxcRYTW-2FUp9QUFjiGvz=
+uXRrv0QjfC1eyTNSUTlSi5FY4-2B2lXi2JtbiNJJGjri3-2Fd1m-2F-2F-2F41Ag-2Fd76n-2Fp=
+uQVOueI4Pu9n10hSoFKgd4EHwbXhA0G4sO2FR9qREu-2B7QSi4b4LykmyQyeqcNeoFuO0KEpjNA=
+aM" target=3D"_blank">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div style=3D"width:100%;display:-webkit-box;display:-m=
+oz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:f=
+lex;margin-top:16px">
+                                <div style=3D"box-sizing:border-box;padding=
+:5px 20px;margin:5px;border-radius:20px;border:1px solid #b7b7b7">
+                                    PENDING
+                                </div>
+                               =20
+                                                        <div style=3D"box-s=
+izing:border-box;padding:5px 20px;margin:5px;border-radius:20px;border:1px =
+solid #4f4f4f">
+                                   in 6 days
+                                </div>
+                       =20
+                    </div>
+                </div>
+            </div>
+   =20
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tab=
+le></td></tr></tbody></table></td></tr></tbody></table></div>
+     =20
+    <table role=3D"module" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%" style=3D"table-layout:fixed">
+      <tbody><tr>
+        <td style=3D"padding:20px 0px 0px 0px" role=3D"module-content" heig=
+ht=3D"100%" valign=3D"top" bgcolor=3D"">
+          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"=
+center" width=3D"100%" height=3D"2px" style=3D"line-height:2px;font-size:2p=
+x">
+            <tbody><tr>
+              <td style=3D"padding:0px 0px 2px 0px" bgcolor=3D"#b2b2b2"></t=
+d>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table><table role=3D"module" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" style=3D"table-layout:fixed">
+      <tbody><tr>
+        <td style=3D"padding:18px 0px 18px 0px;line-height:22px;text-align:=
+inherit" height=3D"100%" valign=3D"top" bgcolor=3D""><div><div style=3D"fon=
+t-family:inherit;text-align:inherit">And that&#39;s a wrap! We=E2=80=99ll c=
+heck in again tomorrow when it=E2=80=99s time for your daily recap.</div>
+<div style=3D"font-family:inherit;text-align:inherit"><br></div>
+<div style=3D"font-family:inherit;text-align:inherit"><strong>Interested in=
+ more projects and communities?</strong> Select them <a href=3D"http://url9=
+462.joinbubbles.co/ls/click?upn=3DLvhhPJWKMkWFaON4cXP-2Bvr3i8EPi98Z7X6TV3Vv=
+-2F4y-2F0mzJGDfGK9vTVynd6LAFQX2srB-2BT7Eo2Qzk-2F3i5ujwY1K0HCtQSJleOccdbt-2B=
+QEpacgqOXCvHhKtxaopSsDFH2Z-2FM42vhL6G7uHoQdMkLtpr84r0HLF8jxDzTP8qy1ruqr4Xxv=
+FqV4L-2BX-2FiIWSJwdIXQCno7P6ghSpijyI0aS5iHTgfI9s1eMhUZmIFs8KOR1tv2zwHolIDJL=
+kbkz1jBW8KbQNgnuBxTvZbfMyzFcuf4WuwYfhiITDNrQgaiZhPK4lJGgkAuvArPe7MWeGWGtp6e=
+4P9NmFLAv95lRcEthGZlXJBo2RM20xxJzjq-2FY7CavLYnq38XfWpC2f59P8o6EzOrxJ6C33pfr=
+ggXfzpvtIJ-2BKVH3yJIOSZJhb7pCwn1SclzrXedcA2FGd-2FK-2BU6PyTBNuokp929MiQt75oJ=
+eBZ-2F-2BmT2KCxWRn4CqR93pk0OyieKMp68eITAPYsDF7Zu8kng-2FAxEV4MhPGJAAJQGqhIBP=
+SnbbI56OG-2B8MqP2MyJlzDAuqSXVobEfUst6Q3TeKI72y2eWcfiQFqlYkw4DGW5-2FyZ4UqdkU=
+Lo5B-2B-2FSxm4Uaf5aNjg9YpjCM6JFv9FimPpTYTeB-2BAzW49R2INAMhOi5ECL-2BkxOjXFy8=
+0OFYqe7NXe02xxGOB-2FDw3u7UoHEFMKzOnUa9_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxm=
+sHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cC=
+gUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYm=
+SdWQSjTDCYQWttgOJvXUH7rIVlR9MS-2B7GtLww8ArIjV3-2BJKmncshRh-2FsJnc2qD76x2WA9=
+cM5ZzFzrlevjc4iQT0r9Vqzt1MyQGpBKnPZVgLKQ5dwPxRfhRdOQz2g9SkI9H6s8Nx-2FVIPnmI=
+QgoXRWWlZve5GLc-2BKRsC-2FrSMhMlIF50OO4IEbiPoqfPWi3t17oSRRKzejhyzfS" title=
+=3D"here" target=3D"_blank">here</a> to stay in the loop.</div><div></div><=
+/div></td>
+      </tr>
+    </tbody></table><table role=3D"module" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout:fixe=
+d">
+      <tbody>
+        <tr>
+          <td valign=3D"top" style=3D"padding:0px 0px 0px 0px;font-size:6px=
+;line-height:10px" align=3D"center">
+            <table align=3D"center">
+              <tbody><tr align=3D"center"><td style=3D"padding:0px 5px" cla=
+ss=3D"m_4876844364748175630social-icon-column">
+      <a role=3D"social-icon-link" href=3D"http://url9462.joinbubbles.co/ls=
+/click?upn=3DyZhGP6XJOXFb0O33ManHQH2fE3KUmocKbuA8LR1TSAZ6qfgXnVcU5Q2M53Fsdr=
+UbiUrl_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeT=
+TdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1j=
+o6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW-2FIA9GV11SzST1HqwbW=
+ntDxiDgzy5cjwsGS-2Fg8Ch4eU5PjIjM-2FpVePiCBBJjzzVXejuvTKvawgGxlv5Y3215RhEPy-=
+2Ffe77zwmntQt1-2BAcJLX-2B2PhpIQvBlaGiOHvNJQ3hV625dCRLDwLRdqr02OwjtahpoQk7Ze=
+fuOdjhIJwIFr8-2BEaD4qlpQwqdJogTUeFwz" alt=3D"Twitter" title=3D"Twitter" sty=
+le=3D"display:inline-block;background-color:rgb(174,174,174);height:30px;wi=
+dth:30px;border-radius:30px" target=3D"_blank">
+        <img role=3D"social-icon" alt=3D"Twitter" title=3D"Twitter" src=3D"=
+https://mc.sendgrid.com/assets/social/white/twitter.png" style=3D"height:30=
+px;width:30px" height=3D"30" width=3D"30">
+      </a>
+    </td><td style=3D"padding:0px 5px" class=3D"m_4876844364748175630social=
+-icon-column">
+      <a role=3D"social-icon-link" href=3D"http://url9462.joinbubbles.co/ls=
+/click?upn=3DyZhGP6XJOXFb0O33ManHQOvjIq1HNKENGKR7vLnK93PU4zUeyeEMEZmyFFj-2F=
+sNDUWTw7_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fz=
+eTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG=
+1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWVu66WQgP0xluvgzBUR=
+1kGGKCxvpVdnI2kLyxdUgwky27exsl3rxXMSzkAwAKKEDgoWKO-2FZP7u4gGQryv7apExzLCRL-=
+2FNI3rNKNYhXdDbU6bwwcvCZnPmzvU0p-2Fy1tqIHvRgt1kqpx6EhcJwtodnovO7tQTptwvMWlg=
+vX0lh0yy7QJsJ0WBGKCbTojy-2Frrton" alt=3D"Instagram" title=3D"Instagram" sty=
+le=3D"display:inline-block;background-color:rgb(174,174,174);height:30px;wi=
+dth:30px;border-radius:30px" target=3D"_blank">
+        <img role=3D"social-icon" alt=3D"Instagram" title=3D"Instagram" src=
+=3D"https://mc.sendgrid.com/assets/social/white/instagram.png" style=3D"hei=
+ght:30px;width:30px" height=3D"30" width=3D"30">
+      </a>
+    </td></tr></tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table><div role=3D"module" style=3D"color:#444444;font-size:12px;line=
+-height:20px;padding:16px 16px 16px 16px;text-align:center"><div><p style=
+=3D"font-size:12px;line-height:20px"></p><p style=3D"font-size:12px;line-he=
+ight:20px"><span></span>, <span></span>, <span></span> <span></span></p></d=
+iv><p style=3D"font-size:12px;line-height:20px"><a href=3D"http://url9462.j=
+oinbubbles.co/asm/unsubscribe/?user_id=3D26516605&amp;data=3DeEUytBXbf0zWBn=
+-Wwf7wC3LRcJ-xYns1viyPIUJn5OVoMDAwdTAwMGz5Rmi1vBQGlbFsBGF6YBP_vVyCQhLtpwEs3=
+GUUFeHwRzAonXkU-KooOLdvu1vEmehkxs6p9lIddIM0zQNA-vFdde1p1CJyRhS3cpZYqj2H6uhi=
+Yz3zRVkZauSwzdHcD1yEVwrLzdSR2jk4oZ0PmpPwPf7lbfpJE8gagyfoFrBEWd0zi-Gvb1XDTCH=
+9FQGWuB43u57BmKKbxqXoFjePuJedySLVLtnugRrw8XCVqpToSfqf0ebb5ye5mHo1ZDlPVEQmuq=
+Mqh4QjasoQ-n2EdaQbfGl-hTdgHPvYhJk2nUC4aY6sLNk_XAcefc8J7SkxEik5t7KNwV48vrQid=
+MJz_hofWDTChYAX3iEgPf3MZVQZvCWc5hrElNZj87zV4jsZj04m8b8kWNufgqPgYD-qOwpHWxEq=
+nWZ2W71ZONyGrEmIraXDX6ZMSTSTnxYdkawyFym-iDGlryLKIcHFT20o7RnGAOxK68_cp_prZOS=
+iJeqwujBidDb84-iMTn2tv9QTWA=3D=3D" target=3D"_blank">Unsubscribe</a> - <a h=
+ref=3D"http://url9462.joinbubbles.co/asm/?user_id=3D26516605&amp;data=3DJql=
+FTIGJfjOHzIrDu8swb9xTnsYoUfW9HRG9UwVFOg1oMDAwdTAwMHAaZXHo-hzIOejr8NBxVRJrh_=
+AO2PzQ6-FCOUSXOdlyr5i108zXhs_GLNbbnU183tXcjFDJ9oljrKJ4AkG17wqt6SnFzHsLFShjt=
+m-VHNI0dBHMBTWd2eG8Y9frWIWs0ODYpsm_GjIvGkzO79OoTJ0WTqi7lbIuIXQakNpXounymDtQ=
+FCL34gG2-9Gx4k-Q_-135Rz_CKpvU1Asi5UYnJ2a7-v8czRtQkZ-pUElYFjxBaEuaayql79TSh8=
+o6-m5K-m-P0lJ7XG3DoTksK14HQ4KwoNr7e1ay2H9WThBRbVfFPAcrx9rWd2uGngbj6cg-CQXfj=
+6UByWwc8hVvcdgZE0r2wk-3hlz_rMVmoTRGdmQqkslYHZgJQUFNll5pvd4LobVLxbu92Lw3L8qN=
+oZm_4Sn_s7omm-Pvxo5ARWb8W8QMH0vH-G316bMMRsm0QEWx9HcRYxMmq2i9XjEfAahxBVdCLfp=
+zmYD025JAsRfd1wt" target=3D"_blank">Unsubscribe Preferences</a></p></div>
+                                     =20
+                                   =20
+                                   =20
+                         =20
+                       =20
+                     =20
+                   =20
+                 =20
+               =20
+             =20
+           =20
+         =20
+        </center></div>
+     =20
+    <img src=3D"http://url9462.joinbubbles.co/wf/open?upn=3DCM0H36eAj-2BGnF=
+InfqhNwgZpaltGU-2FURA-2BZmE9AnBzO5SVL8boMSSMMO2Y48b07THjFHkoxHmQSiHACtkAnYD=
+818RDZwSZQrhqnlVG-2BVe-2BTSoA3QsUmNBCYFLITh0cWMGMm-2BDrb1d9QvUcVpgJ-2BiG-2B=
+45A2lwyl5Rodv9H7CwTv5zYuDsCQnDqj7MkOlPYquLeSxAywvNDW5FPI4-2FVusS1a0-2FIZVVA=
+WCJ-2B16ofkHADAyxg67m4itWCz70CNGNVYvZfsM9HdwYOu6Pu3aZU-2BUGX5kYqAxHvcd5bJbE=
+M9OQBDHASNkn8L82kVpUX5CyDuS9jNZmAXafBjb6iMVpZlLeZxV8UPO7GLyxLBjkPgWG8IjmygC=
+OQjhRBK-2Bo9qZLfZB7U" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=
+=3D"height:1px!important;width:1px!important;border-width:0!important;margi=
+n-top:0!important;margin-bottom:0!important;margin-right:0!important;margin=
+-left:0!important;padding-top:0!important;padding-bottom:0!important;paddin=
+g-right:0!important;padding-left:0!important">
+  </div></div></div>
+
+--000000000000ad705e0609d0c041--

@@ -1,0 +1,1746 @@
+Delivered-To: zile@metaversal.gg
+Received: by 2002:a05:7300:b31a:b0:f4:557a:3a9b with SMTP id ea26csp1348045dyb;
+        Fri, 10 Nov 2023 10:49:59 -0800 (PST)
+X-Received: by 2002:a05:6102:2da:b0:460:f249:4dae with SMTP id h26-20020a05610202da00b00460f2494daemr264581vsh.1.1699642198682;
+        Fri, 10 Nov 2023 10:49:58 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1699642198; cv=none;
+        d=google.com; s=arc-20160816;
+        b=NuqIlcmqNcduYt5rvzMigL+Mm8mst+ATllEbjuVypzh9eEGTGUzXsLpZE7+mZ6KXnr
+         lKhK7yqw//Tg6wdGX3DK6K4EKZDel0Ef8xDDycCwEKHv2Fg15Hvnmix++mysXYwUDeGH
+         Js8Nl7XVDBG8pw29JosYs3/1NKlFjQ/NoWoZEPWVJFNtgKTLWBN+bhohRxkI0fkpCaA/
+         9IwAdQj6+kQcKIyr3kVLsifKAcguID42OxDJojfBAOqsuTXpj49vS5UvbAeujU0mJxYP
+         8hw5C3vbZ9p/jsyBrcj3p7EHDkWpguFBj1RLMN6/JzX09uwwVSvIGcxJxQSsxAaTfEYB
+         zT7Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=CB0BSj0Zg27dCrOCIuVM2be1Hjt309Ix5z4PE+AxPM4=;
+        fh=eU0RSml7k3lOz7wmd33y/vjmWp8z0rVOEaL+HyhN7HM=;
+        b=V7Md+YD+7BiOZtrwt3KlgcHLhJDkzAqP3P34RCWgS0KVYn/MwBAABXnKHwLRQywKvk
+         d0f8rI0WIywZX69TVzt0iwZ3L4i+lSyb1wofOchmHXLs/+HWXkkIpIOgp9gZYpkttgQv
+         fY0qylCBnPNonXAxlwiP4n8JQmdxhRzEMiJF+ff6zTSJ/9dQvd0YHRswSiUDDPFvruB5
+         MEfMVF3p5IAGYbMCCIDkhNaxd5a43nbEl5M+5DXUXqOyHUWgEOBgts+Sgsk5k8i17q7x
+         xVKxjtjvLWk5jgdveDCfEtS9JIZOsiMdIBQ3wPria1D4O1Xq/7x+DtZo4UaPAi9jGlsh
+         tHWw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@metaversal.gg header.s=google header.b=KnFT8N4X;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of jadid@metaversal.gg) smtp.mailfrom=jadid@metaversal.gg
+Return-Path: <jadid@metaversal.gg>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id p4-20020a67e1c4000000b0045af30e8695sor14868vsl.2.2023.11.10.10.49.58
+        for <zile@metaversal.gg>
+        (Google Transport Security);
+        Fri, 10 Nov 2023 10:49:58 -0800 (PST)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of jadid@metaversal.gg) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@metaversal.gg header.s=google header.b=KnFT8N4X;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of jadid@metaversal.gg) smtp.mailfrom=jadid@metaversal.gg
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=metaversal.gg; s=google; t=1699642198; x=1700246998; darn=metaversal.gg;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=CB0BSj0Zg27dCrOCIuVM2be1Hjt309Ix5z4PE+AxPM4=;
+        b=KnFT8N4XxBmA2rm10InpIdA3t2PwFHAltrMrte9SjDOF/3Mr277e2ExOpNxr8ZmjX0
+         JuK8/rJBMtP/PnsQeOAPw5DptTR5hkI3nXJSj3qb4aJFHhtku9DxtUZmMGzYnV/yQXfc
+         yza7SvYJTO7XbL7mlOpSqQpqkSq+/hRRYtHCmkJvU4sMP3OKYwU2tq+jzIaoWilRgKDR
+         EL9GyFWvA4sTOhWVf1byLSYzcW1yGbGN9nGy+33XvnlxMjJKO4DmX56n+V8e6Uz18vBp
+         /mAa2T9UDmDYyhm2wOlWK8F8jeU8d0tUvD0RG4vDHPAB6WEPW17vAC5xgnntFDMH+aRs
+         Y3fw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1699642198; x=1700246998;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=CB0BSj0Zg27dCrOCIuVM2be1Hjt309Ix5z4PE+AxPM4=;
+        b=Xhy0Hvtz9i3GdDPescTgsFf9f4meBrwD0AepqLL6h5Tz53cW0MhYnqwpUmPFAhk5Of
+         2huDOeflF+i3hx/inXaKmATBkbMhu8RoxrFXb+qwxOKqIKg9k7bpOhUm1BymIRqn1F0c
+         0pFuCprUCnDBlLNVQWXGQf17V0XchWpFMuWuRO3bKLpN7rfHsLDSStWt33hVgUgz1z2c
+         FVtft4hdNb44SwIU3yF52szVLnf2XLEY9aml9+C74/2m2/2DbnmHAM0QRuNwpKgG58+H
+         WWNuatCUmQjXbTMSzyipjq28OOWvTRTSpDm4BtKnBbqZgyZUVIWbvRuT4WZlMmSj5Wug
+         Ztdg==
+X-Gm-Message-State: AOJu0YzLGckuzOROFZK3Km3qXda09fD7XYvw3UqRkqvpL5d+rBPGxLmB
+	xWvSwrmX0+0DGSe045XbezaVK/LBwEpkx+ekWfdMpSaUDkTsQmj3hWdK5g==
+X-Google-Smtp-Source: AGHT+IHc4jMDBXSupGh3gEzR4YnAlNCsH6wx8256hLkcR7PRjOHDR5o17inn7b5hN7H0y09yDw3PpY9Qb725J5AMdfA=
+X-Received: by 2002:a67:e04e:0:b0:452:78ea:4aec with SMTP id
+ n14-20020a67e04e000000b0045278ea4aecmr269108vsl.7.1699642197569; Fri, 10 Nov
+ 2023 10:49:57 -0800 (PST)
+MIME-Version: 1.0
+References: <6Eqy1ttiRXaEO0I319rJ1w@geopod-ismtpd-3>
+In-Reply-To: <6Eqy1ttiRXaEO0I319rJ1w@geopod-ismtpd-3>
+From: Jadid Khan <jadid@metaversal.gg>
+Date: Fri, 10 Nov 2023 14:49:43 -0400
+Message-ID: <CAGMKXKEbLX=Kx8MLa+q+8yANy5uWVzUGCrwWFrHuyh9T3mUA_g@mail.gmail.com>
+Subject: Fwd: Big NFT Gaming Update
+To: Zile Cao <zile@metaversal.gg>
+Content-Type: multipart/alternative; boundary="0000000000006e88dd0609d0c95d"
+
+--0000000000006e88dd0609d0c95d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Mint or Skip <mintorskip@mail.beehiiv.com>
+Date: Fri, Nov 10, 2023 at 1:56=E2=80=AFPM
+Subject: Big NFT Gaming Update
+To: jadid@metaversal.gg <jadid@metaversal.gg>
+
+
+AAA wagmi energy
+ =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C
+
+
+November 10, 2023   |   Read Online
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu=
+0_Rt4jcV-BDL15CfsCVX4VU0maktoc41rUn6ogE7CQdXSQpsneBAQKXXqQTaVOpgeobSxi4o9PZ=
+6hVzTcVUCs-wD-vACznSDX2o69XLtumsEfBU30ZYMFQCr-mqMJmnXM19izx_IQp6NJ5Z4waFPcP=
+DCqNrJk3bZSyc7gFKjtJjKZoAToXZwaumYLbRNQ0CAtw46LHxpnsGJX0ZubNX9MHjFizqmxI-Ds=
+zYyN3XDo1CxlcqaTbOAAxPlLbYUgOsrnH_qSUQjCUIeoNm66mUmXZl8AzzPlzz2VeuzhwpmMDU_=
+v7QZF11Uzbt6PeNfMe5boOAy9LB0UJIRNRGWGD6HAl_I06CYsfffywVXM8IqR0kxu7umuRSWK4B=
+_xu80MA0JtqezPRVqpa9rJpvSqw5YXz494pQzluB_q2Y2Z8rS1agCJl7s_3778XqfAzhVqxV2nr=
+fob0jl2rAN8WzlNKDFn_xnkS6s6qNOnACcBpdm5GkrNgA6Gs7k2m9OVAvHmAnzWtB0/416/ErsS=
+7T15QAeOI6v-hXU9QQ/h0/3pJhXRf6gNzT6V56ziBaKIq5bv-V428bke9zqbjYN2w>
+
+
+Yung Cicero
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu=
+0_RvroKKUkt_Fz9MPnJG439Ps9mUIO8Wo4Bb5valzeBBbJs_L4D1L1-ml7LfJwDDMZd-vOOFR-H=
+A_dD2x4K8k3XxYZyfXrm8jHOE5070nJkRTFOMdv40GcdSUvMIt7tVOrT8sfpIsDJ2xssOP3WlVr=
+pM9Tyn57llww3Rd0etT6HXmbxPA6aTENiR_PmI0HGl7nTpFVisNnjrRJoI9A11lQbWzTxwlnNhd=
+H7Mt7PgwxW2Ovlhe-Q2_Tp7Gank5C5W9HSLPcCTfvEV3Wrb3hi_twDg0Vf24KBjHHy87VqukFxr=
+CpzpL3dzAhhotOOr7ju4f3mJ3SMyXryVvtfPTLqEjMdytuAzkityeU8xHl8hoJqbpotT0euKYnW=
+Az96TJiprX0WmvkEqg6S4nYR4hC_3nyFG05UeL8R1kdVsXkUq_JYmAKXUuCVGFfYk8rb1Sp0QzO=
+J5PRZ8zr1tlZLpDvdgyNJtSCSv9u3MGPwVyg7FsOd_CYkR4bmkDJzUJdCvl-9oAuNiHmuRylfzO=
+LYZeNOfrOy8C/416/ErsS7T15QAeOI6v-hXU9QQ/h1/yEuffLOwDBRp5P9lRqU97A49HHeaAElC=
+nWQhg5YBQI4>
+November 10, 2023
+
+GM
+
+The Light within me honors the Light within you.
+
+Then it asks it to buy my bags.
+
+*In today=E2=80=99s edition:*
+
+   -
+
+   Big NFT Gaming Update
+   -
+
+   Top 25 (with two new additions)
+   -
+
+   4 new drops
+
+*=F0=9F=91=89 =F0=9F=91=89 MINTING TODAY*
+
+*=E2=96=AA **And The Absurd Was Born
+<https://link.mail.beehiiv.com/ss/c/Y70s5PRXu6OkYV6H6j9LqNEqOtFA-6Dr6Xwmnlf=
+fKmLI94k1b7hcXde1yJpOOmvLCu8rv5fEz5E4tetZliErnKKJsd2aiEwRF5P_kSVqq3ZistSO9V=
+ZONIPD1NK2UcE0_RjfDotq2u6ES9vgXA2QeKn-JDO9WBNvQiLPAh2lAjbWljey61SOBEA-1270j=
+YxfgtCWY37Mhy_kObTZ38J1GLiROTmnv-dGRMEZvhMtTUs/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+2/2UPwwji7LCbHzck9SLaxFjKs2oZhYY75F_hnVl9li00>**
+by Luis Ponce
+<https://link.mail.beehiiv.com/ss/c/Y70s5PRXu6OkYV6H6j9LqNEqOtFA-6Dr6Xwmnlf=
+fKmLI94k1b7hcXde1yJpOOmvLCu8rv5fEz5E4tetZliErnKKJsd2aiEwRF5P_kSVqq3ZistSO9V=
+ZONIPD1NK2UcE0_RjfDotq2u6ES9vgXA2QeKn-JDO9WBNvQiLPAh2lAjbWljey61SOBEA-1270j=
+YxfgtCWY37Mhy_kObTZ38J1GLiROTmnv-dGRMEZvhMtTUs/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+3/LNKgxR3-pmUw9PpqVFIcdEptLKQ623TW02HzEtesJDA>*
+
+*=F0=9F=91=89 MINTING THIS WEEKEND*
+
+*=E2=96=AA **Big Boss Burn
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLajed6p2BfSfLkVVV_sj=
+Z9A8mQco3T_q7eEbbeJe5EXUmy9qE_eeRB7vzal_OR_78VIiZ05391LWQNKtannvs34JO5FzD9y=
+7rwc58HTu_BaZLKdJGf0OKLReEYdqO2rJKxdBboWMgGslxQ72wPgb74T0hWeLuQlulrBUmyJorz=
+pav/416/ErsS7T15QAeOI6v-hXU9QQ/h4/Vh4SEVLkJjtGn_C9CIxG35wU0bswvqdznQ1Fq4pXZ=
+2U>**
+by Defaced
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLajed6p2BfSfLkVVV_sj=
+Z9A8mQco3T_q7eEbbeJe5EXUmy9qE_eeRB7vzal_OR_78VIiZ05391LWQNKtannvs34JO5FzD9y=
+7rwc58HTu_BaZLKdJGf0OKLReEYdqO2rJKxdBboWMgGslxQ72wPgb74T0hWeLuQlulrBUmyJorz=
+pav/416/ErsS7T15QAeOI6v-hXU9QQ/h5/Skm9ntElt25CxJXi8rpVP_oeR986tu4mFjfmEpSsP=
+UY>*
+
+*Links for the Top 25 drops are **HERE
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5qxggkmz4L3zvuYYiHgT=
+hzx7-qSN66PU1xTKbUcRWdljM4BLWbR0dTb5jxipTzq1UqBUGznUph4ibq4_FH1BjblNOtjNtk4=
+LWVH2g7T-IhYMGjGl35cmJ38uLLCLq3LvZgUJY1nStHxBFM8JFmtkFUvvTwd09MIWHh8-8UfPx0=
+K-5rmMKVGxhmUoHcHkULqf5OCH6RFSmMlNoe76RmTfZjsNA5JI5Criar8WQi-1F3h_j/416/Ers=
+S7T15QAeOI6v-hXU9QQ/h6/zzBq1RbyyHPIVBQmCd3df9ZjLlw_LKuRaSscrw95yis>*
+*.*
+*Did you know?*
+
+We have a premium pass
+<https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10=
+WDJLelr_xHrS48-dW-98vlNhv-b70TZrEkW8rFRf7FCfve7R9IExyLSLdoOTGdWPRvCLTFuw-RN=
+BRRml00-N-Urf7xXO2t3OyY5RIXL5ZugCgxDcmJc-4NJXmAXHVJ3V4MvVthjqSlJFcQo9xQgaAx=
+sYh3gKuV3EJz2pyLq666sSNkg/416/ErsS7T15QAeOI6v-hXU9QQ/h7/r-laPAvujOWknVy4L-w=
+heHIJuaz-c4xiJru9FdJXYK8>
+that gives you access to a directory of every drop we cover, complete with
+detailed information on *how to get on every whitelist* (including those
+underrated ones that aren=E2=80=99t already full).
+
+And for those curatooors out there, you can *get free NFTs* just by finding
+drops that end up on the Mint or Watch list.
+
+Lastly, *hang with me* and the MoS team in a private discord with weekly
+voice chats. The vibes are great.
+*Would you like to be **featured** in Mint or Skip like the above =E2=98=9D=
+=EF=B8=8F ?*
+Then hit us up here
+<https://link.mail.beehiiv.com/ss/c/PAPlyECWq0DDQvb5TVdaeSIie3CmaILFc2jcwe0=
+oly7qyiEi42j9FZt9sIRvnTS1df1VHWQycS6vI72ILQ_jE18IGg9UZVZB8xwD89KpUs5W7BQejt=
+ocqIcamAW5IHmk7CGLuDHGkEb42oxOBxBQ0zP11Adi7mMCv_Gvl9tI4txE8lUOMxDIZSh2tbtxQ=
+Xe7/416/ErsS7T15QAeOI6v-hXU9QQ/h8/SORvyk7Z8EugF5Uv8_fKQDK5M4OXHyV1mdw03_JIp=
+N4>
+*Big NFT Gaming Update*
+
+We mostly talk about indie cryptonative game devs in this newsletter.
+
+But what about all the big AAA game companies =E2=80=93 the ones launching =
+the
+GTAs, Fortnites, and Diablos of the world?
+
+Are they coming around to NFTs yet?
+
+Here=E2=80=99s a snapshot update on those publishers, along with some perso=
+nal
+ratings based on how much wagmi energy they=E2=80=99re each showing as we h=
+ead into
+2024.
+*Ratings*
+
+=E2=AD=90 NFTs are unholy scams
+
+=E2=AD=90=E2=AD=90 Doesn=E2=80=99t like NFTs but likes money
+
+=E2=AD=90=E2=AD=90=E2=AD=90 Kinda into it =F0=9F=91=89=F0=9F=91=88
+
+=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90 Turbo WAGMI
+
+Let=E2=80=99sa go!
+*Blizzard *=E2=AD=90
+
+Blizzard=E2=80=99s last official blockchain comment came in 2022, when thei=
+r
+President tweeted simply:
+
+No one is doing NFTs
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV4WO8yKSEUCp-V2Vujj=
+4LdlMShVXmZ2P4rb5Tz5JbKjGrGzA2z2sBQeK355rZVAKCzwO8EbRBppoBYg4-x0-517pSPxZ69=
+Qxlj2Uf3-lQjl0/416/ErsS7T15QAeOI6v-hXU9QQ/h9/k_ZvA6HoR1lyxZJqICNal1KmrTEBgF=
+JOJLfoGhZNlg8>
+*. *
+
+Not looking great here.
+*Nintendo *=E2=AD=90
+
+Hired an NFT expert
+<https://link.mail.beehiiv.com/ss/c/yhyjo2kOjjDbg7mnn4e8SOBxLB8nOg-yLoirQff=
+zwgLEz0Va43WiDPb5w7FWpd6NcWlW6JmtqfqFCX-bdYvYPqTsch6Y6YtBbSx3TzZdIIH56ASwyu=
+WzwrMhUlNI2KMysSfndTp-lA4wKNGcb5gcGOoPHC8AWskAEn-FRZoeGHrzidSocJutPUlNaXRlB=
+F8qYF1yYZ_y72W0VJTgOUBeOETJOEP1tHMYHAOgprx60H8/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+10/7mAfeb1EIcfboDyCS8RGbzLeEDOFCe5N4Ig3_HnOuF4>
+earlier this year. But knowing Nintendo I wouldn=E2=80=99t expect anything =
+until
+2050 at the earliest.
+*Steam *=E2=AD=90
+
+Totally fading blockchain gaming so far. NFTs are still banned on their
+store, although some manage to sneak in
+<https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RFTgHC_absB_8UCg3Vf=
+Qsw4QEBaC9rtLvETxcSDUTgcMsnBDKstCeEMlRQ9Mz6xuolWp1lhEf7WvfoCy6Ke24UQT1Q16fh=
+LBffnfzFgJ7jLaxua1GZxERl3R9WHqYFjbicDzd8Vy-Dy7qlwnnqlZgysrLDyr2rYlaUVCoXNr_=
+mndtd-wGfw6p2-Jw4hnE6SC7a-xFCil7GeQKWs0IrehtMruW_ZSNWCNRw-j_CiAvvbV/416/Ers=
+S7T15QAeOI6v-hXU9QQ/h11/AHdoi7MeFLMbVcblYvZopRbMr9cn80_ymYKLeNo1pXU>
+anyway.
+*EA *=E2=AD=90=E2=AD=90
+
+EA partnered with Nike
+<https://link.mail.beehiiv.com/ss/c/A8FU_oEKAP1BASG6ZwIAHY47PlWQY4LEtZzTfrA=
+MZzmWCwNtKOvlpIuCSHM-rsfcD_dA20fDFHImoaWLqmTLvyBfucNRbHNswIpJW1reBDqXAOTBm7=
+a7MxGDtwuTro8e92tjuPBDEUi8XG_Knfgbt7oAg2AvbzkyhsktCL-8C0fLzBxhUIl4ngF5s8GaG=
+iZXfUD1UoxE4XGJI26Krfyb3Ig5wAMN9J1Vj6xTf_vObro/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+12/ahjKDT3STADFz13KSmd8AW7YU8VtXFjjkx12c0w2IEM>
+on a very limited NFT experiment in June. But otherwise, they seem content
+printing money with web2 loot boxes.
+*Epic Games *=E2=AD=90=E2=AD=90
+
+2021: CEO Tim Sweeney calls NFTs
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVwDa849zg4yg98CGHSw=
+XIzhfI7pZCU3wIjCt7B20ZMOHDlL8ghtGEvabljuz1En3QtYMZ07lVwQyM5O3OnaJS3Lntozwkv=
+zTwCrK8kULo3Fl6fsTNjeRNvPlcJTJ4PL4d7JhvwyrXwvllTQ6W0ynIW_GPbkbrfJeg7rnwRRdk=
+74q9U3uiBdzhsjHULq9Wb66tWEkq0e96k-stx8ZgoLhhzA/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+13/o34S1ZLquNZf8zAaScOsTo2YTi66hoSW04sUTFVuYvU>
+an =E2=80=9Cintractable mix of scams=E2=80=9D.
+
+2023: Adds dozens
+<https://link.mail.beehiiv.com/ss/c/b7gvTlyjSZuPNTDUnV2KvX5QDrFKpqMQdzwYpbQ=
+t4FxcK-wLQXjsDvK4W5uy1KDxdNBnKKxwRHdjjQmWa7EvbVb2vZ4CIuvquLyjh7n6ZgYdEuxBT1=
+iuIdrSIASrRXUIpCSTiIyRjrLmkQYOwRuTfiv_y0OVWmv8PhWeNHYX_aMiebDhG1dLwYxktL6NS=
+VHjwAmbsFI0dSXnCOMh_B5dioepXkWfiTZDCJtqEHVF1e0c1G1N7a4YRGyKQ8n-Qkfg/416/Ers=
+S7T15QAeOI6v-hXU9QQ/h14/cRQAGq8aZvIv8SVC_mJjFomB4kK9W5DULrzknzYpr34>
+of NFT games to the Epic Games Store.
+
+Still no *Fortnite* though.
+*Take-two *=E2=AD=90=E2=AD=90
+
+Rumors were floating around that *Grand Theft Auto 6* might include crypto.
+
+Turns out there was 0 evidence
+<https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RPfV8vgQh29FRA-9oW6=
+C5ZxPVXHyIAMqltzYXTsBjAGDmvkpAhcKfHOGHNwmMlNrIrYut1PJxMbZM2MiTUtAMZ0mfzpzYq=
+e_z1m1ucANSr_c326IHqXkoIj1dMXlcWap6WKDHdl9Ur2dVGw28GjaAgZizjHC2Jo3Va1SMgYKG=
+WWzu6zDfNRuLeAPQlXQjnBLYfDiMLHsN3Vx-Va3mD2QrwhYIFEVdZbWDfGfCPNth5_y5Wa2bXYL=
+y1dcV5ZZzhAqjg/416/ErsS7T15QAeOI6v-hXU9QQ/h15/Wo3Ct9iS7puomKbyYbbdaD2YrgWyZ=
+d-fOJ0VucAcXVs>
+supporting that.
+
+In reality, Take-Two=E2=80=99s CEO has had mixed things
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLalNrHsky4E1UCq-wCgV=
+QPx9MYLmq5k31mmuiR5mHHchFrecYamOC5XpFL9_ywXT8d8rSxVYTaojF1ByJYmhBWArnnmHlqp=
+tlI4kCwBc5Vv4TzVFey56hcyxGT9MZui5EYKZaR8wCfewYh1K3Xf_JDpA-jBNjwXeUFtfSQQQ6M=
+NQRds3HCVmF7EoS-Q4LFZWGqfUCHO_yDhZsrypx1eLugh_pYLYp0wUkRRIDIoqgmvWRGxTJRpSE=
+A7pxHrypyRH5nT_2eFF26clgZISEDr5-aCZWFVZz4GOqtWQ4A7cbrpIj/416/ErsS7T15QAeOI6=
+v-hXU9QQ/h16/KjUCR_uHLKCZLsx0hCO0vTHqfco-ivLWqr-_mhRaXY0>
+to say about NFTs in the past.
+*Konami *=E2=AD=90=E2=AD=90=E2=AD=90
+
+Hyped me up last month when they revealed an upcoming NFT game called *Proj=
+ect
+Zircon
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV1LbC8tSUZAOwlGmcnB=
+oexEb0pphTZ2zBa0iMDLs9_mLJzOofWv1B2rQlJfATmJMlbcgMw5Vlf46ZxarOlRhUg7wB2S2Lq=
+7jlZ_mYTa-Tp6k1ORq43AZ0ypYqTzAjYhEg6PZ7FwgIQfn-6-1qr4J8tVLF9Y_pjkA96Bjh_tan=
+7_6/416/ErsS7T15QAeOI6v-hXU9QQ/h17/TvD2AmJ_X8lukSVWC59bo-b1HlkmAEWHLUnq72z3=
+TPk>*
+.
+
+But their more recent update makes it seem *really *low on their priority
+list, with development not even planned until 2025 or later
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV1LbC8tSUZAOwlGmcnB=
+oexGgmFC2dNNBQ7U70i7lC2VIKfBUcNaF8esy6Gb3QQTu8Loq5b8SPWGOTx08pHEqmeJMit1mfW=
+jsJmCf_1u7sbS7DWXsgsQs-EO7nLvLf8BUBx6zSrquUdVgRHSSaySlV8qHZK2fXeez9yGSy8qyM=
+IfYJzowaeZINREcUqSSgtXN6i029UMpBscx7VCBe1y6xxA/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+18/AbP74bdNL2NDbGc2HJ8gXvl-elQaO2CLBOX0zirngKE>.
+My interest is dropping fast.
+*Roblox *=E2=AD=90=E2=AD=90=E2=AD=90
+
+Made waves yesterday
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV8syvXBDjZMusZpwRIn=
+lMMQyV41e722TXj-CKNov-Qz16xmbSkbfOuh41_IfcHUFLmOnD6yfo9IY9xeJMOYcuD-Yr3xdAp=
+QQv5tkA_asYnQOd8goouHrJdv7ujCAebpc_3v9_BkswZJB29-emphGBWmTdMApXtWZb730QXK7_=
+WozIAduq4LaMfpz3bv6BcoyLA/416/ErsS7T15QAeOI6v-hXU9QQ/h19/XbdeKJvk7lMqZ9Ca9T=
+7soGhAoL84TmgipBMVN7zitW0>
+when they said that NFTs were a =E2=80=9Cdream=E2=80=9D for them.
+
+I think this happens a little further out, but with 200M monthly users this
+will eventually be a massive participant.
+*CCP Games *=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90
+
+The makers of the 20-year-old hardcore economics space game *EVE Online
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLavCe5JRD64QZiv22ZSE=
+6HmIl3YM0mvp9xVGqJq4X4X-QHqLZhafb5PqECPnSaOkm3E5ENanQ2OuDELBB5383O-DIzA5E-J=
+uY4x15buiKoXTGKCSsHVA3B72GsuqyA3fFFIvrKdkp43fArgNfwL3NxCc/416/ErsS7T15QAeOI=
+6v-hXU9QQ/h20/kCAM-4xx0VYQgqrTYXTAumUt5P1k8R7I1yviI0Hdbxs>*,
+which is more of a metaverse than most things in web3 today.
+
+Recently raised $40m
+<https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RMWDF3YSSXeNE3WcZMX=
+RgpnJP0iRHGxiTSsqiHbA4hj32wuIkjY9nB8FqsplbTD3y4rDnN2pBZYqpnkWgazhm5T88k_unp=
+C-HOVcKL_vvYpnhbykS7eWFjKvlFPqIwxU1QVNnYWOat_GuqIdciY-hhspjvqvk0WitA9ZtybO-=
+Zs31G4Rtm8731Nv-nL2ihcqlSRm8w2DChxeoxHsOmLVjIgIg55TO7jI3yV1hq4RwLgK/416/Ers=
+S7T15QAeOI6v-hXU9QQ/h21/PE1rPshZ0ogsiA7RI7Zryd6_TsXafZORGmJeEbrO5yc>
+to make a blockchain game in the EVE universe. Things seem to be escalating
+quickly.
+*Com2US *=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90
+
+South Korean publisher. Maybe the biggest believer on this list.
+
+Launched *Summoner=E2=80=99s War: Chronicles
+<https://link.mail.beehiiv.com/ss/c/XQtit5lf6C0XXliqbVcGlCZrMpaCDttuQi2ZMUF=
+CPOFcycg765g_9vFBmmIcPumQe09TI56ORJFXggFDxoFCNp9VYPdKWz5vWN8wtphnAX9YigTWeX=
+1h0aIU2Ekka6rFVCqRXsIZwv7NAYlT7iWK9h6z6vx70eNzjoDG6KHQYSDtBKyrW2eKpM9cpezvg=
+PQM/416/ErsS7T15QAeOI6v-hXU9QQ/h22/TFteuv_pfE_2qM-qnSqPrizoCUmBjDVj8_oc7Mvv=
+zI8>*
+with web3 components, and was getting 1 million
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLaqdcDpOJmimQl46oyW0=
+ITAcgGKtUWLtsxOdkKtijM8NeFP4ushO7s-fluPZlgk2kv5v-7QYEF7xnZLxzr4Dx41n-dvAI2p=
+yOJ6WiNblarvsADhfnqLfl9UdwCunnOiAsnYyOMTEGatZOE7f0Xi0xp36hpWFbO0s5fuoDliA3Q=
+hlFg886fqLwSvTaTLZ5jE3MABdXW5hh93PIgQTy5PQWX7YLJRE8XgWQJrc8tzINRXyx/416/Ers=
+S7T15QAeOI6v-hXU9QQ/h23/7tPq_jejkXMYiNrRWo4DnJPkhHAcqPJnKrUioWB335I>
+daily players after launch.
+
+Actual quote
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLaq70ZSeyEv57xktbPkf=
+fS7DhsCUDP77MC5xUpkdy7P9Ku7iuQ9yz0jVSzLNuaQAwjdU8sdugjTha_sX8Iug5F4ttmtdBat=
+q4Gt7V5whLzS4TT6QzprN8_85RDYp74gUfLmVUeVWDS5pycfnjhLpRC5K5VViFR_zI6tz59zYgo=
+cxB3AsgizROPIhvw3EVK6hZ2SwS3q1JvXK76PdQ9pYEe2JjH9sP78oAEwt_BItQ6xwk/416/Ers=
+S7T15QAeOI6v-hXU9QQ/h24/pEj2yLiuxpdmkqcmzg8jalhsIH1ME69tMzxKdOL7nWE>:
+
+
+*=E2=80=9CRight now, our focus is on: we=E2=80=99re going to bring every si=
+ngle original IP
+to the blockchain.=E2=80=9D*
+*Nexon *=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90
+
+Another big believer.
+
+Pivoting the ever-popular *Maplestory
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV07buTjrU6cjXup0G7E=
+1CoGyNKqIlW20b1aygKdKVYq-5gvVlM8vcE8jXhQ5qGY7Ocjv8p2npI98qaRWUckeZy-1N27lxD=
+ibRa5jCBqynEyyo-qEGVoJHbIM3omVbWVc7KnUgNyt72fknXGdqCs1bsfRI1U98cB-cMAfOcaU9=
+ADW/416/ErsS7T15QAeOI6v-hXU9QQ/h25/oUWmyHP6QSXpsTaPG64LbfLUPN3RkkWL_T0lM1gM=
+h30>*
+into NFTs and has plans to go fully interoperable with other blockchain
+assets.
+*Square Enix *=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90
+
+Went hard earlier in the year, making lovey-dovey
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLaj2hF6ZTTNaybhSiRsd=
+gTzKcD7blfGl29Y12jkM_3XYnUEhN6jZrFK4k-2vQE74a-a21Tkw2XuPW8ymqiHgcB3swj9uw_e=
+w7o3BfNxnzXk0L4_xlbgLcoV3xjriboGpVtzgCKG_rV694Nkzp02BpdKpUrJ94hBHAg_SJqDZm_=
+tb9EJ1U6BI01PwxawV54CNDNnQzrWH3Z2KRkYwVYnp-J1w/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+26/9qzK6mOVmXe8ypURp_tM3k4HQm5lcxrRT--MRvT9doU>
+comments about web3 and even replacing their CEO with a blockchain expert.
+
+Now they=E2=80=99re finally launching their NFT game *Symbiogenesis
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVyS0HPtUFCNuicTP6kx=
+r8eKc67C4L9CdvZB4JpwN4HJPFvuqApNQaUiz0nKIHwJ3RDm9d0YCm-FMAbcqmAi3Y3Rkjp7klc=
+k2fh0fD8zzt3ElT91qfNq-8gnfRcZT0MYJ5oGpDVx3V_3FI2mv0HYB04OiOZk-pgJR3DJEvzqe3=
+ONF/416/ErsS7T15QAeOI6v-hXU9QQ/h27/jLcYjEwrBE11tb3Gd9DaLmcvki_OY_88r_8Dd4Ps=
+Nkg>*
+=E2=80=93 although in a very confusing and low-key fashion.
+
+And they keep experimenting here and there, like these
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLalkrSERKqmX5Vr9-apY=
+oll-eNcoAM6JmsPYHhheBkkfh6d3ObVTIgf52s-yeMbiKbQmius4VdgPLTyiRMm9NAOsI5Eo5va=
+RV10C1VNlVh69qcw8uVA6UCtCO0CSLcWyPAHqI5A1htb4Nrhu8i_QTD6xftz_cpruwWLV67Ca_j=
+bWbUtaC9ec2eo9rJqeflAt4VSjjzwNPY2ooQLQ9yEuKbcWB7p3T_pJZqhuFLrLWYeZC/416/Ers=
+S7T15QAeOI6v-hXU9QQ/h28/mlozrmlS6T8RNl-NOAIalJ7pdc2WhtYJ1q7XetokuNo>
+ *Final Fantasy* NFT trading cards.
+*Ubisoft *=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90
+
+One of the first to launch an in-game NFT, and get battered
+<https://link.mail.beehiiv.com/ss/c/Xusstc8D6hz_RDFW1aI2QXSXZV_4s5dJ7tTGuZV=
+GnkIgocLLGmSjsY3u9-FRH3ZsjiUPl-qDuh0nd58stWiQbsECVg-lfMdewKhXoquDK5Ru9mXvAU=
+1ID953xeaHSff50N6ho0O-9XIs60rrGBcD-zWIM63b_lvDexmMq3RVp70Rvkq5R7oJkmfmm89Ax=
+Cng4BvWu50s2Kfv6fFV4SxUhpFP7bFzJwz3FEvfohvj-zo/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+29/VBtuds0e2amFdZsQpMBsBwdLjGHGkw2ikORZ7OnAlYc>
+by anti-NFT gamers. But now they=E2=80=99re back
+<https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RHcp47w9Fs7JbEC3wIR=
+MZVMxSRSKJrwbH8wkNVpB2-psz1hswepNrZYLsVYJsh52L7JyLziNmIe1DdZO53aA-75WyYfmwz=
+__IeCJ22e7Nb0EZTcAxC0x98GSqrea6v3PDsTM3fe8o006oSYv3_1KcKE4WMBQR5iUQwVkznm6u=
+GdRcyO2xfuuc7-xXqFKpfRmVGWgn2gC9Yz0HWJQWl6HJz8_ftRwlypm9UETVoMJ42TTtjuHO6lF=
+9Qxcfe6KbkAb_w/416/ErsS7T15QAeOI6v-hXU9QQ/h30/lZnCR1Bh-DbzLVvEpGchZ5wWadpFX=
+cQt5gLFpgmnygc>
+with a new crypto experience on Immutable.
+
+Props for the conviction.
+*Zynga *=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90
+
+Launched an actual NFT platform earlier this year called *Sugartown
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV6d3njXZxLSlqZ-zU3C=
+OnNKXSNijyC30wffYb3KQVacmRXRO5YVpVahKaYSdToRfbm5GLswL0Fbilv1ZLxqZtlwjZfJbOo=
+-g6obbj-AYLPerQbRhI5-KdKPhB6Pzub2zLOwfh1PjdsKY0gIr2ksFUPUeV-7rPKzoMJ1herAlB=
+DG6/416/ErsS7T15QAeOI6v-hXU9QQ/h31/0ULVwDOpwhDWl2jpZ2zAvL_Wa3Ppa5Z7RyJS7VAi=
+7Hk>*,
+with its very own 10k collection.
+
+It still feels limited in scope relative to the rest of their portfolio,
+but they=E2=80=99re definitely in the trenches now.
+
+*NOTE: **These drops are lightly curated. Our only requirement is that they
+have recognizable founders. As usual, DYOR. To learn more **go here
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLal_Bwl4BIJDrW5aKBH5=
+h56H9onM3Nuf3ifq7Yx4j0wfS-lzPjFelfO4W2gtz0fchUM3r9QmU0iKaV2X9DE8YBUNdut-2BC=
+99ucolpYdzuidnBedTFH0pKDzmotLTz_Q7x7Kde2nYoh5Ub9YjY--WtkA8HkLxJl9Y-NvIWCAHQ=
+-MXp5o0qfCP7zW9BvJyDJJJBXTMzUjZOvQKrPa7Vd_fkAfXHdI5YAHua5Rr6QlOK-sD/416/Ers=
+S7T15QAeOI6v-hXU9QQ/h32/-HfWxvWwzLq1dqSqp2WmYTmm9dWD5dPNmBupN7d8Md0>**.
+*
+
+*Ambiguity** by SeattleSales*
+
+@seattlesale
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV4QcGmnJshnc8IvSnnw=
+08mPgqCZLDO4e51mI1pK0SkPPohnnwp7Rm1rQg7nGtihnTD_fVJLZ6f8Hr8PiLuyL1daXm1Mjwe=
+-jpkkKuEE_2p1KOiDmHBP-hSABUGZ_-dhvpJwfGd34Sdi0var9qF0MwV1kuSK5-5J-fIzCV4vLb=
+NfK/416/ErsS7T15QAeOI6v-hXU9QQ/h33/D5EQGRp93WyplARqf7s1uzAvukfIPt2w2xUM2LA0=
+NSc>
+
+Pseudonymous artist Seattle Sales, founder of art platform Seize the Cultur=
+e
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV004STxrpTS02f5pX1m=
+W81MQZko5ePdqZEmbqnmVYQRKKh6d2WPTzYZSLWkkdk1LDKFftK3kymfCyAIF62SPy_xr4Ukwn8=
+TJ0Mu-E3L1dEwXtv-P0xac892rCJWM0e2nUc6whfrzVy-GD1spm4zJoIQUXlUtknGoMwdXvCmxz=
+dRL/416/ErsS7T15QAeOI6v-hXU9QQ/h34/YU1ln4S_WhDk3efPltBxATny40Fln8aN7sDIXgBt=
+kOU>,
+follows up on his recent *Swirls
+<https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10=
+WDJKyByiUXVXbY6dGbDAH93fYBdQkNVoloAY8ZJ02u4C4qBbomXRWBgHB5quxCPQXh1874IWRDK=
+JtZQoRoGI1nkkq3ls4kitS49012czR7Y-ceLcbu5OK5U9s7wdXauqoUYCpdXlkuZM9lyCwp0ogS=
+vqek419fBoGlcB1pjIx47W-_g/416/ErsS7T15QAeOI6v-hXU9QQ/h35/36lo1uzm5gFKQ3XQZG=
+b8Jbx1wdDVGZ7MO1k6sNiv--A>*
+sellout with the *500-supply* *Ambiguity
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2EB_3wi3k5e9NN72gg=
+iE_CeaO7MnzcvVNmM9VRRc58t18kfTCSSFc-zysPK04sFQ2qCejMMBblsJ-Cw8cpENHjbXmkPq9=
+fHZWG2DkF76YvNxr8_1XtsYDkiiXWrz0YYFm1zBXnW44BVMvt03piKbZGaegq8QZ0e7c8ifgfSl=
+1yAs45tR_X-X_PsA3nYYhOpiw/416/ErsS7T15QAeOI6v-hXU9QQ/h36/SldscJjHUmqIV-E4bj=
+Sh5vTWMn7mHCqm9vWZKO-sQE0>*
+.
+
+The collection features pieces
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2EB_3wi3k5e9NN72gg=
+iE_CeaO7MnzcvVNmM9VRRc58t-TuJzekzFQ4ntt4a4knFp7gP0_V__MU5A2CogEW8Mj4sD49TWP=
+_1nX0ELgELWjA4FpiyvmxloM1jEKCO1fUxKzhrAh1-w3rtsCPpUW0jgjpZEoq0cTGV_RhdLCGeH=
+J1l9f5kZYdkVFOFvFyW39vAHw/416/ErsS7T15QAeOI6v-hXU9QQ/h37/u_bFI6XKdZTx1__--9=
+MCD4OswcAP1VysQhEgGfKedh0>
+of various
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2EB_3wi3k5e9NN72gg=
+iE_CeaO7MnzcvVNmM9VRRc58t9pIkURvO3H7ma4qwvXBA-c66n80-cr4WoPAGxHOBwsVI03Vvyv=
+_Dfei83t1yKBN5L-fKQLptRYPq_ELRt5zUU3Al2pefHefXv6YhHwQQjPj65Wjyp3fiiJX9EpncJ=
+-fLP4K7KrjhV6xgHHcBdwz78g/416/ErsS7T15QAeOI6v-hXU9QQ/h38/EtqKVoMaqqCJdNYwaY=
+GQq5l6POe6NmSkRsP5k6oajyA>
+styles created with Midjourney and Photoshop (like his last), as well as 20
+unique pieces by guest AI artists.
+
+One for emerging AI art explorers.
+
+*Courtyard.io Week of Thanks*
+
+@courtyard_nft
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVxCbgGZc8FwgEiIW4Mp=
+anhB6lTL6GwS8PoZ9pj2jRXnHoHPDNQt3ws5hE3NxlGB5fCYgcRtgGWwmVaiUoSG50u_5xFo1GG=
+iqxRJ5imRWupwGV2xZkpYlAaGJoGjxn1Y6NE3aUSF6fx1Sb7O0jqxECI5ijdhL1GJ4t6DP6pHWy=
+0gc/416/ErsS7T15QAeOI6v-hXU9QQ/h39/ObZhgFeYwtBOppbCFC207BiE2rE1-owau4UcYkH9=
+z2I>
+
+After selling out all ten of their previous drops, Courtyard.io is giving
+back with *Web3 Week of Thanks
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV_E-3H2_W26g7pkXT38=
+19oZ6fvqFaZRoD8IZyATQ69P8xA36LETK5upWe0Ank5ozt_9vL_y6LunAm9BacwZPHz9FCvJg4n=
+jfaDRxd8Xk9w5NmerevCVoRzeZXgrnSxKfV_zu1f_pRYnetfZOlNPIfK9WTxwXPCBnpHhW3SxVm=
+4Wurpj7mGJqFl9PpBCp76iZnQ/416/ErsS7T15QAeOI6v-hXU9QQ/h40/flfc7CmN39qqLH2Jg8=
+lXKkPYQI9qM2Lrj5eO93CLYYQ>*,
+minting *400 tokenized Pok=C3=A9mon cards for free*.
+
+These will be split across four drops
+<https://link.mail.beehiiv.com/ss/c/A8FU_oEKAP1BASG6ZwIAHQ_2tzD4LEViULieMaW=
+smasjxSHEeDSK0xvyAbMDXQtjYkrWaOFob71xK3ESvXz12raRkIX7FF3nuXYbbrXxAIMVBUVSvB=
+c4oKvnnXQVa-U-TBZLYU3xynRhsMyI4Dy9KjHS0RfEtKsF1tAFoNtPLyg/416/ErsS7T15QAeOI=
+6v-hXU9QQ/h41/yRznEn7xRCyvzh3EjEEpDFo5zt7u2OnSxkfJCGz1ZTo>*next
+week
+<https://link.mail.beehiiv.com/ss/c/A8FU_oEKAP1BASG6ZwIAHQ_2tzD4LEViULieMaW=
+smasjxSHEeDSK0xvyAbMDXQtjYkrWaOFob71xK3ESvXz12raRkIX7FF3nuXYbbrXxAIMVBUVSvB=
+c4oKvnnXQVa-U-TBZLYU3xynRhsMyI4Dy9KjHS0RfEtKsF1tAFoNtPLyg/416/ErsS7T15QAeOI=
+6v-hXU9QQ/h42/o0IPelHSq7g40rKvMcMcgmCfEB1IJSiliQQONTO2viM>*.
+They=E2=80=99re all FCFS from what I can see, so better get those clicking =
+fingers
+ready.
+
+Who doesn=E2=80=99t like free Pok=C3=A9mon cards?
+
+=E2=9C=A8* Added to Top 25 *=E2=9C=A8
+
+*Untitled SuperRare Drop by Pindar Van Arman*
+
+@vanarman
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV7IIO811c5UGeKBPjUR=
+b9BR78U0KFWlzYeMU3yTfApvmmH4fy-7koVL-j7zBg26JVLEG8Lc4XLkh3ndp5I271Hqi9Vtgg1=
+qghqYzQW6ItGsyg-7ucye9DYb-WATsA2YrPCVBo4gBhbjSIl364JUZfZU/416/ErsS7T15QAeOI=
+6v-hXU9QQ/h43/rQkklW1oGYijmW9R5yrp2SfdxSUiU2TMXR7Qzga3Pss>
+
+Pindar Van Arman, one of the top AI artists in NFTs, unearths a 2018
+project in this upcoming SuperRare collection
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2vhmQxoNVgPdM6v5p5=
+IVC2xEysPlMEWZiMqt_x6wv4WzMbbnxApcglXa5QsJtK6jTPz_RLHTYksH__T6zSDEB1WccdAMY=
+qisxym-P909O5d9QRQTFAYjkKGgEeH08GK_ZBIwuYnmuH9_CcASZNvOGg-S3iTjbCxgBiy1tRvw=
+PfnwENTAKCwvILZKSEv2tTNmg/416/ErsS7T15QAeOI6v-hXU9QQ/h44/-39mw1l0p5hnd7ykkw=
+ZAa3g7aPvuGCu-ZnkOdJ1d67o>
+.
+
+Consisting of *128 robot-drawn face portraits* with muted colors and rough
+outlines, it serves as a time capsule
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV_FsZPBhRpQaBnMPSie=
+Bysfh86Mmq-x99iMPUTHFxksxFK3kZTBC2Xv9uKxpS-hnzmIjZAcJq5XgVE-uLvOFaspvpXgZ82=
+FwbjKyCdSTObhbyOMGjZjH38tt-qPEa-9puNLF3_LuPH8PfdmaIvACV1_VFrgg7uc1iNDjak6Uw=
+chl-84m4thO3HNf-_0oWwr1Xg/416/ErsS7T15QAeOI6v-hXU9QQ/h45/_a2XldFTkRPTDvnQts=
+kQ63O44nJTOfBdUTqm9x0jfV0>
+for the tech. Aesthetically, it=E2=80=99s similar to his Bright Moments rel=
+ease
+from May, *AI Imagined Faces
+<https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10=
+WDJLTlySfX3464izBIpxF-Xnt-DM0LMI_eRY6CXysWEe5TluD8aFVSoN_SibazGEi3pQDXVZGrf=
+TzoOstLlqVqIWBOuG7MpGT9c0uQcf9GZQf1zXolWGYS0c9Q6LKm2kIwq7vbqRQEBBq4H7cwwyu-=
+Q5EqbkUEi4mPn4MVlNvG8XjWMxYN2mI8erqlrFmrDMWV7U/416/ErsS7T15QAeOI6v-hXU9QQ/h=
+46/vP7Te1opZE8uS2ALEavYMUKNE9HvZpI5jYgK9wKx8fA>*
+.
+
+It hasn=E2=80=99t been that long since Van Arman was lighting up the market
+with *byteGANs
+<https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10=
+WDJK3k08z6xWpFYmHySQxTr4qyCdccwslw9E7AoAMdHmTRTiuhCvZku9Ohvj36Lr88il57fEJdI=
+c1_lgkhPguYDFhPdNiah3ar_NyYw7_3BgHnKjhTlP2gTLsHnsAxAYNjp9osB8naoD_G3o-uZJX1=
+tMz/416/ErsS7T15QAeOI6v-hXU9QQ/h47/rCrGasvy-FNQ626rg3cZJ8PD2fbbb6vN25FHhkXw=
+UrE>*,
+and I could see collectors taking an interest in his earlier work, so I=E2=
+=80=99ve=E2=80=A6
+
+=E2=9C=A8* Added to Top 25 *=E2=9C=A8
+
+*Unigraphs** by Mulan.art*
+
+@mulan_art
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV6EPH27XhUfnS3UMJkh=
+4iOxub_gKruOo2yXO12pi2IcGBNtGY60xmOzXNqW2ABBEiE1-BVppVrcMRB-ZV5Vb9gThJtL0U-=
+5RwmqwViWI_zRBCgjKw6YorpbVPda0MNC3cdAeOogCDjkmExGDXiyyyhg/416/ErsS7T15QAeOI=
+6v-hXU9QQ/h48/WOZOfMJ6vl_dGcqpyFJS_Vpo0pic7UOEQjmy4Ogi29g>
+
+The Ordinals scene is still ripe for artists, but relatively few have taken
+the cross-chain leap.
+
+One who has is Nicole Liu (a.k.a. Mulan.art), and now she=E2=80=99s droppin=
+g *Unigraphs
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV6EPH27XhUfnS3UMJkh=
+4iOyBd1Dm-TOkhJjZX7Ba57BztmsC4-jSU5DTXO3gHzKxYo8FSqUWlYBU49hdb5uJfAl8EYgvTi=
+UyKgXwTQR6nZ2C5I_0NrwdA_jU6mKcgVSIXzZ3rWv6zdKj_GlIfpyVBYdiEXvzIfpkFcxOPFhff=
+wXqYrYXnSdMPr-ZZTT_ZuEGWw/416/ErsS7T15QAeOI6v-hXU9QQ/h49/XnTgggt5Ai0m8e6qka=
+xLCIz7blxrBX0Nt4O3Ny5-Z8s>*
+after selling out her 100-supply *Abstraordinals
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5qxWBgpHr1ocEsWOVwWc=
+GttQAKsOWKKVkw-eNQ6H2WUhYNDUQW8hXSamBU36hyweLRNatb1AagSXP_HX7hJvKVvkGi4bEn2=
+yB7pWEP7pAsS5h7QNxossQucJKx5jYBfzR0GZujQoMY4IiJdc4XYN-oaZm613ptKkq2p0IHFz8L=
+kttvx2Y25SI4aH9lBUCmxremw/416/ErsS7T15QAeOI6v-hXU9QQ/h50/w43vIHiaV7vAg4nO1m=
+vFzP_pj7YQB5n76dVvv4tSxV8>*
+in May, which is currently sitting at 10x its original mint price.
+
+This upcoming *555-supply* generative collection pairs Bitcoin sats=E2=80=
+=99 ID
+numbers and text names with different shapes and colors, ensuring that each
+abstract piece is unique. You can already check the pieces here
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5qxWBgpHr1ocEsWOVwWc=
+GttQAKsOWKKVkw-eNQ6H2WUhYEiJY5LC8Fvym9mvnbo5XkTF-5DXcQKhjlSgDsPbpGKr39sxazj=
+JeUk7YwlXgmBccqAxwkeediwE8Jce_oQh0TA2F4pDXHhb5J8QFoBIELr-pkY1YBawNLvEYjLd86=
+aFuODKQ21f1jg0VJ8cP6xA8RQ/416/ErsS7T15QAeOI6v-hXU9QQ/h51/pOSDq0Vcmvey8iAMlt=
+1EBcV1yWyTse3ywTs2vZonc08>
+.
+
+One for orange coin believers.
+
+Share Mint or Skip
+
+You currently have *0* referrals, only *1* away from receiving *Understandi=
+ng
+NFT Value (PDF)*.
+[image: Understanding NFT Value (PDF)]
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu=
+0_RtXoOVsNhy3eJzez8cbeV2W7vZKQaTANRPpsu-K8hcKoBzSu5ilqNW_gr3y98wC4nnQJZH4LR=
+pm_uBg7uAbquIGjN8fwXZdkFwyMi4-OzTldjYrFAwgxuF3vWSxbwAX0Q4N7S6g6q9BxtfyzKyPX=
+i4bpFGUbTosNiYpP4ZuI5f9jZqOs1c4Fy09pGjZFo7gCPV96oOmjVImH8-ggmBZlMo5lEjh0Nvu=
+PhuobSWoCK_5bHzAlqM-BS3RhPOuMPRQ7b0rA8BPVNyL0UU2S3ZormUQwupx5g0vV7gxw1NJkoR=
+br3UOIctbBpijtSDe5Fre7xpFZN7oF7gUnvC_56f6wncJh1Zf7P1BHq-x_vYWQj3b1SJsYfCCEe=
+Dv3sxlUj4n5aq0E7dT8Haopean_7wFhVlREdwKljPAmLCdy3EDabNzHQ/416/ErsS7T15QAeOI6=
+v-hXU9QQ/h52/UDFQuAYiJWyFKlXJ-z55RuLtzEJH3QTG8wUvVP6mbL0>
+Click to Share
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu=
+0_RtXoOVsNhy3eJzez8cbeV2W7vZKQaTANRPpsu-K8hcKoBzSu5ilqNW_gr3y98wC4nnQJZH4LR=
+pm_uBg7uAbquIGjN8fwXZdkFwyMi4-OzTldjYrFAwgxuF3vWSxbwAX0Q4N7S6g6q9BxtfyzKyPX=
+i4bpFGUbTosNiYpP4ZuI5f9jZqOs1c4Fy09pGjZFo7gCPV96oOmjVImH8-ggmBZlMo5lEjh0Nvu=
+PhuobSWoCK_5bHzAlqM-BS3RhPOuMPRQ7b0rA8BPVNyL0UU2S3ZormUQwupx5g0vV7gxw1NJkoR=
+br3UOIctbBpijtSDe5Fre7xpFZN7oF7gUnvC_56f6wncJh1Zf7P1BHq-x_vYWQj3b1SJsYfCCEe=
+Dv3sxlUj4n5aq0E7dT8Haopean_7wFhVlREdwKljPAmLCdy3EDabNzHQ/416/ErsS7T15QAeOI6=
+v-hXU9QQ/h53/nguu8EG2NQWPh9zTX6mhG9C9SyZgpAo7pH8vDIlSe38>
+
+Or copy and paste this link to others:
+https://mintorskip.beehiiv.com/subscribe?ref=3DdjCchum4JM
+
+*Team*
+
+*Giancarlo Chaux* =E2=80=94 @GiancarloChaux
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVwKUZLQsIQIRzUzLhp5=
+rQZkTy_P2COnzPA4QglptQCziyq8r8A25k5LvMRIUlEj9v2PyIIg2fQwLhtOscr9ISBD9Eopazm=
+nlX8AOa7qgo2vXb5wgewfLt6oC0zkPDHVFYr55wRwMlLJn2ZYczf_q8YNVOt6Ou_ydhJUW9-hq6=
+-1d/416/ErsS7T15QAeOI6v-hXU9QQ/h54/dJKGzz2QwXZQtI04i89saMalm44IOtKn2YjrqKtp=
+JOw>
+
+*Guillermo Martin* =E2=80=94 @pikanxiety
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV-U2GwAI9sM3Y1ZdchG=
+f_G5Lpo9jy-9bS1NZJCailWvRpN8gJzdWVwfb79IJutRoWzOB5HjRgID3Q7dGmbE5GkKZWn8eLW=
+2BMnzhxsInusRkN7DTtpI4SrCKBZAPwK1tIRrA0yQmLYzDoPrufQBbRF7evGSxmQX40EDn4cql5=
+P7q/416/ErsS7T15QAeOI6v-hXU9QQ/h55/vtxWyEjEAkIksbeBjm14W8yiZPVgm_Zt7ehqh7ep=
+izw>
+
+*Jon Yale *=E2=80=94 @JonYale
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVx6W3EFVy_dPGWF_FML=
+52btODFIdcsMYBgFfo27WMI6qzNZ4IZPb2HbAg_N3hvWZf34AwKAitKqc22ZT-_eM_D9iSXI7nt=
+0RGHYqmwziIc1kZErNUNYXUGC6Ip8DzN7OW906-09iOzR51yEt0KmrIiU/416/ErsS7T15QAeOI=
+6v-hXU9QQ/h56/76neFw-NiEbGYmbhwyYLwN7XEPyslub1QJwZ0MhpGxM>
+
+
+*Tell us what you **really** think*
+
+What=E2=80=99d you think of this edition? Tap your choice below =F0=9F=91=
+=87=EF=B8=8F
+cringe <gm@mintorskip.com?subject=3DBig%20NFT%20Gaming%20Update&body=3Dcrin=
+ge>
+not bad
+<gm@mintorskip.com?subject=3DBig%20NFT%20Gaming%20Update&body=3Dnot%20bad>
+loved it
+<gm@mintorskip.com?subject=3DBig%20NFT%20Gaming%20Update&body=3Dloved%20it>
+
+[image: tw]
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVwKUZLQsIQIRzUzLhp5=
+rQZkTy_P2COnzPA4QglptQCziyq8r8A25k5LvMRIUlEj9v2PyIIg2fQwLhtOscr9ISBD9Eopazm=
+nlX8AOa7qgo2vXb5wgewfLt6oC0zkPDHVFYr55wRwMlLJn2ZYczf_q8YNVOt6Ou_ydhJUW9-hq6=
+-1d/416/ErsS7T15QAeOI6v-hXU9QQ/h57/lmuZ4dNCndUCtkYJ-qF2v-AoScSBDdWWt2QC2HLn=
+PfM>
+
+
+Update your email preferences or unsubscribe here
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu=
+0_RtXoOVsNhy3eJzez8cbeV2W7vZKQaTANRPpsu-K8hcKoBzSu5ilqNW_gr3y98wC4nkq7zaxA4=
+QPF44CB07hZC3NDldKj5rCs7VZWLn0Ec6WQGrxAQBdPnV3dWS7iFuLRDNlN0N-e0D4LvogY6Vhh=
+GvHbgQEuHBQzSvSGB7iVF92GiGtOiA1QONbir4jVp6Nks4QDBRZElpHA5PNfwhqwxSrbATzpm-_=
+58lBBDpe3eeTeYDOrjxxN6LCKZ3HOmwjBzi9tpvCvwcfakXceZgVAMPbGreYi_639RmMogG38aH=
+IAsqiiSJjyw-cKeGkxirTQUBlGiIR4K37PWeLAYe5O_oZTOtgbuIV-HfOKFtFCYfOCU3wYo0q3Q=
+9fAcnJQJszqK1iT_RkLdAMjhVCbvr5CExs1OuTaemdkAcUN5Lg6NvOYB6Jf8mnaNsPD9FnxPbi_=
+SXXhuhpTvVE7BND5Yci329khx6J92koqSQk8J-v1d3AfQ/416/ErsS7T15QAeOI6v-hXU9QQ/h5=
+8/aa1XqHxglPBJzQtobHCdgjYDOv98gkXridNgAM5PRBo>
+
+=C2=A9 2023 Mint or Skip
+
+228 Park Ave S, #29976, New York, New York 10003, United States
+[image: beehiiv logo]Powered by beehiiv
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLal92csPoxF93Cj3F1bV=
+z7hQs2KD3n2vOure75Ejl7sALCkXd6fibsEfITElykCOg6jcNa-A6yPM5Jm7sEBjcy0QzerE-AC=
+L0fnbgzPKqlSxZgyxaDDUZDq9s-kiSFMkiQOCGH7qvixEDhyUcxfePKS4/416/ErsS7T15QAeOI=
+6v-hXU9QQ/h59/-KSXbrMD-wET5hd5PoL0IbMrRnsKUKKltKFDGTHUHMQ>
+
+--0000000000006e88dd0609d0c95d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">---------- Forwarded message ---------<br>From: <strong cla=
+ss=3D"gmail_sendername" dir=3D"auto">Mint or Skip</strong> <span dir=3D"aut=
+o">&lt;<a href=3D"mailto:mintorskip@mail.beehiiv.com">mintorskip@mail.beehi=
+iv.com</a>&gt;</span><br>Date: Fri, Nov 10, 2023 at 1:56=E2=80=AFPM<br>Subj=
+ect: Big NFT Gaming Update<br>To: <a href=3D"mailto:jadid@metaversal.gg">ja=
+did@metaversal.gg</a> &lt;<a href=3D"mailto:jadid@metaversal.gg">jadid@meta=
+versal.gg</a>&gt;<br></div><br><br><div class=3D"msg635697164522129341"><u>=
+</u><div class=3D"m_635697164522129341a" style=3D"margin:0px auto;padding:0=
+px;word-wrap:normal;word-spacing:normal;background-color:#ffffff"><div role=
+=3D"article" aria-label=3D"email_name" lang=3D"en" style=3D"font-size:1rem"=
+><div style=3D"display:none;max-height:0px;overflow:hidden"> AAA wagmi ener=
+gy =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C </div><table role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0=
+" align=3D"center" cellpadding=3D"0" class=3D"m_635697164522129341gg"><tbod=
+y><tr><td align=3D"center" valign=3D"top"><table role=3D"none" width=3D"670=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"m_6356971645221=
+29341aa" style=3D"width:670px;table-layout:fixed"><tbody><tr><td align=3D"c=
+enter" valign=3D"top" style=3D"padding:10px 0px 10px 0px"><table role=3D"no=
+ne" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center"><tbody><tr><td align=3D"center" valign=3D"top" style=3D"border:=
+4px solid #ffffff;border-radius:11px;background-color:#ffffff" class=3D"m_6=
+35697164522129341c"><table role=3D"none" width=3D"100%" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td class=3D"m_63=
+5697164522129341f" align=3D"right" valign=3D"top" style=3D"padding:20px 15p=
+x"><p> November 10, 2023 =C2=A0 | =C2=A0 <a href=3D"https://link.mail.beehi=
+iv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu0_Rt4jcV-BDL15CfsCVX4VU0=
+maktoc41rUn6ogE7CQdXSQpsneBAQKXXqQTaVOpgeobSxi4o9PZ6hVzTcVUCs-wD-vACznSDX2o=
+69XLtumsEfBU30ZYMFQCr-mqMJmnXM19izx_IQp6NJ5Z4waFPcPDCqNrJk3bZSyc7gFKjtJjKZo=
+AToXZwaumYLbRNQ0CAtw46LHxpnsGJX0ZubNX9MHjFizqmxI-DszYyN3XDo1CxlcqaTbOAAxPlL=
+bYUgOsrnH_qSUQjCUIeoNm66mUmXZl8AzzPlzz2VeuzhwpmMDU_v7QZF11Uzbt6PeNfMe5boOAy=
+9LB0UJIRNRGWGD6HAl_I06CYsfffywVXM8IqR0kxu7umuRSWK4B_xu80MA0JtqezPRVqpa9rJpv=
+Sqw5YXz494pQzluB_q2Y2Z8rS1agCJl7s_3778XqfAzhVqxV2nrfob0jl2rAN8WzlNKDFn_xnkS=
+6s6qNOnACcBpdm5GkrNgA6Gs7k2m9OVAvHmAnzWtB0/416/ErsS7T15QAeOI6v-hXU9QQ/h0/3p=
+JhXRf6gNzT6V56ziBaKIq5bv-V428bke9zqbjYN2w" target=3D"_blank">Read Online</a=
+></p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding:5px=
+ 15px"><table class=3D"m_635697164522129341mob-block" role=3D"none" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"=
+><tbody><tr><td valign=3D"middle"><table role=3D"none" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"left" class=3D"m_635697164522129341mo=
+b-stack"><tbody><tr><td align=3D"left" valign=3D"middle"><table role=3D"non=
+e" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" style=3D=
+"max-width:380px"><tbody><tr><td align=3D"center" valign=3D"middle"><img sr=
+c=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto=
+,onerror=3Dredirect,quality=3D80/uploads/user/profile_picture/2d01f456-b412=
+-4f4b-a1f4-adfd3284a82e/thumb_yung_cicero.png" width=3D"40" alt=3D"" style=
+=3D"display:block;max-width:40px;border-radius:50%;border:4px solid rgba(0,=
+0,0,0)!important;box-sizing:content-box" border=3D"0"></td><td width=3D"5" =
+style=3D"width:5px">=C2=A0</td><td align=3D"left" valign=3D"middle" class=
+=3D"m_635697164522129341g"><p style=3D"padding:0px"><span style=3D"color:#2=
+d2d2d"><a href=3D"https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7=
+-Wok-HZJqX_bfo_Qu0_RvroKKUkt_Fz9MPnJG439Ps9mUIO8Wo4Bb5valzeBBbJs_L4D1L1-ml7=
+LfJwDDMZd-vOOFR-HA_dD2x4K8k3XxYZyfXrm8jHOE5070nJkRTFOMdv40GcdSUvMIt7tVOrT8s=
+fpIsDJ2xssOP3WlVrpM9Tyn57llww3Rd0etT6HXmbxPA6aTENiR_PmI0HGl7nTpFVisNnjrRJoI=
+9A11lQbWzTxwlnNhdH7Mt7PgwxW2Ovlhe-Q2_Tp7Gank5C5W9HSLPcCTfvEV3Wrb3hi_twDg0Vf=
+24KBjHHy87VqukFxrCpzpL3dzAhhotOOr7ju4f3mJ3SMyXryVvtfPTLqEjMdytuAzkityeU8xHl=
+8hoJqbpotT0euKYnWAz96TJiprX0WmvkEqg6S4nYR4hC_3nyFG05UeL8R1kdVsXkUq_JYmAKXUu=
+CVGFfYk8rb1Sp0QzOJ5PRZ8zr1tlZLpDvdgyNJtSCSv9u3MGPwVyg7FsOd_CYkR4bmkDJzUJdCv=
+l-9oAuNiHmuRylfzOLYZeNOfrOy8C/416/ErsS7T15QAeOI6v-hXU9QQ/h1/yEuffLOwDBRp5P9=
+lRqU97A49HHeaAElCnWQhg5YBQI4" style=3D"color:#2d2d2d!important;text-decorat=
+ion:underline!important" target=3D"_blank">Yung Cicero</a></span><br><span =
+style=3D"color:#555555"> November 10, 2023 </span></p></td></tr></tbody></t=
+able></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td =
+style=3D"height:0px;width:0px"><div style=3D"height:1px"> <img src=3D"https=
+://link.mail.beehiiv.com/ss/o/gRLjVgC0sPA7-2OSv131xw/416/ErsS7T15QAeOI6v-hX=
+U9QQ/ho.gif" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height=
+:1px!important;width:1px!important;border-width:0!important;margin-top:0!im=
+portant;margin-bottom:0!important;margin-right:0!important;margin-left:0!im=
+portant;padding-top:0!important;padding-bottom:0!important;padding-right:0!=
+important;padding-left:0!important"> </div></td></tr><tr id=3D"m_6356971645=
+22129341content-blocks"><td align=3D"center" valign=3D"top" style=3D"paddin=
+g-bottom:15px"><table role=3D"none" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td><table role=3D"non=
+e" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><=
+tr><td bgcolor=3D"transparent" style=3D"background-color:transparent;paddin=
+g:0px 0px 0px 0px"><table role=3D"none" width=3D"100%" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" s=
+tyle=3D"padding:0px 15px 0px"><table role=3D"none" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 0"><tbody><tr><td align=
+=3D"center" valign=3D"top" style=3D"width:160px"><img src=3D"https://media.=
+beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect=
+,quality=3D80/uploads/asset/file/8a2e1597-faac-48cd-9c23-6d3f69e5408a/MoS.p=
+ng" alt=3D"" height=3D"auto" width=3D"160" style=3D"display:block;width:100=
+%" border=3D"0"></td></tr></tbody></table></td></tr><tr><td align=3D"center=
+" valign=3D"top" style=3D"padding:0px 15px 0px"><table role=3D"none" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto"><=
+tbody><tr><td align=3D"center" valign=3D"top" style=3D"width:640px"><img sr=
+c=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto=
+,onerror=3Dredirect,quality=3D80/uploads/asset/file/122a61d8-7383-42b7-a85a=
+-1b7adbf99138/MINT_OR_SKIP_HEADER_TRIO_-_2023-11-10T190559.311.png" alt=3D"=
+" height=3D"auto" width=3D"640" style=3D"display:block;width:100%" border=
+=3D"0"></td></tr></tbody></table></td></tr><tr><td align=3D"left" style=3D"=
+padding:0px 15px;text-align:left;word-break:break-word"><p><span>GM</span><=
+/p></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-align:le=
+ft;word-break:break-word"><p><span>The Light within me honors the Light wit=
+hin you. </span></p></td></tr><tr><td align=3D"left" style=3D"padding:0px 1=
+5px;text-align:left;word-break:break-word"><p><span>Then it asks it to buy =
+my bags. </span></p></td></tr><tr><td align=3D"left" style=3D"padding:0px 1=
+5px;text-align:left;word-break:break-word"><p><span><b>In today=E2=80=99s e=
+dition:</b></span></p></td></tr><tr><td style=3D"padding-bottom:10px;paddin=
+g-left:25px;padding-right:25px;padding-top:10px" class=3D"m_635697164522129=
+341ee"><div style=3D"margin-left:0px"><ul style=3D"list-style-type:disc;mar=
+gin:0px 0px;padding:0px 0px 0px 0px"><li><p style=3D"padding:0px;text-align=
+:left;word-break:break-word"><span>Big NFT Gaming Update</span></p></li><li=
+><p style=3D"padding:0px;text-align:left;word-break:break-word"><span>Top 2=
+5 (with two new additions)</span></p></li><li><p style=3D"padding:0px;text-=
+align:left;word-break:break-word"><span>4 new drops</span></p></li></ul></d=
+iv></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding:12px =
+70px 10px 55px"><table role=3D"none" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" align=3D"center" class=3D"m_635697164522129341d" =
+style=3D"border-radius:6px;border:2px solid #000000"><tbody><tr><td align=
+=3D"center" valign=3D"top" style=3D"padding:4px 4px 4px 4px"><table role=3D=
+"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center"><tbody><tr><td align=3D"center" valign=3D"top" class=3D"m_6356=
+97164522129341i"><p style=3D"margin:0px;text-align:center"><b>=F0=9F=91=89 =
+=F0=9F=91=89 MINTING TODAY</b></p><p style=3D"margin:0px;text-align:center"=
+><b>=E2=96=AA </b><i><b><a href=3D"https://link.mail.beehiiv.com/ss/c/Y70s5=
+PRXu6OkYV6H6j9LqNEqOtFA-6Dr6XwmnlffKmLI94k1b7hcXde1yJpOOmvLCu8rv5fEz5E4tetZ=
+liErnKKJsd2aiEwRF5P_kSVqq3ZistSO9VZONIPD1NK2UcE0_RjfDotq2u6ES9vgXA2QeKn-JDO=
+9WBNvQiLPAh2lAjbWljey61SOBEA-1270jYxfgtCWY37Mhy_kObTZ38J1GLiROTmnv-dGRMEZvh=
+MtTUs/416/ErsS7T15QAeOI6v-hXU9QQ/h2/2UPwwji7LCbHzck9SLaxFjKs2oZhYY75F_hnVl9=
+li00" rel=3D"noopener noreferrer nofollow" target=3D"_blank">And The Absurd=
+ Was Born</a></b></i><b><a href=3D"https://link.mail.beehiiv.com/ss/c/Y70s5=
+PRXu6OkYV6H6j9LqNEqOtFA-6Dr6XwmnlffKmLI94k1b7hcXde1yJpOOmvLCu8rv5fEz5E4tetZ=
+liErnKKJsd2aiEwRF5P_kSVqq3ZistSO9VZONIPD1NK2UcE0_RjfDotq2u6ES9vgXA2QeKn-JDO=
+9WBNvQiLPAh2lAjbWljey61SOBEA-1270jYxfgtCWY37Mhy_kObTZ38J1GLiROTmnv-dGRMEZvh=
+MtTUs/416/ErsS7T15QAeOI6v-hXU9QQ/h3/LNKgxR3-pmUw9PpqVFIcdEptLKQ623TW02HzEte=
+sJDA" rel=3D"noopener noreferrer nofollow" target=3D"_blank"> by Luis Ponce=
+</a></b></p><p style=3D"margin:0px;text-align:center"><b>=F0=9F=91=89 MINTI=
+NG THIS WEEKEND</b></p><p style=3D"margin:0px;text-align:center"><b>=E2=96=
+=AA </b><i><b><a href=3D"https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9B=
+YcfaLajed6p2BfSfLkVVV_sjZ9A8mQco3T_q7eEbbeJe5EXUmy9qE_eeRB7vzal_OR_78VIiZ05=
+391LWQNKtannvs34JO5FzD9y7rwc58HTu_BaZLKdJGf0OKLReEYdqO2rJKxdBboWMgGslxQ72wP=
+gb74T0hWeLuQlulrBUmyJorzpav/416/ErsS7T15QAeOI6v-hXU9QQ/h4/Vh4SEVLkJjtGn_C9C=
+IxG35wU0bswvqdznQ1Fq4pXZ2U" rel=3D"noopener noreferrer nofollow" target=3D"=
+_blank">Big Boss Burn</a></b></i><b><a href=3D"https://link.mail.beehiiv.co=
+m/ss/c/so4PCjQeYhd-a9BYcfaLajed6p2BfSfLkVVV_sjZ9A8mQco3T_q7eEbbeJe5EXUmy9qE=
+_eeRB7vzal_OR_78VIiZ05391LWQNKtannvs34JO5FzD9y7rwc58HTu_BaZLKdJGf0OKLReEYdq=
+O2rJKxdBboWMgGslxQ72wPgb74T0hWeLuQlulrBUmyJorzpav/416/ErsS7T15QAeOI6v-hXU9Q=
+Q/h5/Skm9ntElt25CxJXi8rpVP_oeR986tu4mFjfmEpSsPUY" rel=3D"noopener noreferre=
+r nofollow" target=3D"_blank"> by Defaced</a></b></p></td></tr></tbody></ta=
+ble></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody><=
+/table></td></tr><tr><td><table role=3D"none" width=3D"100%" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td bgcolor=3D"transparent" s=
+tyle=3D"background-color:transparent;padding:0px 0px 0px 0px"><table role=
+=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><=
+tbody><tr><td align=3D"center" valign=3D"top" style=3D"padding:0px 15px 0px=
+"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"margin:0 auto 0 auto"><tbody><tr><td align=3D"center" valign=3D"top" =
+style=3D"width:640px"><img src=3D"https://media.beehiiv.com/cdn-cgi/image/f=
+it=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset=
+/file/60589ad4-b226-40ed-af2d-911afd439ddc/Mint_or_Skip_NARROW_ASSETS__4_.p=
+ng" alt=3D"" height=3D"auto" width=3D"640" style=3D"display:block;width:100=
+%" border=3D"0"></td></tr></tbody></table></td></tr><tr><td align=3D"center=
+" valign=3D"top" style=3D"padding:0px 15px 0px"><table role=3D"none" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto"><=
+tbody><tr><td align=3D"center" valign=3D"top" style=3D"width:640px"><img sr=
+c=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto=
+,onerror=3Dredirect,quality=3D80/uploads/asset/file/ef40c16c-d191-408d-9706=
+-e36d675f116b/2023-11-10_SOON.png" alt=3D"" height=3D"auto" width=3D"640" s=
+tyle=3D"display:block;width:100%" border=3D"0"></td></tr></tbody></table></=
+td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding:0px 15px 0=
+px"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" s=
+tyle=3D"margin:0 auto 0 auto"><tbody><tr><td align=3D"center" valign=3D"top=
+" style=3D"width:640px"><img src=3D"https://media.beehiiv.com/cdn-cgi/image=
+/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/ass=
+et/file/50e5db27-2732-4b81-a20e-5cfa484f8481/2023-11-10_LATER.png" alt=3D""=
+ height=3D"auto" width=3D"640" style=3D"display:block;width:100%" border=3D=
+"0"></td></tr></tbody></table></td></tr><tr><td align=3D"center" style=3D"p=
+adding:0px 15px;text-align:center;word-break:break-word"><p><span style=3D"=
+font-size:1.5rem"><b>Links for the Top 25 drops are </b></span><span style=
+=3D"font-size:1.5rem"><b><a href=3D"https://link.mail.beehiiv.com/ss/c/cTxd=
+b_h6YFeS8x-ztTM5qxggkmz4L3zvuYYiHgThzx7-qSN66PU1xTKbUcRWdljM4BLWbR0dTb5jxip=
+Tzq1UqBUGznUph4ibq4_FH1BjblNOtjNtk4LWVH2g7T-IhYMGjGl35cmJ38uLLCLq3LvZgUJY1n=
+StHxBFM8JFmtkFUvvTwd09MIWHh8-8UfPx0K-5rmMKVGxhmUoHcHkULqf5OCH6RFSmMlNoe76Rm=
+TfZjsNA5JI5Criar8WQi-1F3h_j/416/ErsS7T15QAeOI6v-hXU9QQ/h6/zzBq1RbyyHPIVBQmC=
+d3df9ZjLlw_LKuRaSscrw95yis" rel=3D"noopener noreferrer nofollow" target=3D"=
+_blank">HERE</a></b></span><span style=3D"font-size:1.5rem"><b>.</b></span>=
+</p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding:0px =
+15px 0px"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"margin:0 auto 0 auto"><tbody><tr><td align=3D"center" valig=
+n=3D"top" style=3D"width:640px"><img src=3D"https://media.beehiiv.com/cdn-c=
+gi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/upl=
+oads/asset/file/b39a8c2f-4b00-4020-8363-37a1a1311db5/Mint_or_Skip_NARROW_AS=
+SETS__3_.png" alt=3D"" height=3D"auto" width=3D"640" style=3D"display:block=
+;width:100%" border=3D"0"></td></tr></tbody></table></td></tr><tr><td align=
+=3D"center" valign=3D"top" style=3D"padding:0px 15px;text-align:center"><h2=
+><span><b>Did you know?</b></span></h2></td></tr><tr><td align=3D"left" sty=
+le=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>We h=
+ave a </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE=
+2kP98ui0sGrBRrOrwZqX06mj9zw10WDJLelr_xHrS48-dW-98vlNhv-b70TZrEkW8rFRf7FCfve=
+7R9IExyLSLdoOTGdWPRvCLTFuw-RNBRRml00-N-Urf7xXO2t3OyY5RIXL5ZugCgxDcmJc-4NJXm=
+AXHVJ3V4MvVthjqSlJFcQo9xQgaAxsYh3gKuV3EJz2pyLq666sSNkg/416/ErsS7T15QAeOI6v-=
+hXU9QQ/h7/r-laPAvujOWknVy4L-wheHIJuaz-c4xiJru9FdJXYK8" rel=3D"noopener nore=
+ferrer nofollow" target=3D"_blank">premium pass</a></span><span> that gives=
+ you access to a directory of every drop we cover, complete with detailed i=
+nformation on </span><span><b>how to get on every whitelist</b></span><span=
+> (including those underrated ones that aren=E2=80=99t already full).</span=
+></p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding:0px=
+ 15px 0px"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"margin:0 auto 0 auto"><tbody><tr><td align=3D"center" valig=
+n=3D"top" style=3D"width:640px"><img src=3D"https://media.beehiiv.com/cdn-c=
+gi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/upl=
+oads/asset/file/3197174f-c7e2-4777-8633-14508b9eae61/Untitled_design__6_.pn=
+g" alt=3D"" height=3D"auto" width=3D"640" style=3D"display:block;width:100%=
+" border=3D"0"></td></tr></tbody></table></td></tr><tr><td align=3D"left" s=
+tyle=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>An=
+d for those curatooors out there, you can </span><span><b>get free NFTs</b>=
+</span><span> just by finding drops that end up on the Mint or Watch list. =
+</span></p></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-=
+align:left;word-break:break-word"><p><span>Lastly, </span><span><b>hang wit=
+h me</b></span><span> and the MoS team in a private discord with weekly voi=
+ce chats. The vibes are great.</span></p></td></tr><tr><td align=3D"center"=
+ valign=3D"top" style=3D"padding:0px 15px;text-align:center"><h2><span><b>W=
+ould you like to be </b></span><span><b>featured</b></span><span><b> in Min=
+t or Skip like the above =E2=98=9D=EF=B8=8F ?</b></span></h2></td></tr><tr>=
+<td align=3D"center" valign=3D"top" style=3D"padding-bottom:14px;padding-le=
+ft:15px;padding-right:15px;padding-top:14px;text-align:center;width:100%;wo=
+rd-break:break-word"><table role=3D"none" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center"><tbody><tr><td class=3D"m_6356971645221293=
+41v" align=3D"center" valign=3D"middle" height=3D"52" style=3D"height:52px"=
+><a href=3D"https://link.mail.beehiiv.com/ss/c/PAPlyECWq0DDQvb5TVdaeSIie3Cm=
+aILFc2jcwe0oly7qyiEi42j9FZt9sIRvnTS1df1VHWQycS6vI72ILQ_jE18IGg9UZVZB8xwD89K=
+pUs5W7BQejtocqIcamAW5IHmk7CGLuDHGkEb42oxOBxBQ0zP11Adi7mMCv_Gvl9tI4txE8lUOMx=
+DIZSh2tbtxQXe7/416/ErsS7T15QAeOI6v-hXU9QQ/h8/SORvyk7Z8EugF5Uv8_fKQDK5M4OXHy=
+V1mdw03_JIpN4" rel=3D"noopener noreferrer nofollow" style=3D"color:#ffffff;=
+font-size:18px;padding:0px 22px;text-decoration:none" target=3D"_blank"> Th=
+en hit us up here </a></td></tr></tbody></table></td></tr></tbody></table><=
+/td></tr></tbody></table></td></tr><tr><td><table role=3D"none" width=3D"10=
+0%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td bgcolor=
+=3D"transparent" style=3D"background-color:transparent;padding:0px 0px 0px =
+0px"><table role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" style=3D"padd=
+ing:0px 15px 0px"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" style=3D"margin:0 auto 0 auto"><tbody><tr><td align=3D"center"=
+ valign=3D"top" style=3D"width:640px"><img src=3D"https://media.beehiiv.com=
+/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D=
+80/uploads/asset/file/12dd7d8b-9270-4844-a956-5173a9eba8ba/topstory.png" al=
+t=3D"" height=3D"auto" width=3D"640" style=3D"display:block;width:100%" bor=
+der=3D"0"></td></tr></tbody></table></td></tr><tr><td align=3D"center" vali=
+gn=3D"top" style=3D"padding:0px 15px;text-align:center"><h1><span><b>Big NF=
+T Gaming Update</b></span></h1></td></tr><tr><td align=3D"center" valign=3D=
+"top" style=3D"padding:0px 15px 0px"><table role=3D"none" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto"><tbody><tr><=
+td align=3D"center" valign=3D"top" style=3D"width:640px"><img src=3D"https:=
+//media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3D=
+redirect,quality=3D80/uploads/asset/file/a9e4e4c3-c462-43b4-a946-6287941498=
+97/MoS_Rounded_-_2023-11-10T194432.881.png" alt=3D"" height=3D"auto" width=
+=3D"640" style=3D"display:block;width:100%" border=3D"0"></td></tr></tbody>=
+</table></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-ali=
+gn:left;word-break:break-word"><p><span>We mostly talk about indie cryptona=
+tive game devs in this newsletter.</span></p></td></tr><tr><td align=3D"lef=
+t" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><spa=
+n>But what about all the big AAA game companies =E2=80=93 the ones launchin=
+g the GTAs, Fortnites, and Diablos of the world?=C2=A0</span></p></td></tr>=
+<tr><td align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word"><p><span>Are they coming around to NFTs yet?=C2=A0</span></p><=
+/td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-align:left;w=
+ord-break:break-word"><p><span>Here=E2=80=99s a snapshot update on those pu=
+blishers, along with some personal ratings based on how much wagmi energy t=
+hey=E2=80=99re each showing as we head into 2024.=C2=A0</span></p></td></tr=
+><tr><td align=3D"left" valign=3D"top" style=3D"padding:0px 15px;text-align=
+:left"><h2><span><b>Ratings</b></span></h2></td></tr><tr><td align=3D"left"=
+ style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>=
+=E2=AD=90 NFTs are unholy scams=C2=A0</span></p></td></tr><tr><td align=3D"=
+left" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><=
+span>=E2=AD=90=E2=AD=90 Doesn=E2=80=99t like NFTs but likes money=C2=A0</sp=
+an></p></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-alig=
+n:left;word-break:break-word"><p><span>=E2=AD=90=E2=AD=90=E2=AD=90 Kinda in=
+to it =F0=9F=91=89=F0=9F=91=88</span></p></td></tr><tr><td align=3D"left" s=
+tyle=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>=
+=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90 Turbo WAGMI=C2=A0</span></p></td></tr>=
+<tr><td align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word"><p><span>Let=E2=80=99sa go!</span></p></td></tr><tr><td align=
+=3D"left" valign=3D"top" style=3D"padding:0px 15px;text-align:left"><h3><sp=
+an><b>Blizzard </b></span><span>=E2=AD=90</span></h3></td></tr><tr><td alig=
+n=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word"=
+><p><span>Blizzard=E2=80=99s last official blockchain comment came in 2022,=
+ when their President tweeted simply:=C2=A0</span></p></td></tr><tr><td ali=
+gn=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word=
+"><p><span><a href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeIn=
+QpV4WO8yKSEUCp-V2Vujj4LdlMShVXmZ2P4rb5Tz5JbKjGrGzA2z2sBQeK355rZVAKCzwO8EbRB=
+ppoBYg4-x0-517pSPxZ69Qxlj2Uf3-lQjl0/416/ErsS7T15QAeOI6v-hXU9QQ/h9/k_ZvA6HoR=
+1lyxZJqICNal1KmrTEBgFJOJLfoGhZNlg8" rel=3D"noopener noreferrer nofollow" ta=
+rget=3D"_blank">No one is doing NFTs</a></span><span><i>.=C2=A0</i></span><=
+/p></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-align:le=
+ft;word-break:break-word"><p><span>Not looking great here.</span></p></td><=
+/tr><tr><td align=3D"left" valign=3D"top" style=3D"padding:0px 15px;text-al=
+ign:left"><h3><span><b>Nintendo </b></span><span>=E2=AD=90</span></h3></td>=
+</tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-align:left;word-=
+break:break-word"><p><span>Hired an </span><span><a href=3D"https://link.ma=
+il.beehiiv.com/ss/c/yhyjo2kOjjDbg7mnn4e8SOBxLB8nOg-yLoirQffzwgLEz0Va43WiDPb=
+5w7FWpd6NcWlW6JmtqfqFCX-bdYvYPqTsch6Y6YtBbSx3TzZdIIH56ASwyuWzwrMhUlNI2KMysS=
+fndTp-lA4wKNGcb5gcGOoPHC8AWskAEn-FRZoeGHrzidSocJutPUlNaXRlBF8qYF1yYZ_y72W0V=
+JTgOUBeOETJOEP1tHMYHAOgprx60H8/416/ErsS7T15QAeOI6v-hXU9QQ/h10/7mAfeb1EIcfbo=
+DyCS8RGbzLeEDOFCe5N4Ig3_HnOuF4" rel=3D"noopener noreferrer nofollow" target=
+=3D"_blank">NFT expert</a></span><span> earlier this year. But knowing Nint=
+endo I wouldn=E2=80=99t expect anything until 2050 at the earliest.=C2=A0</=
+span></p></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"padding:0=
+px 15px;text-align:left"><h3><span><b>Steam </b></span><span>=E2=AD=90</spa=
+n></h3></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-alig=
+n:left;word-break:break-word"><p><span>Totally fading blockchain gaming so =
+far. NFTs are still banned on their store, although some manage to </span><=
+span><a href=3D"https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RFTg=
+HC_absB_8UCg3VfQsw4QEBaC9rtLvETxcSDUTgcMsnBDKstCeEMlRQ9Mz6xuolWp1lhEf7WvfoC=
+y6Ke24UQT1Q16fhLBffnfzFgJ7jLaxua1GZxERl3R9WHqYFjbicDzd8Vy-Dy7qlwnnqlZgysrLD=
+yr2rYlaUVCoXNr_mndtd-wGfw6p2-Jw4hnE6SC7a-xFCil7GeQKWs0IrehtMruW_ZSNWCNRw-j_=
+CiAvvbV/416/ErsS7T15QAeOI6v-hXU9QQ/h11/AHdoi7MeFLMbVcblYvZopRbMr9cn80_ymYKL=
+eNo1pXU" rel=3D"noopener noreferrer nofollow" target=3D"_blank">sneak in</a=
+></span><span> anyway.=C2=A0</span></p></td></tr><tr><td align=3D"left" val=
+ign=3D"top" style=3D"padding:0px 15px;text-align:left"><h3><span><b>EA </b>=
+</span><span>=E2=AD=90=E2=AD=90</span></h3></td></tr><tr><td align=3D"left"=
+ style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>=
+EA </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/A8FU_oEKAP1BA=
+SG6ZwIAHY47PlWQY4LEtZzTfrAMZzmWCwNtKOvlpIuCSHM-rsfcD_dA20fDFHImoaWLqmTLvyBf=
+ucNRbHNswIpJW1reBDqXAOTBm7a7MxGDtwuTro8e92tjuPBDEUi8XG_Knfgbt7oAg2Avbzkyhsk=
+tCL-8C0fLzBxhUIl4ngF5s8GaGiZXfUD1UoxE4XGJI26Krfyb3Ig5wAMN9J1Vj6xTf_vObro/41=
+6/ErsS7T15QAeOI6v-hXU9QQ/h12/ahjKDT3STADFz13KSmd8AW7YU8VtXFjjkx12c0w2IEM" r=
+el=3D"noopener noreferrer nofollow" target=3D"_blank">partnered with Nike</=
+a></span><span> on a very limited NFT experiment in June. But otherwise, th=
+ey seem content printing money with web2 loot boxes.=C2=A0</span></p></td><=
+/tr><tr><td align=3D"left" valign=3D"top" style=3D"padding:0px 15px;text-al=
+ign:left"><h3><span><b>Epic Games </b></span><span>=E2=AD=90=E2=AD=90</span=
+></h3></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-align=
+:left;word-break:break-word"><p><span>2021: CEO Tim Sweeney </span><span><a=
+ href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVwDa849zg4y=
+g98CGHSwXIzhfI7pZCU3wIjCt7B20ZMOHDlL8ghtGEvabljuz1En3QtYMZ07lVwQyM5O3OnaJS3=
+LntozwkvzTwCrK8kULo3Fl6fsTNjeRNvPlcJTJ4PL4d7JhvwyrXwvllTQ6W0ynIW_GPbkbrfJeg=
+7rnwRRdk74q9U3uiBdzhsjHULq9Wb66tWEkq0e96k-stx8ZgoLhhzA/416/ErsS7T15QAeOI6v-=
+hXU9QQ/h13/o34S1ZLquNZf8zAaScOsTo2YTi66hoSW04sUTFVuYvU" rel=3D"noopener nor=
+eferrer nofollow" target=3D"_blank">calls NFTs</a></span><span> an =E2=80=
+=9Cintractable mix of scams=E2=80=9D.</span></p></td></tr><tr><td align=3D"=
+left" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><=
+span>2023: Adds </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/=
+b7gvTlyjSZuPNTDUnV2KvX5QDrFKpqMQdzwYpbQt4FxcK-wLQXjsDvK4W5uy1KDxdNBnKKxwRHd=
+jjQmWa7EvbVb2vZ4CIuvquLyjh7n6ZgYdEuxBT1iuIdrSIASrRXUIpCSTiIyRjrLmkQYOwRuTfi=
+v_y0OVWmv8PhWeNHYX_aMiebDhG1dLwYxktL6NSVHjwAmbsFI0dSXnCOMh_B5dioepXkWfiTZDC=
+JtqEHVF1e0c1G1N7a4YRGyKQ8n-Qkfg/416/ErsS7T15QAeOI6v-hXU9QQ/h14/cRQAGq8aZvIv=
+8SVC_mJjFomB4kK9W5DULrzknzYpr34" rel=3D"noopener noreferrer nofollow" targe=
+t=3D"_blank">dozens</a></span><span> of NFT games to the Epic Games Store.<=
+/span></p></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-a=
+lign:left;word-break:break-word"><p><span>Still no </span><span><i>Fortnite=
+</i></span><span> though.=C2=A0</span></p></td></tr><tr><td align=3D"left" =
+valign=3D"top" style=3D"padding:0px 15px;text-align:left"><h3><span><b>Take=
+-two </b></span><span>=E2=AD=90=E2=AD=90</span></h3></td></tr><tr><td align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word">=
+<p><span>Rumors were floating around that </span><span><i>Grand Theft Auto =
+6</i></span><span> might include crypto.=C2=A0</span></p></td></tr><tr><td =
+align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-w=
+ord"><p><span>Turns out there was </span><span><a href=3D"https://link.mail=
+.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RPfV8vgQh29FRA-9oW6C5ZxPVXHyIAMqltzYX=
+TsBjAGDmvkpAhcKfHOGHNwmMlNrIrYut1PJxMbZM2MiTUtAMZ0mfzpzYqe_z1m1ucANSr_c326I=
+HqXkoIj1dMXlcWap6WKDHdl9Ur2dVGw28GjaAgZizjHC2Jo3Va1SMgYKGWWzu6zDfNRuLeAPQlX=
+QjnBLYfDiMLHsN3Vx-Va3mD2QrwhYIFEVdZbWDfGfCPNth5_y5Wa2bXYLy1dcV5ZZzhAqjg/416=
+/ErsS7T15QAeOI6v-hXU9QQ/h15/Wo3Ct9iS7puomKbyYbbdaD2YrgWyZd-fOJ0VucAcXVs" re=
+l=3D"noopener noreferrer nofollow" target=3D"_blank">0 evidence</a></span><=
+span> supporting that.=C2=A0</span></p></td></tr><tr><td align=3D"left" sty=
+le=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>In r=
+eality, Take-Two=E2=80=99s CEO has had </span><span><a href=3D"https://link=
+.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLalNrHsky4E1UCq-wCgVQPx9MYLmq5k31=
+mmuiR5mHHchFrecYamOC5XpFL9_ywXT8d8rSxVYTaojF1ByJYmhBWArnnmHlqptlI4kCwBc5Vv4=
+TzVFey56hcyxGT9MZui5EYKZaR8wCfewYh1K3Xf_JDpA-jBNjwXeUFtfSQQQ6MNQRds3HCVmF7E=
+oS-Q4LFZWGqfUCHO_yDhZsrypx1eLugh_pYLYp0wUkRRIDIoqgmvWRGxTJRpSEA7pxHrypyRH5n=
+T_2eFF26clgZISEDr5-aCZWFVZz4GOqtWQ4A7cbrpIj/416/ErsS7T15QAeOI6v-hXU9QQ/h16/=
+KjUCR_uHLKCZLsx0hCO0vTHqfco-ivLWqr-_mhRaXY0" rel=3D"noopener noreferrer nof=
+ollow" target=3D"_blank">mixed things</a></span><span> to say about NFTs in=
+ the past.=C2=A0</span></p></td></tr><tr><td align=3D"left" valign=3D"top" =
+style=3D"padding:0px 15px;text-align:left"><h3><span><b>Konami </b></span><=
+span>=E2=AD=90=E2=AD=90=E2=AD=90</span></h3></td></tr><tr><td align=3D"left=
+" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span=
+>Hyped me up last month when they revealed an upcoming NFT game called </sp=
+an><span><i><a href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeI=
+nQpV1LbC8tSUZAOwlGmcnBoexEb0pphTZ2zBa0iMDLs9_mLJzOofWv1B2rQlJfATmJMlbcgMw5V=
+lf46ZxarOlRhUg7wB2S2Lq7jlZ_mYTa-Tp6k1ORq43AZ0ypYqTzAjYhEg6PZ7FwgIQfn-6-1qr4=
+J8tVLF9Y_pjkA96Bjh_tan7_6/416/ErsS7T15QAeOI6v-hXU9QQ/h17/TvD2AmJ_X8lukSVWC5=
+9bo-b1HlkmAEWHLUnq72z3TPk" rel=3D"noopener noreferrer nofollow" target=3D"_=
+blank">Project Zircon</a></i></span><span>.</span></p></td></tr><tr><td ali=
+gn=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word=
+"><p><span>But their more recent update makes it seem </span><span><i>reall=
+y </i></span><span>low on their priority list, with development not even pl=
+anned until </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/Kinh=
+qNfGHv_nlAGeInQpV1LbC8tSUZAOwlGmcnBoexGgmFC2dNNBQ7U70i7lC2VIKfBUcNaF8esy6Gb=
+3QQTu8Loq5b8SPWGOTx08pHEqmeJMit1mfWjsJmCf_1u7sbS7DWXsgsQs-EO7nLvLf8BUBx6zSr=
+quUdVgRHSSaySlV8qHZK2fXeez9yGSy8qyMIfYJzowaeZINREcUqSSgtXN6i029UMpBscx7VCBe=
+1y6xxA/416/ErsS7T15QAeOI6v-hXU9QQ/h18/AbP74bdNL2NDbGc2HJ8gXvl-elQaO2CLBOX0z=
+irngKE" rel=3D"noopener noreferrer nofollow" target=3D"_blank">2025 or late=
+r</a></span><span>. My interest is dropping fast.=C2=A0</span></p></td></tr=
+><tr><td align=3D"left" valign=3D"top" style=3D"padding:0px 15px;text-align=
+:left"><h3><span><b>Roblox </b></span><span>=E2=AD=90=E2=AD=90=E2=AD=90</sp=
+an></h3></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-ali=
+gn:left;word-break:break-word"><p><span>Made waves </span><span><a href=3D"=
+https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV8syvXBDjZMusZpwRInl=
+MMQyV41e722TXj-CKNov-Qz16xmbSkbfOuh41_IfcHUFLmOnD6yfo9IY9xeJMOYcuD-Yr3xdApQ=
+Qv5tkA_asYnQOd8goouHrJdv7ujCAebpc_3v9_BkswZJB29-emphGBWmTdMApXtWZb730QXK7_W=
+ozIAduq4LaMfpz3bv6BcoyLA/416/ErsS7T15QAeOI6v-hXU9QQ/h19/XbdeKJvk7lMqZ9Ca9T7=
+soGhAoL84TmgipBMVN7zitW0" rel=3D"noopener noreferrer nofollow" target=3D"_b=
+lank">yesterday</a></span><span> when they said that NFTs were a =E2=80=9Cd=
+ream=E2=80=9D for them.=C2=A0</span></p></td></tr><tr><td align=3D"left" st=
+yle=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>I t=
+hink this happens a little further out, but with 200M monthly users this wi=
+ll eventually be a massive participant.=C2=A0</span></p></td></tr><tr><td a=
+lign=3D"left" valign=3D"top" style=3D"padding:0px 15px;text-align:left"><h3=
+><span><b>CCP Games </b></span><span>=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90</=
+span></h3></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-a=
+lign:left;word-break:break-word"><p><span>The makers of the 20-year-old har=
+dcore economics space game </span><span><i><a href=3D"https://link.mail.bee=
+hiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLavCe5JRD64QZiv22ZSE6HmIl3YM0mvp9xVGqJq4X4=
+X-QHqLZhafb5PqECPnSaOkm3E5ENanQ2OuDELBB5383O-DIzA5E-JuY4x15buiKoXTGKCSsHVA3=
+B72GsuqyA3fFFIvrKdkp43fArgNfwL3NxCc/416/ErsS7T15QAeOI6v-hXU9QQ/h20/kCAM-4xx=
+0VYQgqrTYXTAumUt5P1k8R7I1yviI0Hdbxs" rel=3D"noopener noreferrer nofollow" t=
+arget=3D"_blank">EVE Online</a></i></span><span>, which is more of a metave=
+rse than most things in web3 today.=C2=A0</span></p></td></tr><tr><td align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word">=
+<p><span>Recently </span><span><a href=3D"https://link.mail.beehiiv.com/ss/=
+c/Y7FVsDMOUdhiya-x7sA8RMWDF3YSSXeNE3WcZMXRgpnJP0iRHGxiTSsqiHbA4hj32wuIkjY9n=
+B8FqsplbTD3y4rDnN2pBZYqpnkWgazhm5T88k_unpC-HOVcKL_vvYpnhbykS7eWFjKvlFPqIwxU=
+1QVNnYWOat_GuqIdciY-hhspjvqvk0WitA9ZtybO-Zs31G4Rtm8731Nv-nL2ihcqlSRm8w2DChx=
+eoxHsOmLVjIgIg55TO7jI3yV1hq4RwLgK/416/ErsS7T15QAeOI6v-hXU9QQ/h21/PE1rPshZ0o=
+gsiA7RI7Zryd6_TsXafZORGmJeEbrO5yc" rel=3D"noopener noreferrer nofollow" tar=
+get=3D"_blank">raised $40m</a></span><span> to make a blockchain game in th=
+e EVE universe. Things seem to be escalating quickly.=C2=A0</span></p></td>=
+</tr><tr><td align=3D"left" valign=3D"top" style=3D"padding:0px 15px;text-a=
+lign:left"><h3><span><b>Com2US </b></span><span>=E2=AD=90=E2=AD=90=E2=AD=90=
+=E2=AD=90</span></h3></td></tr><tr><td align=3D"left" style=3D"padding:0px =
+15px;text-align:left;word-break:break-word"><p><span>South Korean publisher=
+. Maybe the biggest believer on this list.=C2=A0</span></p></td></tr><tr><t=
+d align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break=
+-word"><p><span>Launched </span><span><i><a href=3D"https://link.mail.beehi=
+iv.com/ss/c/XQtit5lf6C0XXliqbVcGlCZrMpaCDttuQi2ZMUFCPOFcycg765g_9vFBmmIcPum=
+Qe09TI56ORJFXggFDxoFCNp9VYPdKWz5vWN8wtphnAX9YigTWeX1h0aIU2Ekka6rFVCqRXsIZwv=
+7NAYlT7iWK9h6z6vx70eNzjoDG6KHQYSDtBKyrW2eKpM9cpezvgPQM/416/ErsS7T15QAeOI6v-=
+hXU9QQ/h22/TFteuv_pfE_2qM-qnSqPrizoCUmBjDVj8_oc7MvvzI8" rel=3D"noopener nor=
+eferrer nofollow" target=3D"_blank">Summoner=E2=80=99s War: Chronicles</a><=
+/i></span><span> with web3 components, and was getting </span><span><a href=
+=3D"https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLaqdcDpOJmimQl46o=
+yW0ITAcgGKtUWLtsxOdkKtijM8NeFP4ushO7s-fluPZlgk2kv5v-7QYEF7xnZLxzr4Dx41n-dvA=
+I2pyOJ6WiNblarvsADhfnqLfl9UdwCunnOiAsnYyOMTEGatZOE7f0Xi0xp36hpWFbO0s5fuoDli=
+A3QhlFg886fqLwSvTaTLZ5jE3MABdXW5hh93PIgQTy5PQWX7YLJRE8XgWQJrc8tzINRXyx/416/=
+ErsS7T15QAeOI6v-hXU9QQ/h23/7tPq_jejkXMYiNrRWo4DnJPkhHAcqPJnKrUioWB335I" rel=
+=3D"noopener noreferrer nofollow" target=3D"_blank">1 million</a></span><sp=
+an> daily players after launch.=C2=A0</span></p></td></tr><tr><td align=3D"=
+left" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><=
+span>Actual </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/so4P=
+CjQeYhd-a9BYcfaLaq70ZSeyEv57xktbPkffS7DhsCUDP77MC5xUpkdy7P9Ku7iuQ9yz0jVSzLN=
+uaQAwjdU8sdugjTha_sX8Iug5F4ttmtdBatq4Gt7V5whLzS4TT6QzprN8_85RDYp74gUfLmVUeV=
+WDS5pycfnjhLpRC5K5VViFR_zI6tz59zYgocxB3AsgizROPIhvw3EVK6hZ2SwS3q1JvXK76PdQ9=
+pYEe2JjH9sP78oAEwt_BItQ6xwk/416/ErsS7T15QAeOI6v-hXU9QQ/h24/pEj2yLiuxpdmkqcm=
+zg8jalhsIH1ME69tMzxKdOL7nWE" rel=3D"noopener noreferrer nofollow" target=3D=
+"_blank">quote</a></span><span>: </span></p></td></tr><tr><td align=3D"cent=
+er" valign=3D"top" style=3D"padding:12px 19px 12px 15px"><table role=3D"non=
+e" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D=
+"center" class=3D"m_635697164522129341d2" style=3D"border-left-color:#dfd15=
+0;border-left-style:solid;border-left-width:3px;border-radius:0px"><tbody><=
+tr><td align=3D"center" valign=3D"top" style=3D"padding:7px 12px 7px 12px">=
+<table role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" align=3D"center"><tbody><tr><td align=3D"left" valign=3D"top" cla=
+ss=3D"m_635697164522129341i2"><p style=3D"margin:0px;text-align:left"><i>=
+=E2=80=9CRight now, our focus is on: we=E2=80=99re going to bring every sin=
+gle original IP to the blockchain.=E2=80=9D</i></p></td></tr></tbody></tabl=
+e></td></tr></tbody></table></td></tr><tr><td align=3D"left" valign=3D"top"=
+ style=3D"padding:0px 15px;text-align:left"><h3><span><b>Nexon </b></span><=
+span>=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90</span></h3></td></tr><tr><td alig=
+n=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word"=
+><p><span>Another big believer.=C2=A0</span></p></td></tr><tr><td align=3D"=
+left" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><=
+span>Pivoting the ever-popular </span><span><i><a href=3D"https://link.mail=
+.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV07buTjrU6cjXup0G7E1CoGyNKqIlW20b1ayg=
+KdKVYq-5gvVlM8vcE8jXhQ5qGY7Ocjv8p2npI98qaRWUckeZy-1N27lxDibRa5jCBqynEyyo-qE=
+GVoJHbIM3omVbWVc7KnUgNyt72fknXGdqCs1bsfRI1U98cB-cMAfOcaU9ADW/416/ErsS7T15QA=
+eOI6v-hXU9QQ/h25/oUWmyHP6QSXpsTaPG64LbfLUPN3RkkWL_T0lM1gMh30" rel=3D"noopen=
+er noreferrer nofollow" target=3D"_blank">Maplestory</a></i></span><span> i=
+nto NFTs and has plans to go fully interoperable with other blockchain asse=
+ts.=C2=A0</span></p></td></tr><tr><td align=3D"left" valign=3D"top" style=
+=3D"padding:0px 15px;text-align:left"><h3><span><b>Square Enix </b></span><=
+span>=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90</span></h3></td></tr><tr><td alig=
+n=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word"=
+><p><span>Went hard earlier in the year, making </span><span><a href=3D"htt=
+ps://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLaj2hF6ZTTNaybhSiRsdgTzK=
+cD7blfGl29Y12jkM_3XYnUEhN6jZrFK4k-2vQE74a-a21Tkw2XuPW8ymqiHgcB3swj9uw_ew7o3=
+BfNxnzXk0L4_xlbgLcoV3xjriboGpVtzgCKG_rV694Nkzp02BpdKpUrJ94hBHAg_SJqDZm_tb9E=
+J1U6BI01PwxawV54CNDNnQzrWH3Z2KRkYwVYnp-J1w/416/ErsS7T15QAeOI6v-hXU9QQ/h26/9=
+qzK6mOVmXe8ypURp_tM3k4HQm5lcxrRT--MRvT9doU" rel=3D"noopener noreferrer nofo=
+llow" target=3D"_blank">lovey-dovey</a></span><span> comments about web3 an=
+d even replacing their CEO with a blockchain expert.=C2=A0</span></p></td><=
+/tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-align:left;word-b=
+reak:break-word"><p><span>Now they=E2=80=99re finally launching their NFT g=
+ame </span><span><i><a href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGH=
+v_nlAGeInQpVyS0HPtUFCNuicTP6kxr8eKc67C4L9CdvZB4JpwN4HJPFvuqApNQaUiz0nKIHwJ3=
+RDm9d0YCm-FMAbcqmAi3Y3Rkjp7klck2fh0fD8zzt3ElT91qfNq-8gnfRcZT0MYJ5oGpDVx3V_3=
+FI2mv0HYB04OiOZk-pgJR3DJEvzqe3ONF/416/ErsS7T15QAeOI6v-hXU9QQ/h27/jLcYjEwrBE=
+11tb3Gd9DaLmcvki_OY_88r_8Dd4PsNkg" rel=3D"noopener noreferrer nofollow" tar=
+get=3D"_blank">Symbiogenesis</a></i></span><span> =E2=80=93 although in a v=
+ery confusing and low-key fashion.=C2=A0</span></p></td></tr><tr><td align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word">=
+<p><span>And they keep experimenting here and there, like </span><span><a h=
+ref=3D"https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLalkrSERKqmX5V=
+r9-apYoll-eNcoAM6JmsPYHhheBkkfh6d3ObVTIgf52s-yeMbiKbQmius4VdgPLTyiRMm9NAOsI=
+5Eo5vaRV10C1VNlVh69qcw8uVA6UCtCO0CSLcWyPAHqI5A1htb4Nrhu8i_QTD6xftz_cpruwWLV=
+67Ca_jbWbUtaC9ec2eo9rJqeflAt4VSjjzwNPY2ooQLQ9yEuKbcWB7p3T_pJZqhuFLrLWYeZC/4=
+16/ErsS7T15QAeOI6v-hXU9QQ/h28/mlozrmlS6T8RNl-NOAIalJ7pdc2WhtYJ1q7XetokuNo" =
+rel=3D"noopener noreferrer nofollow" target=3D"_blank">these</a></span><spa=
+n>=C2=A0</span><span><i>Final Fantasy</i></span><span> NFT trading cards.=
+=C2=A0</span></p></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"p=
+adding:0px 15px;text-align:left"><h3><span><b>Ubisoft </b></span><span>=E2=
+=AD=90=E2=AD=90=E2=AD=90=E2=AD=90</span></h3></td></tr><tr><td align=3D"lef=
+t" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><spa=
+n>One of the first to launch an in-game NFT, and </span><span><a href=3D"ht=
+tps://link.mail.beehiiv.com/ss/c/Xusstc8D6hz_RDFW1aI2QXSXZV_4s5dJ7tTGuZVGnk=
+IgocLLGmSjsY3u9-FRH3ZsjiUPl-qDuh0nd58stWiQbsECVg-lfMdewKhXoquDK5Ru9mXvAU1ID=
+953xeaHSff50N6ho0O-9XIs60rrGBcD-zWIM63b_lvDexmMq3RVp70Rvkq5R7oJkmfmm89AxCng=
+4BvWu50s2Kfv6fFV4SxUhpFP7bFzJwz3FEvfohvj-zo/416/ErsS7T15QAeOI6v-hXU9QQ/h29/=
+VBtuds0e2amFdZsQpMBsBwdLjGHGkw2ikORZ7OnAlYc" rel=3D"noopener noreferrer nof=
+ollow" target=3D"_blank">get battered</a></span><span> by anti-NFT gamers. =
+But now </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/Y7FVsDMO=
+Udhiya-x7sA8RHcp47w9Fs7JbEC3wIRMZVMxSRSKJrwbH8wkNVpB2-psz1hswepNrZYLsVYJsh5=
+2L7JyLziNmIe1DdZO53aA-75WyYfmwz__IeCJ22e7Nb0EZTcAxC0x98GSqrea6v3PDsTM3fe8o0=
+06oSYv3_1KcKE4WMBQR5iUQwVkznm6uGdRcyO2xfuuc7-xXqFKpfRmVGWgn2gC9Yz0HWJQWl6HJ=
+z8_ftRwlypm9UETVoMJ42TTtjuHO6lF9Qxcfe6KbkAb_w/416/ErsS7T15QAeOI6v-hXU9QQ/h3=
+0/lZnCR1Bh-DbzLVvEpGchZ5wWadpFXcQt5gLFpgmnygc" rel=3D"noopener noreferrer n=
+ofollow" target=3D"_blank">they=E2=80=99re back</a></span><span> with a new=
+ crypto experience on Immutable.=C2=A0</span></p></td></tr><tr><td align=3D=
+"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p>=
+<span>Props for the conviction.=C2=A0</span></p></td></tr><tr><td align=3D"=
+left" valign=3D"top" style=3D"padding:0px 15px;text-align:left"><h3><span><=
+b>Zynga </b></span><span>=E2=AD=90=E2=AD=90=E2=AD=90=E2=AD=90</span></h3></=
+td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-align:left;wo=
+rd-break:break-word"><p><span>Launched an actual NFT platform earlier this =
+year called </span><span><i><a href=3D"https://link.mail.beehiiv.com/ss/c/K=
+inhqNfGHv_nlAGeInQpV6d3njXZxLSlqZ-zU3COnNKXSNijyC30wffYb3KQVacmRXRO5YVpVahK=
+aYSdToRfbm5GLswL0Fbilv1ZLxqZtlwjZfJbOo-g6obbj-AYLPerQbRhI5-KdKPhB6Pzub2zLOw=
+fh1PjdsKY0gIr2ksFUPUeV-7rPKzoMJ1herAlBDG6/416/ErsS7T15QAeOI6v-hXU9QQ/h31/0U=
+LVwDOpwhDWl2jpZ2zAvL_Wa3Ppa5Z7RyJS7VAi7Hk" rel=3D"noopener noreferrer nofol=
+low" target=3D"_blank">Sugartown</a></i></span><span>, with its very own 10=
+k collection.</span></p></td></tr><tr><td align=3D"left" style=3D"padding:0=
+px 15px;text-align:left;word-break:break-word"><p><span>It still feels limi=
+ted in scope relative to the rest of their portfolio, but they=E2=80=99re d=
+efinitely in the trenches now.=C2=A0</span></p></td></tr><tr><td align=3D"l=
+eft" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p></=
+p></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td><ta=
+ble role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody><tr><td bgcolor=3D"#FFFFFF" style=3D"background-color:#ffffff=
+;padding:10px 10px 10px 10px"><table role=3D"none" width=3D"100%" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" val=
+ign=3D"top" style=3D"padding:0px 15px 0px"><table role=3D"none" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto"><tbody=
+><tr><td align=3D"center" valign=3D"top" style=3D"width:620px"><img src=3D"=
+https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,oner=
+ror=3Dredirect,quality=3D80/uploads/asset/file/618733d1-b21e-4038-9aa4-484e=
+62c66dbd/Mint_or_Skip_NARROW_ASSETS.png" alt=3D"" height=3D"auto" width=3D"=
+620" style=3D"display:block;width:100%" border=3D"0"></td></tr></tbody></ta=
+ble></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;text-align:l=
+eft;word-break:break-word"><p><span><i><b>NOTE: </b></i></span><span><i>The=
+se drops are lightly curated. Our only requirement is that they have recogn=
+izable founders. As usual, DYOR. To learn more </i></span><span><i><a href=
+=3D"https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLal_Bwl4BIJDrW5aK=
+BH5h56H9onM3Nuf3ifq7Yx4j0wfS-lzPjFelfO4W2gtz0fchUM3r9QmU0iKaV2X9DE8YBUNdut-=
+2BC99ucolpYdzuidnBedTFH0pKDzmotLTz_Q7x7Kde2nYoh5Ub9YjY--WtkA8HkLxJl9Y-NvIWC=
+AHQ-MXp5o0qfCP7zW9BvJyDJJJBXTMzUjZOvQKrPa7Vd_fkAfXHdI5YAHua5Rr6QlOK-sD/416/=
+ErsS7T15QAeOI6v-hXU9QQ/h32/-HfWxvWwzLq1dqSqp2WmYTmm9dWD5dPNmBupN7d8Md0" rel=
+=3D"noopener noreferrer nofollow" target=3D"_blank">go here</a></i></span><=
+span><i>. </i></span></p></td></tr><tr><td align=3D"center" valign=3D"top" =
+style=3D"font-size:0px;line-height:0px;padding:20px 0px"><table class=3D"m_=
+635697164522129341j" role=3D"none" width=3D"38%%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td> =C2=A0 </td></tr>=
+</tbody></table></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"pa=
+dding:0px 15px;text-align:left"><h3><span><i><b>Ambiguity</b></i></span><sp=
+an><b> by SeattleSales</b></span></h3></td></tr><tr><td align=3D"center" va=
+lign=3D"top" style=3D"padding:0px 15px 0px"><table role=3D"none" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto"><tbod=
+y><tr><td align=3D"center" valign=3D"top" style=3D"width:620px"><img src=3D=
+"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,one=
+rror=3Dredirect,quality=3D80/uploads/asset/file/97a4a1bd-4018-4a8b-a121-27a=
+e168b27d6/3.png" alt=3D"" height=3D"auto" width=3D"620" style=3D"display:bl=
+ock;width:100%" border=3D"0"></td></tr><tr><td align=3D"center" valign=3D"t=
+op" class=3D"m_635697164522129341t" style=3D"width:620px"><p><span><a href=
+=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV4QcGmnJshnc8IvS=
+nnw08mPgqCZLDO4e51mI1pK0SkPPohnnwp7Rm1rQg7nGtihnTD_fVJLZ6f8Hr8PiLuyL1daXm1M=
+jwe-jpkkKuEE_2p1KOiDmHBP-hSABUGZ_-dhvpJwfGd34Sdi0var9qF0MwV1kuSK5-5J-fIzCV4=
+vLbNfK/416/ErsS7T15QAeOI6v-hXU9QQ/h33/D5EQGRp93WyplARqf7s1uzAvukfIPt2w2xUM2=
+LA0NSc" rel=3D"noopener noreferrer nofollow" target=3D"_blank">@seattlesale=
+</a></span></p></td></tr></tbody></table></td></tr><tr><td align=3D"left" s=
+tyle=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>Ps=
+eudonymous artist Seattle Sales, founder of art platform </span><span><a hr=
+ef=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV004STxrpTS02f=
+5pX1mW81MQZko5ePdqZEmbqnmVYQRKKh6d2WPTzYZSLWkkdk1LDKFftK3kymfCyAIF62SPy_xr4=
+Ukwn8TJ0Mu-E3L1dEwXtv-P0xac892rCJWM0e2nUc6whfrzVy-GD1spm4zJoIQUXlUtknGoMwdX=
+vCmxzdRL/416/ErsS7T15QAeOI6v-hXU9QQ/h34/YU1ln4S_WhDk3efPltBxATny40Fln8aN7sD=
+IXgBtkOU" rel=3D"noopener noreferrer nofollow" target=3D"_blank">Seize the =
+Culture</a></span><span>, follows up on his recent </span><span><i><a href=
+=3D"https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9z=
+w10WDJKyByiUXVXbY6dGbDAH93fYBdQkNVoloAY8ZJ02u4C4qBbomXRWBgHB5quxCPQXh1874IW=
+RDKJtZQoRoGI1nkkq3ls4kitS49012czR7Y-ceLcbu5OK5U9s7wdXauqoUYCpdXlkuZM9lyCwp0=
+ogSvqek419fBoGlcB1pjIx47W-_g/416/ErsS7T15QAeOI6v-hXU9QQ/h35/36lo1uzm5gFKQ3X=
+QZGb8Jbx1wdDVGZ7MO1k6sNiv--A" rel=3D"noopener noreferrer nofollow" target=
+=3D"_blank">Swirls</a></i></span><span> sellout with the </span><span><b>50=
+0-supply</b></span><span>=C2=A0</span><span><i><a href=3D"https://link.mail=
+.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2EB_3wi3k5e9NN72ggiE_CeaO7MnzcvVNmM9=
+VRRc58t18kfTCSSFc-zysPK04sFQ2qCejMMBblsJ-Cw8cpENHjbXmkPq9fHZWG2DkF76YvNxr8_=
+1XtsYDkiiXWrz0YYFm1zBXnW44BVMvt03piKbZGaegq8QZ0e7c8ifgfSl1yAs45tR_X-X_PsA3n=
+YYhOpiw/416/ErsS7T15QAeOI6v-hXU9QQ/h36/SldscJjHUmqIV-E4bjSh5vTWMn7mHCqm9vWZ=
+KO-sQE0" rel=3D"noopener noreferrer nofollow" target=3D"_blank">Ambiguity</=
+a></i></span><span>.</span></p></td></tr><tr><td align=3D"left" style=3D"pa=
+dding:0px 15px;text-align:left;word-break:break-word"><p><span>The collecti=
+on features </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/Kinh=
+qNfGHv_nlAGeInQpV2EB_3wi3k5e9NN72ggiE_CeaO7MnzcvVNmM9VRRc58t-TuJzekzFQ4ntt4=
+a4knFp7gP0_V__MU5A2CogEW8Mj4sD49TWP_1nX0ELgELWjA4FpiyvmxloM1jEKCO1fUxKzhrAh=
+1-w3rtsCPpUW0jgjpZEoq0cTGV_RhdLCGeHJ1l9f5kZYdkVFOFvFyW39vAHw/416/ErsS7T15QA=
+eOI6v-hXU9QQ/h37/u_bFI6XKdZTx1__--9MCD4OswcAP1VysQhEgGfKedh0" rel=3D"noopen=
+er noreferrer nofollow" target=3D"_blank">pieces</a></span><span> of </span=
+><span><a href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2=
+EB_3wi3k5e9NN72ggiE_CeaO7MnzcvVNmM9VRRc58t9pIkURvO3H7ma4qwvXBA-c66n80-cr4Wo=
+PAGxHOBwsVI03Vvyv_Dfei83t1yKBN5L-fKQLptRYPq_ELRt5zUU3Al2pefHefXv6YhHwQQjPj6=
+5Wjyp3fiiJX9EpncJ-fLP4K7KrjhV6xgHHcBdwz78g/416/ErsS7T15QAeOI6v-hXU9QQ/h38/E=
+tqKVoMaqqCJdNYwaYGQq5l6POe6NmSkRsP5k6oajyA" rel=3D"noopener noreferrer nofo=
+llow" target=3D"_blank">various</a></span><span> styles created with Midjou=
+rney and Photoshop (like his last), as well as 20 unique pieces by guest AI=
+ artists.</span></p></td></tr><tr><td align=3D"left" style=3D"padding:0px 1=
+5px;text-align:left;word-break:break-word"><p><span>One for emerging AI art=
+ explorers.</span></p></td></tr><tr><td align=3D"center" valign=3D"top" sty=
+le=3D"font-size:0px;line-height:0px;padding:20px 0px"><table class=3D"m_635=
+697164522129341j" role=3D"none" width=3D"38%%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"center"><tbody><tr><td> =C2=A0 </td></tr></tb=
+ody></table></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"paddin=
+g:0px 15px;text-align:left"><h3><span><b>Courtyard.io Week of Thanks</b></s=
+pan></h3></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding=
+:0px 15px 0px"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" style=3D"margin:0 auto 0 auto"><tbody><tr><td align=3D"center" va=
+lign=3D"top" style=3D"width:620px"><img src=3D"https://media.beehiiv.com/cd=
+n-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/=
+uploads/asset/file/11f97db3-0f6f-4b95-be65-959df63745e1/New_Drops_-_2023-11=
+-10T174705.119.gif" alt=3D"" height=3D"auto" width=3D"620" style=3D"display=
+:block;width:100%" border=3D"0"></td></tr><tr><td align=3D"center" valign=
+=3D"top" class=3D"m_635697164522129341t" style=3D"width:620px"><p><span><a =
+href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVxCbgGZc8Fwg=
+EiIW4MpanhB6lTL6GwS8PoZ9pj2jRXnHoHPDNQt3ws5hE3NxlGB5fCYgcRtgGWwmVaiUoSG50u_=
+5xFo1GGiqxRJ5imRWupwGV2xZkpYlAaGJoGjxn1Y6NE3aUSF6fx1Sb7O0jqxECI5ijdhL1GJ4t6=
+DP6pHWy0gc/416/ErsS7T15QAeOI6v-hXU9QQ/h39/ObZhgFeYwtBOppbCFC207BiE2rE1-owau=
+4UcYkH9z2I" rel=3D"noopener noreferrer nofollow" target=3D"_blank">@courtya=
+rd_nft</a></span></p></td></tr></tbody></table></td></tr><tr><td align=3D"l=
+eft" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><s=
+pan>After selling out all ten of their previous drops, Courtyard.io is givi=
+ng back with </span><span><i><a href=3D"https://link.mail.beehiiv.com/ss/c/=
+KinhqNfGHv_nlAGeInQpV_E-3H2_W26g7pkXT3819oZ6fvqFaZRoD8IZyATQ69P8xA36LETK5up=
+We0Ank5ozt_9vL_y6LunAm9BacwZPHz9FCvJg4njfaDRxd8Xk9w5NmerevCVoRzeZXgrnSxKfV_=
+zu1f_pRYnetfZOlNPIfK9WTxwXPCBnpHhW3SxVm4Wurpj7mGJqFl9PpBCp76iZnQ/416/ErsS7T=
+15QAeOI6v-hXU9QQ/h40/flfc7CmN39qqLH2Jg8lXKkPYQI9qM2Lrj5eO93CLYYQ" rel=3D"no=
+opener noreferrer nofollow" target=3D"_blank">Web3 Week of Thanks</a></i></=
+span><span>, minting </span><span><b>400 tokenized Pok=C3=A9mon cards for f=
+ree</b></span><span>.</span></p></td></tr><tr><td align=3D"left" style=3D"p=
+adding:0px 15px;text-align:left;word-break:break-word"><p><span>These will =
+be split across </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/=
+A8FU_oEKAP1BASG6ZwIAHQ_2tzD4LEViULieMaWsmasjxSHEeDSK0xvyAbMDXQtjYkrWaOFob71=
+xK3ESvXz12raRkIX7FF3nuXYbbrXxAIMVBUVSvBc4oKvnnXQVa-U-TBZLYU3xynRhsMyI4Dy9Kj=
+HS0RfEtKsF1tAFoNtPLyg/416/ErsS7T15QAeOI6v-hXU9QQ/h41/yRznEn7xRCyvzh3EjEEpDF=
+o5zt7u2OnSxkfJCGz1ZTo" rel=3D"noopener noreferrer nofollow" target=3D"_blan=
+k">four drops </a></span><span><b><a href=3D"https://link.mail.beehiiv.com/=
+ss/c/A8FU_oEKAP1BASG6ZwIAHQ_2tzD4LEViULieMaWsmasjxSHEeDSK0xvyAbMDXQtjYkrWaO=
+Fob71xK3ESvXz12raRkIX7FF3nuXYbbrXxAIMVBUVSvBc4oKvnnXQVa-U-TBZLYU3xynRhsMyI4=
+Dy9KjHS0RfEtKsF1tAFoNtPLyg/416/ErsS7T15QAeOI6v-hXU9QQ/h42/o0IPelHSq7g40rKvM=
+cMcgmCfEB1IJSiliQQONTO2viM" rel=3D"noopener noreferrer nofollow" target=3D"=
+_blank">next week</a></b></span><span>. They=E2=80=99re all FCFS from what =
+I can see, so better get those clicking fingers ready.</span></p></td></tr>=
+<tr><td align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word"><p><span>Who doesn=E2=80=99t like free Pok=C3=A9mon cards?</sp=
+an></p></td></tr><tr><td align=3D"center" style=3D"padding:0px 15px;text-al=
+ign:center;word-break:break-word"><p> =E2=9C=A8<span><b> Added to Top 25 </=
+b></span>=E2=9C=A8 </p></td></tr><tr><td align=3D"center" valign=3D"top" st=
+yle=3D"font-size:0px;line-height:0px;padding:20px 0px"><table class=3D"m_63=
+5697164522129341j" role=3D"none" width=3D"38%%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td> =C2=A0 </td></tr></t=
+body></table></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"paddi=
+ng:0px 15px;text-align:left"><h3><span><b>Untitled SuperRare Drop by Pindar=
+ Van Arman</b></span></h3></td></tr><tr><td align=3D"center" valign=3D"top"=
+ style=3D"padding:0px 15px 0px"><table role=3D"none" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto"><tbody><tr><td al=
+ign=3D"center" valign=3D"top" style=3D"width:620px"><img src=3D"https://med=
+ia.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredir=
+ect,quality=3D80/uploads/asset/file/ba4bbed9-0a2e-45fe-a1f4-0eb59b9cfcbc/Ne=
+w_Drops_-_2023-11-10T174704.788.gif" alt=3D"" height=3D"auto" width=3D"620"=
+ style=3D"display:block;width:100%" border=3D"0"></td></tr><tr><td align=3D=
+"center" valign=3D"top" class=3D"m_635697164522129341t" style=3D"width:620p=
+x"><p><span><a href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeI=
+nQpV7IIO811c5UGeKBPjURb9BR78U0KFWlzYeMU3yTfApvmmH4fy-7koVL-j7zBg26JVLEG8Lc4=
+XLkh3ndp5I271Hqi9Vtgg1qghqYzQW6ItGsyg-7ucye9DYb-WATsA2YrPCVBo4gBhbjSIl364JU=
+ZfZU/416/ErsS7T15QAeOI6v-hXU9QQ/h43/rQkklW1oGYijmW9R5yrp2SfdxSUiU2TMXR7Qzga=
+3Pss" rel=3D"noopener noreferrer nofollow" target=3D"_blank">@vanarman</a><=
+/span></p></td></tr></tbody></table></td></tr><tr><td align=3D"left" style=
+=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span>Pindar=
+ Van Arman, one of the top AI artists in NFTs, unearths a 2018 project in t=
+his </span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_n=
+lAGeInQpV2vhmQxoNVgPdM6v5p5IVC2xEysPlMEWZiMqt_x6wv4WzMbbnxApcglXa5QsJtK6jTP=
+z_RLHTYksH__T6zSDEB1WccdAMYqisxym-P909O5d9QRQTFAYjkKGgEeH08GK_ZBIwuYnmuH9_C=
+cASZNvOGg-S3iTjbCxgBiy1tRvwPfnwENTAKCwvILZKSEv2tTNmg/416/ErsS7T15QAeOI6v-hX=
+U9QQ/h44/-39mw1l0p5hnd7ykkwZAa3g7aPvuGCu-ZnkOdJ1d67o" rel=3D"noopener noref=
+errer nofollow" target=3D"_blank">upcoming SuperRare collection</a></span><=
+span>.</span></p></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px=
+;text-align:left;word-break:break-word"><p><span>Consisting of </span><span=
+><b>128 robot-drawn face portraits</b></span><span> with muted colors and r=
+ough outlines, it serves as a </span><span><a href=3D"https://link.mail.bee=
+hiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV_FsZPBhRpQaBnMPSieBysfh86Mmq-x99iMPUTHFx=
+ksxFK3kZTBC2Xv9uKxpS-hnzmIjZAcJq5XgVE-uLvOFaspvpXgZ82FwbjKyCdSTObhbyOMGjZjH=
+38tt-qPEa-9puNLF3_LuPH8PfdmaIvACV1_VFrgg7uc1iNDjak6Uwchl-84m4thO3HNf-_0oWwr=
+1Xg/416/ErsS7T15QAeOI6v-hXU9QQ/h45/_a2XldFTkRPTDvnQtskQ63O44nJTOfBdUTqm9x0j=
+fV0" rel=3D"noopener noreferrer nofollow" target=3D"_blank">time capsule</a=
+></span><span> for the tech. Aesthetically, it=E2=80=99s similar to his Bri=
+ght Moments release from May, </span><span><i><a href=3D"https://link.mail.=
+beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10WDJLTlySfX3464izBIp=
+xF-Xnt-DM0LMI_eRY6CXysWEe5TluD8aFVSoN_SibazGEi3pQDXVZGrfTzoOstLlqVqIWBOuG7M=
+pGT9c0uQcf9GZQf1zXolWGYS0c9Q6LKm2kIwq7vbqRQEBBq4H7cwwyu-Q5EqbkUEi4mPn4MVlNv=
+G8XjWMxYN2mI8erqlrFmrDMWV7U/416/ErsS7T15QAeOI6v-hXU9QQ/h46/vP7Te1opZE8uS2AL=
+EavYMUKNE9HvZpI5jYgK9wKx8fA" rel=3D"noopener noreferrer nofollow" target=3D=
+"_blank">AI Imagined Faces</a></i></span><span>.</span></p></td></tr><tr><t=
+d align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break=
+-word"><p><span>It hasn=E2=80=99t been that long since Van Arman was lighti=
+ng up the market with </span><span><i><a href=3D"https://link.mail.beehiiv.=
+com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10WDJK3k08z6xWpFYmHySQxTr4qyC=
+dccwslw9E7AoAMdHmTRTiuhCvZku9Ohvj36Lr88il57fEJdIc1_lgkhPguYDFhPdNiah3ar_NyY=
+w7_3BgHnKjhTlP2gTLsHnsAxAYNjp9osB8naoD_G3o-uZJX1tMz/416/ErsS7T15QAeOI6v-hXU=
+9QQ/h47/rCrGasvy-FNQ626rg3cZJ8PD2fbbb6vN25FHhkXwUrE" rel=3D"noopener norefe=
+rrer nofollow" target=3D"_blank">byteGANs</a></i></span><span>, and I could=
+ see collectors taking an interest in his earlier work, so I=E2=80=99ve=E2=
+=80=A6</span></p></td></tr><tr><td align=3D"center" style=3D"padding:0px 15=
+px;text-align:center;word-break:break-word"><p> =E2=9C=A8<span><b> Added to=
+ Top 25 </b></span>=E2=9C=A8 </p></td></tr><tr><td align=3D"center" valign=
+=3D"top" style=3D"font-size:0px;line-height:0px;padding:20px 0px"><table cl=
+ass=3D"m_635697164522129341j" role=3D"none" width=3D"38%%" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td> =C2=A0 </=
+td></tr></tbody></table></td></tr><tr><td align=3D"left" valign=3D"top" sty=
+le=3D"padding:0px 15px;text-align:left"><h3><span><i><b>Unigraphs</b></i></=
+span><span><b> by Mulan.art</b></span></h3></td></tr><tr><td align=3D"cente=
+r" valign=3D"top" style=3D"padding:0px 15px 0px"><table role=3D"none" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto">=
+<tbody><tr><td align=3D"center" valign=3D"top" style=3D"width:620px"><img s=
+rc=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Daut=
+o,onerror=3Dredirect,quality=3D80/uploads/asset/file/101ccbb6-26aa-486c-9e7=
+9-aadbfb62cdb7/New_Drops_-_2023-11-10T174316.870.gif" alt=3D"" height=3D"au=
+to" width=3D"620" style=3D"display:block;width:100%" border=3D"0"></td></tr=
+><tr><td align=3D"center" valign=3D"top" class=3D"m_635697164522129341t" st=
+yle=3D"width:620px"><p><span><a href=3D"https://link.mail.beehiiv.com/ss/c/=
+KinhqNfGHv_nlAGeInQpV6EPH27XhUfnS3UMJkh4iOxub_gKruOo2yXO12pi2IcGBNtGY60xmOz=
+XNqW2ABBEiE1-BVppVrcMRB-ZV5Vb9gThJtL0U-5RwmqwViWI_zRBCgjKw6YorpbVPda0MNC3cd=
+AeOogCDjkmExGDXiyyyhg/416/ErsS7T15QAeOI6v-hXU9QQ/h48/WOZOfMJ6vl_dGcqpyFJS_V=
+po0pic7UOEQjmy4Ogi29g" rel=3D"noopener noreferrer nofollow" target=3D"_blan=
+k">@mulan_art</a></span></p></td></tr></tbody></table></td></tr><tr><td ali=
+gn=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word=
+"><p><span>The Ordinals scene is still ripe for artists, but relatively few=
+ have taken the cross-chain leap.</span></p></td></tr><tr><td align=3D"left=
+" style=3D"padding:0px 15px;text-align:left;word-break:break-word"><p><span=
+>One who has is Nicole Liu (a.k.a. Mulan.art), and now she=E2=80=99s droppi=
+ng </span><span><i><a href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv=
+_nlAGeInQpV6EPH27XhUfnS3UMJkh4iOyBd1Dm-TOkhJjZX7Ba57BztmsC4-jSU5DTXO3gHzKxY=
+o8FSqUWlYBU49hdb5uJfAl8EYgvTiUyKgXwTQR6nZ2C5I_0NrwdA_jU6mKcgVSIXzZ3rWv6zdKj=
+_GlIfpyVBYdiEXvzIfpkFcxOPFhffwXqYrYXnSdMPr-ZZTT_ZuEGWw/416/ErsS7T15QAeOI6v-=
+hXU9QQ/h49/XnTgggt5Ai0m8e6qkaxLCIz7blxrBX0Nt4O3Ny5-Z8s" rel=3D"noopener nor=
+eferrer nofollow" target=3D"_blank">Unigraphs</a></i></span><span> after se=
+lling out her 100-supply </span><span><i><a href=3D"https://link.mail.beehi=
+iv.com/ss/c/cTxdb_h6YFeS8x-ztTM5qxWBgpHr1ocEsWOVwWcGttQAKsOWKKVkw-eNQ6H2WUh=
+YNDUQW8hXSamBU36hyweLRNatb1AagSXP_HX7hJvKVvkGi4bEn2yB7pWEP7pAsS5h7QNxossQuc=
+JKx5jYBfzR0GZujQoMY4IiJdc4XYN-oaZm613ptKkq2p0IHFz8Lkttvx2Y25SI4aH9lBUCmxrem=
+w/416/ErsS7T15QAeOI6v-hXU9QQ/h50/w43vIHiaV7vAg4nO1mvFzP_pj7YQB5n76dVvv4tSxV=
+8" rel=3D"noopener noreferrer nofollow" target=3D"_blank">Abstraordinals</a=
+></i></span><span> in May, which is currently sitting at 10x its original m=
+int price.</span></p></td></tr><tr><td align=3D"left" style=3D"padding:0px =
+15px;text-align:left;word-break:break-word"><p><span>This upcoming </span><=
+span><b>555-supply</b></span><span> generative collection pairs Bitcoin sat=
+s=E2=80=99 ID numbers and text names with different shapes and colors, ensu=
+ring that each abstract piece is unique. You can already check the pieces <=
+/span><span><a href=3D"https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-zt=
+TM5qxWBgpHr1ocEsWOVwWcGttQAKsOWKKVkw-eNQ6H2WUhYEiJY5LC8Fvym9mvnbo5XkTF-5DXc=
+QKhjlSgDsPbpGKr39sxazjJeUk7YwlXgmBccqAxwkeediwE8Jce_oQh0TA2F4pDXHhb5J8QFoBI=
+ELr-pkY1YBawNLvEYjLd86aFuODKQ21f1jg0VJ8cP6xA8RQ/416/ErsS7T15QAeOI6v-hXU9QQ/=
+h51/pOSDq0Vcmvey8iAMlt1EBcV1yWyTse3ywTs2vZonc08" rel=3D"noopener noreferrer=
+ nofollow" target=3D"_blank">here</a></span><span>.</span></p></td></tr><tr=
+><td align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:br=
+eak-word"><p><span>One for orange coin believers.</span></p></td></tr></tbo=
+dy></table></td></tr></tbody></table></td></tr><tr><td><table role=3D"none"=
+ width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr=
+><td bgcolor=3D"transparent" style=3D"background-color:transparent;padding:=
+0px 0px 0px 0px"><table role=3D"none" width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" s=
+tyle=3D"padding:0px 15px 0px"><table role=3D"none" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto"><tbody><tr><td alig=
+n=3D"center" valign=3D"top" style=3D"width:640px"><img src=3D"https://media=
+.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirec=
+t,quality=3D80/uploads/asset/file/05ddeb0b-70cb-44a1-9f6e-c66a0f32f398/shar=
+e_us_emoji_narrow.png" alt=3D"" height=3D"auto" width=3D"640" style=3D"disp=
+lay:block;width:100%" border=3D"0"></td></tr></tbody></table></td></tr><tr>=
+<td align=3D"center" valign=3D"top"><table role=3D"none" width=3D"100%" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><=
+td align=3D"center" valign=3D"top" style=3D"font-size:0px;line-height:0px;p=
+adding:20px 0px"><table class=3D"m_635697164522129341j" role=3D"none" width=
+=3D"38%%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"=
+><tbody><tr><td> =C2=A0 </td></tr></tbody></table></td></tr><tr><td align=
+=3D"left" valign=3D"top" style=3D"padding:0px 15px;text-align:left"><h2>Sha=
+re Mint or Skip</h2></td></tr><tr><td align=3D"left" style=3D"padding:0px 1=
+5px;text-align:left;word-break:break-word"><p> You currently have <strong>0=
+</strong> referrals, only <strong>1</strong> away from receiving <strong>Un=
+derstanding NFT Value (PDF)</strong>. </p></td></tr><tr><td align=3D"left" =
+valign=3D"top" style=3D"padding:0px 15px 0px"><table role=3D"none" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 0"><tbo=
+dy><tr><td align=3D"center" valign=3D"top" style=3D"width:320px"><a href=3D=
+"https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu=
+0_RtXoOVsNhy3eJzez8cbeV2W7vZKQaTANRPpsu-K8hcKoBzSu5ilqNW_gr3y98wC4nnQJZH4LR=
+pm_uBg7uAbquIGjN8fwXZdkFwyMi4-OzTldjYrFAwgxuF3vWSxbwAX0Q4N7S6g6q9BxtfyzKyPX=
+i4bpFGUbTosNiYpP4ZuI5f9jZqOs1c4Fy09pGjZFo7gCPV96oOmjVImH8-ggmBZlMo5lEjh0Nvu=
+PhuobSWoCK_5bHzAlqM-BS3RhPOuMPRQ7b0rA8BPVNyL0UU2S3ZormUQwupx5g0vV7gxw1NJkoR=
+br3UOIctbBpijtSDe5Fre7xpFZN7oF7gUnvC_56f6wncJh1Zf7P1BHq-x_vYWQj3b1SJsYfCCEe=
+Dv3sxlUj4n5aq0E7dT8Haopean_7wFhVlREdwKljPAmLCdy3EDabNzHQ/416/ErsS7T15QAeOI6=
+v-hXU9QQ/h52/UDFQuAYiJWyFKlXJ-z55RuLtzEJH3QTG8wUvVP6mbL0" rel=3D"noopener n=
+oreferrer nofollow" style=3D"text-decoration:none" target=3D"_blank"><img s=
+rc=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Daut=
+o,onerror=3Dredirect,quality=3D80/uploads/reward/image/47267bdc-9038-4b27-b=
+d45-bab87d78d01a/smart_peepo.png" alt=3D"Understanding NFT Value (PDF)" hei=
+ght=3D"auto" width=3D"320" style=3D"display:block;width:100%" border=3D"0">=
+</a></td></tr></tbody></table></td></tr><tr><td align=3D"left" valign=3D"to=
+p" style=3D"padding-bottom:14px;padding-left:15px;padding-right:15px;paddin=
+g-top:14px;text-align:left;width:100%;word-break:break-word"><table role=3D=
+"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left"><tbo=
+dy><tr><td class=3D"m_635697164522129341v" align=3D"center" valign=3D"middl=
+e" height=3D"42" style=3D"height:42px"><a href=3D"https://link.mail.beehiiv=
+.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu0_RtXoOVsNhy3eJzez8cbeV2W7=
+vZKQaTANRPpsu-K8hcKoBzSu5ilqNW_gr3y98wC4nnQJZH4LRpm_uBg7uAbquIGjN8fwXZdkFwy=
+Mi4-OzTldjYrFAwgxuF3vWSxbwAX0Q4N7S6g6q9BxtfyzKyPXi4bpFGUbTosNiYpP4ZuI5f9jZq=
+Os1c4Fy09pGjZFo7gCPV96oOmjVImH8-ggmBZlMo5lEjh0NvuPhuobSWoCK_5bHzAlqM-BS3RhP=
+OuMPRQ7b0rA8BPVNyL0UU2S3ZormUQwupx5g0vV7gxw1NJkoRbr3UOIctbBpijtSDe5Fre7xpFZ=
+N7oF7gUnvC_56f6wncJh1Zf7P1BHq-x_vYWQj3b1SJsYfCCEeDv3sxlUj4n5aq0E7dT8Haopean=
+_7wFhVlREdwKljPAmLCdy3EDabNzHQ/416/ErsS7T15QAeOI6v-hXU9QQ/h53/nguu8EG2NQWPh=
+9zTX6mhG9C9SyZgpAo7pH8vDIlSe38" rel=3D"noopener noreferrer nofollow" style=
+=3D"color:#ffffff;font-size:16px;padding:0px 14px;text-decoration:none" tar=
+get=3D"_blank"> Click to Share </a></td></tr></tbody></table></td></tr><tr>=
+<td align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:bre=
+ak-word"><p> Or copy and paste this link to others: <a href=3D"https://mint=
+orskip.beehiiv.com/subscribe?ref=3DdjCchum4JM" rel=3D"noopener noreferrer n=
+ofollow" target=3D"_blank">https://mintorskip.beehiiv.com/subscribe?ref=3Dd=
+jCchum4JM</a></p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D=
+"font-size:0px;line-height:0px;padding:20px 0px"><table class=3D"m_63569716=
+4522129341j" role=3D"none" width=3D"38%%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center"><tbody><tr><td> =C2=A0 </td></tr></tbody><=
+/table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbod=
+y></table></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"paddin=
+g:0px 15px;text-align:center"><h2><b>Team</b></h2></td></tr><tr><td align=
+=3D"center" style=3D"padding:0px 15px;text-align:center;word-break:break-wo=
+rd"><p><b>Giancarlo Chaux</b> =E2=80=94 <a href=3D"https://link.mail.beehii=
+v.com/ss/c/KinhqNfGHv_nlAGeInQpVwKUZLQsIQIRzUzLhp5rQZkTy_P2COnzPA4QglptQCzi=
+yq8r8A25k5LvMRIUlEj9v2PyIIg2fQwLhtOscr9ISBD9EopazmnlX8AOa7qgo2vXb5wgewfLt6o=
+C0zkPDHVFYr55wRwMlLJn2ZYczf_q8YNVOt6Ou_ydhJUW9-hq6-1d/416/ErsS7T15QAeOI6v-h=
+XU9QQ/h54/dJKGzz2QwXZQtI04i89saMalm44IOtKn2YjrqKtpJOw" rel=3D"noopener nore=
+ferrer nofollow" target=3D"_blank">@GiancarloChaux</a></p></td></tr><tr><td=
+ align=3D"center" style=3D"padding:0px 15px;text-align:center;word-break:br=
+eak-word"><p><b>Guillermo Martin</b> =E2=80=94 <a href=3D"https://link.mail=
+.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV-U2GwAI9sM3Y1ZdchGf_G5Lpo9jy-9bS1NZJ=
+CailWvRpN8gJzdWVwfb79IJutRoWzOB5HjRgID3Q7dGmbE5GkKZWn8eLW2BMnzhxsInusRkN7DT=
+tpI4SrCKBZAPwK1tIRrA0yQmLYzDoPrufQBbRF7evGSxmQX40EDn4cql5P7q/416/ErsS7T15QA=
+eOI6v-hXU9QQ/h55/vtxWyEjEAkIksbeBjm14W8yiZPVgm_Zt7ehqh7epizw" rel=3D"noopen=
+er noreferrer nofollow" target=3D"_blank">@pikanxiety</a></p></td></tr><tr>=
+<td align=3D"center" style=3D"padding:0px 15px;text-align:center;word-break=
+:break-word"><p><b>Jon Yale </b>=E2=80=94 <a href=3D"https://link.mail.beeh=
+iiv.com/ss/c/KinhqNfGHv_nlAGeInQpVx6W3EFVy_dPGWF_FML52btODFIdcsMYBgFfo27WMI=
+6qzNZ4IZPb2HbAg_N3hvWZf34AwKAitKqc22ZT-_eM_D9iSXI7nt0RGHYqmwziIc1kZErNUNYXU=
+GC6Ip8DzN7OW906-09iOzR51yEt0KmrIiU/416/ErsS7T15QAeOI6v-hXU9QQ/h56/76neFw-Ni=
+EbGYmbhwyYLwN7XEPyslub1QJwZ0MhpGxM" rel=3D"noopener noreferrer nofollow" ta=
+rget=3D"_blank">@JonYale</a></p></td></tr><tr><td align=3D"center" valign=
+=3D"top" style=3D"font-size:0px;line-height:0px;padding:20px 0px"><table cl=
+ass=3D"m_635697164522129341j" role=3D"none" width=3D"38%%" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td> =C2=A0 </=
+td></tr></tbody></table></td></tr><tr><td align=3D"left" style=3D"padding:0=
+px 15px;text-align:left;word-break:break-word"><p><b>Tell us what you </b><=
+i><b>really</b></i><b> think</b></p></td></tr><tr><td align=3D"left" style=
+=3D"padding:0px 15px;text-align:left;word-break:break-word"><p> What=E2=80=
+=99d you think of this edition? Tap your choice below =F0=9F=91=87=EF=B8=8F=
+=C2=A0 </p></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"padding=
+-bottom:14px;padding-left:15px;padding-right:15px;padding-top:14px;text-ali=
+gn:left;width:100%;word-break:break-word"><table role=3D"none" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" align=3D"left"><tbody><tr><td class=3D=
+"m_635697164522129341v" align=3D"center" valign=3D"middle" height=3D"52" st=
+yle=3D"height:52px"><a href=3D"mailto:gm@mintorskip.com?subject=3DBig%20NFT=
+%20Gaming%20Update&amp;body=3Dcringe" rel=3D"noopener noreferrer nofollow" =
+style=3D"color:#ffffff;font-size:18px;padding:0px 22px;text-decoration:none=
+" target=3D"_blank"> cringe </a></td></tr></tbody></table></td></tr><tr><td=
+ align=3D"left" valign=3D"top" style=3D"padding-bottom:14px;padding-left:15=
+px;padding-right:15px;padding-top:14px;text-align:left;width:100%;word-brea=
+k:break-word"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" align=3D"left"><tbody><tr><td class=3D"m_635697164522129341v" alig=
+n=3D"center" valign=3D"middle" height=3D"52" style=3D"height:52px"><a href=
+=3D"mailto:gm@mintorskip.com?subject=3DBig%20NFT%20Gaming%20Update&amp;body=
+=3Dnot%20bad" rel=3D"noopener noreferrer nofollow" style=3D"color:#ffffff;f=
+ont-size:18px;padding:0px 22px;text-decoration:none" target=3D"_blank"> not=
+ bad </a></td></tr></tbody></table></td></tr><tr><td align=3D"left" valign=
+=3D"top" style=3D"padding-bottom:14px;padding-left:15px;padding-right:15px;=
+padding-top:14px;text-align:left;width:100%;word-break:break-word"><table r=
+ole=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left=
+"><tbody><tr><td class=3D"m_635697164522129341v" align=3D"center" valign=3D=
+"middle" height=3D"52" style=3D"height:52px"><a href=3D"mailto:gm@mintorski=
+p.com?subject=3DBig%20NFT%20Gaming%20Update&amp;body=3Dloved%20it" rel=3D"n=
+oopener noreferrer nofollow" style=3D"color:#ffffff;font-size:18px;padding:=
+0px 22px;text-decoration:none" target=3D"_blank"> loved it </a></td></tr></=
+tbody></table></td></tr><tr><td align=3D"left" style=3D"padding:0px 15px;te=
+xt-align:left;word-break:break-word"><p></p></td></tr></tbody></table></td>=
+</tr><tr><td class=3D"m_635697164522129341b" align=3D"center" valign=3D"top=
+" bgcolor=3D"#DFD150" style=3D"padding:0px;border-bottom-left-radius:11px;b=
+order-bottom-right-radius:11px"><table role=3D"none" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td =
+align=3D"center" valign=3D"top" bgcolor=3D"#2C81E5" style=3D"padding:12px">=
+<table role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" align=3D"center"><tbody><tr><td><span style=3D"padding-left:1px">=
+</span></td><td align=3D"center" valign=3D"middle" width=3D"75" style=3D"wi=
+dth:75px"><a href=3D"https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQ=
+pVwKUZLQsIQIRzUzLhp5rQZkTy_P2COnzPA4QglptQCziyq8r8A25k5LvMRIUlEj9v2PyIIg2fQ=
+wLhtOscr9ISBD9EopazmnlX8AOa7qgo2vXb5wgewfLt6oC0zkPDHVFYr55wRwMlLJn2ZYczf_q8=
+YNVOt6Ou_ydhJUW9-hq6-1d/416/ErsS7T15QAeOI6v-hXU9QQ/h57/lmuZ4dNCndUCtkYJ-qF2=
+v-AoScSBDdWWt2QC2HLnPfM" style=3D"text-decoration:none" target=3D"_blank"><=
+img width=3D"22" alt=3D"tw" border=3D"0" style=3D"display:block;max-width:2=
+2px" src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=
+=3Dauto,onerror=3Dredirect,quality=3D80/static_assets/x_light.png"></a></td=
+><td><span style=3D"padding-left:1px"></span></td></tr></tbody></table></td=
+></tr><tr><td height=3D"10" style=3D"line-height:1px;font-size:1px;height:1=
+0px"> =C2=A0 </td></tr><tr><td class=3D"m_635697164522129341w" align=3D"cen=
+ter" valign=3D"top" style=3D"padding:15px"><table role=3D"none" width=3D"10=
+0%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><tbod=
+y><tr><td align=3D"center" valign=3D"top"><p style=3D"font-family:&#39;Verd=
+ana&#39;,Geneva,sans-serif;color:#222222!important"> Update your email pref=
+erences or unsubscribe <a href=3D"https://link.mail.beehiiv.com/ss/c/cTxdb_=
+h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu0_RtXoOVsNhy3eJzez8cbeV2W7vZKQaTANRPpsu-K8=
+hcKoBzSu5ilqNW_gr3y98wC4nkq7zaxA4QPF44CB07hZC3NDldKj5rCs7VZWLn0Ec6WQGrxAQBd=
+PnV3dWS7iFuLRDNlN0N-e0D4LvogY6VhhGvHbgQEuHBQzSvSGB7iVF92GiGtOiA1QONbir4jVp6=
+Nks4QDBRZElpHA5PNfwhqwxSrbATzpm-_58lBBDpe3eeTeYDOrjxxN6LCKZ3HOmwjBzi9tpvCvw=
+cfakXceZgVAMPbGreYi_639RmMogG38aHIAsqiiSJjyw-cKeGkxirTQUBlGiIR4K37PWeLAYe5O=
+_oZTOtgbuIV-HfOKFtFCYfOCU3wYo0q3Q9fAcnJQJszqK1iT_RkLdAMjhVCbvr5CExs1OuTaemd=
+kAcUN5Lg6NvOYB6Jf8mnaNsPD9FnxPbi_SXXhuhpTvVE7BND5Yci329khx6J92koqSQk8J-v1d3=
+AfQ/416/ErsS7T15QAeOI6v-hXU9QQ/h58/aa1XqHxglPBJzQtobHCdgjYDOv98gkXridNgAM5P=
+RBo" style=3D"text-decoration:underline;text-decoration-color:#222222!impor=
+tant;color:#222222!important" target=3D"_blank"> here</a></p><p class=3D"m_=
+635697164522129341copyright" style=3D"font-family:&#39;Verdana&#39;,Geneva,=
+sans-serif;color:#222222!important"> =C2=A9 2023 Mint or Skip </p><p style=
+=3D"font-family:&#39;Verdana&#39;,Geneva,sans-serif;color:#222222!important=
+"> 228 Park Ave S, #29976, New York, New York 10003, United States </p></td=
+></tr><tr style=3D"display:table-row!important"><td align=3D"center" valign=
+=3D"top" style=3D"padding-top:20px"><table role=3D"none" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"display:table!impo=
+rtant"><tbody><tr style=3D"display:table-row!important"><td class=3D"m_6356=
+97164522129341u" align=3D"center" valign=3D"middle" height=3D"32" style=3D"=
+height:32px;display:table-cell!important;max-height:32px!important;margin:0=
+px!important"><a style=3D"line-height:32px!important;text-decoration:none;d=
+isplay:block!important" href=3D"https://link.mail.beehiiv.com/ss/c/so4PCjQe=
+Yhd-a9BYcfaLal92csPoxF93Cj3F1bVz7hQs2KD3n2vOure75Ejl7sALCkXd6fibsEfITElykCO=
+g6jcNa-A6yPM5Jm7sEBjcy0QzerE-ACL0fnbgzPKqlSxZgyxaDDUZDq9s-kiSFMkiQOCGH7qvix=
+EDhyUcxfePKS4/416/ErsS7T15QAeOI6v-hXU9QQ/h59/-KSXbrMD-wET5hd5PoL0IbMrRnsKUK=
+KltKFDGTHUHMQ" target=3D"_blank"><img src=3D"https://media.beehiiv.com/outp=
+ut-onlinepngtools.png" width=3D"16" alt=3D"beehiiv logo" style=3D"display:i=
+nline-block!important;max-width:16px!important;vertical-align:-3px!importan=
+t;width:16px!important" border=3D"0"><span style=3D"padding-left:11px!impor=
+tant;display:inline-block!important">Powered by beehiiv</span></a></td></tr=
+></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></t=
+d></tr></tbody></table></div></div></div></div></div>
+
+--0000000000006e88dd0609d0c95d--

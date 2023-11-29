@@ -40,12 +40,11 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>#Web3 Tweet Thread Generator</h1>
+            <h1>Market Signal Aggregator</h1>
           </div>
           <div className="header-subtitle">
-            <h2>what do you want to post about? (max output: 1000 characters)</h2>
-            <h4>sometimes the app will time-out due to vercel run-time limiter!</h4>
-            <h4>see inspiration from the <a href="https://twitter.com/weavechainweb3">weavechain twitter</a> 🙂</h4>
+            <h2>Paste newsletter text in the box below or upload pdf (max output: 1000 characters).</h2>
+            <h2>Sometimes the app will time-out due to vercel run-time limiter!</h2>
           </div>
         </div>
         <div className="prompt-container">
@@ -76,10 +75,7 @@ const Home = () => {
               </div>
             </div>
             <div className="output-content">
-              <p>#Web3Wednesday pt. [xX]</p>
               <p>{apiOutput}</p>
-              <p></p>
-              <p>Read more: [Insert Link]</p>
             </div>
           </div>
         )}

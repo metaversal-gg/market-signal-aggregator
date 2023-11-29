@@ -1,0 +1,1810 @@
+Delivered-To: zile@metaversal.gg
+Received: by 2002:a05:7300:51f3:b0:f4:557a:3a9b with SMTP id u19csp2213893dyd;
+        Wed, 29 Nov 2023 09:36:10 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEZ97791tW6+C24J77dSGmy+2fEc3MdEYRP8lm7RZfLgbJZM/CdiG2C0nPgrhmA1YNTkG0Z
+X-Received: by 2002:a17:902:ced0:b0:1cf:658f:d2d with SMTP id d16-20020a170902ced000b001cf658f0d2dmr21657188plg.5.1701279370417;
+        Wed, 29 Nov 2023 09:36:10 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1701279370; cv=none;
+        d=google.com; s=arc-20160816;
+        b=P4PUUZnU2CC6LE+9W5Iw0yBExqOqbMhmQ9iVbO/WTxe7+cLMF+/gUXTDb2LboF0x3g
+         bXvD888qli6lL6B6bjiIzWozPe2DZpMLWG9HoBrUuln2abkkBzXa4wA0aAZSc1lPFP8N
+         huLOIVCfy9wYiaNoRsLnMyGjxIxV4bbspOFVMgyd+SfhWDuTWWfTDxwl9xogEnZ69O9E
+         1JF3UGzeRhBwPKjiSv58HZucy+eDOdtm/FmtLbHPCfX+g3dlDTh/OnIKZxg5ahW2lXbu
+         aL6u4MB7yp5RiWvQCCjABLl+lfAvJSBbo6HxkY80GrL+E1b5gsTyfvwnw9uQS1WnSq4Y
+         fUkw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:list-unsubscribe:sid:feedback-id:reply-to:subject:message-id
+         :mime-version:from:date:dkim-signature;
+        bh=xpTWca9WQfqFyNUQ80xVMF/Zh3KWnckGyzWEi83+HkA=;
+        fh=/0A6mPYAK9ppOhrHjC5K8+3APADSyLDhIIdFZ5qmJoo=;
+        b=PB0Iz/Jv88s28Q1f9O+LI8Vs/Ub+Llwv8r4cZZ33B2fqTJZPaGaeHojrpGFmN9zmFH
+         xFuVoyDOAz6bUzkj5sBJpbWoZaKOcM0SRaEyu9ik3pAlE0nZgKeO+z0cTlmhV1B96wPy
+         GoZjFxoDejCHvBh57EQvwhGImeuRri9oXeRp/tLsFGmykjow23gCj3hzWFGcH4e5P/9Z
+         0eJJVeTOd/uICEqBu0K2KqOWtO8NWsU4jLYqH9lzKPftSO72lu7fO1KBOjvp82Q+8ntm
+         53ZqMReH7eTkkDZKA8CtCwDfnK0aSl/Vfc6EGUjHn8ygFDCYG16H3E1kObOupRk8e0uo
+         ziAg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.milkroad.com header.s=s1 header.b=dcnggMbP;
+       spf=pass (google.com: domain of bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com designates 149.72.116.182 as permitted sender) smtp.mailfrom="bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=milkroad.com
+Return-Path: <bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com>
+Received: from o3.ptr6352.mail.beehiiv.com (o3.ptr6352.mail.beehiiv.com. [149.72.116.182])
+        by mx.google.com with ESMTPS id l2-20020a170903244200b001d00a9256adsi3087886pls.488.2023.11.29.09.36.09
+        for <zile@metaversal.gg>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 29 Nov 2023 09:36:10 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com designates 149.72.116.182 as permitted sender) client-ip=149.72.116.182;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.milkroad.com header.s=s1 header.b=dcnggMbP;
+       spf=pass (google.com: domain of bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com designates 149.72.116.182 as permitted sender) smtp.mailfrom="bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=milkroad.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.milkroad.com;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:to:
+	cc:content-type:from:subject:to;
+	s=s1; bh=xpTWca9WQfqFyNUQ80xVMF/Zh3KWnckGyzWEi83+HkA=;
+	b=dcnggMbPM14neAMSTEljIPPW6zEhZUnCQ7uVY6B9EG5/Gcs+SWnR+yARIHDqFH8UTeg8
+	xQMq4isNK+k0ix1TsAZjYO3VKzuywUMyd0TIY+dyqrEZCKZIZTYwZUkcbNGlgEa3qZRptM
+	WxsCRL4QTDt5SC95Y5sG5u1Eoe+AMqneerupWNGMT212rvum5WHmnzsYv6PKY4o0BJwCU6
+	wKDcs39VBHh2kgVy+a3nYQ1NgfC/uEb9gHimZBgrab/fJ4gSo4zuL5zPpS4kJkB03Erg4N
+	peWKjGcgU9kfvaSBVghfTXP1GDWemqkV/ULBs46WHn7dFynyzxNJ3jmxVul+zlew==
+Received: by filterdrecv-868b798575-dggdc with SMTP id filterdrecv-868b798575-dggdc-1-6567764C-61
+        2023-11-29 17:35:09.088550223 +0000 UTC m=+3711225.757241741
+Received: from MjM0NjM2MjU (unknown)
+	by geopod-ismtpd-12 (SG) with HTTP
+	id 0rT0dbF3Tk-dBZ7OCBunPQ
+	Wed, 29 Nov 2023 17:35:08.756 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=cea906ff53488739774720f39c5ac1fa9c54fedb1e61c34502623d0b33e9
+Date: Wed, 29 Nov 2023 17:36:08 +0000 (UTC)
+From: Milk Road <newsletter@mail.milkroad.com>
+Mime-Version: 1.0
+Message-ID: <0rT0dbF3Tk-dBZ7OCBunPQ@geopod-ismtpd-12>
+Subject: =?UTF-8?B?8J+lmw==?= Happy birthday to the Bitcoin halving!
+ =?UTF-8?B?8J+Ogg==?=
+Reply-To: Milk Road <newsletter@milkroad.com>
+x-beehiiv-type: newsletter
+x-newsletter-signup: https://themilkroad.beehiiv.com/subscribe
+x-beehiiv-ids: 
+ =?us-ascii?Q?{=22account=5Fname=22=3A=22https=3A=2F=2Fthemilkroad=2Ebeehiiv=2Ecom=2F=22=2C=22campaign=5Fi?=
+ =?us-ascii?Q?d=22=3A=22e4cdbd20-53df-496f-abad-051d3223315?=
+ =?us-ascii?Q?0=22=2C=22category=22=3A=22newsletter=22=2C=22email=5Fgener?=
+ =?us-ascii?Q?ated=5Fat=22=3A1701279308=2C=22user=5Fid=22=3A=22654e9594?=
+ =?us-ascii?Q?-184c-4884-8e02-e6e58a3a6871=22}?=
+Feedback-ID: 
+ =?us-ascii?Q?e4cdbd20-53df-496f-abad-051d32233150=3Anewsletter=3A654e9594-184c-?=
+ =?us-ascii?Q?4884-8e02-e6e58a3a6871=3A7bdde86ecb25fb5?=
+sId: 654e9594-184c-4884-8e02-e6e58a3a6871
+x-list-id: 654e9594-184c-4884-8e02-e6e58a3a6871
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Cmailto=3A654e9594-184c-4884-8e02-e6e58a3a6871+bcc9e91e-b3d2-4e9?=
+ =?us-ascii?Q?7-88f1-76c0da9b04a7+e4cdbd20-53df-496f-?=
+ =?us-ascii?Q?abad-051d32233150=40unsub=2Ebeehiiv=2Ecom=3E=2C?=
+ =?us-ascii?Q?_=3Chttps=3A=2F=2Fthemilkroad=2Ebeehiiv=2Ecom=2Fsubscribe=2Fbcc9e91e-b3d2-4e97-?=
+ =?us-ascii?Q?88f1-76c0da9b04a7=2Fmanage=3Fpost=5Fid=3De4cdbd?=
+ =?us-ascii?Q?20-53df-496f-abad-051d32233150=3E?=
+x-list-owner: <mailto:newsletter@milkroad.com>
+x-newsletter: https://themilkroad.beehiiv.com/p/happy-birthday-bitcoin-halving
+x-newsletter-id: https://themilkroad.beehiiv.com/
+X-SG-EID: 
+ =?us-ascii?Q?T3R61P0pyJ7C+vfbWcG=2FwLjAV67oW=2FW+zZ0muxOP61VnBYBFVYxzcHPva1V0o0?=
+ =?us-ascii?Q?i5OUKmj0ze+gzEh3ymTqEQVhwvEkMJ9WuJiM2A4?=
+ =?us-ascii?Q?GxG3WQGg7wy6A1ZkOp6MHk3Xhq4psHfNUEw=2Fygx?=
+ =?us-ascii?Q?RHVg8W+AP88ix92xfzpwVgBd8abYIOjgyq9VLl=2F?=
+ =?us-ascii?Q?ksrdv=2FF04MNouJf3ihkIEIFYb1pRHwbhAuB++Ml?=
+ =?us-ascii?Q?1IykTRNAxeV0TA1y+w42QFDBjAcliEpGPdIUfB?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FLxVM69ceEc1HIRn6NgiB?=
+ =?us-ascii?Q?p7ofT34GamvxtqgYEd4z6UMWA2Ef9Ji3SsH0SOu?=
+ =?us-ascii?Q?BaM1kJA9MqkTxCbYXmFHVxAH7U3ZWA46nh5mvaT?=
+ =?us-ascii?Q?KbY8DLd8vXGj7uL9iqYayrn+QDdjo=2FS4+u3BtKx?=
+ =?us-ascii?Q?6WjNFsVxbTDgaDct=2FFhyzq1jQaQcWqUuZhVpw=2Fq?=
+ =?us-ascii?Q?UE7TGJLBvOCQewLh5gqZXxp+UbxPFWBFVJwCWgc?=
+ =?us-ascii?Q?ngCVpIBFnWhOXt6g0Ql9Q=3D=3D?=
+To: "zile@metaversal.gg" <zile@metaversal.gg>
+X-Entity-ID: 2UVm8W7D2AZ4pVSrmLxWTQ==
+
+--cea906ff53488739774720f39c5ac1fa9c54fedb1e61c34502623d0b33e9
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/934026e2-d1c7-4=
+6de-9715-5d3f808a0f6b/Screenshot_2023-11-29_at_7.10.53_AM.png?t=3D170125989=
+7)
+Follow image link: (https://out.milkroad.com/Dopex1129AdIntro)
+Caption:=20
+
+**Today=E2=80=99s edition is brought to you by **[Dopex](https://out.milkro=
+ad.com/Dopex1129AdIntro)** - a decentralized options exchange with cheap pr=
+emiums and capital efficient LP returns.**
+
+[Traders: Dopex v2 (CLAMM) is now live!](https://out.milkroad.com/Dopex1129=
+AdCopyCTA)
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+GM. This is Milk Road. We=E2=80=99re the Crypto Whisperers - we break down =
+complex concepts and make them easy to understand.
+
+Here=E2=80=99s what=E2=80=99s on the menu today:
+
+* Happy birthday to the Bitcoin halving! =F0=9F=8E=82
+
+* OpenSea=E2=80=99s monthly volume dropped from $5B =E2=80=94> $50M =F0=9F=
+=93=89
+
+* Coinbase gets subpoenaed =F0=9F=8D=AA
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/66def3e9-1b05-4=
+e21-96b8-d2b31e3cbf37/Screenshot_2023-11-29_at_7.21.16_AM.png?t=3D170126049=
+1)
+Follow image link: (https://milkroad.com/fear-greed/)
+Caption: Prices as of 10:30 AM ET. Click here for our Fear & Greed Index
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+# **HAPPY BIRTHDAY TO THE BITCOIN HALVING! **=F0=9F=8E=82
+
+**11 years ago**, **[**Bitcoin**](https://milkroad.com/bitcoin/)** had its =
+first halving.=C2=A0**
+
+**NOTE: Ok, ok=E2=80=A6 Bitcoin Halving=E2=80=99s 11th birthday was _techni=
+cally_ yesterday.=C2=A0
+
+But I have _=E2=80=98Forget-Everyones-Bday=E2=80=99 _syndrome, so if it=E2=
+=80=99s not on Facebook there=E2=80=99s a 100% chance I=E2=80=99ll miss it.
+
+Anyways, happy belated to the Bitcoin Halving.
+
+**The crazy part? **The next halving event is only about 145 days away.=C2=
+=A0
+
+I know, it=E2=80=99s kind of confusing. So let me explain.=C2=A0
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/25328856-06cc-4=
+e81-887b-8b8a0dda0beb/Screenshot_2023-11-29_at_9.33.52_AM.png?t=3D170126911=
+0)
+Follow image link: (https://www.nicehash.com/countdown/btc-halving-2024-05-=
+10-12-00)
+Caption: Source: NiceHash
+
+**First off, wtf is the halving? **It=E2=80=99s an event where [Bitcoin min=
+ing](https://milkroad.com/mining/) rewards get cut in half.=C2=A0
+
+* Bitcoin **miners initially got a 50 BTC =E2=80=9Creward=E2=80=9D** each t=
+ime they mined a Bitcoin block.=C2=A0
+
+* **Each =E2=80=9Chalving=E2=80=9D event cuts these rewards in half.**=20
+
+* The Bitcoin **halving happens every 210,000 Bitcoin blocks or ***_**rough=
+ly***_** every 4 years. **(Btw, it doesn=E2=80=99t happen on the same date =
+every time. Hence why the first halving happened in November 2012 and the n=
+ext one is expected for April 2024).
+
+* It will **continue to happen until all 21M Bitcoin have been mined** (exp=
+ected sometime in 2140).
+
+Here=E2=80=99s a simple analogy to help explain the halving:** it=E2=80=99s=
+ a lot like Christmas gifts growing up.=C2=A0**
+
+You see, I=E2=80=99m the oldest one out of all my cousins. So when I was a =
+little kid, my grandparents used to give me all the best Christmas gifts=E2=
+=80=A6
+
+Hot Wheels sets. Game Boys. Pokemon cards. You name it. (This is the equiva=
+lent of Bitcoin miners getting 50 BTC rewards).
+
+**But after a few years, the supply of =E2=80=9Clittle kids=E2=80=9D in the=
+ family started going up. **Suddenly, giving us all awesome gifts was unsus=
+tainable.=C2=A0
+
+So to fight inflation (and avoid going broke), my grandparents cut my Chris=
+tmas gifts in half.=C2=A0
+
+I went from getting the newest PlayStation =E2=86=92 a box of Old Navy clot=
+hes =E2=86=92 a =E2=80=9CMerry Christmas=E2=80=9D card with $20 bucks in it=
+.=C2=A0(still grateful, but damn).
+
+Similarly, Bitcoin miners=E2=80=99 rewards have dropped from 50 BTC =E2=86=
+=92 25 BTC =E2=86=92 12.5 BTC =E2=86=92 6.25 BTC (current reward) over the =
+last 10+ years.
+
+**So, why does the Bitcoin halving happen? **Cutting mining rewards in half=
+ reduces the amount of new Bitcoin entering circulation, lowering inflation=
+.=C2=A0
+
+**Why should you care? **The next Bitcoin halving event is right around the=
+ corner.=20
+
+T-141 days, give or take.=C2=A0
+
+**And each time a halving happens, Bitcoin=E2=80=99s price usually goes up*=
+*. Check it out.=C2=A0
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/34d8d5d8-944f-4=
+753-8172-46406687ce92/Screenshot_2023-11-29_at_8.38.48_AM.png?t=3D170126911=
+1)
+Follow image link: (https://www.coindesk.com/learn/bitcoin-halving-explaine=
+d/)
+Caption: Source: CoinDesk
+
+On average, Bitcoin=E2=80=99s price increases by ~180% heading into the hal=
+ving event and increases by ~3,000% after the halving event.
+
+We=E2=80=99ll see if history repeats itself.
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/bdd174d2-24c9-4=
+f64-9270-8a077916e07d/Add_a_subheading-2.png?t=3D1701259924)
+Follow image link: (https://out.milkroad.com/Dopex1129AdBanner)
+Caption:=20
+
+----------
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/860d3430-c1fa-4=
+87f-bfaa-14a28a26e4a7/11_29_Dopex_banner_1701188544.jpeg?t=3D1701259957)
+Follow image link: (https://out.milkroad.com/Dopex1129AdBanner)
+Caption:=20
+
+# [**WHY CLAMM (OPTIONS) IS BETTER THEN TRADING PERPS**](https://out.milkro=
+ad.com/Dopex1129AdCopy)
+
+Just like pizza delivery services, perp and options traders care about two =
+things: **speed and price.**
+
+That=E2=80=99s because in trading, these two factors can cause a lot more i=
+ssues than a cold meal.
+
+**Traders** need to be able to act **quickly**, and benefit from deep **liq=
+uidity** and cheap **premiums**. And that=E2=80=99s where [Dopex=E2=80=99s =
+Concentrated Liquidity Automated Market Maker (=E2=80=9DCLAMM=E2=80=9D)](ht=
+tps://out.milkroad.com/Dopex1129AdCopy) comes in.
+
+**Trade American-style options** on all your favorite tokens, including ETH=
+/USDC, WBTC/ USDC, ARB/USDC.
+
+**BUT why are perp traders moving to **[Dopex](https://out.milkroad.com/Dop=
+ex1129AdCopy)**?**
+
+* **No margin** **requirement** (or funding fee)
+
+* **No liquidations** (sleep peacefully with open positions)
+
+* **Premium is paid upfront** (one-time vs 2-way fees)
+
+* **Cheapest premiums** are found on BTC/ARB/ETH
+
+The platform is designed for you to seize **short-term profit opportunities=
+** (1h, 6h, 24h). And soon, you=E2=80=99ll be able to [utilize CLAMM](https=
+://out.milkroad.com/Dopex1129AdCopy) on countless long-tail assets!
+
+[Dopex v2 (CLAMM) is now live. Dive right in!](https://out.milkroad.com/Dop=
+ex1129AdCopyCTA)
+
+
+
+----------View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-=
+down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/05637=
+32e-fc0d-4697-9d4f-fd4576545eed/image.png)
+Caption:=20
+
+# **OPENSEA=E2=80=99S MONTHLY VOLUME DROPPED FROM $5B =E2=80=94> $50M **=F0=
+=9F=93=89
+
+[OpenSea](https://milkroad.com/reviews/opensea/) was once the King of [NFT =
+Marketplaces](https://milkroad.com/nft/marketplaces/).=C2=A0
+
+Well, check it out. OpenSea=E2=80=99s monthly volume has plummeted since th=
+e beginning of last year.
+
+* **January 2022 **- $5B in volume
+
+* **October 2023 **- $49M in volume
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/73d37527-8328-4=
+aca-883a-7c10fee590ee/Screenshot_2023-11-29_at_10.44.35_AM.png?t=3D17012734=
+43)
+Follow image link: (https://dune.com/rchen8/opensea)
+Caption: Source: Dune Analytics (@rchen8)
+
+**[According to @Punk9059](https://twitter.com/punk9059/status/172969288091=
+7123531)**** (Milk Road friend and NFT expert), this is due to a combinatio=
+n of three things:**
+
+1/ NFT volumes are generally down.
+
+2/ OpenSea went from having a 95% market share for NFT trading =E2=86=92 35=
+% market share.
+
+3/ Margin compression in platform fees.=C2=A0
+
+So, now everyone=E2=80=99s wondering the same thing=E2=80=A6** is this the =
+end of NFTs?=C2=A0**
+
+Short answer: No.=C2=A0
+
+Long answer: Hell no.=C2=A0
+
+**The NFT market just looks different than what it was a year ago.** There =
+are=E2=80=A6
+
+* More NFT marketplaces (i.e. [Blur](https://milkroad.com/reviews/blur/)).
+
+* More blockchains implementing NFTs (i.e. [over the last 30 days](https://=
+www.cryptoslam.io/blockchains), there=E2=80=99s been more NFT volume on the=
+ [Bitcoin](https://milkroad.com/bitcoin/) blockchain than the [Ethereum](ht=
+tps://milkroad.com/ethereum/) blockchain).
+
+So for us, it=E2=80=99s more of an =E2=80=9COpenSea problem=E2=80=9D than a=
+n =E2=80=9CNFT problem=E2=80=9D.
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/f1c36e79-1bca-4=
+6b2-8d90-d0c5d7443522/image.png)
+Caption:=20
+
+# **BITE-SIZED COOKIES **=F0=9F=8D=AA
+
+[Phemex is set to launch PT Staking on November 30th at 14:00 UTC.](https:/=
+/out.milkroad.com/Phemex1129Classified)** **Brace yourself for a rewarding =
+experience as Phemex vows to use a slice of its daily USDT contract trading=
+ volume to buy back PT and distribute them as staking rewards for their loy=
+al community!*
+
+[Coinbase announced it received a subpoena from a U.S. regulator.](https://=
+www.theblock.co/post/265009/coinbase-tells-some-customers-it-received-subpo=
+ena-related-to-bybit)** **The crypto exchange says it may respond to the su=
+bpoena, =E2=80=9Cincluding sending information concerning Coinbase accounts=
+ to the Commodity Future Trading Commission (CFTC).
+
+[Changpheng Zhao (aka =E2=80=9CCZ=E2=80=9D) stepped down as chairman of the=
+ board of directors for Binance.US](https://milkroad.com/news/binance-us-re=
+mains-unaffected-amidst-legal-drama-cz-steps-down/)**. **The former Binance=
+ CEO has transferred his voting rights through a proxy agreement, removing =
+his influence from Binance.US's governance.
+
+[CF Benchmarks launched a new staking index series for institutional client=
+s](https://www.theblock.co/post/264981/cf-benchmarks-launches-staking-index=
+-series-for-institutional-clients)**.** It=E2=80=99s called the =E2=80=98CF=
+ Staking Reward Rate Series=E2=80=99 and provides investors with reward rat=
+es from certain proof-of-stake protocols.=C2=A0
+
+[The U.S. Securities and Exchange Commission (SEC) has opened up a comment =
+period for Franklin Templeton=E2=80=99s spot Bitcoin ETF proposal](https://=
+blockworks.co/news/sec-frank-templeton-bitcoin-etf)**. **According to the f=
+iling, =E2=80=9Cthe commission seeks and encourages interested persons to p=
+rovide comments on the proposed rule change=E2=80=9D.=C2=A0
+
+[The number of crypto addresses holding DOGE hit 5 million for the first ti=
+me ever](https://www.coindesk.com/markets/2023/11/28/dogecoin-now-held-at-5=
+m-crypto-addresses-though-concentration-remains-a-concern/)**. **The crazy =
+part? Fewer than 5,000 addresses control more than 80% of DOGE's supply.
+
+*This is sponsored content
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/f1c36e79-1bca-4=
+6b2-8d90-d0c5d7443522/image.png)
+Caption:=20
+
+# **MILKY MEMES **=F0=9F=A4=A3
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/d10ac55e-6615-4=
+da9-8f4a-916c9e591889/GACEe1GWcAAB5Rt.jpeg?t=3D1701269740)
+Follow image link: (https://twitter.com/MinisterOfNFTs/status/1729527926528=
+352278)
+Caption: Source: @MinisterOfNFTs
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/d21e798a-900e-4=
+053-9ee0-82a5e7c2b281/tax-season-is-coming-v0-vhjn9xqihx2c1.jpg?t=3D1701269=
+411)
+Follow image link: (https://i.redd.it/tax-season-is-coming-v0-vhjn9xqihx2c1=
+.jpg?s=3D078d5166d2f6da108697438f5e9dc6252c70f46b)
+Caption: Source: Reddit
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/0563732e-fc0d-4=
+697-9d4f-fd4576545eed/image.png)
+Caption:=20
+
+## **RATE TODAY=E2=80=99S EDITION**
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+Share Milk Road
+
+You currently have <strong>0</strong> referrals, only <strong>1</strong> aw=
+ay from receiving <strong>The Next 10x Opportunity in Crypto for 2023</stro=
+ng>.
+
+Or copy and paste this link to others: https://themilkroad.beehiiv.com/subs=
+cribe?ref=3D1noEEQMdgM
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+## **ROADER REVIEW OF THE DAY**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/93338bf8-9533-4=
+5ad-9d35-d9cd76ee0ff8/Screenshot_2023-11-29_at_11.13.32_AM.png?t=3D17012736=
+66)
+Caption:=20
+
+## **VITALIK PIC OF THE DAY**
+
+Tweet:  (https://twitter.com/MilkRoadImages/status/1729894495456551333)
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+## **WANT TO SPONSOR THIS NEWSLETTER?**
+
+Over 250,000 subscribers are throwing a party, and your brand is invited!
+
+Tap into our network of savvy (and good-looking) crypto & Web3 enthusiasts =
+who are eager to learn and invest.
+
+Your Brand + Our Crypto Clan =3D Magic Waiting To Happen. **[RSVP to the pa=
+rty!](https://out.milkroad.com/advertise)**
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+_**DISCLAIMER: **__None of this is financial advice. This newsletter is str=
+ictly educational and is not investment advice or a solicitation to buy or =
+sell any assets or to make any financial decisions. Please be careful and d=
+o your own research. _
+
+
+=E2=80=94=E2=80=94=E2=80=94
+
+You are reading a plain text version of this post. For the best experience,=
+ copy and paste this link in your browser to view the post online:
+https://themilkroad.beehiiv.com/p/happy-birthday-bitcoin-halving
+
+--cea906ff53488739774720f39c5ac1fa9c54fedb1e61c34502623d0b33e9
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office" style=3D"font-size:16px;"><head><meta charset=3D"utf-8"/><!=
+--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"=
+/><!--<![endif]--><meta name=3D"viewport" content=3D"width=3Ddevice-width,i=
+nitial-scale=3D1"/><meta name=3D"x-apple-disable-message-reformatting"/><me=
+ta name=3D"format-detection" content=3D"telephone=3Dno,address=3Dno,email=
+=3Dno,date=3Dno,url=3Dno"/><meta name=3D"color-scheme" content=3D"light"/><=
+meta name=3D"supported-color-schemes" content=3D"light"/><title>=F0=9F=A5=
+=9B Happy birthday to the Bitcoin halving! =F0=9F=8E=82</title><!--[if mso]=
+><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsP=
+erInch></o:OfficeDocumentSettings></xml><![endif]--><style>
+  :root { color-scheme: light; supported-color-schemes: light; }
+  body { margin: 0; padding: 0; min-width: 100%!important; -ms-text-size-ad=
+just: 100% !important; -webkit-transform: scale(1) !important; -webkit-text=
+-size-adjust: 100% !important; -webkit-font-smoothing: antialiased !importa=
+nt; }
+  .body { word-wrap: normal; word-spacing:normal; }
+  table.mso { width: 100%; border-collapse: collapse; padding: 0; table-lay=
+out: fixed; }
+  img { border: 0; outline: none; }
+  table {  mso-table-lspace: 0px; mso-table-rspace: 0px; }
+  td, a, span {  mso-line-height-rule: exactly; }
+  #root [x-apple-data-detectors=3Dtrue],
+  a[x-apple-data-detectors=3Dtrue],
+  #MessageViewBody a { color: inherit !important; text-decoration: inherit =
+!important; font-size: inherit !important; font-family: inherit !important;=
+ font-weight: inherit !important; line-height: inherit !important; }
+  span.MsoHyperlink { color: inherit !important; mso-style-priority: 99 !im=
+portant; }
+  span.MsoHyperlinkFollowed { color: inherit !important; mso-style-priority=
+: 99 !important; }
+  .a { background-color:#F4F4F4; }
+  .b { background-color:#008CF2; }
+  .c  { background-color:#FFFFFF; }
+  .d { background-color:#F4F4F4; }
+  .d2 { background-color:#FFFFFF; }
+  .d3 { background-color:#FFFFFF; }
+  h1 { color:#222222; }
+  h2 { color:#222222; }
+  h3 { color:#222222; }
+  h4 { color:#000000; }
+  h5 { color:#000000; }
+  h6 { color:#000000; }
+  h1 a { text-decoration:none;color:#222222 !important; }
+  h2 a { text-decoration:none;color:#222222 !important; }
+  h3 a { text-decoration:none;color:#222222 !important; }
+  h4 a { text-decoration:none;color:#000000 !important; }
+  h5 a { text-decoration:none;color:#000000 !important; }
+  h6 a { text-decoration:none;color:#000000 !important; }
+  h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, ul, li, ol, p=
+, p a { margin: 0;padding: 0; }
+  h1 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:28px;line-height:42px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h2 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:24px;line-height:36px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h3 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:20px;line-height:30px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h4 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:18px;line-height:27px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h5 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:16px;line-height:24px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h6 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:14px;line-height:21px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  p { font-family:'Verdana',Geneva,sans-serif;color:#222222;font-size:14px;=
+line-height:21px;padding-bottom:6px;padding-top:6px;mso-margin-top-alt:6px;=
+mso-margin-bottom-alt:6px; }
+  p a, .e a, ul a, li a  { word-break:break-word;color:#1400FF !important;t=
+ext-decoration:none;font-weight:bold; }
+  p .bold { font-weight:bold;color:#222222; }
+  p span[style*=3D"font-size"] { line-height: 1.6; }
+  .f p { font-size:12px;line-height:15px;color:#222222;padding:0; }
+  .f p a { text-decoration:underline;color:#222222 !important; }
+  .g p { font-family:'Montserrat','DejaVu Sans',Verdana,sans-serif;font-siz=
+e:14px;line-height:20px;font-weight:normal;margin:0; }
+  .g p a  { text-decoration: underline; }
+  .i p { font-family:'Verdana',Geneva,sans-serif;line-height:24px;font-size=
+:16px;color:#222222; }
+  .i p a { text-decoration:underline;color:#222222 !important; }
+  .i2 p { font-family:'Helvetica';line-height:23px;font-size:15px;color:#2D=
+2D2D; }
+  .i2 p a { text-decoration:underline;color:#2D2D2D !important; }
+  .i3 p { font-family:'Helvetica';line-height:43px;font-size:24px;color:#2D=
+2D2D; }
+  .i3 p a { text-decoration:underline;color:#2D2D2D !important; }
+  .h p a { text-decoration:underline;color:#595959 !important; }
+  .h2 p a { text-decoration:underline;color:#595959 !important; }
+  .h3 p a { text-decoration:underline;color:#595959 !important; }
+  .j { border-top:2px dashed #1400FF; }
+  .k p { padding-left:15px;padding-bottom:0px;padding-top:6px;mso-margin-to=
+p-alt:6px;mso-margin-bottom-alt:0px;mso-margin-left-alt:15px; }
+  .o { background-color:#FFFCEF;border:1px solid #D1D5DB;border-radius:6px;=
+ }
+  .o p { font-family:'Playfair Display',Didot,'Bodoni MT','Times New Roman'=
+,serif;padding:0px;margin:0px; }
+  .l p,
+  .l p a { font-size:14px;line-height:20px;font-weight: bold;color:#000000;=
+padding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .m p,
+  .m p a { font-size:12px;line-height:17px;font-weight:400;color:#000000;pa=
+dding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .n p,
+  .n p a { font-size:12px;line-height:17px;font-weight:400;color:#000000;pa=
+dding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .p { background-color:#FFFFFF;max-width:520px;border:1px solid #E1E8ED;bo=
+rder:1px solid rgba(80, 80, 80, 0.3);border-radius:5px; }
+  .q { font-size:16px;font-family:Helvetica,Roboto,Calibri,sans-serif !impo=
+rtant;border:1px solid #e1e8ed;border:1px solid rgba(80, 80, 80, 0.3);borde=
+r-radius:5px;background-color:#FFFFFF; }
+  .q p { font-size:16px;font-family:Helvetica,Roboto,Calibri,sans-serif !im=
+portant;color:#222222; }
+  .r { border:1px solid #E1E8ED !important;border-radius:5px; }
+  .s p { font-size: 14px; line-height: 17px; font-weight: 400; color: #6978=
+82; text-decoration: none; }
+  .t p { font-family:'Verdana',Geneva,sans-serif;font-size:12px;line-height=
+:18px;font-weight:400;color:#222222;font-style:italic;padding:4px 0px 0px;}
+  .v { border-radius:6px;border:solid 0px #1400FF;background-color:#1400FF;=
+font-family:'Verdana',Geneva,sans-serif;color:#FFFFFF; }
+  .v a { text-decoration:none;display:block;color:#FFFFFF; }
+  .w p { font-size:12px;line-height:15px;font-weight:400;color:#FFFFFF; }
+  .w p a { text-decoration: underline !important;color:#FFFFFF !important; =
+}
+  ul { font-family:'Verdana',Geneva,sans-serif;margin:0px 0px 0px 25px !imp=
+ortant;padding:0px !important;color:#222222;line-height:21px;list-style:squ=
+are;font-size:14px; }
+  ul li { font-family:'Verdana',Geneva,sans-serif;margin:5px 0px 0px 0px !i=
+mportant;padding: 0px 0px 0px 0px !important; color: #222222; list-style:sq=
+uare; }
+  ol { font-family:'Verdana',Geneva,sans-serif;margin: 0px 0px 0px 25px !im=
+portant;padding:0px !important;color:#222222;line-height:21px;list-style:de=
+cimal;font-size:14px; }
+  ol li { font-family:'Verdana',Geneva,sans-serif;margin:5px 0px 0px 0px !i=
+mportant;padding: 0px 0px 0px 0px !important; color: #222222; list-style:de=
+cimal; }
+  .e h3,
+  .e p,
+  .e span { padding-bottom:0px;padding-top:0px;mso-margin-top-alt:0px;mso-m=
+argin-bottom-alt:0px; }
+  .e span,
+  .e li { font-family:'Verdana',Geneva,sans-serif;font-size:14px;color:#222=
+222;line-height:21px; }
+  .rec { font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSys=
+temFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-ser=
+if, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color E=
+moji" !important; }
+  .rec__button:hover { background-color: #f9fafb !important; }
+  .copyright a {color: inherit !important; text-decoration: none !important=
+; font-size: inherit !important; font-family: inherit !important; font-weig=
+ht: inherit !important; line-height: inherit !important;}
+  .txt_social p { padding: 0; }
+  @media only screen and (max-width:667px) {
+    .aa { width: 100% !important; }
+    .bb img { width: 100% !important; height: auto !important; max-width: n=
+one !important; }
+    .cc { padding: 0px 8px !important; }
+    .ee { padding-top:10px !important;padding-bottom:10px !important; }
+    .ff ul, .ff ol { margin: 0px 0px 0px 10px !important;padding: 0px !impo=
+rtant; }
+    .ff li { margin:5px 0px 0px 10px !important; }
+    .r {height:140px !important;}
+    .s p { font-size:13px !important;line-height:15px !important; }
+    .mob-hide {display:none !important;}
+    .mob-stack {display:block !important;width:100% !important;}
+    .mob-block {display:block !important;}
+    .embed-img {padding:0px 0px 12px 0px !important;}
+    .socialShare {padding-top:15px !important;}
+    .rec { padding-left:15px!important;padding-right:15px!important; }
+  }
+  @media screen and (max-width: 480px) {
+    u + .a .gg { width: 100% !important; width: 100vw !important; }
+    .tok-heart { padding-top:75% !important; }
+    .tok-play { padding-top: 250px !important; }
+  }
+  @media screen and (max-width: 320px) {
+    .tok-heart { padding-top:65% !important; }
+  }
+  .u { border: 1px solid #CACACA !important; border-radius: 2px !important;=
+ background-color: #ffffff !important; padding: 0px 13px 0px 13px !importan=
+t; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Se=
+goe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif !important;fon=
+t-size: 12px !important; color: #767676 !important; }
+  .u a { text-decoration: none; display: block !important; color: #767676 !=
+important; margin: 0px !important; }
+  .u span, .u img { color: #767676 !important;margin:0px !important; max-he=
+ight:32px !important;background-color:#ffffff !important; }
+</style><!--[if mso]><style type=3D"text/css">
+    sup { font-size: 100% !important;vertical-align: .5em !important;mso-te=
+xt-raise: -1.5% !important;line-height: 0 !important; }
+    ul { margin-left:0px !important; margin-right:10px !important; margin-t=
+op:20px !important; margin-bottom:20px !important; }
+    ul li { margin-left: 0px !important; mso-special-format: decimal; }
+    ol { margin-left:0px !important; margin-right:10px !important; margin-t=
+op:20px !important; margin-bottom:20px !important; }
+    ol li { margin-left: 0px !important; mso-special-format: decimal; }
+    li.listItem { margin-left:15px !important; margin-top:0px !important; }
+    .paddingDesktop { padding: 10px 0 !important; }
+    .edm_outlooklist { margin-left: -20px !important; }
+    .embedImage { display:none !important; }
+  </style><![endif]--><style>
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm=
+459WlhyyTh89Y.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm=
+459WlhyyTh89Y.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUQjIg1_i6t8kCHKm=
+459WxRyS7m0dR9pA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUQjIg1_i6t8kCHKm=
+459WxRyS7m0dR9pA.woff2') format('woff2');
+  }
+</style><style>
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFiD-vYSZviV=
+YUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFiD-vYSZviV=
+YUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFkD-vYSZviV=
+YUb_rj3ij__anPXDTnogkk7yRZrPA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFkD-vYSZviV=
+YUb_rj3ij__anPXDTnogkk7yRZrPA.woff2') format('woff2');
+  }
+</style></head><head><meta charset=3D"utf-8"/><!--[if !mso]><!--><meta http=
+-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"/><!--<![endif]--><meta nam=
+e=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"/><meta na=
+me=3D"x-apple-disable-message-reformatting"/><meta name=3D"format-detection=
+" content=3D"telephone=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno"/><m=
+eta name=3D"color-scheme" content=3D"light"/><meta name=3D"supported-color-=
+schemes" content=3D"light"/><title>=F0=9F=A5=9B Happy birthday to the Bitco=
+in halving! =F0=9F=8E=82</title><!--[if mso]><xml><o:OfficeDocumentSettings=
+><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettin=
+gs></xml><![endif]--><style>
+  :root { color-scheme: light; supported-color-schemes: light; }
+  body { margin: 0; padding: 0; min-width: 100%!important; -ms-text-size-ad=
+just: 100% !important; -webkit-transform: scale(1) !important; -webkit-text=
+-size-adjust: 100% !important; -webkit-font-smoothing: antialiased !importa=
+nt; }
+  .body { word-wrap: normal; word-spacing:normal; }
+  table.mso { width: 100%; border-collapse: collapse; padding: 0; table-lay=
+out: fixed; }
+  img { border: 0; outline: none; }
+  table {  mso-table-lspace: 0px; mso-table-rspace: 0px; }
+  td, a, span {  mso-line-height-rule: exactly; }
+  #root [x-apple-data-detectors=3Dtrue],
+  a[x-apple-data-detectors=3Dtrue],
+  #MessageViewBody a { color: inherit !important; text-decoration: inherit =
+!important; font-size: inherit !important; font-family: inherit !important;=
+ font-weight: inherit !important; line-height: inherit !important; }
+  span.MsoHyperlink { color: inherit !important; mso-style-priority: 99 !im=
+portant; }
+  span.MsoHyperlinkFollowed { color: inherit !important; mso-style-priority=
+: 99 !important; }
+  .a { background-color:#F4F4F4; }
+  .b { background-color:#008CF2; }
+  .c  { background-color:#FFFFFF; }
+  .d { background-color:#F4F4F4; }
+  .d2 { background-color:#FFFFFF; }
+  .d3 { background-color:#FFFFFF; }
+  h1 { color:#222222; }
+  h2 { color:#222222; }
+  h3 { color:#222222; }
+  h4 { color:#000000; }
+  h5 { color:#000000; }
+  h6 { color:#000000; }
+  h1 a { text-decoration:none;color:#222222 !important; }
+  h2 a { text-decoration:none;color:#222222 !important; }
+  h3 a { text-decoration:none;color:#222222 !important; }
+  h4 a { text-decoration:none;color:#000000 !important; }
+  h5 a { text-decoration:none;color:#000000 !important; }
+  h6 a { text-decoration:none;color:#000000 !important; }
+  h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, ul, li, ol, p=
+, p a { margin: 0;padding: 0; }
+  h1 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:28px;line-height:42px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h2 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:24px;line-height:36px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h3 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:20px;line-height:30px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h4 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:18px;line-height:27px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h5 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:16px;line-height:24px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h6 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:14px;line-height:21px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  p { font-family:'Verdana',Geneva,sans-serif;color:#222222;font-size:14px;=
+line-height:21px;padding-bottom:6px;padding-top:6px;mso-margin-top-alt:6px;=
+mso-margin-bottom-alt:6px; }
+  p a, .e a, ul a, li a  { word-break:break-word;color:#1400FF !important;t=
+ext-decoration:none;font-weight:bold; }
+  p .bold { font-weight:bold;color:#222222; }
+  p span[style*=3D"font-size"] { line-height: 1.6; }
+  .f p { font-size:12px;line-height:15px;color:#222222;padding:0; }
+  .f p a { text-decoration:underline;color:#222222 !important; }
+  .g p { font-family:'Montserrat','DejaVu Sans',Verdana,sans-serif;font-siz=
+e:14px;line-height:20px;font-weight:normal;margin:0; }
+  .g p a  { text-decoration: underline; }
+  .i p { font-family:'Verdana',Geneva,sans-serif;line-height:24px;font-size=
+:16px;color:#222222; }
+  .i p a { text-decoration:underline;color:#222222 !important; }
+  .i2 p { font-family:'Helvetica';line-height:23px;font-size:15px;color:#2D=
+2D2D; }
+  .i2 p a { text-decoration:underline;color:#2D2D2D !important; }
+  .i3 p { font-family:'Helvetica';line-height:43px;font-size:24px;color:#2D=
+2D2D; }
+  .i3 p a { text-decoration:underline;color:#2D2D2D !important; }
+  .h p a { text-decoration:underline;color:#595959 !important; }
+  .h2 p a { text-decoration:underline;color:#595959 !important; }
+  .h3 p a { text-decoration:underline;color:#595959 !important; }
+  .j { border-top:2px dashed #1400FF; }
+  .k p { padding-left:15px;padding-bottom:0px;padding-top:6px;mso-margin-to=
+p-alt:6px;mso-margin-bottom-alt:0px;mso-margin-left-alt:15px; }
+  .o { background-color:#FFFCEF;border:1px solid #D1D5DB;border-radius:6px;=
+ }
+  .o p { font-family:'Playfair Display',Didot,'Bodoni MT','Times New Roman'=
+,serif;padding:0px;margin:0px; }
+  .l p,
+  .l p a { font-size:14px;line-height:20px;font-weight: bold;color:#000000;=
+padding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .m p,
+  .m p a { font-size:12px;line-height:17px;font-weight:400;color:#000000;pa=
+dding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .n p,
+  .n p a { font-size:12px;line-height:17px;font-weight:400;color:#000000;pa=
+dding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .p { background-color:#FFFFFF;max-width:520px;border:1px solid #E1E8ED;bo=
+rder:1px solid rgba(80, 80, 80, 0.3);border-radius:5px; }
+  .q { font-size:16px;font-family:Helvetica,Roboto,Calibri,sans-serif !impo=
+rtant;border:1px solid #e1e8ed;border:1px solid rgba(80, 80, 80, 0.3);borde=
+r-radius:5px;background-color:#FFFFFF; }
+  .q p { font-size:16px;font-family:Helvetica,Roboto,Calibri,sans-serif !im=
+portant;color:#222222; }
+  .r { border:1px solid #E1E8ED !important;border-radius:5px; }
+  .s p { font-size: 14px; line-height: 17px; font-weight: 400; color: #6978=
+82; text-decoration: none; }
+  .t p { font-family:'Verdana',Geneva,sans-serif;font-size:12px;line-height=
+:18px;font-weight:400;color:#222222;font-style:italic;padding:4px 0px 0px;}
+  .v { border-radius:6px;border:solid 0px #1400FF;background-color:#1400FF;=
+font-family:'Verdana',Geneva,sans-serif;color:#FFFFFF; }
+  .v a { text-decoration:none;display:block;color:#FFFFFF; }
+  .w p { font-size:12px;line-height:15px;font-weight:400;color:#FFFFFF; }
+  .w p a { text-decoration: underline !important;color:#FFFFFF !important; =
+}
+  ul { font-family:'Verdana',Geneva,sans-serif;margin:0px 0px 0px 25px !imp=
+ortant;padding:0px !important;color:#222222;line-height:21px;list-style:squ=
+are;font-size:14px; }
+  ul li { font-family:'Verdana',Geneva,sans-serif;margin:5px 0px 0px 0px !i=
+mportant;padding: 0px 0px 0px 0px !important; color: #222222; list-style:sq=
+uare; }
+  ol { font-family:'Verdana',Geneva,sans-serif;margin: 0px 0px 0px 25px !im=
+portant;padding:0px !important;color:#222222;line-height:21px;list-style:de=
+cimal;font-size:14px; }
+  ol li { font-family:'Verdana',Geneva,sans-serif;margin:5px 0px 0px 0px !i=
+mportant;padding: 0px 0px 0px 0px !important; color: #222222; list-style:de=
+cimal; }
+  .e h3,
+  .e p,
+  .e span { padding-bottom:0px;padding-top:0px;mso-margin-top-alt:0px;mso-m=
+argin-bottom-alt:0px; }
+  .e span,
+  .e li { font-family:'Verdana',Geneva,sans-serif;font-size:14px;color:#222=
+222;line-height:21px; }
+  .rec { font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSys=
+temFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-ser=
+if, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color E=
+moji" !important; }
+  .rec__button:hover { background-color: #f9fafb !important; }
+  .copyright a {color: inherit !important; text-decoration: none !important=
+; font-size: inherit !important; font-family: inherit !important; font-weig=
+ht: inherit !important; line-height: inherit !important;}
+  .txt_social p { padding: 0; }
+  @media only screen and (max-width:667px) {
+    .aa { width: 100% !important; }
+    .bb img { width: 100% !important; height: auto !important; max-width: n=
+one !important; }
+    .cc { padding: 0px 8px !important; }
+    .ee { padding-top:10px !important;padding-bottom:10px !important; }
+    .ff ul, .ff ol { margin: 0px 0px 0px 10px !important;padding: 0px !impo=
+rtant; }
+    .ff li { margin:5px 0px 0px 10px !important; }
+    .r {height:140px !important;}
+    .s p { font-size:13px !important;line-height:15px !important; }
+    .mob-hide {display:none !important;}
+    .mob-stack {display:block !important;width:100% !important;}
+    .mob-block {display:block !important;}
+    .embed-img {padding:0px 0px 12px 0px !important;}
+    .socialShare {padding-top:15px !important;}
+    .rec { padding-left:15px!important;padding-right:15px!important; }
+  }
+  @media screen and (max-width: 480px) {
+    u + .a .gg { width: 100% !important; width: 100vw !important; }
+    .tok-heart { padding-top:75% !important; }
+    .tok-play { padding-top: 250px !important; }
+  }
+  @media screen and (max-width: 320px) {
+    .tok-heart { padding-top:65% !important; }
+  }
+  .u { border: 1px solid #CACACA !important; border-radius: 2px !important;=
+ background-color: #ffffff !important; padding: 0px 13px 0px 13px !importan=
+t; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Se=
+goe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif !important;fon=
+t-size: 12px !important; color: #767676 !important; }
+  .u a { text-decoration: none; display: block !important; color: #767676 !=
+important; margin: 0px !important; }
+  .u span, .u img { color: #767676 !important;margin:0px !important; max-he=
+ight:32px !important;background-color:#ffffff !important; }
+</style><!--[if mso]><style type=3D"text/css">
+    sup { font-size: 100% !important;vertical-align: .5em !important;mso-te=
+xt-raise: -1.5% !important;line-height: 0 !important; }
+    ul { margin-left:0px !important; margin-right:10px !important; margin-t=
+op:20px !important; margin-bottom:20px !important; }
+    ul li { margin-left: 0px !important; mso-special-format: decimal; }
+    ol { margin-left:0px !important; margin-right:10px !important; margin-t=
+op:20px !important; margin-bottom:20px !important; }
+    ol li { margin-left: 0px !important; mso-special-format: decimal; }
+    li.listItem { margin-left:15px !important; margin-top:0px !important; }
+    .paddingDesktop { padding: 10px 0 !important; }
+    .edm_outlooklist { margin-left: -20px !important; }
+    .embedImage { display:none !important; }
+  </style><![endif]--><style>
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm=
+459WlhyyTh89Y.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm=
+459WlhyyTh89Y.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUQjIg1_i6t8kCHKm=
+459WxRyS7m0dR9pA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUQjIg1_i6t8kCHKm=
+459WxRyS7m0dR9pA.woff2') format('woff2');
+  }
+</style><style>
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFiD-vYSZviV=
+YUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFiD-vYSZviV=
+YUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFkD-vYSZviV=
+YUb_rj3ij__anPXDTnogkk7yRZrPA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFkD-vYSZviV=
+YUb_rj3ij__anPXDTnogkk7yRZrPA.woff2') format('woff2');
+  }
+</style></head><body class=3D"a" style=3D"margin:0px auto;padding:0px;word-=
+wrap:normal;word-spacing:normal;background-color:#F4F4F4;"><div role=3D"art=
+icle" aria-roledescription=3D"email" aria-label=3D"email_name" lang=3Den st=
+yle=3D"font-size:1rem"><div style=3D"display:none;max-height:0px;overflow:h=
+idden;"> OpenSea=E2=80=99s monthly volume is down BIG time =F0=9F=93=89 &#1=
+60;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;=
+&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#82=
+04;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&=
+#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#16=
+0;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&=
+#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#820=
+4;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#=
+8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160=
+;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#=
+160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204=
+;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8=
+204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;=
+&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#1=
+60;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;=
+&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#82=
+04;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&=
+#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#16=
+0;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&=
+#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#820=
+4;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#=
+8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160=
+;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#=
+160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204=
+;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8=
+204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;=
+&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#1=
+60;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;=
+&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#82=
+04;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&=
+#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#16=
+0;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&=
+#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#820=
+4;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#=
+8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160=
+;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204; </div><table role=3D"none" =
+width=3D"100%" border=3D"0" cellspacing=3D"0" align=3D"center" cellpadding=
+=3D"0" class=3D"gg"><tr><td align=3D"center" valign=3D"top"><table role=3D"=
+none" width=3D"670" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=
+=3D"aa" style=3D"width:670px;table-layout:fixed;"><tr><td align=3D"center" =
+valign=3D"top" style=3D"padding:10px 5px 10px 5px;"><table role=3D"none" wi=
+dth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er"><tr><td align=3D"center" valign=3D"top" style=3D"border:0px solid #ffff=
+ff;border-radius:6px;background-color:#FFFFFF;" class=3D"c"><table role=3D"=
+none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center"><tr><td class=3D"f" align=3D"right" valign=3D"top" style=3D"pad=
+ding:20px 15px;"><p> November 29, 2023 &nbsp; | &nbsp; <a href=3D"https://e=
+link.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgq0Pha_iGXsJDAfpYaESza3fkJpErn7Dt=
+eS52SQoj5hPc24KIO_9euNWou1s4UUrl7hoSYZOVwwiogZ11f0LL1gs/41p/I1qCE2XWRkasZCH=
+GxkP4Eg/h0/jhWnbyhvHcu_r_PN0zzMiBv6EPqlZrngKNiGMwqLJys">Read Online</a></p>=
+</td></tr><tr><td style=3D"height:0px;width:0px;"><div style=3D"height:1px;=
+" data-open-tracking=3D"true"> <img src=3D"https://elink.milkroad.com/ss/o/=
+RAM9dtkkisYh9IGMFOFGaw/41p/I1qCE2XWRkasZCHGxkP4Eg/ho.gif" alt=3D"" width=3D=
+"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !imp=
+ortant;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !i=
+mportant;margin-right:0 !important;margin-left:0 !important;padding-top:0 !=
+important;padding-bottom:0 !important;padding-right:0 !important;padding-le=
+ft:0 !important;"/> </div></td></tr><tr id=3D"content-blocks"><td class=3D"=
+email-card-body" align=3D"center" valign=3D"top" style=3D"padding-bottom:15=
+px;"><table role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center"><tr><td align=3D"center" valign=3D"top" sty=
+le=3D"padding: 20px 15px 20px; " class=3D"dd"><table role=3D"none" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;">=
+<tr><td align=3D"center" valign=3D"top" style=3D"width:189px;"><a href=3D"h=
+ttps://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdMd=
+Zou7RK8br7LXy8sUnr0ovMSKca0HrYB8rZ8ijIitOg/41p/I1qCE2XWRkasZCHGxkP4Eg/h1/jA=
+0SO6tBqI50mhvrQxsJt6p_QQMnURN3x_2kwCISLd4" target=3D"_blank" rel=3D"noopene=
+r noreferrer nofollow" style=3D"text-decoration:none;"><img src=3D"https://=
+media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dre=
+direct,quality=3D80/uploads/asset/file/934026e2-d1c7-46de-9715-5d3f808a0f6b=
+/Screenshot_2023-11-29_at_7.10.53_AM.png?t=3D1701259897" alt=3D"" height=3D=
+"auto" width=3D"189" style=3D"display:block;width:100%;" border=3D"0"/></a>=
+</td></tr></table></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"pa=
+dding:0px 15px;text-align:left;word-break:break-word;"><p><span style=3D"">=
+<b>Today=E2=80=99s edition is brought to you by </b></span><a class=3D"link=
+" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrU=
+HEGw8XiTdMdZou7RK8br7LXy8sUnr0ovMSKca0HrYB8rZ8ijIitOg/41p/I1qCE2XWRkasZCHGx=
+kP4Eg/h2/dbW87M8haYbStxJJqp3V3N9N5teB8-eAOMGuO9ov2xE" target=3D"_blank" rel=
+=3D"noopener noreferrer nofollow">Dopex</a><span style=3D""><b> - a decentr=
+alized options exchange with cheap premiums and capital efficient LP return=
+s.</b></span></p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"pad=
+ding:0px 15px;text-align:left;word-break:break-word;"><p><a class=3D"link" =
+href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHE=
+Gw8XiTdMjEpfI3yZ6D0dapzdJCat-0UN6lJdoioR-DuWLTBR5Qw/41p/I1qCE2XWRkasZCHGxkP=
+4Eg/h3/h1uUWJk_1lmXW99LIPfFoQ80gyBlNYErKnzXbCReEPg" target=3D"_blank" rel=
+=3D"noopener noreferrer nofollow">Traders: Dopex v2 (CLAMM) is now live!</a=
+></p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"font-size:0=
+px;line-height:0px;padding:40px 0px;" class=3D"dd"><table class=3D"j" role=
+=3D"none" width=3D"80%%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"center"><tr><td> &nbsp; </td></tr></table></td></tr><tr><td class=
+=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word;"><p> GM. This is Milk Road. We=E2=80=99re the Crypto Whisperer=
+s - we break down complex concepts and make them easy to understand. </p></=
+td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-=
+align:left;word-break:break-word;"><p> Here=E2=80=99s what=E2=80=99s on the=
+ menu today: </p></td></tr><tr><td style=3D"padding-bottom:12px;padding-lef=
+t:43px;padding-right:27px;padding-top:12px;" class=3D"ee"><div style=3D"mar=
+gin-left:0px;" class=3D"edm_outlooklist"><ul style=3D"list-style-type:squar=
+e;margin:0px 0px;padding:0px 0px 0px 0px;"><li class=3D"listItem ultext"><p=
+ style=3D"padding:0px;text-align:left;word-break:break-word;"> Happy birthd=
+ay to the Bitcoin halving! =F0=9F=8E=82 </p></li><li class=3D"listItem ulte=
+xt"><p style=3D"padding:0px;text-align:left;word-break:break-word;"> OpenSe=
+a=E2=80=99s monthly volume dropped from $5B =E2=80=94&gt; $50M =F0=9F=93=89=
+ </p></li><li class=3D"listItem ultext"><p style=3D"padding:0px;text-align:=
+left;word-break:break-word;"> Coinbase gets subpoenaed =F0=9F=8D=AA </p></l=
+i></ul></div></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"pad=
+ding: 20px 15px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td ali=
+gn=3D"center" valign=3D"top" style=3D"width:630px;"><a href=3D"https://elin=
+k.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgqzSx-IWUIkZL14RaW3JxBjPyaDVRFJ8jhmv=
+t_5MXx28j/41p/I1qCE2XWRkasZCHGxkP4Eg/h4/Y6EJPQ19lR7WbywfUnzAKyEOAHrgMuAhWgu=
+XlKPjy8A" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"t=
+ext-decoration:none;"><img src=3D"https://media.beehiiv.com/cdn-cgi/image/f=
+it=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset=
+/file/66def3e9-1b05-4e21-96b8-d2b31e3cbf37/Screenshot_2023-11-29_at_7.21.16=
+_AM.png?t=3D1701260491" alt=3D"" height=3D"auto" width=3D"630" style=3D"dis=
+play:block;width:100%;" border=3D"0"/></a></td></tr><tr><td align=3D"center=
+" valign=3D"top" class=3D"t" style=3D"width:630px;"><a href=3D"https://elin=
+k.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgqzSx-IWUIkZL14RaW3JxBjPyaDVRFJ8jhmv=
+t_5MXx28j/41p/I1qCE2XWRkasZCHGxkP4Eg/h5/EZyi0jifvWDu19FKqsfPcf9zZmmCLbo8vZl=
+CkLa6xd0" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"t=
+ext-decoration:underline;text-decoration-color:#222222;"><p>Prices as of 10=
+:30 AM ET. Click here for our Fear &amp; Greed Index</p></a></td></tr></tab=
+le></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"font-size:0px=
+;line-height:0px;padding:40px 0px;" class=3D"dd"><table class=3D"j" role=3D=
+"none" width=3D"80%%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center"><tr><td> &nbsp; </td></tr></table></td></tr><tr><td class=3D"d=
+d" align=3D"center" valign=3D"top" style=3D"padding:0px 15px;text-align:cen=
+ter;"><h1><b>HAPPY BIRTHDAY TO THE BITCOIN HALVING! </b>=F0=9F=8E=82</h1></=
+td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-=
+align:left;word-break:break-word;"><p><span style=3D""><b>11 years ago**, <=
+/b></span><span style=3D""><a class=3D"link" href=3D"https://elink.milkroad=
+.com/ss/c/_YA6v3WSkC2ptsolyBUgqxTI7j2IoGA9egGAW4Wj-zQQt5eZbOUC61rIe8tdQUC2/=
+41p/I1qCE2XWRkasZCHGxkP4Eg/h6/jg9URsbft4HTLht76db6FpKUa3eb1riMr2Z2MRZY4Yc" =
+target=3D"_blank" rel=3D"noopener noreferrer nofollow"><b>Bitcoin</b></a></=
+span><span style=3D""><b> had its first halving.=C2=A0</b></span></p></td><=
+/tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-alig=
+n:left;word-break:break-word;"><p> **NOTE: Ok, ok=E2=80=A6 Bitcoin Halving=
+=E2=80=99s 11th birthday was <span style=3D""><i>technically</i></span> yes=
+terday.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"pa=
+dding:0px 15px;text-align:left;word-break:break-word;"><p> But I have <span=
+ style=3D""><i>=E2=80=98Forget-Everyones-Bday=E2=80=99 </i></span>syndrome,=
+ so if it=E2=80=99s not on Facebook there=E2=80=99s a 100% chance I=E2=80=
+=99ll miss it. </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"p=
+adding:0px 15px;text-align:left;word-break:break-word;"><p> Anyways, happy =
+belated to the Bitcoin Halving. </p></td></tr><tr><td class=3D"dd" align=3D=
+"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p=
+><span style=3D""><b>The crazy part? </b></span>The next halving event is o=
+nly about 145 days away.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"=
+left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p>=
+ I know, it=E2=80=99s kind of confusing. So let me explain.=C2=A0 </p></td>=
+</tr><tr><td align=3D"center" valign=3D"top" style=3D"padding: 20px 15px 20=
+px; " class=3D"dd"><table role=3D"none" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"center" vali=
+gn=3D"top" style=3D"width:630px;"><a href=3D"https://elink.milkroad.com/ss/=
+c/AX1lEgEQaxtvFxLaVo0GBlE566KP1cUEcD5pOPlLyfdSJhK1gXN9eyT1KSS6-OS6Kroh13vJn=
+SlRmGJ4oYSQ6xaHON3U0dmHEaJBES5Y1zo/41p/I1qCE2XWRkasZCHGxkP4Eg/h7/nQTVKurJeD=
+FjDoXgzIL0Lx5U00MXFOLIPty9DLi82mc" target=3D"_blank" rel=3D"noopener norefe=
+rrer nofollow" style=3D"text-decoration:none;"><img src=3D"https://media.be=
+ehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,q=
+uality=3D80/uploads/asset/file/25328856-06cc-4e81-887b-8b8a0dda0beb/Screens=
+hot_2023-11-29_at_9.33.52_AM.png?t=3D1701269110" alt=3D"" height=3D"auto" w=
+idth=3D"630" style=3D"display:block;width:100%;" border=3D"0"/></a></td></t=
+r><tr><td align=3D"center" valign=3D"top" class=3D"t" style=3D"width:630px;=
+"><a href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtvFxLaVo0GBlE566KP1c=
+UEcD5pOPlLyfdSJhK1gXN9eyT1KSS6-OS6Kroh13vJnSlRmGJ4oYSQ6xaHON3U0dmHEaJBES5Y1=
+zo/41p/I1qCE2XWRkasZCHGxkP4Eg/h8/0EblTWZ8t2ivQWq7Ih-UwzvGo8eMLShRLtypM-SN_5=
+g" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"text-dec=
+oration:underline;text-decoration-color:#222222;"><p>Source: NiceHash</p></=
+a></td></tr></table></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"=
+padding:0px 15px;text-align:left;word-break:break-word;"><p><span style=3D"=
+"><b>First off, wtf is the halving? </b></span>It=E2=80=99s an event where =
+<a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsoly=
+BUgqyQJQ3RXT4a1lbo_ao8cm5Ytqs3cwQUOqPNP5HebdwTp/41p/I1qCE2XWRkasZCHGxkP4Eg/=
+h9/GnwzmqAXmmTTYCVYHFp8wBKkp1kjKq_6DVJYrDiNTw4" target=3D"_blank" rel=3D"no=
+opener noreferrer nofollow">Bitcoin mining</a> rewards get cut in half.=C2=
+=A0 </p></td></tr><tr><td style=3D"padding-bottom:12px;padding-left:43px;pa=
+dding-right:27px;padding-top:12px;" class=3D"ee"><div style=3D"margin-left:=
+0px;" class=3D"edm_outlooklist"><ul style=3D"list-style-type:square;margin:=
+0px 0px;padding:0px 0px 0px 0px;"><li class=3D"listItem ultext"><p style=3D=
+"padding:0px;text-align:left;word-break:break-word;"> Bitcoin <span style=
+=3D""><b>miners initially got a 50 BTC =E2=80=9Creward=E2=80=9D</b></span> =
+each time they mined a Bitcoin block.=C2=A0 </p></li><li class=3D"listItem =
+ultext"><p style=3D"padding:0px;text-align:left;word-break:break-word;"><sp=
+an style=3D""><b>Each =E2=80=9Chalving=E2=80=9D event cuts these rewards in=
+ half.</b></span>=C2=A0 </p></li><li class=3D"listItem ultext"><p style=3D"=
+padding:0px;text-align:left;word-break:break-word;"> The Bitcoin <span styl=
+e=3D""><b>halving happens every 210,000 Bitcoin blocks or *</b></span><span=
+ style=3D""><i><b>roughly*</b></i></span><span style=3D""><b> every 4 years=
+. </b></span>(Btw, it doesn=E2=80=99t happen on the same date every time. H=
+ence why the first halving happened in November 2012 and the next one is ex=
+pected for April 2024). </p></li><li class=3D"listItem ultext"><p style=3D"=
+padding:0px;text-align:left;word-break:break-word;"> It will <span style=3D=
+""><b>continue to happen until all 21M Bitcoin have been mined</b></span> (=
+expected sometime in 2140). </p></li></ul></div></td></tr><tr><td class=3D"=
+dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:bre=
+ak-word;"><p> Here=E2=80=99s a simple analogy to help explain the halving:<=
+span style=3D""><b> it=E2=80=99s a lot like Christmas gifts growing up.=C2=
+=A0</b></span></p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"pa=
+dding:0px 15px;text-align:left;word-break:break-word;"><p> You see, I=E2=80=
+=99m the oldest one out of all my cousins. So when I was a little kid, my g=
+randparents used to give me all the best Christmas gifts=E2=80=A6 </p></td>=
+</tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-ali=
+gn:left;word-break:break-word;"><p> Hot Wheels sets. Game Boys. Pokemon car=
+ds. You name it. (This is the equivalent of Bitcoin miners getting 50 BTC r=
+ewards). </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding=
+:0px 15px;text-align:left;word-break:break-word;"><p><span style=3D""><b>Bu=
+t after a few years, the supply of =E2=80=9Clittle kids=E2=80=9D in the fam=
+ily started going up. </b></span>Suddenly, giving us all awesome gifts was =
+unsustainable.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" styl=
+e=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> So to fig=
+ht inflation (and avoid going broke), my grandparents cut my Christmas gift=
+s in half.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D=
+"padding:0px 15px;text-align:left;word-break:break-word;"><p> I went from g=
+etting the newest PlayStation =E2=86=92 a box of Old Navy clothes =E2=86=92=
+ a =E2=80=9CMerry Christmas=E2=80=9D card with $20 bucks in it.=C2=A0(still=
+ grateful, but damn). </p></td></tr><tr><td class=3D"dd" align=3D"left" sty=
+le=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> Similarl=
+y, Bitcoin miners=E2=80=99 rewards have dropped from 50 BTC =E2=86=92 25 BT=
+C =E2=86=92 12.5 BTC =E2=86=92 6.25 BTC (current reward) over the last 10+ =
+years. </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0=
+px 15px;text-align:left;word-break:break-word;"><p><span style=3D""><b>So, =
+why does the Bitcoin halving happen? </b></span>Cutting mining rewards in h=
+alf reduces the amount of new Bitcoin entering circulation, lowering inflat=
+ion.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"paddi=
+ng:0px 15px;text-align:left;word-break:break-word;"><p><span style=3D""><b>=
+Why should you care? </b></span>The next Bitcoin halving event is right aro=
+und the corner. </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"=
+padding:0px 15px;text-align:left;word-break:break-word;"><p> T-141 days, gi=
+ve or take.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" style=
+=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p><span style=
+=3D""><b>And each time a halving happens, Bitcoin=E2=80=99s price usually g=
+oes up</b></span>. Check it out.=C2=A0 </p></td></tr><tr><td align=3D"cente=
+r" valign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table r=
+ole=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"marg=
+in:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=3D"width:6=
+30px;"><a href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtvFxLaVo0GBvtre=
+AoKmypYymH430ODaaH3am3LsQBNLY_MB7z-KjXzGVfuTm9cXMp8pMWQYSHj2Nmucwalj4UTrQpD=
+jCqCBv0/41p/I1qCE2XWRkasZCHGxkP4Eg/h10/r5xXS9Gknpu_7st9ZiQt4LXQRv_1_9enDOiB=
+lKBs87M" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"te=
+xt-decoration:none;"><img src=3D"https://media.beehiiv.com/cdn-cgi/image/fi=
+t=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/=
+file/34d8d5d8-944f-4753-8172-46406687ce92/Screenshot_2023-11-29_at_8.38.48_=
+AM.png?t=3D1701269111" alt=3D"" height=3D"auto" width=3D"630" style=3D"disp=
+lay:block;width:100%;" border=3D"0"/></a></td></tr><tr><td align=3D"center"=
+ valign=3D"top" class=3D"t" style=3D"width:630px;"><a href=3D"https://elink=
+.milkroad.com/ss/c/AX1lEgEQaxtvFxLaVo0GBvtreAoKmypYymH430ODaaH3am3LsQBNLY_M=
+B7z-KjXzGVfuTm9cXMp8pMWQYSHj2Nmucwalj4UTrQpDjCqCBv0/41p/I1qCE2XWRkasZCHGxkP=
+4Eg/h11/u8SD4yV_AX8d49nIuncsxgTxZ07iBl3T34nSeyx3OQo" target=3D"_blank" rel=
+=3D"noopener noreferrer nofollow" style=3D"text-decoration:underline;text-d=
+ecoration-color:#222222;"><p>Source: CoinDesk</p></a></td></tr></table></td=
+></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-al=
+ign:left;word-break:break-word;"><p> On average, Bitcoin=E2=80=99s price in=
+creases by ~180% heading into the halving event and increases by ~3,000% af=
+ter the halving event. </p></td></tr><tr><td class=3D"dd" align=3D"left" st=
+yle=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> We=E2=
+=80=99ll see if history repeats itself. </p></td></tr><tr><td align=3D"cent=
+er" valign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table =
+role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"mar=
+gin:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=3D"width:=
+630px;"><a href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZW=
+WH1XQUGrUHEGw8XiTdPKsGeAaUBK2Q_Bh8xU1jyox4t5pLskGy_oRlPcIKsVaA/41p/I1qCE2XW=
+RkasZCHGxkP4Eg/h12/k0vVZdZFVvyJbPRTPGErB6pYiiHhYo-pJ0AfSpozhT0" target=3D"_=
+blank" rel=3D"noopener noreferrer nofollow" style=3D"text-decoration:none;"=
+><img src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/bdd174d2-24c9-4=
+f64-9270-8a077916e07d/Add_a_subheading-2.png?t=3D1701259924" alt=3D"" heigh=
+t=3D"auto" width=3D"630" style=3D"display:block;width:100%;" border=3D"0"/>=
+</a></td></tr></table></td></tr><tr><td><table role=3D"none" width=3D"100%"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D""><tr><td bgcolo=
+r=3D"#BEDADA" style=3D"background-color:#BEDADA;padding:0px 0px 0px 0px;"><=
+table role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0"><tr><td align=3D"center" valign=3D"top" style=3D"padding: 20px 15p=
+x 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"center" =
+valign=3D"top" style=3D"width:630px;"><a href=3D"https://elink.milkroad.com=
+/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdPKsGeAaUBK2Q_Bh8xU1jyox4t5p=
+LskGy_oRlPcIKsVaA/41p/I1qCE2XWRkasZCHGxkP4Eg/h13/1m2DwYC12jVlqiqkC9ZSmUOC-v=
+mN3pGPOwdJyCL8mks" target=3D"_blank" rel=3D"noopener noreferrer nofollow" s=
+tyle=3D"text-decoration:none;"><img src=3D"https://media.beehiiv.com/cdn-cg=
+i/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uplo=
+ads/asset/file/860d3430-c1fa-487f-bfaa-14a28a26e4a7/11_29_Dopex_banner_1701=
+188544.jpeg?t=3D1701259957" alt=3D"" height=3D"auto" width=3D"630" style=3D=
+"display:block;width:100%;" border=3D"0"/></a></td></tr></table></td></tr><=
+tr><td class=3D"dd" align=3D"center" valign=3D"top" style=3D"padding:0px 15=
+px;text-align:center;"><h1><span style=3D""><a class=3D"link" href=3D"https=
+://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdP5qfn2=
+QKROmkQLtIQoSGsi/41p/I1qCE2XWRkasZCHGxkP4Eg/h14/pnG2jiTQOyjGArUY0POJU39hp-W=
+iM4VFmQ7wxBJb80Q" target=3D"_blank" rel=3D"noopener noreferrer nofollow"><b=
+>WHY CLAMM (OPTIONS) IS BETTER THEN TRADING PERPS</b></a></span></h1></td><=
+/tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-alig=
+n:left;word-break:break-word;"><p><span style=3D"">Just like pizza delivery=
+ services, perp and options traders care about two things: </span><span sty=
+le=3D""><b>speed and price.</b></span></p></td></tr><tr><td class=3D"dd" al=
+ign=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-wor=
+d;"><p><span style=3D"">That=E2=80=99s because in trading, these two factor=
+s can cause a lot more issues than a cold meal.</span><br><br><span style=
+=3D""><b>Traders</b></span><span style=3D""> need to be able to act </span>=
+<span style=3D""><b>quickly</b></span><span style=3D"">, and benefit from d=
+eep </span><span style=3D""><b>liquidity</b></span><span style=3D""> and ch=
+eap </span><span style=3D""><b>premiums</b></span><span style=3D"">. And th=
+at=E2=80=99s where </span><span style=3D""><a class=3D"link" href=3D"https:=
+//elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdP5qfn2Q=
+KROmkQLtIQoSGsi/41p/I1qCE2XWRkasZCHGxkP4Eg/h15/UwbRbcwJSkeSjAbd1ymWZTSwzFvg=
+O73CKb4906tW-Wg" target=3D"_blank" rel=3D"noopener noreferrer nofollow">Dop=
+ex=E2=80=99s Concentrated Liquidity Automated Market Maker (=E2=80=9DCLAMM=
+=E2=80=9D)</a></span><span style=3D""> comes in.</span></p></td></tr><tr><t=
+d class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;wor=
+d-break:break-word;"><p><span style=3D""><b>Trade American-style options</b=
+></span><span style=3D""> on all your favorite tokens, including ETH/USDC, =
+WBTC/ USDC, ARB/USDC.</span></p></td></tr><tr><td class=3D"dd" align=3D"lef=
+t" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p><sp=
+an style=3D""><b>BUT why are perp traders moving to </b></span><span style=
+=3D""><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4em=
+etSgrrglemiZWWH1XQUGrUHEGw8XiTdP5qfn2QKROmkQLtIQoSGsi/41p/I1qCE2XWRkasZCHGx=
+kP4Eg/h16/Yz0Jb2l988b7zRI7Z1hy3Ht6SyM8mhvogHpXs6T4Nw0" target=3D"_blank" re=
+l=3D"noopener noreferrer nofollow">Dopex</a></span><span style=3D""><b>?</b=
+></span></p></td></tr><tr><td style=3D"padding-bottom:12px;padding-left:43p=
+x;padding-right:27px;padding-top:12px;" class=3D"ee"><div style=3D"margin-l=
+eft:0px;" class=3D"edm_outlooklist"><ul style=3D"list-style-type:square;mar=
+gin:0px 0px;padding:0px 0px 0px 0px;"><li class=3D"listItem ultext"><p styl=
+e=3D"padding:0px;text-align:left;word-break:break-word;"><span style=3D""><=
+b>No margin</b></span><span style=3D"">=C2=A0</span><span style=3D""><b>req=
+uirement</b></span><span style=3D""> (or funding fee)</span></p></li><li cl=
+ass=3D"listItem ultext"><p style=3D"padding:0px;text-align:left;word-break:=
+break-word;"><span style=3D""><b>No liquidations</b></span><span style=3D""=
+> (sleep peacefully with open positions)</span></p></li><li class=3D"listIt=
+em ultext"><p style=3D"padding:0px;text-align:left;word-break:break-word;">=
+<span style=3D""><b>Premium is paid upfront</b></span><span style=3D""> (on=
+e-time vs 2-way fees)</span></p></li><li class=3D"listItem ultext"><p style=
+=3D"padding:0px;text-align:left;word-break:break-word;"><span style=3D""><b=
+>Cheapest premiums</b></span><span style=3D""> are found on BTC/ARB/ETH</sp=
+an></p></li></ul></div></td></tr><tr><td class=3D"dd" align=3D"left" style=
+=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p><span style=
+=3D"">The platform is designed for you to seize </span><span style=3D""><b>=
+short-term profit opportunities</b></span><span style=3D""> (1h, 6h, 24h). =
+And soon, you=E2=80=99ll be able to </span><span style=3D""><a class=3D"lin=
+k" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGr=
+UHEGw8XiTdP5qfn2QKROmkQLtIQoSGsi/41p/I1qCE2XWRkasZCHGxkP4Eg/h17/KWPh7tt_l0k=
+FP9Y079C66SMrxiPaHtVqn9CQq0G0Ufk" target=3D"_blank" rel=3D"noopener norefer=
+rer nofollow">utilize CLAMM</a></span><span style=3D""> on countless long-t=
+ail assets!</span></p></td></tr><tr><td class=3D"dd" align=3D"left" style=
+=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p><span style=
+=3D""><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4em=
+etSgrrglemiZWWH1XQUGrUHEGw8XiTdMjEpfI3yZ6D0dapzdJCat-0UN6lJdoioR-DuWLTBR5Qw=
+/41p/I1qCE2XWRkasZCHGxkP4Eg/h18/TeWCZyMydp_gwC7YVDmnwPvL4yOPC-JeYA76EjJ6K1k=
+" target=3D"_blank" rel=3D"noopener noreferrer nofollow">Dopex v2 (CLAMM) i=
+s now live. Dive right in!</a></span><br></p></td></tr></table></td></tr></=
+table></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding: 2=
+0px 15px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"c=
+enter" valign=3D"top" style=3D"width:630px;"><img src=3D"https://media.beeh=
+iiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,qua=
+lity=3D80/uploads/asset/file/0563732e-fc0d-4697-9d4f-fd4576545eed/image.png=
+" alt=3D"" height=3D"auto" width=3D"630" style=3D"display:block;width:100%;=
+" border=3D"0"/></td></tr></table></td></tr><tr><td class=3D"dd" align=3D"c=
+enter" valign=3D"top" style=3D"padding:0px 15px;text-align:center;"><h1><b>=
+OPENSEA=E2=80=99S MONTHLY VOLUME DROPPED FROM $5B =E2=80=94&gt; $50M </b>=
+=F0=9F=93=89</h1></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"pad=
+ding:0px 15px;text-align:left;word-break:break-word;"><p><a class=3D"link" =
+href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgq-wRcqBWnLNIjr8=
+nhhpJcAJ5QQ4hir53vy4KrQEXkmBH/41p/I1qCE2XWRkasZCHGxkP4Eg/h19/wKzZRrb4ylmMG0=
+H6eX3dYgLQxk6PMJjy7n_CbCfOOFY" target=3D"_blank" rel=3D"noopener noreferrer=
+ nofollow">OpenSea</a> was once the King of <a class=3D"link" href=3D"https=
+://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgq8wZRhBZU2C7GmO1lOSx-xC_qtPv=
+z_OW1OGPBEMEXmaq/41p/I1qCE2XWRkasZCHGxkP4Eg/h20/2vo8Tw5o3YZbwenhr6bZwCJn1j1=
+ZuZVJZ7D9ZooTXF8" target=3D"_blank" rel=3D"noopener noreferrer nofollow">NF=
+T Marketplaces</a>.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left"=
+ style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> Well=
+, check it out. OpenSea=E2=80=99s monthly volume has plummeted since the be=
+ginning of last year. </p></td></tr><tr><td style=3D"padding-bottom:12px;pa=
+dding-left:43px;padding-right:27px;padding-top:12px;" class=3D"ee"><div sty=
+le=3D"margin-left:0px;" class=3D"edm_outlooklist"><ul style=3D"list-style-t=
+ype:square;margin:0px 0px;padding:0px 0px 0px 0px;"><li class=3D"listItem u=
+ltext"><p style=3D"padding:0px;text-align:left;word-break:break-word;"><spa=
+n style=3D""><b>January 2022 </b></span>- $5B in volume </p></li><li class=
+=3D"listItem ultext"><p style=3D"padding:0px;text-align:left;word-break:bre=
+ak-word;"><span style=3D""><b>October 2023 </b></span>- $49M in volume </p>=
+</li></ul></div></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"=
+padding: 20px 15px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td =
+align=3D"center" valign=3D"top" style=3D"width:630px;"><a href=3D"https://e=
+link.milkroad.com/ss/c/3-udRmltChThHwRMWypgY-XseYMQWVpXvDYXuui4zic6a4BVuMUO=
+pO432QHq8wDh/41p/I1qCE2XWRkasZCHGxkP4Eg/h21/n_o3a9pUv2v5W_fYfuHw41LBg_28jKs=
+PM80imiOdyQU" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=
+=3D"text-decoration:none;"><img src=3D"https://media.beehiiv.com/cdn-cgi/im=
+age/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/=
+asset/file/73d37527-8328-4aca-883a-7c10fee590ee/Screenshot_2023-11-29_at_10=
+.44.35_AM.png?t=3D1701273443" alt=3D"" height=3D"auto" width=3D"630" style=
+=3D"display:block;width:100%;" border=3D"0"/></a></td></tr><tr><td align=3D=
+"center" valign=3D"top" class=3D"t" style=3D"width:630px;"><a href=3D"https=
+://elink.milkroad.com/ss/c/3-udRmltChThHwRMWypgY-XseYMQWVpXvDYXuui4zic6a4BV=
+uMUOpO432QHq8wDh/41p/I1qCE2XWRkasZCHGxkP4Eg/h22/w9sXNzHbKxzuRubVKW4R3dCDCXj=
+stJu9XcKCOtZc02U" target=3D"_blank" rel=3D"noopener noreferrer nofollow" st=
+yle=3D"text-decoration:underline;text-decoration-color:#222222;"><p>Source:=
+ Dune Analytics (@rchen8)</p></a></td></tr></table></td></tr><tr><td class=
+=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word;"><p><b><a class=3D"link" href=3D"https://elink.milkroad.com/ss=
+/c/4MnwyC8ZLgKS2W4rhpYGaQ-SVZku0bSGss34KFbi1WtzSWbPkdgZ1SaKt8vrfXSZ-OEzDhiD=
+ILUbgwFDqpMJQQ/41p/I1qCE2XWRkasZCHGxkP4Eg/h23/YEVm6MFJkW1q7M-9IXXtVb89RODZd=
+Veka6XvJQ8JHM0" target=3D"_blank" rel=3D"noopener noreferrer nofollow">Acco=
+rding to @Punk9059</a></b><b> (Milk Road friend and NFT expert), this is du=
+e to a combination of three things:</b></p></td></tr><tr><td class=3D"dd" a=
+lign=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-wo=
+rd;"><p> 1/ NFT volumes are generally down. </p></td></tr><tr><td class=3D"=
+dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:bre=
+ak-word;"><p> 2/ OpenSea went from having a 95% market share for NFT tradin=
+g =E2=86=92 35% market share. </p></td></tr><tr><td class=3D"dd" align=3D"l=
+eft" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> =
+3/ Margin compression in platform fees.=C2=A0 </p></td></tr><tr><td class=
+=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word;"><p> So, now everyone=E2=80=99s wondering the same thing=E2=80=
+=A6<span style=3D""><b> is this the end of NFTs?=C2=A0</b></span></p></td><=
+/tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-alig=
+n:left;word-break:break-word;"><p> Short answer: No.=C2=A0 </p></td></tr><t=
+r><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left=
+;word-break:break-word;"><p> Long answer: Hell no.=C2=A0 </p></td></tr><tr>=
+<td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;w=
+ord-break:break-word;"><p><span style=3D""><b>The NFT market just looks dif=
+ferent than what it was a year ago.</b></span> There are=E2=80=A6 </p></td>=
+</tr><tr><td style=3D"padding-bottom:12px;padding-left:43px;padding-right:2=
+7px;padding-top:12px;" class=3D"ee"><div style=3D"margin-left:0px;" class=
+=3D"edm_outlooklist"><ul style=3D"list-style-type:square;margin:0px 0px;pad=
+ding:0px 0px 0px 0px;"><li class=3D"listItem ultext"><p style=3D"padding:0p=
+x;text-align:left;word-break:break-word;"> More NFT marketplaces (i.e. <a c=
+lass=3D"link" href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgq=
+-wRcqBWnLNIjr8nhhpJcALZka4FbTlT4tXI7_N-Qo1B/41p/I1qCE2XWRkasZCHGxkP4Eg/h24/=
+nmEsIs3kFU9DqJkMadCoTMBchM0OTS60ufOsL2HLDTM" target=3D"_blank" rel=3D"noope=
+ner noreferrer nofollow">Blur</a>). </p></li><li class=3D"listItem ultext">=
+<p style=3D"padding:0px;text-align:left;word-break:break-word;"> More block=
+chains implementing NFTs (i.e. <a class=3D"link" href=3D"https://elink.milk=
+road.com/ss/c/AX1lEgEQaxtvFxLaVo0GBuhY_qQBARRpuLNja4VaVSsqVIOzmzkvKMRLCGawz=
+ULH/41p/I1qCE2XWRkasZCHGxkP4Eg/h25/EBY0OCt-6mDZ7h5b0lbUqxGc_uJMT1CdkPy2tnht=
+uhg" target=3D"_blank" rel=3D"noopener noreferrer nofollow">over the last 3=
+0 days</a>, there=E2=80=99s been more NFT volume on the <a class=3D"link" h=
+ref=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgqxTI7j2IoGA9egGA=
+W4Wj-zQQt5eZbOUC61rIe8tdQUC2/41p/I1qCE2XWRkasZCHGxkP4Eg/h26/ygG0uNVWDkFonri=
+GXRCcV6jMYjFyGpntAmCyl1Z3_QQ" target=3D"_blank" rel=3D"noopener noreferrer =
+nofollow">Bitcoin</a> blockchain than the <a class=3D"link" href=3D"https:/=
+/elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgq_Lb1Iq1WUhCqGXlxGJzX6Keq8iHaf=
+EzOvbHonu4lW2F/41p/I1qCE2XWRkasZCHGxkP4Eg/h27/Tyo-33DUpnPLFj2KglYbxVshewmMC=
+g1_YoGaLBqNMmU" target=3D"_blank" rel=3D"noopener noreferrer nofollow">Ethe=
+reum</a> blockchain). </p></li></ul></div></td></tr><tr><td class=3D"dd" al=
+ign=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-wor=
+d;"><p> So for us, it=E2=80=99s more of an =E2=80=9COpenSea problem=E2=80=
+=9D than an =E2=80=9CNFT problem=E2=80=9D. </p></td></tr><tr><td align=3D"c=
+enter" valign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"><tab=
+le role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"=
+margin:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=3D"wid=
+th:630px;"><img src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-=
+down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/f1c36=
+e79-1bca-46b2-8d90-d0c5d7443522/image.png" alt=3D"" height=3D"auto" width=
+=3D"630" style=3D"display:block;width:100%;" border=3D"0"/></td></tr></tabl=
+e></td></tr><tr><td class=3D"dd" align=3D"center" valign=3D"top" style=3D"p=
+adding:0px 15px;text-align:center;"><h1><b>BITE-SIZED COOKIES </b>=F0=9F=8D=
+=AA</h1></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px =
+15px;text-align:left;word-break:break-word;"><p><a class=3D"link" href=3D"h=
+ttps://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdPd=
+BJH8ohWpl4W4d-uWpaXJ_WUh4WgnU8pA0aDXkByBAg/41p/I1qCE2XWRkasZCHGxkP4Eg/h28/C=
+0cOK9DYGo9dFPVyPkwtGs8dUfFBA_EfVsVCVWg5_kI" target=3D"_blank" rel=3D"noopen=
+er noreferrer nofollow">Phemex is set to launch PT Staking on November 30th=
+ at 14:00 UTC.</a><span style=3D""><b>=C2=A0</b></span><span style=3D"">Bra=
+ce yourself for a rewarding experience as Phemex vows to use a slice of its=
+ daily USDT contract trading volume to buy back PT and distribute them as s=
+taking rewards for their loyal community!*</span></p></td></tr><tr><td clas=
+s=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-brea=
+k:break-word;"><p><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c=
+/AX1lEgEQaxtvFxLaVo0GBqbRPFF2BdQeTlUSLR1wQNpJ95gHDowrwekAtRNNQ8kEUVm8QLAUya=
+aQisuh6kt9ZmWQgnqL0vsm1XefdAqpTuJoTGp_2hInlMNQN2OD7qpniTSk3izZ-raCYlRjkT38i=
+g/41p/I1qCE2XWRkasZCHGxkP4Eg/h29/awwHhRHZWo-CcicW2j9g3tOXVPUM4rCZG_E8AVuMts=
+Y" target=3D"_blank" rel=3D"noopener noreferrer nofollow">Coinbase announce=
+d it received a subpoena from a U.S. regulator.</a><span style=3D""><b>=C2=
+=A0</b></span>The crypto exchange says it may respond to the subpoena, =E2=
+=80=9Cincluding sending information concerning Coinbase accounts to the Com=
+modity Future Trading Commission (CFTC). </p></td></tr><tr><td class=3D"dd"=
+ align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-=
+word;"><p><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/_YA6v3W=
+SkC2ptsolyBUgq_ten6M0m1tylBTsPi9cHXi1yD6NieWgwadcbO_0n_GO4HkotkRtLbXGn0A5iM=
+9mgij68l4U2FFzQBE67jBeDtwq7Qg8AlAyaCN5Mtt1GUKGKF90OGfB3Ftl77INwrkdLg/41p/I1=
+qCE2XWRkasZCHGxkP4Eg/h30/w-zseXNSiu43FTU48FgLVA0g0Xh4pzLCrZPmtdAnO4Y" targe=
+t=3D"_blank" rel=3D"noopener noreferrer nofollow">Changpheng Zhao (aka =E2=
+=80=9CCZ=E2=80=9D) stepped down as chairman of the board of directors for B=
+inance.US</a><span style=3D""><b>. </b></span>The former Binance CEO has tr=
+ansferred his voting rights through a proxy agreement, removing his influen=
+ce from Binance.US&#39;s governance. </p></td></tr><tr><td class=3D"dd" ali=
+gn=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word=
+;"><p><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxt=
+vFxLaVo0GBqbRPFF2BdQeTlUSLR1wQNrOVFPUpMhn0QlALDgB0HgPuuiy_SfqzJSXuK7mf7kana=
+_RwA9MYo-fWzlaxxa_Gz0SOEfFLR9w2VhaRwhB_b41TbWe8jVUobdKBxVx83o6yTB9DD6Y7JsD1=
+yEXnXCv-EI/41p/I1qCE2XWRkasZCHGxkP4Eg/h31/iKD5UAawTb9NzrkiTAalNhaixPKUr1PkD=
+8vkQYV2gf0" target=3D"_blank" rel=3D"noopener noreferrer nofollow">CF Bench=
+marks launched a new staking index series for institutional clients</a><spa=
+n style=3D""><b>.</b></span> It=E2=80=99s called the =E2=80=98CF Staking Re=
+ward Rate Series=E2=80=99 and provides investors with reward rates from cer=
+tain proof-of-stake protocols.=C2=A0 </p></td></tr><tr><td class=3D"dd" ali=
+gn=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word=
+;"><p><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/J-vxvHcwZeq=
+wNZ1dSIu-6bc7r3AZpwTNjZZj8xAQX6gGqwLngUp7C3ThP4z-aFU8FoQnYD3eENw1v7q8-akPYv=
+-GxAcM4d_AxvmhIr6Gb1Y/41p/I1qCE2XWRkasZCHGxkP4Eg/h32/WBPlPQR-Y1rPLTveb5ikqH=
+0_rkvapAISfNdy3kTcVjU" target=3D"_blank" rel=3D"noopener noreferrer nofollo=
+w">The U.S. Securities and Exchange Commission (SEC) has opened up a commen=
+t period for Franklin Templeton=E2=80=99s spot Bitcoin ETF proposal</a><spa=
+n style=3D""><b>. </b></span>According to the filing, =E2=80=9Cthe commissi=
+on seeks and encourages interested persons to provide comments on the propo=
+sed rule change=E2=80=9D.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D=
+"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p=
+><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtvFxLa=
+Vo0GBvtreAoKmypYymH430ODaaH4T0PE0Mkfv6KuO8SCf0kmxdfno2PRzwEqbaK4Wv7m6EHxlbY=
+we8cmFTGW-cKkn3cB3lSBvRDnT_YdxwnGKFxmQKZvaHfGUGnVSyUKqGuhRyEzGIsUyWSK5yK8xy=
+l9wBeOBOdEeOIzAFnZ-GjLZ5lW/41p/I1qCE2XWRkasZCHGxkP4Eg/h33/ldS41E6naUnW29MQN=
+BCfXgTdtAuUqg6YkG2Q7T-lmBE" target=3D"_blank" rel=3D"noopener noreferrer no=
+follow">The number of crypto addresses holding DOGE hit 5 million for the f=
+irst time ever</a><span style=3D""><b>. </b></span>The crazy part? Fewer th=
+an 5,000 addresses control more than 80% of DOGE&#39;s supply. </p></td></t=
+r><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:=
+left;word-break:break-word;"><p><span style=3D"">*This is sponsored content=
+</span></p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"paddi=
+ng: 20px 15px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=
+=3D"center" valign=3D"top" style=3D"width:630px;"><img src=3D"https://media=
+.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirec=
+t,quality=3D80/uploads/asset/file/f1c36e79-1bca-46b2-8d90-d0c5d7443522/imag=
+e.png" alt=3D"" height=3D"auto" width=3D"630" style=3D"display:block;width:=
+100%;" border=3D"0"/></td></tr></table></td></tr><tr><td class=3D"dd" align=
+=3D"center" valign=3D"top" style=3D"padding:0px 15px;text-align:center;"><h=
+1><b>MILKY MEMES </b>=F0=9F=A4=A3</h1></td></tr><tr><td align=3D"center" va=
+lign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table role=
+=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:=
+0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=3D"width:535p=
+x;"><a href=3D"https://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaRvaAAn3=
+7_VcHNw4eztSWB2BENC6F-sdtDBjKEbIqSeA15H3Yr1Oq6XwcjNa8-SwpyUf9VLNHcz0yJTbQiD=
+zS4A/41p/I1qCE2XWRkasZCHGxkP4Eg/h34/E-8pk0C3WIVku2zvHBz7MVnFWrrrnfjh0ca1EXD=
+yKTM" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"text-=
+decoration:none;"><img src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=
+=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/f=
+ile/d10ac55e-6615-4da9-8f4a-916c9e591889/GACEe1GWcAAB5Rt.jpeg?t=3D170126974=
+0" alt=3D"" height=3D"auto" width=3D"535" style=3D"display:block;width:100%=
+;" border=3D"0"/></a></td></tr><tr><td align=3D"center" valign=3D"top" clas=
+s=3D"t" style=3D"width:535px;"><a href=3D"https://elink.milkroad.com/ss/c/4=
+MnwyC8ZLgKS2W4rhpYGaRvaAAn37_VcHNw4eztSWB2BENC6F-sdtDBjKEbIqSeA15H3Yr1Oq6Xw=
+cjNa8-SwpyUf9VLNHcz0yJTbQiDzS4A/41p/I1qCE2XWRkasZCHGxkP4Eg/h35/nxlSSbxXaVZC=
+zlbrE-N6yL8JoHOpaO_DYapg9vsJ2M8" target=3D"_blank" rel=3D"noopener noreferr=
+er nofollow" style=3D"text-decoration:underline;text-decoration-color:#2222=
+22;"><p>Source: @MinisterOfNFTs</p></a></td></tr></table></td></tr><tr><td =
+align=3D"center" valign=3D"top" style=3D"padding: 20px 15px 20px; " class=
+=3D"dd"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" =
+style=3D"width:535px;"><a href=3D"https://elink.milkroad.com/ss/c/XAeQQuQ7n=
+BoK9b8Umu738r7a56nF5e70ZDKSzhCwum4ZkxybsApS-sO5WqUUTx4yTDGYD3VvnnB4pnO-7FQV=
+uN9nnHcewpibQHS6nHKoPUq_GQoIHaS7aFG8MBbSJU-iL-CWsheKW7TRw0vsY1WCig/41p/I1qC=
+E2XWRkasZCHGxkP4Eg/h36/PYXW6SD9IM2zJLr1hjeKdrE6h8xPRmzq3QBERe9c0hY" target=
+=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"text-decoration:n=
+one;"><img src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,=
+format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/d21e798a-9=
+00e-4053-9ee0-82a5e7c2b281/tax-season-is-coming-v0-vhjn9xqihx2c1.jpg?t=3D17=
+01269411" alt=3D"" height=3D"auto" width=3D"535" style=3D"display:block;wid=
+th:100%;" border=3D"0"/></a></td></tr><tr><td align=3D"center" valign=3D"to=
+p" class=3D"t" style=3D"width:535px;"><a href=3D"https://elink.milkroad.com=
+/ss/c/XAeQQuQ7nBoK9b8Umu738r7a56nF5e70ZDKSzhCwum4ZkxybsApS-sO5WqUUTx4yTDGYD=
+3VvnnB4pnO-7FQVuN9nnHcewpibQHS6nHKoPUq_GQoIHaS7aFG8MBbSJU-iL-CWsheKW7TRw0vs=
+Y1WCig/41p/I1qCE2XWRkasZCHGxkP4Eg/h37/k-qPPOLD4TAtmUv9cQzxJav-5db47lGJfG199=
+OjjX-c" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"tex=
+t-decoration:underline;text-decoration-color:#222222;"><p>Source: Reddit</p=
+></a></td></tr></table></td></tr><tr><td align=3D"center" valign=3D"top" st=
+yle=3D"padding: 20px 15px 20px; " class=3D"dd"><table role=3D"none" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;">=
+<tr><td align=3D"center" valign=3D"top" style=3D"width:630px;"><img src=3D"=
+https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,oner=
+ror=3Dredirect,quality=3D80/uploads/asset/file/0563732e-fc0d-4697-9d4f-fd45=
+76545eed/image.png" alt=3D"" height=3D"auto" width=3D"630" style=3D"display=
+:block;width:100%;" border=3D"0"/></td></tr></table></td></tr><tr><td class=
+=3D"dd" align=3D"center" valign=3D"top" style=3D"padding:0px 15px;text-alig=
+n:center;"><h2><b>RATE TODAY=E2=80=99S EDITION</b></h2></td></tr><tr><td cl=
+ass=3D"e" align=3D"left" valign=3D"top" style=3D"padding:15px 15px 6px;"><h=
+3 style=3D"">What&#39;d you think of today&#39;s edition?</h3></td></tr><tr=
+><td class=3D"ee e " style=3D"padding:0px 15px 15px;"><div style=3D"margin-=
+left:0px;" class=3D"edm_outlooklist"><ul style=3D"list-style-type:disc;padd=
+ing:0px 0px 0px 0px;margin:0px 0px;"><li class=3D"listItem ff" style=3D"lis=
+t-style-type:disc;text-align:left;"><a href=3D"https://elink.milkroad.com/s=
+s/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipcapnf2esHoaWUbjycwvnUbeUDUuopFmbfD0vqGnshLN=
+CP_IMKn2I_SyjOw2GPLV99ToBFzciM9JNcAEMc7Z4uG-xEexkTTzW9YZdqNQ8b0WDYmxe5sWvxT=
+Ezpp29XqIrIvX4Ls2wOOTdvkA3glWTM0ukHEJb2esL2C1TydDQFAjE6AUwUoB9h-9yJ8EANXwuw=
+H31WBrkl76GDQxaGzVSVMXSZVfEBpWSvPVs2BhU4mN1alt0_niY57-2KPu9cdda6kZvjaO_SNp5=
+tgs/41p/I1qCE2XWRkasZCHGxkP4Eg/h38/pLDJfLFhmBefC6e98-N3TUOm5TEOCy8iQeMau1zE=
+ZDM">=F0=9F=A5=9B=F0=9F=A5=9B=F0=9F=A5=9B=F0=9F=A5=9B=F0=9F=A5=9B F**king g=
+reat</a></li><li class=3D"listItem ff" style=3D"list-style-type:disc;text-a=
+lign:left;"><a href=3D"https://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYG=
+aaLkBfipcapnf2esHoaWUbjycwvnUbeUDUuopFmbfD0vqGnshLNCP_IMKn2I_SyjOw2GPLV99To=
+BFzciM9JNcAEMc7Z4uG-xEexkTTzW9YZdqbaWWZEjD-XBmH4rzVuK15KbndYegBou053hZzNKzh=
+47F8E5vfPiuan73Q8Rjb_Z6IfmbqwFK_cHH4OSM-w1OAyLoNmYN3NPEOfpThAcokIP038O42z8t=
+J49zabMoIEEU3K_8ZFhnOgTWTaDBQ2LYsK0E-f3pAH4n1wThbnhM7M/41p/I1qCE2XWRkasZCHG=
+xkP4Eg/h39/6pirgNfSXIOGDjGWxeKATzR77hgpTJZ0meoI1NIqJHg">=F0=9F=A5=9B=F0=9F=
+=A5=9B=F0=9F=A5=9B Meh, do better</a></li><li class=3D"listItem ff" style=
+=3D"list-style-type:disc;text-align:left;"><a href=3D"https://elink.milkroa=
+d.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipcapnf2esHoaWUbjycwvnUbeUDUuopFmbfD0v=
+qGnshLNCP_IMKn2I_SyjOw2GPLV99ToBFzciM9JNcAEMc7Z4uG-xEexkTTzW9YZd3zGaQwlmwWY=
+SLmcXChp_wG2vqoojtYmxpwlprf5PzLl9S0tjZw82E_P5OKrc6ik4THt0otIyD1QcUG2NRwNiR1=
+L6oswremcaYpHFZd_wCHDgy-2aexSGPMjXmehohYDeBcCJgpGfD-N09X5T9gWriwNG-LQZhGf0N=
+Ub-Mx99YBs/41p/I1qCE2XWRkasZCHGxkP4Eg/h40/HElQ-wzPdbptFTDkybMZEe_Zem0bTvPTD=
+vNGRNunzMs">=F0=9F=A5=9B You didn&#39;t bring the heat</a></li></ul></div><=
+/td></tr><tr><td align=3D"center" valign=3D"top"><table role=3D"none" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"=
+><tr><td align=3D"center" valign=3D"top" style=3D"font-size:0px;line-height=
+:0px;padding:40px 0px;" class=3D"dd"><table class=3D"j" role=3D"none" width=
+=3D"80%%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"=
+><tr><td> &nbsp; </td></tr></table></td></tr><tr><td class=3D"dd" align=3D"=
+left" valign=3D"top" style=3D"padding:0px 15px;text-align:left;"><h2>Share =
+Milk Road</h2></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"paddin=
+g:0px 15px;text-align:left;word-break:break-word;"><p> You currently have <=
+strong>0</strong> referrals, only <strong>1</strong> away from receiving <s=
+trong>The Next 10x Opportunity in Crypto for 2023</strong>. </p></td></tr><=
+tr><td align=3D"left" valign=3D"top" style=3D"padding: 20px 15px 20px; disp=
+lay:none;width:0px;max-height:0px;overflow:hidden;mso-hide:all;height:0;fon=
+t-size:0;max-height:0;line-height:0;margin:0 auto;" class=3D"dd"><table rol=
+e=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin=
+:0 auto 0 0;"><tr><td align=3D"center" valign=3D"top" style=3D"width:315px;=
+"><a href=3D"https://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipca=
+pnf2esHoaWUbhaJtX8WqPCXE1Y9dem1APWkDH_2GLuP_B4rmH6_IvtnACmNjju_Wj0pHFs75mfG=
+BKaFiPFaw8qFHEYrl4SBPw8FqhE8ou6a0JFh1IzXKdBrvAmJEBeuYQ-teT7CQB0u9CAdezh8Her=
+bLf4Rux2zm05yh4fs-8Jwx7nQnxITI2tAtclIl5fULJcSjgzqEqerPCia71a5BFo6c0kF4Neavn=
+pHYUKMZips1JabD_SxKFZxMVId2rovphYIcBxrrBDu3xz4iaeAYiWcL_KP0iF7kNV582SXF3t_G=
+ZniW1lJU0OctcDTvRmUm2rFSxr1-mJoVNFjAsghgjdpxgfvQQUczgSvLlucxCWXMPiSU-7vTInN=
+_NqCgovN_fe3dDmJpxu6XhLcZ2TgS4Lkcdnv5afT_iDOuH-kTP8pT0K-25j34nATg/41p/I1qCE=
+2XWRkasZCHGxkP4Eg/h41/mPe8rFR2CsvCgD-LUsojZuFe5hLz5Y0YZhN13C19VAo" target=
+=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"text-decoration:n=
+one;"><img src=3D"" alt=3D"The Next 10x Opportunity in Crypto for 2023" hei=
+ght=3D"auto" width=3D"315" style=3D"display:block;width:100%;" border=3D"0"=
+/></a></td></tr></table></td></tr><tr><td align=3D"left" valign=3D"top" sty=
+le=3D"padding-bottom:24px;padding-left:15px;padding-right:15px;padding-top:=
+24px;text-align:left;width:100%;word-break:break-word;" class=3D"dd"><table=
+ role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"le=
+ft"><tr><td class=3D"v" align=3D"center" valign=3D"middle" height=3D"42" st=
+yle=3D"height:42px;"><a href=3D"https://elink.milkroad.com/ss/c/4MnwyC8ZLgK=
+S2W4rhpYGaaLkBfipcapnf2esHoaWUbhaJtX8WqPCXE1Y9dem1APWkDH_2GLuP_B4rmH6_IvtnA=
+CmNjju_Wj0pHFs75mfGBKaFiPFaw8qFHEYrl4SBPw8FqhE8ou6a0JFh1IzXKdBrvAmJEBeuYQ-t=
+eT7CQB0u9CAdezh8HerbLf4Rux2zm05yh4fs-8Jwx7nQnxITI2tAtclIl5fULJcSjgzqEqerPCi=
+a71a5BFo6c0kF4NeavnpHYUKMZips1JabD_SxKFZxMVId2rovphYIcBxrrBDu3xz4iaeAYiWcL_=
+KP0iF7kNV582SXF3t_GZniW1lJU0OctcDTvRmUm2rFSxr1-mJoVNFjAsghgjdpxgfvQQUczgSvL=
+lucxCWXMPiSU-7vTInN_NqCgovN_fe3dDmJpxu6XhLcZ2TgS4Lkcdnv5afT_iDOuH-kTP8pT0K-=
+25j34nATg/41p/I1qCE2XWRkasZCHGxkP4Eg/h42/u7EsyeDUG9IldN31yhSGyCS-5OxkDWmi87=
+pq5qXu510" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"=
+color:#FFFFFF;font-size:14px;padding:0px 14px;text-decoration:none;"> Click=
+ to Share </a></td></tr></table></td></tr><tr><td class=3D"dd" align=3D"lef=
+t" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> Or=
+ copy and paste this link to others: <a class=3D"link" href=3D"https://them=
+ilkroad.beehiiv.com/subscribe?ref=3D1noEEQMdgM" target=3D"_blank" rel=3D"no=
+opener noreferrer nofollow" clicktracking=3D"off">https://themilkroad.beehi=
+iv.com/subscribe?ref=3D1noEEQMdgM</a></p></td></tr><tr><td align=3D"center"=
+ valign=3D"top" style=3D"font-size:0px;line-height:0px;padding:40px 0px;" c=
+lass=3D"dd"><table class=3D"j" role=3D"none" width=3D"80%%" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" align=3D"center"><tr><td> &nbsp; </td></t=
+r></table></td></tr></table></td></tr><tr><td class=3D"dd" align=3D"center"=
+ valign=3D"top" style=3D"padding:0px 15px;text-align:center;"><h2><b>ROADER=
+ REVIEW OF THE DAY</b></h2></td></tr><tr><td align=3D"center" valign=3D"top=
+" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table role=3D"none" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto=
+;"><tr><td align=3D"center" valign=3D"top" style=3D"width:504px;"><img src=
+=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,=
+onerror=3Dredirect,quality=3D80/uploads/asset/file/93338bf8-9533-45ad-9d35-=
+d9cd76ee0ff8/Screenshot_2023-11-29_at_11.13.32_AM.png?t=3D1701273666" alt=
+=3D"" height=3D"auto" width=3D"504" style=3D"display:block;width:100%;" bor=
+der=3D"0"/></td></tr></table></td></tr><tr><td class=3D"dd" align=3D"center=
+" valign=3D"top" style=3D"padding:0px 15px;text-align:center;"><h2><b>VITAL=
+IK PIC OF THE DAY</b></h2></td></tr><tr><td class=3D"dd" style=3D"padding: =
+20px;"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" role=3D"no=
+ne" style=3D"max-width:520px;margin:0 auto;"><tr><td class=3D"q" style=3D"p=
+adding:20px 20px 11.6px 20px;"><a href=3D"https://elink.milkroad.com/ss/c/4=
+MnwyC8ZLgKS2W4rhpYGaVUF8-tWp_PZ7xXFRxKoEZjaG2LikPo94Q5uQe94d3EAgCor9peJWn64=
+9mu1fR3--nTnRzeU4q-vpJ7PQWkE3xw/41p/I1qCE2XWRkasZCHGxkP4Eg/h43/PNweyg_JKPab=
+3Lq8iozrgV63zpx1j15e5U_3wRy0zx4" style=3D"text-decoration:none !important;"=
+><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" rol=
+e=3D"none"><tr><td width=3D"100%" style=3D"padding: 0 0 14px 0;text-decorat=
+ion:none;width:100%;"><table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" role=3D"none"><tr><td width=3D"36" style=3D"width:36px;=
+"><img src=3D"https://pbs.twimg.com/profile_images/1607411354465406976/mGr5=
+I2zz_normal.jpg" alt=3D"tw profile: Milk Road Images" style=3D"display:bloc=
+k;width:36px;height:36px;border-radius:50%;border:0;"/></td><td width=3D"40=
+0" style=3D"padding:0 0 0 8px;text-decoration:none;"><span style=3D"display=
+:block;font-size:14px;color:#1c2022;font-weight:700;"> Milk Road Images </s=
+pan><span style=3D"display:block;color:#697882;font-size:14px;"> @MilkRoadI=
+mages </span></td><td width=3D"24" align=3D"right" style=3D"vertical-align:=
+text-top;"><img width=3D"24" height=3D"24" loading=3D"lazy" alt=3D"tw" styl=
+e=3D"border:0;" src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-=
+down,format=3Dauto,onerror=3Dredirect,quality=3D80/static_assets/x_logo.png=
+"/></td></tr></table></td></tr><tr></tr><tr><td style=3D"word-break:break-w=
+ord;"><p>POV: Bitcoin miners realizing their rewards are getting cut in hal=
+f in a few months...</p></td></tr><tr><td align=3D"center" style=3D"padding=
+:8px 0 0 0;width:480px;"><img src=3D"https://pbs.twimg.com/media/GAHRxOxX0A=
+ACizJ.jpg" width=3D"480" height=3D"auto" style=3D"display:block;border:1px =
+solid #E1E8ED;border-radius:5px;width:100%;max-width:480px;height:auto;"/><=
+/td></tr><tr><td height=3D"10" style=3D"line-height:1px;font-size:1px;heigh=
+t:10px;">&nbsp;</td></tr><tr><td align=3D"left" valign=3D"top" class=3D"s">=
+<p>Nov 29, 2023</p></td></tr><tr><td height=3D"10" style=3D"line-height: 1p=
+x; font-size: 1px; height: 10px;">&nbsp;</td></tr><tr><td height=3D"1" bgco=
+lor=3D"#e1e8ed" style=3D"line-height:0px;font-size:0px;height:1px;"><img sr=
+c=3D"https://emailancer.com/edm/beehiiv/fernweh/images/spacer.gif" width=3D=
+"1" height=3D"1" alt=3D"" border=3D"0" style=3D"display:block;"/></td></tr>=
+<tr><td height=3D"10" style=3D"line-height:1px;font-size:1px;height:10px;">=
+&nbsp;</td></tr><tr><td align=3D"left" valign=3D"top" class=3D"s"><p><b sty=
+le=3D"color:#1C2022">0</b> Likes &nbsp; <b style=3D"color:#1C2022">0</b> Re=
+tweets &nbsp; <b style=3D"color:#1C2022">0</b> Replies </p></td></tr></tabl=
+e></a></td></tr></table></td></tr><tr><td align=3D"center" valign=3D"top" s=
+tyle=3D"font-size:0px;line-height:0px;padding:40px 0px;" class=3D"dd"><tabl=
+e class=3D"j" role=3D"none" width=3D"80%%" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" align=3D"center"><tr><td> &nbsp; </td></tr></table></td></=
+tr><tr><td class=3D"dd" align=3D"center" valign=3D"top" style=3D"padding:0p=
+x 15px;text-align:center;"><h2><b>WANT TO SPONSOR THIS NEWSLETTER?</b></h2>=
+</td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;tex=
+t-align:left;word-break:break-word;"><p> Over 250,000 subscribers are throw=
+ing a party, and your brand is invited! </p></td></tr><tr><td class=3D"dd" =
+align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-w=
+ord;"><p> Tap into our network of savvy (and good-looking) crypto &amp; Web=
+3 enthusiasts who are eager to learn and invest. </p></td></tr><tr><td clas=
+s=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-brea=
+k:break-word;"><p> Your Brand + Our Crypto Clan =3D Magic Waiting To Happen=
+. <b><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4eme=
+tSgrrglemiZWWH1XQUGrUHEGw8XiTdN4qdlPcGGRY8lswNzNzBX-/41p/I1qCE2XWRkasZCHGxk=
+P4Eg/h44/ODnYMM52gKU0f24OZDu7PNc-lMZDXWoQmxZJm9ab-Y8" target=3D"_blank" rel=
+=3D"noopener noreferrer nofollow">RSVP to the party!</a></b></p></td></tr><=
+tr><td align=3D"center" valign=3D"top" style=3D"font-size:0px;line-height:0=
+px;padding:40px 0px;" class=3D"dd"><table class=3D"j" role=3D"none" width=
+=3D"80%%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"=
+><tr><td> &nbsp; </td></tr></table></td></tr><tr><td class=3D"dd" align=3D"=
+left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p>=
+<i><b>DISCLAIMER: </b></i><i>None of this is financial advice. This newslet=
+ter is strictly educational and is not investment advice or a solicitation =
+to buy or sell any assets or to make any financial decisions. Please be car=
+eful and do your own research. </i></p></td></tr></table></td></tr><tr><td =
+class=3D"b" align=3D"center" valign=3D"top" bgcolor=3D"#008CF2" style=3D"pa=
+dding:0px;border-bottom-left-radius:6px;border-bottom-right-radius:6px;"><t=
+able role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" align=3D"center"><tr><td align=3D"center" valign=3D"top" bgcolor=3D=
+"#1400FF" style=3D"padding:12px"><table role=3D"none" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><tr><td><span s=
+tyle=3D"padding-left:1px;"></span></td><td align=3D"center" valign=3D"middl=
+e" width=3D"75" style=3D"width:75px;"><a href=3D"https://elink.milkroad.com=
+/ss/c/4MnwyC8ZLgKS2W4rhpYGaVUF8-tWp_PZ7xXFRxKoEZjQYqikQtKF6M_bDSRa2sGX/41p/=
+I1qCE2XWRkasZCHGxkP4Eg/h45/5sWnuUgrSTQebhyxttx34_4ZA__-vkgPG-_r4L6ZTJ8" sty=
+le=3D"text-decoration:none;"><img width=3D"22" alt=3D"tw" border=3D"0" styl=
+e=3D"display:block;max-width:22px;" src=3D"https://media.beehiiv.com/cdn-cg=
+i/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/stat=
+ic_assets/x_dark.png"/></a></td><td align=3D"center" valign=3D"middle" widt=
+h=3D"75" style=3D"width:75px;"><a href=3D"https://elink.milkroad.com/ss/c/A=
+X1lEgEQaxtvFxLaVo0GBvXiTU5PnNrO3-1lUjjwcmIcnHYwy_D-ifWMMRbQ7iee/41p/I1qCE2X=
+WRkasZCHGxkP4Eg/h46/_9j69Z62Bc-lcbrjatg5qXQS4Y6szRYNL01bmYZ__Ns" style=3D"t=
+ext-decoration:none;"><img width=3D"22" alt=3D"ig" border=3D"0" style=3D"di=
+splay:block;max-width:22px;" src=3D"https://media.beehiiv.com/cdn-cgi/image=
+/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/static_asse=
+ts/instagram_dark.png"/></a></td><td align=3D"center" valign=3D"middle" wid=
+th=3D"75" style=3D"width:75px;"><a href=3D"https://elink.milkroad.com/ss/c/=
+AX1lEgEQaxtvFxLaVo0GBvRMKOPKJ_SaqdI5lTdWQ4QnV9iXu_rzXEqON-w4FtJk8PJfS0mRaLY=
+yHMkxnR8VtQ/41p/I1qCE2XWRkasZCHGxkP4Eg/h47/_8N9xFgM5BgVlcCZhIaqF43gHqchx8Ia=
+IW0Zj_X_s6E" style=3D"text-decoration:none;"><img width=3D"22" alt=3D"yt" b=
+order=3D"0" style=3D"display:block;max-width:22px;" src=3D"https://media.be=
+ehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,q=
+uality=3D80/static_assets/youtube_dark.png"/></a></td><td align=3D"center" =
+valign=3D"middle" width=3D"75" style=3D"width:75px;"><a href=3D"https://eli=
+nk.milkroad.com/ss/c/AX1lEgEQaxtvFxLaVo0GBjjxDT3LtxS91NVxujU4ULE-s-oKnBovVW=
+tIKQscc34m/41p/I1qCE2XWRkasZCHGxkP4Eg/h48/nZ8VyW_T7jPFqyrugsvXAja_fkf7C6Kbt=
+rTB22SbiGk" style=3D"text-decoration:none;"><img width=3D"22" alt=3D"tk" bo=
+rder=3D"0" style=3D"display:block;max-width:22px;" src=3D"https://media.bee=
+hiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,qu=
+ality=3D80/static_assets/tiktok_dark.png"/></a></td><td align=3D"center" va=
+lign=3D"middle" width=3D"75" style=3D"width:75px;"><a href=3D"https://elink=
+.milkroad.com/ss/c/AX1lEgEQaxtvFxLaVo0GBqzsqj5ZnUTV_knhG9qu20njpPaCDeB8jBFh=
+_7mWgZfkIDLx2csUNgGemOzhy5duZw/41p/I1qCE2XWRkasZCHGxkP4Eg/h49/9FwIB2wILK_aM=
+5gxA2VhgU3_PhwCnzBmYMgez6KHLoQ" style=3D"text-decoration:none;"><img width=
+=3D"22" alt=3D"in" border=3D"0" style=3D"display:block;max-width:22px;" src=
+=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,=
+onerror=3Dredirect,quality=3D80/static_assets/linkedin_dark.png"/></a></td>=
+<td><span style=3D"padding-left:1px;"></span></td></tr></table></td></tr><t=
+r><td height=3D"10" style=3D"line-height:1px;font-size:1px;height:10px;"> &=
+nbsp; </td></tr><tr><td class=3D"w" align=3D"center" valign=3D"top" style=
+=3D"padding:15px;"><table role=3D"none" width=3D"100%" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center"><tr><td align=3D"center" vali=
+gn=3D"top"><p style=3D"font-family:'Verdana',Geneva,sans-serif;color:#FFFFF=
+F!important;"> Update your email preferences or unsubscribe <a class=3D"lin=
+k" href=3D"https://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipcapn=
+f2esHoaWUbhaJtX8WqPCXE1Y9dem1APWkDH_2GLuP_B4rmH6_IvtnACmNjju_Wj0pHFs75mfGBL=
+63A1GsShlg5WLZ6ush-a_LpCbAvcs39L_Aj70y9so96i_2x6UvGdk3uBI1X1_AfWzWHnxL9oBio=
+f7SP1_56ueZ1NzsTPAkVCjzPtWOyAF1XZlaqkHsiWaYO5SyevBALr1q02ysQt_-rWysNU-ndVbz=
+AChJoDb-J2kmTNB5q7gjjxTO6M1RTMmbMiD2tuj93B2RH0wl3ACuhpzri64HJr2mAygukRFKtjB=
+E4yrvykLQNMQUjDcysBV6iYQwAUtNhhnfiZnMG4y_QuUqir3bgXy0YLSP1mjlSqXefN8bEVIC6V=
+w7rY6CeV6otkDmd_Sw1c7TMUg8bPvjDzxGbqAOrTAstno65tF-f_7f2GH3OTVi9mAWNyMfkRQI-=
+RTBT8_yj87yaEL2CSRrLTuzYi_9cS5sL9l0QOo-YqQB0AICMAfzg/41p/I1qCE2XWRkasZCHGxk=
+P4Eg/h50/OV3AseP6UvixoMeqxXxylfXOYIgAZrXfGvWxpyqWfnU" style=3D"text-decorat=
+ion:underline;text-decoration-color:#FFFFFF!important;color:#FFFFFF!importa=
+nt;"> here</a></p><p class=3D"copyright" style=3D"font-family:'Verdana',Gen=
+eva,sans-serif;color:#FFFFFF!important;"> &copy; 2023 Milk Road </p><p styl=
+e=3D"font-family:'Verdana',Geneva,sans-serif;color:#FFFFFF!important;"> 603=
+ Munger Avenue Suite 100 #1006<br>Dallas, Texas 75202, United States </p></=
+td></tr></table></td></tr></table></td></tr></table></td></tr></table></td>=
+</tr></table></td></tr></table></div></body></html>
+--cea906ff53488739774720f39c5ac1fa9c54fedb1e61c34502623d0b33e9--

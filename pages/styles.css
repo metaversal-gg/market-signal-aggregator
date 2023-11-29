@@ -156,6 +156,22 @@ textarea {
     width: 100%;
 }
 
+.upload-button {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    flex-flow: row nowrap;
+    gap: 12px;
+    height: min-content;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    color: white
+}
+
 .key-stroke {
     outline: none;
     display: flex;
@@ -190,7 +206,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(81, 227, 201);
+    background-color: rgb(80, 94, 152);
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;

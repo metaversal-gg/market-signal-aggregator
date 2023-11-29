@@ -1,0 +1,1793 @@
+Delivered-To: zile@metaversal.gg
+Received: by 2002:a05:7300:51f3:b0:f4:557a:3a9b with SMTP id u19csp1470350dyd;
+        Tue, 28 Nov 2023 09:22:41 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IExHX+YEZhDxemDLBn2dHQ0YXP8WD4UTAsDvvLVS4ytf/AhEch6NJezPyCqh5zJ+IVQLQi1
+X-Received: by 2002:a05:690c:2a49:b0:5ce:c5f5:462a with SMTP id ej9-20020a05690c2a4900b005cec5f5462amr7299682ywb.2.1701192161339;
+        Tue, 28 Nov 2023 09:22:41 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1701192161; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wjJaYAoP6y/YV3El08+ZL0LR/gvFyGaaM2NeRGujDstjZ5AZM2AKXXdYgn53x3Jot5
+         5Jy2l1UYrx2rm+YVd8YCnE571BuoVWk4WkVTSDCJkoFoAZLU0zy8ZQCKR+COOWm7u63F
+         i0vxoLu1MrMD6rVXTQXn8W2m1c8sM7gc+4P/IoEIonuTjRTeHmWRqPfQZprRICrqrQyX
+         JaDHxK/GzMkS7zKcwQdvw7YSX6AsGewilA529x4MwimBIH5M+CE2yc8SHEAzfGD9qviD
+         BuCrXy1dff2ta+Be0GQRO3sSyzTXH47iqLvweTX3dX6PnyfjMDnlitnroV+gVgSi3ZzG
+         u0EA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:feedback-id:sid:list-unsubscribe:reply-to:subject:message-id
+         :mime-version:from:date:dkim-signature;
+        bh=sSzHnrWXPAWEiMKsHYMoIBCla8HpbSvwHQw8YzM5rck=;
+        fh=/0A6mPYAK9ppOhrHjC5K8+3APADSyLDhIIdFZ5qmJoo=;
+        b=icjoz8Vz3s10dOjfrja15gyEu0dYVtOsYC4Hy+sTMKhJrt4aWcD8qb41HxBDpa33G6
+         g937398BSDoMMDjW0k7Q9La5lGlAdG8UZim1dv1oOjKYsrcmkn6RAb6AndqvtHvG5VxO
+         acdgFeF7yGcBk0NxFsrS9eRBIrrUC3QbzDx1EcqmX8m4+L3lirIHRVvxP/HbEFCIS8eW
+         sKPzYytJmz0DnRxbLzC2FI7mFBrvuU9uQy7usY0ts62r4vUcpePPAjWbM3DzLq24gMoq
+         1NRs5JlzYVIcwn7N450gqyyhuYkH2wSOl6s1ViC6eZITSu+6cQyGC4XvLxwSydmyuuLU
+         fgyw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.milkroad.com header.s=s1 header.b=Q4bqHvMM;
+       spf=pass (google.com: domain of bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com designates 149.72.116.182 as permitted sender) smtp.mailfrom="bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=milkroad.com
+Return-Path: <bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com>
+Received: from o3.ptr6352.mail.beehiiv.com (o3.ptr6352.mail.beehiiv.com. [149.72.116.182])
+        by mx.google.com with ESMTPS id c13-20020a81e54d000000b005d1a4aa71a2si849157ywm.266.2023.11.28.09.22.41
+        for <zile@metaversal.gg>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 28 Nov 2023 09:22:41 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com designates 149.72.116.182 as permitted sender) client-ip=149.72.116.182;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.milkroad.com header.s=s1 header.b=Q4bqHvMM;
+       spf=pass (google.com: domain of bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com designates 149.72.116.182 as permitted sender) smtp.mailfrom="bounces+23463625-3270-zile=metaversal.gg@em8543.mail.milkroad.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=milkroad.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.milkroad.com;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:to:
+	cc:content-type:from:subject:to;
+	s=s1; bh=sSzHnrWXPAWEiMKsHYMoIBCla8HpbSvwHQw8YzM5rck=;
+	b=Q4bqHvMM/XWxHtOMAQs3ugXb5FcItbEWRDorvIVjV+9Vk3q1ia+l5kceeFvuHLPV+7P8
+	i1h7SD9JiasB0632wEwTMTW/OfZmn3yzm0C2AfgrXS4SmGWV7qoIRgJRyVCeyWA5y7j79z
+	jKcgQi05hWtrWEFWUhE0ix3urVa/RFdXt4RoFNZKBYHiVm2YBGNX0+IC0zKCgCho5C5iO1
+	bF2os8/KYvHg/hgOoPSdAB02wmppYlnKTz51zxVCX38KWpfuRTrFO/1MrHHCXtTT3yp75u
+	xi2UD8pwGa0NjkV0yV1kQ2q25kFR/R5oytHdXK3jxa6LSYBAv6jGVEyxKKMPQwKQ==
+Received: by filterdrecv-bcd576c5f-xqk6p with SMTP id filterdrecv-bcd576c5f-xqk6p-1-656621BE-40
+        2023-11-28 17:22:06.996736699 +0000 UTC m=+3624026.855886946
+Received: from MjM0NjM2MjU (unknown)
+	by geopod-ismtpd-64 (SG) with HTTP
+	id yhmxZORMTmWXn1Bmw5Sfzg
+	Tue, 28 Nov 2023 17:22:06.880 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=981d2a2393b7164a50bfa311079df429d1f75cfb3f3a8164222d2690f90b
+Date: Tue, 28 Nov 2023 17:22:40 +0000 (UTC)
+From: Milk Road <newsletter@mail.milkroad.com>
+Mime-Version: 1.0
+Message-ID: <yhmxZORMTmWXn1Bmw5Sfzg@geopod-ismtpd-64>
+Subject: =?UTF-8?B?8J+lmw==?= 3 trends you need to be watching...
+ =?UTF-8?B?8J+RgA==?=
+Reply-To: Milk Road <newsletter@milkroad.com>
+x-list-owner: <mailto:newsletter@milkroad.com>
+x-newsletter: https://themilkroad.beehiiv.com/p/3-trends-keep-eye
+x-beehiiv-ids: 
+ =?us-ascii?Q?{=22account=5Fname=22=3A=22https=3A=2F=2Fthemilkroad=2Ebeehiiv=2Ecom=2F=22=2C=22campaign=5Fi?=
+ =?us-ascii?Q?d=22=3A=224f4f7ed5-cca1-4e5e-955c-5df8b78b168?=
+ =?us-ascii?Q?9=22=2C=22category=22=3A=22newsletter=22=2C=22email=5Fgener?=
+ =?us-ascii?Q?ated=5Fat=22=3A1701192126=2C=22user=5Fid=22=3A=22654e9594?=
+ =?us-ascii?Q?-184c-4884-8e02-e6e58a3a6871=22}?=
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Cmailto=3A654e9594-184c-4884-8e02-e6e58a3a6871+bcc9e91e-b3d2-4e9?=
+ =?us-ascii?Q?7-88f1-76c0da9b04a7+4f4f7ed5-cca1-4e5e-?=
+ =?us-ascii?Q?955c-5df8b78b1689=40unsub=2Ebeehiiv=2Ecom=3E=2C?=
+ =?us-ascii?Q?_=3Chttps=3A=2F=2Fthemilkroad=2Ebeehiiv=2Ecom=2Fsubscribe=2Fbcc9e91e-b3d2-4e97-?=
+ =?us-ascii?Q?88f1-76c0da9b04a7=2Fmanage=3Fpost=5Fid=3D4f4f7e?=
+ =?us-ascii?Q?d5-cca1-4e5e-955c-5df8b78b1689=3E?=
+x-beehiiv-type: newsletter
+x-list-id: 654e9594-184c-4884-8e02-e6e58a3a6871
+sId: 654e9594-184c-4884-8e02-e6e58a3a6871
+Feedback-ID: 
+ =?us-ascii?Q?4f4f7ed5-cca1-4e5e-955c-5df8b78b1689=3Anewsletter=3A654e9594-184c-?=
+ =?us-ascii?Q?4884-8e02-e6e58a3a6871=3A7bdde86ecb25fb5?=
+x-newsletter-id: https://themilkroad.beehiiv.com/
+x-newsletter-signup: https://themilkroad.beehiiv.com/subscribe
+X-SG-EID: 
+ =?us-ascii?Q?T3R61P0pyJ7C+vfbWcG=2FwLjAV67oW=2FW+zZ0muxOP61VnBYBFVYxzcHPva1V0o0?=
+ =?us-ascii?Q?i5OUKmj0ze+gzEh3ymTqEQVjbaDMy5fP5zIcFOJ?=
+ =?us-ascii?Q?MZTAkUnNokmfv=2Folcyr=2FT0cU6gdTwbubS3iu0Ak?=
+ =?us-ascii?Q?+kjjLcgd5N2SqKdE7j+UHUcfJmz3ozfpPFO4SP=2F?=
+ =?us-ascii?Q?QUn2wfc0iZXirb7naOU7FOcPQZ1Ofxdn78whXWn?=
+ =?us-ascii?Q?m4zqMtaRgHIrC1M7irthEYAKeGHP2nVogPsb88?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FLxVM69ceEc1HIRn6NgiB?=
+ =?us-ascii?Q?p7vK9GgEif7VRR7Yu3TZLBx7+b2AtPRLEP28+ku?=
+ =?us-ascii?Q?GJvvgtO8um1zt2N=2FTxB+AQZJ3=2Fo6QLbcNcocyQG?=
+ =?us-ascii?Q?ReANHkzINJLgvyk7bUFnMIlUps8M1sTghYR+RSk?=
+ =?us-ascii?Q?UEd8bmMgc5bYNRDi4IY2HkolXOkvmTCO=2F9z6QuH?=
+ =?us-ascii?Q?=2FkBzQV=2FPao2V9jtnztnA0Tt2xEzOkp4=2FtlBCrFA?=
+ =?us-ascii?Q?KhSA26lMkABOO7IP7wozQ=3D=3D?=
+To: "zile@metaversal.gg" <zile@metaversal.gg>
+X-Entity-ID: 2UVm8W7D2AZ4pVSrmLxWTQ==
+
+--981d2a2393b7164a50bfa311079df429d1f75cfb3f3a8164222d2690f90b
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/fd7a86fd-728d-4=
+f99-b07d-21dc86da6482/Screenshot_2023-11-28_at_8.12.05_AM.png?t=3D170117716=
+6)
+Follow image link: (https://out.milkroad.com/Phemex1128AdIntro)
+Caption:=20
+
+**Today=E2=80=99s edition is brought to you by **[Phemex](https://out.milkr=
+oad.com/Phemex1128AdIntro)** - a top exchange for trading crypto and deriva=
+tives that is entering the final stage of its Phemex Token To The Moon even=
+t.**
+
+[Today's event is live right now!](https://out.milkroad.com/Phemex1128AdCop=
+yCTA)
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+GM. This is Milk Road. We make crypto clearer than your ex=E2=80=99s mixed =
+signals.=20
+
+Here=E2=80=99s what we got for you today:
+
+* 3 trends to keep your eyes on =F0=9F=91=80
+
+* $600M+ is being unlocked this week =F0=9F=92=B8
+
+* Bitcoin=E2=80=99s circulating supply in profit hits multi-year high =F0=
+=9F=8D=AA
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/574cded8-6a14-4=
+e00-9fb6-fd736bc7d3fc/Screenshot_2023-11-28_at_8.30.19_AM.png?t=3D170117823=
+7)
+Follow image link: (https://milkroad.com/fear-greed/)
+Caption: Prices as of 9:30 AM ET. Click here for our Fear & Greed Index
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+# **3 TRENDS TO KEEP YOUR EYES ON **=F0=9F=91=80
+
+Graphs are everywhere in crypto.=C2=A0
+
+**The problem? **They=E2=80=99re hard as f*ck to understand.
+
+It=E2=80=99s like trying to read a book=E2=80=A6 except, it=E2=80=99s in Sp=
+anish. (and I only know about 5 and a half Spanish words).
+
+**Well, today we=E2=80=99re gonna show you 3 important, easy-to-understand =
+graphs. **No Rosetta Stone needed.
+
+Let=E2=80=99s dive in.=C2=A0
+
+### **1/ INSTITUTIONAL MONEY KEEPS FLOWING INTO CRYPTO**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/013bae98-6253-4=
+61d-8c1d-7d57b186197d/Screenshot_2023-11-27_at_5.02.18_PM.png?t=3D170118206=
+6)
+Follow image link: (https://jbutterfill.medium.com/volume-159-digital-asset=
+-fund-flows-weekly-report-0103828f4a3d)
+Caption: Source: CoinShares
+
+**What happened: **Digital asset investment products saw [$346M in inflows]=
+(https://milkroad.com/news/crypto-funds-witness-346000000-inflows-heres-why=
+/) last week.=C2=A0
+
+According to CoinShare=E2=80=99s [latest report](https://jbutterfill.medium=
+.com/volume-159-digital-asset-fund-flows-weekly-report-0103828f4a3d):
+
+* [**BTC**](https://milkroad.com/bitcoin/)** led the way with $312M in infl=
+ows. **Bringing the year-to-date total to $1.5B.=C2=A0
+
+* [**ETH**](https://milkroad.com/ethereum/)** saw another big week of inflo=
+ws.** $34M last week and $103M over the last month. (It=E2=80=99s almost ev=
+ened out the run of outflows earlier this year).
+
+* **Some altcoins also saw minor inflows.** The top tokens (not named BTC o=
+r ETH) that saw inflows were [SOL](https://milkroad.com/buy/sol/), [DOT](ht=
+tps://milkroad.com/buy/dot/), and [LINK](https://milkroad.com/buy/link/).=
+=C2=A0
+
+* **Total assets under management (AUM) rose to $45.3B. **It=E2=80=99s the =
+highest level in 1.5 years.=C2=A0
+
+**Why this matters: **This was the largest weekly inflow since late 2021.=
+=C2=A0
+
+Oh, and it also extended the streak to **9 straight weeks of inflows. ****_=
+chest bumps all around**_
+
+CoinShares analysts believe that the run was =E2=80=9Cspurred by anticipati=
+on of a spot-based ETF launch in the U.S.=E2=80=9D
+
+We=E2=80=99ll see if the streak continues next week.
+
+### **2/ STABLECOIN SUPPLIES ARE INCREASING**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/cbc80c40-f820-4=
+d24-aed8-15b0c8102700/Screenshot_2023-11-28_at_9.06.08_AM.png?t=3D170118209=
+7)
+Follow image link: (https://studio.glassnode.com/dashboards/mrkt-stablecoin=
+-supplies)
+Caption: Source: Glassnode
+
+**What happened: **[Stablecoin](https://milkroad.com/stablecoins/) supplies=
+ are up $2.2B over the last 90 days.=C2=A0
+
+**Why this matters: **Earlier this month, the 90-day change in stablecoin s=
+upplies flipped positive. It was the first time that=E2=80=99s happened sin=
+ce May 2022.=C2=A0
+
+(You=E2=80=99ll need a magnifying glass to see that sliver of green on the =
+graph, but it=E2=80=99s there. I promise).
+
+This is a positive sign that on-chain liquidity is improving.
+
+### **3/ EVM CHAINS ARE SEEING BIG TRANSACTION COUNT INCREASES**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/958f5bf3-573c-4=
+bb5-9a84-e8baea5612a7/Screenshot_2023-11-28_at_8.09.27_AM.png?t=3D170118216=
+9)
+Follow image link: (https://www.theblock.co/data/scaling-solutions/evm-chai=
+ns-stats/transaction-count-for-evm-chains)
+Caption: Source: The Block
+
+**What happened: **Alternative Ethereum Virtual Machine (EVM) chains are se=
+eing BIG increases in transaction counts over the last week.=C2=A0
+
+* **Fantom** is up 1,321%.
+
+* **Celo** is up 1,277%.
+
+* [**Avalanche**](https://milkroad.com/buy/avax/) is up 857%.
+
+* [**Polygon**](https://milkroad.com/buy/matic/) is up 155%.
+
+**Why this matters: **Ethereum is like the DMV. (aka the Department of Moto=
+r Vehicles),
+
+If you don=E2=80=99t know what that is, just imagine hell on Earth. Now add=
+ paperwork, super long lines, and voila - that=E2=80=99s the DMV.=C2=A0
+
+And like the DMV,=C2=A0 Ethereum can be slow (~15 transactions per second) =
+and expensive ($10-$100 [transaction fees](https://milkroad.com/ethereum/ga=
+s/)).=C2=A0
+
+As more people use Ethereum, the slower and more expensive it gets.=C2=A0
+
+**That=E2=80=99s where EVMs come in. **It=E2=80=99s like having a scanner m=
+achine at the front desk of the DMV. It checks all your paperwork and compl=
+etes your transaction, instead of having you wait in line all day long.=C2=
+=A0
+
+It=E2=80=99s fast, cheap, and there=E2=80=99s no waiting period.=C2=A0
+
+(Btw, as we get closer and closer to another bull run we predict that more =
+and more people will look toward EVM solutions as a cheap alternative to Et=
+hereum=E2=80=99s main network).
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/7edb708c-9a16-4=
+5dc-a6eb-d8b6189631b5/Add_a_subheading-2.png?t=3D1701177228)
+Caption:=20
+
+----------
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/ec448164-e12f-4=
+1fb-aff5-0a1babd22707/Screenshot_2023-11-28_at_8.14.04_AM.png?t=3D170117725=
+7)
+Follow image link: (https://out.milkroad.com/Phemex1128AdBanner)
+Caption:=20
+
+# **[THE FINAL STAGE OF YOUR MISSION IS HERE](https://out.milkroad.com/Phem=
+ex1128AdCopy)**
+
+Phemex is about to kick off what may be the most thrilling week in its hist=
+ory, and they [extend an invitation](https://out.milkroad.com/Phemex1128AdC=
+opyEvent) to all crypto enthusiasts to partake in the exciting lineup of ac=
+tivities set to unfold in the coming days!
+
+First off, the Phemex [PT Bidding](https://out.milkroad.com/Phemex1128AdCop=
+y) is **live right now, and ending soon**. You can join the event for fair =
+and risk-free [PT Bidding](https://out.milkroad.com/Phemex1128AdCopy), whic=
+h is running between 14:00-20:00 (UTC).
+
+Following this, [PT Staking](https://out.milkroad.com/Phemex1128AdCopyStaki=
+ng) kick-offs on **November 30th**. Anticipation is running high, given Phe=
+mex's commitment to use a portion of its daily USDT contract trading volume=
+ for the repurchase of PT. These repurchased tokens will then be distribute=
+d as staking rewards.
+
+Last but not least, Phemex invites the entire crypto community to **explore=
+ their trading platform**, familiarize themselves with the unique features =
+they offer as they get ready for mission launch on November 30th at 15:00 U=
+TC.=C2=A0
+
+[Click on through to learn more about Phemex Token to the Moon event and jo=
+in the fun!=C2=A0](https://out.milkroad.com/Phemex1128AdCopyCTA)
+
+
+----------View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-=
+down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/05637=
+32e-fc0d-4697-9d4f-fd4576545eed/image.png)
+Caption:=20
+
+# **$600M+ IS BEING UNLOCKED THIS WEEK **=F0=9F=92=B8
+
+Every crypto trader needs to know about **token unlocks**.=20
+
+You see, when a token launches there are early investors, employees, develo=
+pers, etc, that receive tokens for cheap (sometimes even for free).
+
+**But the tokens are =E2=80=9Clocked=E2=80=9D for a certain period of time.=
+** This is so they don=E2=80=99t immediately dump the tokens, take the prof=
+it, and run to the beach to sip on margaritas.
+
+Well, check it out=E2=80=A6=20
+
+**There=E2=80=99s $600M+ worth of crypto tokens being **[**unlocked**](http=
+s://token.unlocks.app/)** over the next week. **Here are the top 7 biggest =
+unlocks that are happening:
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/9f2b206a-6e79-4=
+12a-a4a1-eb39f6b384ff/F_9Y9BiWwAAB0K1.png?t=3D1701183054)
+Follow image link: (https://twitter.com/top7ico/status/1729198790962298929)
+Caption: Source: @top7ico
+
+Token unlocks are usually followed by one thing=E2=80=A6 **price volatility=
+.**
+
+And with some of these projects unlocking $40M+ in tokens, we expect prices=
+ to move up and down like it was the Drop of Doom at Six Flags.
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/f1c36e79-1bca-4=
+6b2-8d90-d0c5d7443522/image.png)
+Caption:=20
+
+# **BITE-SIZED COOKIES **=F0=9F=8D=AA
+
+[Bitcoin circulating supply in profit hits multi-year high](https://www.the=
+block.co/post/264818/bitcoin-circulating-supply-in-profit-hits-multi-year-h=
+igh)**. **The current percentage of bitcoin held in profit hit 83% - the hi=
+ghest level since November 2021.=C2=A0
+
+[A U.S. federal judge ruled Changpeng Zhao must stay in the U.S. as he awai=
+ts sentencing](https://blockworks.co/news/binance-changpeng-zhao-us)**.** Z=
+hao pleaded guilty to breaking anti-money laundering laws last week and is =
+scheduled to be sentenced in February.
+
+[Jito Foundation announced it's launching a governance token called JTO](ht=
+tps://www.theblock.co/post/264820/solana-mev-developer-jito-launching-gover=
+nance-token)**.** The token will help manage and develop the Jito Network (=
+a Solana-based liquid staking protocol).
+
+[The SEC says it's been trying to serve Richard Heart a lawsuit for alleged=
+ly selling unregistered securities for weeks now](https://www.theblock.co/p=
+ost/264702/the-sec-is-having-trouble-serving-hex-founder-richard-heart-with=
+-its-lawsuit)**. **The problem? The founder of Hex and PulseChain is nowher=
+e to be found.=C2=A0_It=E2=80=99s Catch Me If You Can, in real life._
+
+[Circle partnered with SBI Holdings to expand the USDC stablecoins presence=
+ in Japan](https://www.theblock.co/post/264708/circle-seeks-to-expand-usdc-=
+presence-in-japan-with-sbi-holdings)**. **SBI is looking to register in Jap=
+an to help circulate USDC stablecoins, while SBI Shinsei Bank will offer ba=
+nking services for Circle.
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/f1c36e79-1bca-4=
+6b2-8d90-d0c5d7443522/image.png)
+Caption:=20
+
+# **MILKY MEMES **=F0=9F=A4=A3
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/8a4bff8a-7daa-4=
+1b8-a191-7956e75d4fdb/Screenshot_2023-11-28_at_9.57.09_AM.png?t=3D170118271=
+2)
+Caption:=20
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/92d88782-8937-4=
+e71-8689-35040674740a/every-single-time-v0-k0tz9ad46x2c1.jpeg?t=3D170118226=
+6)
+Follow image link: (https://i.redd.it/every-single-time-v0-k0tz9ad46x2c1.jp=
+eg?s=3D7e0748d0ebe1a98256e58200b9c3facddab9e66d)
+Caption: Source: Reddit
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/0563732e-fc0d-4=
+697-9d4f-fd4576545eed/image.png)
+Caption:=20
+
+## **RATE TODAY=E2=80=99S EDITION**
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+Share Milk Road
+
+You currently have <strong>0</strong> referrals, only <strong>1</strong> aw=
+ay from receiving <strong>The Next 10x Opportunity in Crypto for 2023</stro=
+ng>.
+
+Or copy and paste this link to others: https://themilkroad.beehiiv.com/subs=
+cribe?ref=3D1noEEQMdgM
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+## **ROADER REVIEW OF THE DAY**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,forma=
+t=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/f03535c6-ca2a-4=
+4a4-b621-f6c78a8091f5/Screenshot_2023-11-28_at_10.11.25_AM.png?t=3D17011835=
+44)
+Caption:=20
+
+## **VITALIK PIC OF THE DAY**
+
+Tweet:  (https://twitter.com/MilkRoadImages/status/1729515505428377922)
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+## **WANT TO SPONSOR THIS NEWSLETTER?**
+
+Over 250,000 subscribers are throwing a party, and your brand is invited!
+
+Tap into our network of savvy (and good-looking) crypto & Web3 enthusiasts =
+who are eager to learn and invest.
+
+Your Brand + Our Crypto Clan =3D Magic Waiting To Happen. **[RSVP to the pa=
+rty!](https://out.milkroad.com/advertise)**
+
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94
+
+_**DISCLAIMER: **__None of this is financial advice. This newsletter is str=
+ictly educational and is not investment advice or a solicitation to buy or =
+sell any assets or to make any financial decisions. Please be careful and d=
+o your own research. _
+
+
+=E2=80=94=E2=80=94=E2=80=94
+
+You are reading a plain text version of this post. For the best experience,=
+ copy and paste this link in your browser to view the post online:
+https://themilkroad.beehiiv.com/p/3-trends-keep-eye
+
+--981d2a2393b7164a50bfa311079df429d1f75cfb3f3a8164222d2690f90b
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office" style=3D"font-size:16px;"><head><meta charset=3D"utf-8"/><!=
+--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"=
+/><!--<![endif]--><meta name=3D"viewport" content=3D"width=3Ddevice-width,i=
+nitial-scale=3D1"/><meta name=3D"x-apple-disable-message-reformatting"/><me=
+ta name=3D"format-detection" content=3D"telephone=3Dno,address=3Dno,email=
+=3Dno,date=3Dno,url=3Dno"/><meta name=3D"color-scheme" content=3D"light"/><=
+meta name=3D"supported-color-schemes" content=3D"light"/><title>=F0=9F=A5=
+=9B 3 trends you need to be watching... =F0=9F=91=80</title><!--[if mso]><x=
+ml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerI=
+nch></o:OfficeDocumentSettings></xml><![endif]--><style>
+  :root { color-scheme: light; supported-color-schemes: light; }
+  body { margin: 0; padding: 0; min-width: 100%!important; -ms-text-size-ad=
+just: 100% !important; -webkit-transform: scale(1) !important; -webkit-text=
+-size-adjust: 100% !important; -webkit-font-smoothing: antialiased !importa=
+nt; }
+  .body { word-wrap: normal; word-spacing:normal; }
+  table.mso { width: 100%; border-collapse: collapse; padding: 0; table-lay=
+out: fixed; }
+  img { border: 0; outline: none; }
+  table {  mso-table-lspace: 0px; mso-table-rspace: 0px; }
+  td, a, span {  mso-line-height-rule: exactly; }
+  #root [x-apple-data-detectors=3Dtrue],
+  a[x-apple-data-detectors=3Dtrue],
+  #MessageViewBody a { color: inherit !important; text-decoration: inherit =
+!important; font-size: inherit !important; font-family: inherit !important;=
+ font-weight: inherit !important; line-height: inherit !important; }
+  span.MsoHyperlink { color: inherit !important; mso-style-priority: 99 !im=
+portant; }
+  span.MsoHyperlinkFollowed { color: inherit !important; mso-style-priority=
+: 99 !important; }
+  .a { background-color:#F4F4F4; }
+  .b { background-color:#008CF2; }
+  .c  { background-color:#FFFFFF; }
+  .d { background-color:#F4F4F4; }
+  .d2 { background-color:#FFFFFF; }
+  .d3 { background-color:#FFFFFF; }
+  h1 { color:#222222; }
+  h2 { color:#222222; }
+  h3 { color:#222222; }
+  h4 { color:#000000; }
+  h5 { color:#000000; }
+  h6 { color:#000000; }
+  h1 a { text-decoration:none;color:#222222 !important; }
+  h2 a { text-decoration:none;color:#222222 !important; }
+  h3 a { text-decoration:none;color:#222222 !important; }
+  h4 a { text-decoration:none;color:#000000 !important; }
+  h5 a { text-decoration:none;color:#000000 !important; }
+  h6 a { text-decoration:none;color:#000000 !important; }
+  h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, ul, li, ol, p=
+, p a { margin: 0;padding: 0; }
+  h1 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:28px;line-height:42px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h2 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:24px;line-height:36px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h3 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:20px;line-height:30px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h4 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:18px;line-height:27px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h5 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:16px;line-height:24px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h6 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:14px;line-height:21px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  p { font-family:'Verdana',Geneva,sans-serif;color:#222222;font-size:14px;=
+line-height:21px;padding-bottom:6px;padding-top:6px;mso-margin-top-alt:6px;=
+mso-margin-bottom-alt:6px; }
+  p a, .e a, ul a, li a  { word-break:break-word;color:#1400FF !important;t=
+ext-decoration:none;font-weight:bold; }
+  p .bold { font-weight:bold;color:#222222; }
+  p span[style*=3D"font-size"] { line-height: 1.6; }
+  .f p { font-size:12px;line-height:15px;color:#222222;padding:0; }
+  .f p a { text-decoration:underline;color:#222222 !important; }
+  .g p { font-family:'Montserrat','DejaVu Sans',Verdana,sans-serif;font-siz=
+e:14px;line-height:20px;font-weight:normal;margin:0; }
+  .g p a  { text-decoration: underline; }
+  .i p { font-family:'Verdana',Geneva,sans-serif;line-height:24px;font-size=
+:16px;color:#222222; }
+  .i p a { text-decoration:underline;color:#222222 !important; }
+  .i2 p { font-family:'Helvetica';line-height:23px;font-size:15px;color:#2D=
+2D2D; }
+  .i2 p a { text-decoration:underline;color:#2D2D2D !important; }
+  .i3 p { font-family:'Helvetica';line-height:43px;font-size:24px;color:#2D=
+2D2D; }
+  .i3 p a { text-decoration:underline;color:#2D2D2D !important; }
+  .h p a { text-decoration:underline;color:#595959 !important; }
+  .h2 p a { text-decoration:underline;color:#595959 !important; }
+  .h3 p a { text-decoration:underline;color:#595959 !important; }
+  .j { border-top:2px dashed #1400FF; }
+  .k p { padding-left:15px;padding-bottom:0px;padding-top:6px;mso-margin-to=
+p-alt:6px;mso-margin-bottom-alt:0px;mso-margin-left-alt:15px; }
+  .o { background-color:#FFFCEF;border:1px solid #D1D5DB;border-radius:6px;=
+ }
+  .o p { font-family:'Playfair Display',Didot,'Bodoni MT','Times New Roman'=
+,serif;padding:0px;margin:0px; }
+  .l p,
+  .l p a { font-size:14px;line-height:20px;font-weight: bold;color:#000000;=
+padding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .m p,
+  .m p a { font-size:12px;line-height:17px;font-weight:400;color:#000000;pa=
+dding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .n p,
+  .n p a { font-size:12px;line-height:17px;font-weight:400;color:#000000;pa=
+dding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .p { background-color:#FFFFFF;max-width:520px;border:1px solid #E1E8ED;bo=
+rder:1px solid rgba(80, 80, 80, 0.3);border-radius:5px; }
+  .q { font-size:16px;font-family:Helvetica,Roboto,Calibri,sans-serif !impo=
+rtant;border:1px solid #e1e8ed;border:1px solid rgba(80, 80, 80, 0.3);borde=
+r-radius:5px;background-color:#FFFFFF; }
+  .q p { font-size:16px;font-family:Helvetica,Roboto,Calibri,sans-serif !im=
+portant;color:#222222; }
+  .r { border:1px solid #E1E8ED !important;border-radius:5px; }
+  .s p { font-size: 14px; line-height: 17px; font-weight: 400; color: #6978=
+82; text-decoration: none; }
+  .t p { font-family:'Verdana',Geneva,sans-serif;font-size:12px;line-height=
+:18px;font-weight:400;color:#222222;font-style:italic;padding:4px 0px 0px;}
+  .v { border-radius:6px;border:solid 0px #1400FF;background-color:#1400FF;=
+font-family:'Verdana',Geneva,sans-serif;color:#FFFFFF; }
+  .v a { text-decoration:none;display:block;color:#FFFFFF; }
+  .w p { font-size:12px;line-height:15px;font-weight:400;color:#FFFFFF; }
+  .w p a { text-decoration: underline !important;color:#FFFFFF !important; =
+}
+  ul { font-family:'Verdana',Geneva,sans-serif;margin:0px 0px 0px 25px !imp=
+ortant;padding:0px !important;color:#222222;line-height:21px;list-style:squ=
+are;font-size:14px; }
+  ul li { font-family:'Verdana',Geneva,sans-serif;margin:5px 0px 0px 0px !i=
+mportant;padding: 0px 0px 0px 0px !important; color: #222222; list-style:sq=
+uare; }
+  ol { font-family:'Verdana',Geneva,sans-serif;margin: 0px 0px 0px 25px !im=
+portant;padding:0px !important;color:#222222;line-height:21px;list-style:de=
+cimal;font-size:14px; }
+  ol li { font-family:'Verdana',Geneva,sans-serif;margin:5px 0px 0px 0px !i=
+mportant;padding: 0px 0px 0px 0px !important; color: #222222; list-style:de=
+cimal; }
+  .e h3,
+  .e p,
+  .e span { padding-bottom:0px;padding-top:0px;mso-margin-top-alt:0px;mso-m=
+argin-bottom-alt:0px; }
+  .e span,
+  .e li { font-family:'Verdana',Geneva,sans-serif;font-size:14px;color:#222=
+222;line-height:21px; }
+  .rec { font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSys=
+temFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-ser=
+if, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color E=
+moji" !important; }
+  .rec__button:hover { background-color: #f9fafb !important; }
+  .copyright a {color: inherit !important; text-decoration: none !important=
+; font-size: inherit !important; font-family: inherit !important; font-weig=
+ht: inherit !important; line-height: inherit !important;}
+  .txt_social p { padding: 0; }
+  @media only screen and (max-width:667px) {
+    .aa { width: 100% !important; }
+    .bb img { width: 100% !important; height: auto !important; max-width: n=
+one !important; }
+    .cc { padding: 0px 8px !important; }
+    .ee { padding-top:10px !important;padding-bottom:10px !important; }
+    .ff ul, .ff ol { margin: 0px 0px 0px 10px !important;padding: 0px !impo=
+rtant; }
+    .ff li { margin:5px 0px 0px 10px !important; }
+    .r {height:140px !important;}
+    .s p { font-size:13px !important;line-height:15px !important; }
+    .mob-hide {display:none !important;}
+    .mob-stack {display:block !important;width:100% !important;}
+    .mob-block {display:block !important;}
+    .embed-img {padding:0px 0px 12px 0px !important;}
+    .socialShare {padding-top:15px !important;}
+    .rec { padding-left:15px!important;padding-right:15px!important; }
+  }
+  @media screen and (max-width: 480px) {
+    u + .a .gg { width: 100% !important; width: 100vw !important; }
+    .tok-heart { padding-top:75% !important; }
+    .tok-play { padding-top: 250px !important; }
+  }
+  @media screen and (max-width: 320px) {
+    .tok-heart { padding-top:65% !important; }
+  }
+  .u { border: 1px solid #CACACA !important; border-radius: 2px !important;=
+ background-color: #ffffff !important; padding: 0px 13px 0px 13px !importan=
+t; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Se=
+goe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif !important;fon=
+t-size: 12px !important; color: #767676 !important; }
+  .u a { text-decoration: none; display: block !important; color: #767676 !=
+important; margin: 0px !important; }
+  .u span, .u img { color: #767676 !important;margin:0px !important; max-he=
+ight:32px !important;background-color:#ffffff !important; }
+</style><!--[if mso]><style type=3D"text/css">
+    sup { font-size: 100% !important;vertical-align: .5em !important;mso-te=
+xt-raise: -1.5% !important;line-height: 0 !important; }
+    ul { margin-left:0px !important; margin-right:10px !important; margin-t=
+op:20px !important; margin-bottom:20px !important; }
+    ul li { margin-left: 0px !important; mso-special-format: decimal; }
+    ol { margin-left:0px !important; margin-right:10px !important; margin-t=
+op:20px !important; margin-bottom:20px !important; }
+    ol li { margin-left: 0px !important; mso-special-format: decimal; }
+    li.listItem { margin-left:15px !important; margin-top:0px !important; }
+    .paddingDesktop { padding: 10px 0 !important; }
+    .edm_outlooklist { margin-left: -20px !important; }
+    .embedImage { display:none !important; }
+  </style><![endif]--><style>
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm=
+459WlhyyTh89Y.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm=
+459WlhyyTh89Y.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUQjIg1_i6t8kCHKm=
+459WxRyS7m0dR9pA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUQjIg1_i6t8kCHKm=
+459WxRyS7m0dR9pA.woff2') format('woff2');
+  }
+</style><style>
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFiD-vYSZviV=
+YUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFiD-vYSZviV=
+YUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFkD-vYSZviV=
+YUb_rj3ij__anPXDTnogkk7yRZrPA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFkD-vYSZviV=
+YUb_rj3ij__anPXDTnogkk7yRZrPA.woff2') format('woff2');
+  }
+</style></head><head><meta charset=3D"utf-8"/><!--[if !mso]><!--><meta http=
+-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"/><!--<![endif]--><meta nam=
+e=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"/><meta na=
+me=3D"x-apple-disable-message-reformatting"/><meta name=3D"format-detection=
+" content=3D"telephone=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno"/><m=
+eta name=3D"color-scheme" content=3D"light"/><meta name=3D"supported-color-=
+schemes" content=3D"light"/><title>=F0=9F=A5=9B 3 trends you need to be wat=
+ching... =F0=9F=91=80</title><!--[if mso]><xml><o:OfficeDocumentSettings><o=
+:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings>=
+</xml><![endif]--><style>
+  :root { color-scheme: light; supported-color-schemes: light; }
+  body { margin: 0; padding: 0; min-width: 100%!important; -ms-text-size-ad=
+just: 100% !important; -webkit-transform: scale(1) !important; -webkit-text=
+-size-adjust: 100% !important; -webkit-font-smoothing: antialiased !importa=
+nt; }
+  .body { word-wrap: normal; word-spacing:normal; }
+  table.mso { width: 100%; border-collapse: collapse; padding: 0; table-lay=
+out: fixed; }
+  img { border: 0; outline: none; }
+  table {  mso-table-lspace: 0px; mso-table-rspace: 0px; }
+  td, a, span {  mso-line-height-rule: exactly; }
+  #root [x-apple-data-detectors=3Dtrue],
+  a[x-apple-data-detectors=3Dtrue],
+  #MessageViewBody a { color: inherit !important; text-decoration: inherit =
+!important; font-size: inherit !important; font-family: inherit !important;=
+ font-weight: inherit !important; line-height: inherit !important; }
+  span.MsoHyperlink { color: inherit !important; mso-style-priority: 99 !im=
+portant; }
+  span.MsoHyperlinkFollowed { color: inherit !important; mso-style-priority=
+: 99 !important; }
+  .a { background-color:#F4F4F4; }
+  .b { background-color:#008CF2; }
+  .c  { background-color:#FFFFFF; }
+  .d { background-color:#F4F4F4; }
+  .d2 { background-color:#FFFFFF; }
+  .d3 { background-color:#FFFFFF; }
+  h1 { color:#222222; }
+  h2 { color:#222222; }
+  h3 { color:#222222; }
+  h4 { color:#000000; }
+  h5 { color:#000000; }
+  h6 { color:#000000; }
+  h1 a { text-decoration:none;color:#222222 !important; }
+  h2 a { text-decoration:none;color:#222222 !important; }
+  h3 a { text-decoration:none;color:#222222 !important; }
+  h4 a { text-decoration:none;color:#000000 !important; }
+  h5 a { text-decoration:none;color:#000000 !important; }
+  h6 a { text-decoration:none;color:#000000 !important; }
+  h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, ul, li, ol, p=
+, p a { margin: 0;padding: 0; }
+  h1 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:28px;line-height:42px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h2 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:24px;line-height:36px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h3 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:20px;line-height:30px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h4 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:18px;line-height:27px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h5 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:16px;line-height:24px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  h6 { font-family:'Verdana',Geneva,sans-serif;font-weight:normal;font-size=
+:14px;line-height:21px;padding-bottom:4px;padding-top:16px;mso-margin-top-a=
+lt:16px;mso-margin-bottom-alt:4px }
+  p { font-family:'Verdana',Geneva,sans-serif;color:#222222;font-size:14px;=
+line-height:21px;padding-bottom:6px;padding-top:6px;mso-margin-top-alt:6px;=
+mso-margin-bottom-alt:6px; }
+  p a, .e a, ul a, li a  { word-break:break-word;color:#1400FF !important;t=
+ext-decoration:none;font-weight:bold; }
+  p .bold { font-weight:bold;color:#222222; }
+  p span[style*=3D"font-size"] { line-height: 1.6; }
+  .f p { font-size:12px;line-height:15px;color:#222222;padding:0; }
+  .f p a { text-decoration:underline;color:#222222 !important; }
+  .g p { font-family:'Montserrat','DejaVu Sans',Verdana,sans-serif;font-siz=
+e:14px;line-height:20px;font-weight:normal;margin:0; }
+  .g p a  { text-decoration: underline; }
+  .i p { font-family:'Verdana',Geneva,sans-serif;line-height:24px;font-size=
+:16px;color:#222222; }
+  .i p a { text-decoration:underline;color:#222222 !important; }
+  .i2 p { font-family:'Helvetica';line-height:23px;font-size:15px;color:#2D=
+2D2D; }
+  .i2 p a { text-decoration:underline;color:#2D2D2D !important; }
+  .i3 p { font-family:'Helvetica';line-height:43px;font-size:24px;color:#2D=
+2D2D; }
+  .i3 p a { text-decoration:underline;color:#2D2D2D !important; }
+  .h p a { text-decoration:underline;color:#595959 !important; }
+  .h2 p a { text-decoration:underline;color:#595959 !important; }
+  .h3 p a { text-decoration:underline;color:#595959 !important; }
+  .j { border-top:2px dashed #1400FF; }
+  .k p { padding-left:15px;padding-bottom:0px;padding-top:6px;mso-margin-to=
+p-alt:6px;mso-margin-bottom-alt:0px;mso-margin-left-alt:15px; }
+  .o { background-color:#FFFCEF;border:1px solid #D1D5DB;border-radius:6px;=
+ }
+  .o p { font-family:'Playfair Display',Didot,'Bodoni MT','Times New Roman'=
+,serif;padding:0px;margin:0px; }
+  .l p,
+  .l p a { font-size:14px;line-height:20px;font-weight: bold;color:#000000;=
+padding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .m p,
+  .m p a { font-size:12px;line-height:17px;font-weight:400;color:#000000;pa=
+dding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .n p,
+  .n p a { font-size:12px;line-height:17px;font-weight:400;color:#000000;pa=
+dding-bottom:6px;mso-margin-bottom-alt:6px;text-decoration:none; }
+  .p { background-color:#FFFFFF;max-width:520px;border:1px solid #E1E8ED;bo=
+rder:1px solid rgba(80, 80, 80, 0.3);border-radius:5px; }
+  .q { font-size:16px;font-family:Helvetica,Roboto,Calibri,sans-serif !impo=
+rtant;border:1px solid #e1e8ed;border:1px solid rgba(80, 80, 80, 0.3);borde=
+r-radius:5px;background-color:#FFFFFF; }
+  .q p { font-size:16px;font-family:Helvetica,Roboto,Calibri,sans-serif !im=
+portant;color:#222222; }
+  .r { border:1px solid #E1E8ED !important;border-radius:5px; }
+  .s p { font-size: 14px; line-height: 17px; font-weight: 400; color: #6978=
+82; text-decoration: none; }
+  .t p { font-family:'Verdana',Geneva,sans-serif;font-size:12px;line-height=
+:18px;font-weight:400;color:#222222;font-style:italic;padding:4px 0px 0px;}
+  .v { border-radius:6px;border:solid 0px #1400FF;background-color:#1400FF;=
+font-family:'Verdana',Geneva,sans-serif;color:#FFFFFF; }
+  .v a { text-decoration:none;display:block;color:#FFFFFF; }
+  .w p { font-size:12px;line-height:15px;font-weight:400;color:#FFFFFF; }
+  .w p a { text-decoration: underline !important;color:#FFFFFF !important; =
+}
+  ul { font-family:'Verdana',Geneva,sans-serif;margin:0px 0px 0px 25px !imp=
+ortant;padding:0px !important;color:#222222;line-height:21px;list-style:squ=
+are;font-size:14px; }
+  ul li { font-family:'Verdana',Geneva,sans-serif;margin:5px 0px 0px 0px !i=
+mportant;padding: 0px 0px 0px 0px !important; color: #222222; list-style:sq=
+uare; }
+  ol { font-family:'Verdana',Geneva,sans-serif;margin: 0px 0px 0px 25px !im=
+portant;padding:0px !important;color:#222222;line-height:21px;list-style:de=
+cimal;font-size:14px; }
+  ol li { font-family:'Verdana',Geneva,sans-serif;margin:5px 0px 0px 0px !i=
+mportant;padding: 0px 0px 0px 0px !important; color: #222222; list-style:de=
+cimal; }
+  .e h3,
+  .e p,
+  .e span { padding-bottom:0px;padding-top:0px;mso-margin-top-alt:0px;mso-m=
+argin-bottom-alt:0px; }
+  .e span,
+  .e li { font-family:'Verdana',Geneva,sans-serif;font-size:14px;color:#222=
+222;line-height:21px; }
+  .rec { font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSys=
+temFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-ser=
+if, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color E=
+moji" !important; }
+  .rec__button:hover { background-color: #f9fafb !important; }
+  .copyright a {color: inherit !important; text-decoration: none !important=
+; font-size: inherit !important; font-family: inherit !important; font-weig=
+ht: inherit !important; line-height: inherit !important;}
+  .txt_social p { padding: 0; }
+  @media only screen and (max-width:667px) {
+    .aa { width: 100% !important; }
+    .bb img { width: 100% !important; height: auto !important; max-width: n=
+one !important; }
+    .cc { padding: 0px 8px !important; }
+    .ee { padding-top:10px !important;padding-bottom:10px !important; }
+    .ff ul, .ff ol { margin: 0px 0px 0px 10px !important;padding: 0px !impo=
+rtant; }
+    .ff li { margin:5px 0px 0px 10px !important; }
+    .r {height:140px !important;}
+    .s p { font-size:13px !important;line-height:15px !important; }
+    .mob-hide {display:none !important;}
+    .mob-stack {display:block !important;width:100% !important;}
+    .mob-block {display:block !important;}
+    .embed-img {padding:0px 0px 12px 0px !important;}
+    .socialShare {padding-top:15px !important;}
+    .rec { padding-left:15px!important;padding-right:15px!important; }
+  }
+  @media screen and (max-width: 480px) {
+    u + .a .gg { width: 100% !important; width: 100vw !important; }
+    .tok-heart { padding-top:75% !important; }
+    .tok-play { padding-top: 250px !important; }
+  }
+  @media screen and (max-width: 320px) {
+    .tok-heart { padding-top:65% !important; }
+  }
+  .u { border: 1px solid #CACACA !important; border-radius: 2px !important;=
+ background-color: #ffffff !important; padding: 0px 13px 0px 13px !importan=
+t; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Se=
+goe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif !important;fon=
+t-size: 12px !important; color: #767676 !important; }
+  .u a { text-decoration: none; display: block !important; color: #767676 !=
+important; margin: 0px !important; }
+  .u span, .u img { color: #767676 !important;margin:0px !important; max-he=
+ight:32px !important;background-color:#ffffff !important; }
+</style><!--[if mso]><style type=3D"text/css">
+    sup { font-size: 100% !important;vertical-align: .5em !important;mso-te=
+xt-raise: -1.5% !important;line-height: 0 !important; }
+    ul { margin-left:0px !important; margin-right:10px !important; margin-t=
+op:20px !important; margin-bottom:20px !important; }
+    ul li { margin-left: 0px !important; mso-special-format: decimal; }
+    ol { margin-left:0px !important; margin-right:10px !important; margin-t=
+op:20px !important; margin-bottom:20px !important; }
+    ol li { margin-left: 0px !important; mso-special-format: decimal; }
+    li.listItem { margin-left:15px !important; margin-top:0px !important; }
+    .paddingDesktop { padding: 10px 0 !important; }
+    .edm_outlooklist { margin-left: -20px !important; }
+    .embedImage { display:none !important; }
+  </style><![endif]--><style>
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm=
+459WlhyyTh89Y.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUSjIg1_i6t8kCHKm=
+459WlhyyTh89Y.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUQjIg1_i6t8kCHKm=
+459WxRyS7m0dR9pA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/montserrat/v24/JTUQjIg1_i6t8kCHKm=
+459WxRyS7m0dR9pA.woff2') format('woff2');
+  }
+</style><style>
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFiD-vYSZviV=
+YUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFiD-vYSZviV=
+YUb_rj3ij__anPXDTzYgEM86xQ.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFkD-vYSZviV=
+YUb_rj3ij__anPXDTnogkk7yRZrPA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v29/nuFkD-vYSZviV=
+YUb_rj3ij__anPXDTnogkk7yRZrPA.woff2') format('woff2');
+  }
+</style></head><body class=3D"a" style=3D"margin:0px auto;padding:0px;word-=
+wrap:normal;word-spacing:normal;background-color:#F4F4F4;"><div role=3D"art=
+icle" aria-roledescription=3D"email" aria-label=3D"email_name" lang=3Den st=
+yle=3D"font-size:1rem"><div style=3D"display:none;max-height:0px;overflow:h=
+idden;"> $600M+ worth of tokens are being unlocked this week...=F0=9F=92=B8=
+ &#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8=
+204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;=
+&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#1=
+60;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;=
+&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#82=
+04;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&=
+#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#16=
+0;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&=
+#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#820=
+4;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#=
+8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160=
+;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#=
+160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204=
+;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8=
+204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;=
+&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#1=
+60;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;=
+&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#82=
+04;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&=
+#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#16=
+0;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&=
+#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#820=
+4;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#=
+8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160=
+;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#=
+160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204=
+;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8=
+204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;=
+&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#1=
+60;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;=
+&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#82=
+04;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&=
+#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#16=
+0;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204;&=
+#160;&#8204;&#160;&#8204;&#160;&#8204;&#160;&#8204; </div><table role=3D"no=
+ne" width=3D"100%" border=3D"0" cellspacing=3D"0" align=3D"center" cellpadd=
+ing=3D"0" class=3D"gg"><tr><td align=3D"center" valign=3D"top"><table role=
+=3D"none" width=3D"670" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" cl=
+ass=3D"aa" style=3D"width:670px;table-layout:fixed;"><tr><td align=3D"cente=
+r" valign=3D"top" style=3D"padding:10px 5px 10px 5px;"><table role=3D"none"=
+ width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"c=
+enter"><tr><td align=3D"center" valign=3D"top" style=3D"border:0px solid #f=
+fffff;border-radius:6px;background-color:#FFFFFF;" class=3D"c"><table role=
+=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"center"><tr><td class=3D"f" align=3D"right" valign=3D"top" style=3D=
+"padding:20px 15px;"><p> November 28, 2023 &nbsp; | &nbsp; <a href=3D"https=
+://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgq0Pha_iGXsJDAfpYaESza3cnQ3Ls=
+sQQlHGQHjRTs8HWmUzs_ZyL-wATuNprYUc6Ddg/41o/xPg1kdyqTx-fG5icrZoo8A/h0/lMhuOs=
+xPrlRodtayQHMK_Ijl7_Jx9GMQs2k23EEIPEU">Read Online</a></p></td></tr><tr><td=
+ style=3D"height:0px;width:0px;"><div style=3D"height:1px;" data-open-track=
+ing=3D"true"> <img src=3D"https://elink.milkroad.com/ss/o/RAM9dtkkisYh9IGMF=
+OFGaw/41o/xPg1kdyqTx-fG5icrZoo8A/ho.gif" alt=3D"" width=3D"1" height=3D"1" =
+border=3D"0" style=3D"height:1px !important;width:1px !important;border-wid=
+th:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-r=
+ight:0 !important;margin-left:0 !important;padding-top:0 !important;padding=
+-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"=
+/> </div></td></tr><tr id=3D"content-blocks"><td class=3D"email-card-body" =
+align=3D"center" valign=3D"top" style=3D"padding-bottom:15px;"><table role=
+=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"center"><tr><td align=3D"center" valign=3D"top" style=3D"padding: 2=
+0px 15px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"c=
+enter" valign=3D"top" style=3D"width:189px;"><a href=3D"https://elink.milkr=
+oad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdOYcW_yi7ozluw6oMcHs5=
+5pZUjAYmvSHNUfbrr0gAOsVg/41o/xPg1kdyqTx-fG5icrZoo8A/h1/cPR_IiDTs1qwcU2yVR4A=
+01PmbWziKlX3fsSbZo1aTho" target=3D"_blank" rel=3D"noopener noreferrer nofol=
+low" style=3D"text-decoration:none;"><img src=3D"https://media.beehiiv.com/=
+cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D8=
+0/uploads/asset/file/fd7a86fd-728d-4f99-b07d-21dc86da6482/Screenshot_2023-1=
+1-28_at_8.12.05_AM.png?t=3D1701177166" alt=3D"" height=3D"auto" width=3D"18=
+9" style=3D"display:block;width:100%;" border=3D"0"/></a></td></tr></table>=
+</td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;tex=
+t-align:left;word-break:break-word;"><p><span style=3D""><b>Today=E2=80=99s=
+ edition is brought to you by </b></span><a class=3D"link" href=3D"https://=
+elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdOYcW_yi7o=
+zluw6oMcHs55pZUjAYmvSHNUfbrr0gAOsVg/41o/xPg1kdyqTx-fG5icrZoo8A/h2/teXCz-C44=
+sT5nJFOLoobVEh18AT7l_4o9OdFZXgBMzA" target=3D"_blank" rel=3D"noopener noref=
+errer nofollow">Phemex</a><span style=3D""><b> - a top exchange for trading=
+ crypto and derivatives that is entering the final stage of its Phemex Toke=
+n To The Moon event.</b></span></p></td></tr><tr><td class=3D"dd" align=3D"=
+left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p>=
+<a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrr=
+glemiZWWH1XQUGrUHEGw8XiTdNhTnCrvp5ALfXi3nAezTge38UB5yRqcyQgRf1xkeUFXA/41o/x=
+Pg1kdyqTx-fG5icrZoo8A/h3/K85dyrfUI360C6rCCTjqjdfe4JIeOH1IRNmOVW2e958" targe=
+t=3D"_blank" rel=3D"noopener noreferrer nofollow">Today&#39;s event is live=
+ right now!</a></p></td></tr><tr><td align=3D"center" valign=3D"top" style=
+=3D"font-size:0px;line-height:0px;padding:40px 0px;" class=3D"dd"><table cl=
+ass=3D"j" role=3D"none" width=3D"80%%" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" align=3D"center"><tr><td> &nbsp; </td></tr></table></td></tr><=
+tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:lef=
+t;word-break:break-word;"><p> GM. This is Milk Road. We make crypto clearer=
+ than your ex=E2=80=99s mixed signals. </p></td></tr><tr><td class=3D"dd" a=
+lign=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-wo=
+rd;"><p> Here=E2=80=99s what we got for you today: </p></td></tr><tr><td st=
+yle=3D"padding-bottom:12px;padding-left:43px;padding-right:27px;padding-top=
+:12px;" class=3D"ee"><div style=3D"margin-left:0px;" class=3D"edm_outlookli=
+st"><ul style=3D"list-style-type:square;margin:0px 0px;padding:0px 0px 0px =
+0px;"><li class=3D"listItem ultext"><p style=3D"padding:0px;text-align:left=
+;word-break:break-word;"> 3 trends to keep your eyes on =F0=9F=91=80 </p></=
+li><li class=3D"listItem ultext"><p style=3D"padding:0px;text-align:left;wo=
+rd-break:break-word;"> $600M+ is being unlocked this week =F0=9F=92=B8 </p>=
+</li><li class=3D"listItem ultext"><p style=3D"padding:0px;text-align:left;=
+word-break:break-word;"> Bitcoin=E2=80=99s circulating supply in profit hit=
+s multi-year high =F0=9F=8D=AA </p></li></ul></div></td></tr><tr><td align=
+=3D"center" valign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"=
+><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"margin:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=
+=3D"width:630px;"><a href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2pts=
+olyBUgqzSx-IWUIkZL14RaW3JxBjPyaDVRFJ8jhmvt_5MXx28j/41o/xPg1kdyqTx-fG5icrZoo=
+8A/h4/VXaxzGZdaEo9T4SXJQxSYPAhkgKWBJgofdn24nXUlUI" target=3D"_blank" rel=3D=
+"noopener noreferrer nofollow" style=3D"text-decoration:none;"><img src=3D"=
+https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,oner=
+ror=3Dredirect,quality=3D80/uploads/asset/file/574cded8-6a14-4e00-9fb6-fd73=
+6bc7d3fc/Screenshot_2023-11-28_at_8.30.19_AM.png?t=3D1701178237" alt=3D"" h=
+eight=3D"auto" width=3D"630" style=3D"display:block;width:100%;" border=3D"=
+0"/></a></td></tr><tr><td align=3D"center" valign=3D"top" class=3D"t" style=
+=3D"width:630px;"><a href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2pts=
+olyBUgqzSx-IWUIkZL14RaW3JxBjPyaDVRFJ8jhmvt_5MXx28j/41o/xPg1kdyqTx-fG5icrZoo=
+8A/h5/Zl1GRbqNRKuLWgTReKhu2m36EFxRSwjkRbVg-OM3UAI" target=3D"_blank" rel=3D=
+"noopener noreferrer nofollow" style=3D"text-decoration:underline;text-deco=
+ration-color:#222222;"><p>Prices as of 9:30 AM ET. Click here for our Fear =
+&amp; Greed Index</p></a></td></tr></table></td></tr><tr><td align=3D"cente=
+r" valign=3D"top" style=3D"font-size:0px;line-height:0px;padding:40px 0px;"=
+ class=3D"dd"><table class=3D"j" role=3D"none" width=3D"80%%" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><tr><td> &nbsp; </td><=
+/tr></table></td></tr><tr><td class=3D"dd" align=3D"center" valign=3D"top" =
+style=3D"padding:0px 15px;text-align:center;"><h1><b>3 TRENDS TO KEEP YOUR =
+EYES ON </b>=F0=9F=91=80</h1></td></tr><tr><td class=3D"dd" align=3D"left" =
+style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> Graph=
+s are everywhere in crypto.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"=
+><p><span style=3D""><b>The problem? </b></span>They=E2=80=99re hard as f*c=
+k to understand. </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D=
+"padding:0px 15px;text-align:left;word-break:break-word;"><p> It=E2=80=99s =
+like trying to read a book=E2=80=A6 except, it=E2=80=99s in Spanish. (and I=
+ only know about 5 and a half Spanish words). </p></td></tr><tr><td class=
+=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word;"><p><span style=3D""><b>Well, today we=E2=80=99re gonna show y=
+ou 3 important, easy-to-understand graphs. </b></span>No Rosetta Stone need=
+ed. </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px =
+15px;text-align:left;word-break:break-word;"><p> Let=E2=80=99s dive in.=C2=
+=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" valign=3D"top" style=
+=3D"padding:0px 15px;text-align:left;"><h3><span style=3D""><b>1/ INSTITUTI=
+ONAL MONEY KEEPS FLOWING INTO CRYPTO</b></span></h3></td></tr><tr><td align=
+=3D"center" valign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"=
+><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"margin:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=
+=3D"width:630px;"><a href=3D"https://elink.milkroad.com/ss/c/HDww2f8W1_eKev=
+kWJpcBWyuEfumZkCe8FGAbaGDiOLZWYC2EjPwkNUVcX8jNiTC6F5a-Vnk30Ph_EKUdlqpMqIxHm=
+_Zd7GBAOOZTP-kcjSGKn-X3x2Jv_FrUE9Y0eCh_FfypyoIBRhZMtehKOy_CZg/41o/xPg1kdyqT=
+x-fG5icrZoo8A/h6/EwiAk2ajRjW3iWNMoh4zs5snE5FTfUykQfO5fyX3fQY" target=3D"_bl=
+ank" rel=3D"noopener noreferrer nofollow" style=3D"text-decoration:none;"><=
+img src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=
+=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/file/013bae98-6253-46=
+1d-8c1d-7d57b186197d/Screenshot_2023-11-27_at_5.02.18_PM.png?t=3D1701182066=
+" alt=3D"" height=3D"auto" width=3D"630" style=3D"display:block;width:100%;=
+" border=3D"0"/></a></td></tr><tr><td align=3D"center" valign=3D"top" class=
+=3D"t" style=3D"width:630px;"><a href=3D"https://elink.milkroad.com/ss/c/HD=
+ww2f8W1_eKevkWJpcBWyuEfumZkCe8FGAbaGDiOLZWYC2EjPwkNUVcX8jNiTC6F5a-Vnk30Ph_E=
+KUdlqpMqIxHm_Zd7GBAOOZTP-kcjSGKn-X3x2Jv_FrUE9Y0eCh_FfypyoIBRhZMtehKOy_CZg/4=
+1o/xPg1kdyqTx-fG5icrZoo8A/h7/m0P_JaL2l8H_6xPPRFFqvIRElCRfE2JoUTqJJg9RjPc" t=
+arget=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"text-decorat=
+ion:underline;text-decoration-color:#222222;"><p>Source: CoinShares</p></a>=
+</td></tr></table></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"pa=
+dding:0px 15px;text-align:left;word-break:break-word;"><p><span style=3D"">=
+<b>What happened: </b></span>Digital asset investment products saw <a class=
+=3D"link" href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgq_ten=
+6M0m1tylBTsPi9cHXg28LleGoeCHSC6ceZLbRitRPre-1VzqmqDfimdCMgIO2aCrkxJVFAAF6Xm=
+V1o0MuUJqDzBVkkMotF2Q4otpTr2/41o/xPg1kdyqTx-fG5icrZoo8A/h8/Ix1g3_Xng5Oo6p9W=
+T-Q8FjhqAJ5TWUIpVvndGqs4BWM" target=3D"_blank" rel=3D"noopener noreferrer n=
+ofollow">$346M in inflows</a> last week.=C2=A0 </p></td></tr><tr><td class=
+=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word;"><p> According to CoinShare=E2=80=99s <a class=3D"link" href=
+=3D"https://elink.milkroad.com/ss/c/HDww2f8W1_eKevkWJpcBWyuEfumZkCe8FGAbaGD=
+iOLZWYC2EjPwkNUVcX8jNiTC6F5a-Vnk30Ph_EKUdlqpMqIxHm_Zd7GBAOOZTP-kcjSGKn-X3x2=
+Jv_FrUE9Y0eCh_FfypyoIBRhZMtehKOy_CZg/41o/xPg1kdyqTx-fG5icrZoo8A/h9/efRazJzd=
+oYBA_TkaOz68KFyu0I_VxurAIUM1l4i0jWo" target=3D"_blank" rel=3D"noopener nore=
+ferrer nofollow">latest report</a>: </p></td></tr><tr><td style=3D"padding-=
+bottom:12px;padding-left:43px;padding-right:27px;padding-top:12px;" class=
+=3D"ee"><div style=3D"margin-left:0px;" class=3D"edm_outlooklist"><ul style=
+=3D"list-style-type:square;margin:0px 0px;padding:0px 0px 0px 0px;"><li cla=
+ss=3D"listItem ultext"><p style=3D"padding:0px;text-align:left;word-break:b=
+reak-word;"><span style=3D""><a class=3D"link" href=3D"https://elink.milkro=
+ad.com/ss/c/_YA6v3WSkC2ptsolyBUgqxTI7j2IoGA9egGAW4Wj-zQQt5eZbOUC61rIe8tdQUC=
+2/41o/xPg1kdyqTx-fG5icrZoo8A/h10/rFTuNYpt6N3YcfH6ZHxw75kZ5IPlpDia-7xPVjl7x7=
+I" target=3D"_blank" rel=3D"noopener noreferrer nofollow"><b>BTC</b></a></s=
+pan><span style=3D""><b> led the way with $312M in inflows. </b></span>Brin=
+ging the year-to-date total to $1.5B.=C2=A0 </p></li><li class=3D"listItem =
+ultext"><p style=3D"padding:0px;text-align:left;word-break:break-word;"><sp=
+an style=3D""><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/_YA=
+6v3WSkC2ptsolyBUgq_Lb1Iq1WUhCqGXlxGJzX6Keq8iHafEzOvbHonu4lW2F/41o/xPg1kdyqT=
+x-fG5icrZoo8A/h11/xuUravuj63sDiuuSR1gZIiVsC5GNKk5OZIgCImdMHc4" target=3D"_b=
+lank" rel=3D"noopener noreferrer nofollow"><b>ETH</b></a></span><span style=
+=3D""><b> saw another big week of inflows.</b></span> $34M last week and $1=
+03M over the last month. (It=E2=80=99s almost evened out the run of outflow=
+s earlier this year). </p></li><li class=3D"listItem ultext"><p style=3D"pa=
+dding:0px;text-align:left;word-break:break-word;"><span style=3D""><b>Some =
+altcoins also saw minor inflows.</b></span> The top tokens (not named BTC o=
+r ETH) that saw inflows were <a class=3D"link" href=3D"https://elink.milkro=
+ad.com/ss/c/_YA6v3WSkC2ptsolyBUgqzNSGl6jWWZe1_TBmVcGNhusrlqo0QYsusHz9rpndXC=
+_/41o/xPg1kdyqTx-fG5icrZoo8A/h12/pBFt3J9LJEPj48sKtKnxohJVOUPyLTTBlXRSHpiY4D=
+E" target=3D"_blank" rel=3D"noopener noreferrer nofollow">SOL</a>, <a class=
+=3D"link" href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgqzNSG=
+l6jWWZe1_TBmVcGNhtdCEXD8SGI0ip1pgtv-MXP/41o/xPg1kdyqTx-fG5icrZoo8A/h13/cvPA=
+BfTsBcFqEx81fFqCxOWzz85LpFdy_ZIMilMqg1s" target=3D"_blank" rel=3D"noopener =
+noreferrer nofollow">DOT</a>, and <a class=3D"link" href=3D"https://elink.m=
+ilkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgqzNSGl6jWWZe1_TBmVcGNhunkJG_N5BdVWKAGl=
+5JVEc6/41o/xPg1kdyqTx-fG5icrZoo8A/h14/Og6NwxL-rsMRCdeM6qIYSEZTKlwwTNLGw_zt-=
+Vysjdk" target=3D"_blank" rel=3D"noopener noreferrer nofollow">LINK</a>.=C2=
+=A0 </p></li><li class=3D"listItem ultext"><p style=3D"padding:0px;text-ali=
+gn:left;word-break:break-word;"><span style=3D""><b>Total assets under mana=
+gement (AUM) rose to $45.3B. </b></span>It=E2=80=99s the highest level in 1=
+.5 years.=C2=A0 </p></li></ul></div></td></tr><tr><td class=3D"dd" align=3D=
+"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p=
+><span style=3D""><b>Why this matters: </b></span>This was the largest week=
+ly inflow since late 2021.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"=
+><p> Oh, and it also extended the streak to <span style=3D""><b>9 straight =
+weeks of inflows. </b></span><span style=3D"">**</span><span style=3D""><i>=
+chest bumps all around**</i></span></p></td></tr><tr><td class=3D"dd" align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"=
+><p> CoinShares analysts believe that the run was =E2=80=9Cspurred by antic=
+ipation of a spot-based ETF launch in the U.S.=E2=80=9D </p></td></tr><tr><=
+td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;wo=
+rd-break:break-word;"><p> We=E2=80=99ll see if the streak continues next we=
+ek. </p></td></tr><tr><td class=3D"dd" align=3D"left" valign=3D"top" style=
+=3D"padding:0px 15px;text-align:left;"><h3><span style=3D""><b>2/ STABLECOI=
+N SUPPLIES ARE INCREASING</b></span></h3></td></tr><tr><td align=3D"center"=
+ valign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table rol=
+e=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin=
+:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=3D"width:630=
+px;"><a href=3D"https://elink.milkroad.com/ss/c/F5RjnyiTAApJ_5s6XyjNu3TbzOj=
+E75OlaLL2Y6xMmGYGeyPHQCGcjsLI6k3t2cN5uHy0MVA7KtLpYa0y8hcYD-jIAdjcMtCZziGDnn=
+PjkZs/41o/xPg1kdyqTx-fG5icrZoo8A/h15/xPhIuySZlYLeuSOiMugcC2MWt7u2vMTl1rbUMA=
+zvuTg" target=3D"_blank" rel=3D"noopener noreferrer nofollow" style=3D"text=
+-decoration:none;"><img src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=
+=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/asset/f=
+ile/cbc80c40-f820-4d24-aed8-15b0c8102700/Screenshot_2023-11-28_at_9.06.08_A=
+M.png?t=3D1701182097" alt=3D"" height=3D"auto" width=3D"630" style=3D"displ=
+ay:block;width:100%;" border=3D"0"/></a></td></tr><tr><td align=3D"center" =
+valign=3D"top" class=3D"t" style=3D"width:630px;"><a href=3D"https://elink.=
+milkroad.com/ss/c/F5RjnyiTAApJ_5s6XyjNu3TbzOjE75OlaLL2Y6xMmGYGeyPHQCGcjsLI6=
+k3t2cN5uHy0MVA7KtLpYa0y8hcYD-jIAdjcMtCZziGDnnPjkZs/41o/xPg1kdyqTx-fG5icrZoo=
+8A/h16/rSJzj8OvdzMn7sEP2BvO8s67mOQSTObW48NgZaWRXVA" target=3D"_blank" rel=
+=3D"noopener noreferrer nofollow" style=3D"text-decoration:underline;text-d=
+ecoration-color:#222222;"><p>Source: Glassnode</p></a></td></tr></table></t=
+d></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-a=
+lign:left;word-break:break-word;"><p><span style=3D""><b>What happened: </b=
+></span><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSk=
+C2ptsolyBUgq_Ot1NjBzL4-SaRpEHIVfxhmMS7ITFO1Xncl8DIAuZmz/41o/xPg1kdyqTx-fG5i=
+crZoo8A/h17/n2dsbTnM2-wFHA1zL0-tRH7_bGbHYjOe0lcoSJFJPj0" target=3D"_blank" =
+rel=3D"noopener noreferrer nofollow">Stablecoin</a> supplies are <span styl=
+e=3D"color:rgb(56, 118, 29);">up $2.2B</span> over the last 90 days.=C2=A0 =
+</p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px=
+;text-align:left;word-break:break-word;"><p><span style=3D""><b>Why this ma=
+tters: </b></span>Earlier this month, the 90-day change in stablecoin suppl=
+ies flipped positive. It was the first time that=E2=80=99s happened since M=
+ay 2022.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"p=
+adding:0px 15px;text-align:left;word-break:break-word;"><p> (You=E2=80=99ll=
+ need a magnifying glass to see that sliver of green on the graph, but it=
+=E2=80=99s there. I promise). </p></td></tr><tr><td class=3D"dd" align=3D"l=
+eft" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> =
+This is a positive sign that on-chain liquidity is improving. </p></td></tr=
+><tr><td class=3D"dd" align=3D"left" valign=3D"top" style=3D"padding:0px 15=
+px;text-align:left;"><h3><span style=3D""><b>3/ EVM CHAINS ARE SEEING BIG T=
+RANSACTION COUNT INCREASES</b></span></h3></td></tr><tr><td align=3D"center=
+" valign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table ro=
+le=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margi=
+n:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=3D"width:63=
+0px;"><a href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtvFxLaVo0GBkb5_D=
+0FfZzJlW50K7wlx_QB7e43K3PUlhKWWCrblXgOAnvGSiTsIGVYIB4hs3ScP0F8aeMhsSGW3-AjR=
+zs4mrloAKOkDp0B-A47Ha43mvqzHaP_XwpgEZKSTsYgwWzAFg/41o/xPg1kdyqTx-fG5icrZoo8=
+A/h18/DPbSMr4vz_h46dYQddZ_CYUwaMkTzDncGfv-bBVP1Pg" target=3D"_blank" rel=3D=
+"noopener noreferrer nofollow" style=3D"text-decoration:none;"><img src=3D"=
+https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,oner=
+ror=3Dredirect,quality=3D80/uploads/asset/file/958f5bf3-573c-4bb5-9a84-e8ba=
+ea5612a7/Screenshot_2023-11-28_at_8.09.27_AM.png?t=3D1701182169" alt=3D"" h=
+eight=3D"auto" width=3D"630" style=3D"display:block;width:100%;" border=3D"=
+0"/></a></td></tr><tr><td align=3D"center" valign=3D"top" class=3D"t" style=
+=3D"width:630px;"><a href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtvFx=
+LaVo0GBkb5_D0FfZzJlW50K7wlx_QB7e43K3PUlhKWWCrblXgOAnvGSiTsIGVYIB4hs3ScP0F8a=
+eMhsSGW3-AjRzs4mrloAKOkDp0B-A47Ha43mvqzHaP_XwpgEZKSTsYgwWzAFg/41o/xPg1kdyqT=
+x-fG5icrZoo8A/h19/kd5DIstWtVw4qE1N-GOXyW66mCZn1AhfHV5q8wWwL_g" target=3D"_b=
+lank" rel=3D"noopener noreferrer nofollow" style=3D"text-decoration:underli=
+ne;text-decoration-color:#222222;"><p>Source: The Block</p></a></td></tr></=
+table></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15=
+px;text-align:left;word-break:break-word;"><p><span style=3D""><b>What happ=
+ened: </b></span>Alternative Ethereum Virtual Machine (EVM) chains are seei=
+ng BIG increases in transaction counts over the last week.=C2=A0 </p></td><=
+/tr><tr><td style=3D"padding-bottom:12px;padding-left:43px;padding-right:27=
+px;padding-top:12px;" class=3D"ee"><div style=3D"margin-left:0px;" class=3D=
+"edm_outlooklist"><ul style=3D"list-style-type:square;margin:0px 0px;paddin=
+g:0px 0px 0px 0px;"><li class=3D"listItem ultext"><p style=3D"padding:0px;t=
+ext-align:left;word-break:break-word;"><span style=3D""><b>Fantom</b></span=
+> is up 1,321%. </p></li><li class=3D"listItem ultext"><p style=3D"padding:=
+0px;text-align:left;word-break:break-word;"><span style=3D""><b>Celo</b></s=
+pan> is up 1,277%. </p></li><li class=3D"listItem ultext"><p style=3D"paddi=
+ng:0px;text-align:left;word-break:break-word;"><span style=3D""><a class=3D=
+"link" href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC2ptsolyBUgqzNSGl6j=
+WWZe1_TBmVcGNhsxWcAMT9RtL2AAuTGi1SZQ/41o/xPg1kdyqTx-fG5icrZoo8A/h20/HwcDAEw=
+cCsUIqwZbD_p5Z7-DrAlZnVx-nTAfwhKdPwk" target=3D"_blank" rel=3D"noopener nor=
+eferrer nofollow"><b>Avalanche</b></a></span> is up 857%. </p></li><li clas=
+s=3D"listItem ultext"><p style=3D"padding:0px;text-align:left;word-break:br=
+eak-word;"><span style=3D""><a class=3D"link" href=3D"https://elink.milkroa=
+d.com/ss/c/_YA6v3WSkC2ptsolyBUgqzNSGl6jWWZe1_TBmVcGNhsk0Nc4kCJehryqy-9EXMoF=
+/41o/xPg1kdyqTx-fG5icrZoo8A/h21/mq0mx-MuQveV53901ieGmdyoB__eiSbGRExw4UyhBBo=
+" target=3D"_blank" rel=3D"noopener noreferrer nofollow"><b>Polygon</b></a>=
+</span> is up 155%. </p></li></ul></div></td></tr><tr><td class=3D"dd" alig=
+n=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;=
+"><p><span style=3D""><b>Why this matters: </b></span>Ethereum is like the =
+DMV. (aka the Department of Motor Vehicles), </p></td></tr><tr><td class=3D=
+"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:br=
+eak-word;"><p> If you don=E2=80=99t know what that is, just imagine hell on=
+ Earth. Now add paperwork, super long lines, and voila - that=E2=80=99s the=
+ DMV.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padd=
+ing:0px 15px;text-align:left;word-break:break-word;"><p> And like the DMV,=
+=C2=A0 Ethereum can be slow (~15 transactions per second) and expensive ($1=
+0-$100 <a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/_YA6v3WSkC=
+2ptsolyBUgq_Lb1Iq1WUhCqGXlxGJzX6KtD4A4TYgraIVYhlLv99fG/41o/xPg1kdyqTx-fG5ic=
+rZoo8A/h22/VuJlapgwdZ2h1Ufzzv82_7mkxcAoKofAYMFsFU1VtNs" target=3D"_blank" r=
+el=3D"noopener noreferrer nofollow">transaction fees</a>).=C2=A0 </p></td><=
+/tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-alig=
+n:left;word-break:break-word;"><p> As more people use Ethereum, the slower =
+and more expensive it gets.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"=
+><p><span style=3D""><b>That=E2=80=99s where EVMs come in. </b></span>It=E2=
+=80=99s like having a scanner machine at the front desk of the DMV. It chec=
+ks all your paperwork and completes your transaction, instead of having you=
+ wait in line all day long.=C2=A0 </p></td></tr><tr><td class=3D"dd" align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"=
+><p> It=E2=80=99s fast, cheap, and there=E2=80=99s no waiting period.=C2=A0=
+ </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15p=
+x;text-align:left;word-break:break-word;"><p> (Btw, as we get closer and cl=
+oser to another bull run we predict that more and more people will look tow=
+ard EVM solutions as a cheap alternative to Ethereum=E2=80=99s main network=
+). </p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding: =
+20px 15px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"=
+center" valign=3D"top" style=3D"width:630px;"><img src=3D"https://media.bee=
+hiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,qu=
+ality=3D80/uploads/asset/file/7edb708c-9a16-45dc-a6eb-d8b6189631b5/Add_a_su=
+bheading-2.png?t=3D1701177228" alt=3D"" height=3D"auto" width=3D"630" style=
+=3D"display:block;width:100%;" border=3D"0"/></td></tr></table></td></tr><t=
+r><td><table role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" style=3D""><tr><td bgcolor=3D"#BEDADA" style=3D"background-=
+color:#BEDADA;padding:0px 0px 0px 0px;"><table role=3D"none" width=3D"100%"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center" =
+valign=3D"top" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table role=
+=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:=
+0 auto 0 auto;"><tr><td align=3D"center" valign=3D"top" style=3D"width:504p=
+x;"><a href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1X=
+QUGrUHEGw8XiTdO-B4fwaNAM--LO5RRQkRqlVm6J-M5_sXh7aRdpRYXR3Q/41o/xPg1kdyqTx-f=
+G5icrZoo8A/h23/jxJWz5SHVDHXXIwFUkx9ylzZ-dSdbDEpZga5PbxYX_s" target=3D"_blan=
+k" rel=3D"noopener noreferrer nofollow" style=3D"text-decoration:none;"><im=
+g src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3D=
+auto,onerror=3Dredirect,quality=3D80/uploads/asset/file/ec448164-e12f-41fb-=
+aff5-0a1babd22707/Screenshot_2023-11-28_at_8.14.04_AM.png?t=3D1701177257" a=
+lt=3D"" height=3D"auto" width=3D"504" style=3D"display:block;width:100%;" b=
+order=3D"0"/></a></td></tr></table></td></tr><tr><td class=3D"dd" align=3D"=
+center" valign=3D"top" style=3D"padding:0px 15px;text-align:center;"><h1><s=
+pan style=3D""><b><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c=
+/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdNhTnCrvp5ALfXi3nAezTgegdMz9rN-kh=
+M_YWWrES76Rw/41o/xPg1kdyqTx-fG5icrZoo8A/h24/s-xkRr_hrYqZnR9w9SQNXzgMoJ4mXWV=
+KbVsU0Zid4TA" target=3D"_blank" rel=3D"noopener noreferrer nofollow">THE FI=
+NAL STAGE OF YOUR MISSION IS HERE</a></b></span></h1></td></tr><tr><td clas=
+s=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-brea=
+k:break-word;"><p><span style=3D"">Phemex is about to kick off what may be =
+the most thrilling week in its history, and they </span><span style=3D""><a=
+ class=3D"link" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrgl=
+emiZWWH1XQUGrUHEGw8XiTdNhTnCrvp5ALfXi3nAezTgehPukDfwQKul2C2yTP16_dg/41o/xPg=
+1kdyqTx-fG5icrZoo8A/h25/3WnC0lHwdizaLcX0l3WE8QNu6WFGIWUg5WFQJ_JrDN4" target=
+=3D"_blank" rel=3D"noopener noreferrer nofollow">extend an invitation</a></=
+span><span style=3D""> to all crypto enthusiasts to partake in the exciting=
+ lineup of activities set to unfold in the coming days!</span></p></td></tr=
+><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:l=
+eft;word-break:break-word;"><p><span style=3D"">First off, the Phemex </spa=
+n><span style=3D""><a class=3D"link" href=3D"https://elink.milkroad.com/ss/=
+c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdNhTnCrvp5ALfXi3nAezTgegdMz9rN-k=
+hM_YWWrES76Rw/41o/xPg1kdyqTx-fG5icrZoo8A/h26/Pu11bLcBc_ZlPqut6PIRvwZngE3rih=
+2JSwzNQSpM6tU" target=3D"_blank" rel=3D"noopener noreferrer nofollow">PT Bi=
+dding</a></span><span style=3D""> is </span><span style=3D""><b>live right =
+now, and ending soon</b></span><span style=3D"">. You can join the event fo=
+r fair and risk-free </span><span style=3D""><a class=3D"link" href=3D"http=
+s://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdNhTnC=
+rvp5ALfXi3nAezTgegdMz9rN-khM_YWWrES76Rw/41o/xPg1kdyqTx-fG5icrZoo8A/h27/bIZl=
+ZbC8hTOk6WLQFTLYmdGUFEJ2YSWELar3okQneDA" target=3D"_blank" rel=3D"noopener =
+noreferrer nofollow">PT Bidding</a></span><span style=3D"">, which is runni=
+ng between 14:00-20:00 (UTC).</span></p></td></tr><tr><td class=3D"dd" alig=
+n=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;=
+"><p><span style=3D"">Following this, </span><span style=3D""><a class=3D"l=
+ink" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQU=
+GrUHEGw8XiTdNhTnCrvp5ALfXi3nAezTgeIa9CdKHiIMEOvvfEKDa7yQ/41o/xPg1kdyqTx-fG5=
+icrZoo8A/h28/tQpXGd_2Xyo4UqwqfavgxztBUzGsZ5RFMABAybQ5vsE" target=3D"_blank"=
+ rel=3D"noopener noreferrer nofollow">PT Staking</a></span><span style=3D""=
+> kick-offs on </span><span style=3D""><b>November 30th</b></span><span sty=
+le=3D"">. Anticipation is running high, given Phemex&#39;s commitment to us=
+e a portion of its daily USDT contract trading volume for the repurchase of=
+ PT. These repurchased tokens will then be distributed as staking rewards.<=
+/span></p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0p=
+x 15px;text-align:left;word-break:break-word;"><p><span style=3D"">Last but=
+ not least, Phemex invites the entire crypto community to </span><span styl=
+e=3D""><b>explore their trading platform</b></span><span style=3D"">, famil=
+iarize themselves with the unique features they offer as they get ready for=
+ mission launch on November 30th at 15:00 UTC.=C2=A0</span></p></td></tr><t=
+r><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left=
+;word-break:break-word;"><p><span style=3D""><a class=3D"link" href=3D"http=
+s://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWWH1XQUGrUHEGw8XiTdNhTnC=
+rvp5ALfXi3nAezTge38UB5yRqcyQgRf1xkeUFXA/41o/xPg1kdyqTx-fG5icrZoo8A/h29/xxfV=
+8NoyoAsgAkIMFllFENn-uDY9ajdqrsu2_1b_1ZA" target=3D"_blank" rel=3D"noopener =
+noreferrer nofollow">Click on through to learn more about Phemex Token to t=
+he Moon event and join the fun!=C2=A0</a></span></p></td></tr></table></td>=
+</tr></table></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"pad=
+ding: 20px 15px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td ali=
+gn=3D"center" valign=3D"top" style=3D"width:630px;"><img src=3D"https://med=
+ia.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredir=
+ect,quality=3D80/uploads/asset/file/0563732e-fc0d-4697-9d4f-fd4576545eed/im=
+age.png" alt=3D"" height=3D"auto" width=3D"630" style=3D"display:block;widt=
+h:100%;" border=3D"0"/></td></tr></table></td></tr><tr><td class=3D"dd" ali=
+gn=3D"center" valign=3D"top" style=3D"padding:0px 15px;text-align:center;">=
+<h1><b>$600M+ IS BEING UNLOCKED THIS WEEK </b>=F0=9F=92=B8</h1></td></tr><t=
+r><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left=
+;word-break:break-word;"><p> Every crypto trader needs to know about <b>tok=
+en unlocks</b>. </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"=
+padding:0px 15px;text-align:left;word-break:break-word;"><p> You see, when =
+a token launches there are early investors, employees, developers, etc, tha=
+t receive tokens for cheap (sometimes even for free). </p></td></tr><tr><td=
+ class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word=
+-break:break-word;"><p><b>But the tokens are =E2=80=9Clocked=E2=80=9D for a=
+ certain period of time.</b> This is so they don=E2=80=99t immediately dump=
+ the tokens, take the profit, and run to the beach to sip on margaritas. </=
+p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;t=
+ext-align:left;word-break:break-word;"><p> Well, check it out=E2=80=A6 </p>=
+</td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;tex=
+t-align:left;word-break:break-word;"><p><b>There=E2=80=99s $600M+ worth of =
+crypto tokens being </b><a class=3D"link" href=3D"https://elink.milkroad.co=
+m/ss/c/4MnwyC8ZLgKS2W4rhpYGaeV5b-TCcvFt2il0EpU4B1llQyAN4J2hIYA1ciJ8UNZ-/41o=
+/xPg1kdyqTx-fG5icrZoo8A/h30/-IM0qOj0fk91aPQ8ElrulnpVvgOli47ApTw01DDiH5I" ta=
+rget=3D"_blank" rel=3D"noopener noreferrer nofollow"><b>unlocked</b></a><b>=
+ over the next week. </b>Here are the top 7 biggest unlocks that are happen=
+ing: </p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding=
+: 20px 15px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=
+=3D"center" valign=3D"top" style=3D"width:630px;"><a href=3D"https://elink.=
+milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaVfyxk_1jhVBAx0z61Mlnk4l9DXGSCvB9rIId=
+A3QSuJtYiejY-qmyzgxbwLW2m07kg/41o/xPg1kdyqTx-fG5icrZoo8A/h31/Oui8WkK9a_8Rz8=
+0H8WljArqNL0ow0CfhEdkceWsbf-s" target=3D"_blank" rel=3D"noopener noreferrer=
+ nofollow" style=3D"text-decoration:none;"><img src=3D"https://media.beehii=
+v.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quali=
+ty=3D80/uploads/asset/file/9f2b206a-6e79-412a-a4a1-eb39f6b384ff/F_9Y9BiWwAA=
+B0K1.png?t=3D1701183054" alt=3D"" height=3D"auto" width=3D"630" style=3D"di=
+splay:block;width:100%;" border=3D"0"/></a></td></tr><tr><td align=3D"cente=
+r" valign=3D"top" class=3D"t" style=3D"width:630px;"><a href=3D"https://eli=
+nk.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaVfyxk_1jhVBAx0z61Mlnk4l9DXGSCvB9r=
+IIdA3QSuJtYiejY-qmyzgxbwLW2m07kg/41o/xPg1kdyqTx-fG5icrZoo8A/h32/_Vz8ilNDNwJ=
+7bDY19qPgRGF9jKpbCqQTjzR2o6BASuE" target=3D"_blank" rel=3D"noopener norefer=
+rer nofollow" style=3D"text-decoration:underline;text-decoration-color:#222=
+222;"><p>Source: @top7ico</p></a></td></tr></table></td></tr><tr><td class=
+=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-break=
+:break-word;"><p> Token unlocks are usually followed by one thing=E2=80=A6 =
+<b>price volatility.</b></p></td></tr><tr><td class=3D"dd" align=3D"left" s=
+tyle=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> And wi=
+th some of these projects unlocking $40M+ in tokens, we expect prices to mo=
+ve up and down like it was the Drop of Doom at Six Flags. </p></td></tr><tr=
+><td align=3D"center" valign=3D"top" style=3D"padding: 20px 15px 20px; " cl=
+ass=3D"dd"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"center" valign=3D"t=
+op" style=3D"width:630px;"><img src=3D"https://media.beehiiv.com/cdn-cgi/im=
+age/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/uploads/=
+asset/file/f1c36e79-1bca-46b2-8d90-d0c5d7443522/image.png" alt=3D"" height=
+=3D"auto" width=3D"630" style=3D"display:block;width:100%;" border=3D"0"/><=
+/td></tr></table></td></tr><tr><td class=3D"dd" align=3D"center" valign=3D"=
+top" style=3D"padding:0px 15px;text-align:center;"><h1><b>BITE-SIZED COOKIE=
+S </b>=F0=9F=8D=AA</h1></td></tr><tr><td class=3D"dd" align=3D"left" style=
+=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p><a class=3D=
+"link" href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtvFxLaVo0GBqbRPFF2=
+BdQeTlUSLR1wQNoW7n6lfQzZqFVRfDDJllqlPN6CHmmcV5aieSgfccZN6d2QsPwrnbM2BKgcOIK=
+4YDawyDsJBW5ff58wtSselNMmiyLYQjddJFavKfhag36PGg/41o/xPg1kdyqTx-fG5icrZoo8A/=
+h33/NdMjzwVwhUpi6x_613HxIgWb5ZsEmPGZdxmy8mmK4J8" target=3D"_blank" rel=3D"n=
+oopener noreferrer nofollow">Bitcoin circulating supply in profit hits mult=
+i-year high</a><span style=3D""><b>. </b></span>The current percentage of b=
+itcoin held in profit hit 83% - the highest level since November 2021.=C2=
+=A0 </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px =
+15px;text-align:left;word-break:break-word;"><p><a class=3D"link" href=3D"h=
+ttps://elink.milkroad.com/ss/c/J-vxvHcwZeqwNZ1dSIu-6bc7r3AZpwTNjZZj8xAQX6iU=
+Zi_IwlRy-wOMQmLc9Q9CpxUfGFF4DwQPL0wnHtkxmw/41o/xPg1kdyqTx-fG5icrZoo8A/h34/W=
+EBwXPVCdv8turV8O59nNKMYfo3SSl4niITmjkTWV-g" target=3D"_blank" rel=3D"noopen=
+er noreferrer nofollow">A U.S. federal judge ruled Changpeng Zhao must stay=
+ in the U.S. as he awaits sentencing</a><span style=3D""><b>.</b></span> Zh=
+ao pleaded guilty to breaking anti-money laundering laws last week and is s=
+cheduled to be sentenced in February. </p></td></tr><tr><td class=3D"dd" al=
+ign=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-wor=
+d;"><p><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQax=
+tvFxLaVo0GBqbRPFF2BdQeTlUSLR1wQNpJT_vHfCjQPFxlN8ZUngXZ9FEW0hlJpq66vXtNBNVqt=
+mcRShOGjm0_DHRNQ3_VOekf77FdiZB1rePDKRJKC9rE/41o/xPg1kdyqTx-fG5icrZoo8A/h35/=
+MhWs_5C6jVSW3bDtr-g48bm0KnZwAp8Aw609aHQ5A4c" target=3D"_blank" rel=3D"noope=
+ner noreferrer nofollow">Jito Foundation announced it&#39;s launching a gov=
+ernance token called JTO</a><span style=3D""><b>.</b></span> The token will=
+ help manage and develop the Jito Network (a Solana-based liquid staking pr=
+otocol). </p></td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding=
+:0px 15px;text-align:left;word-break:break-word;"><p><a class=3D"link" href=
+=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtvFxLaVo0GBqbRPFF2BdQeTlUSLR1=
+wQNqCuHqq76tP-PYbi3SER6isqydjm4SW8txXnMfOfpW_6VFJhUSAOCnu6rDdoDahvCfUg2PodV=
+9CVw6d6rMtEEI2kBH7LrkcPec22JH23sGzoFTay8RFUI59hAqw0Aq__WA/41o/xPg1kdyqTx-fG=
+5icrZoo8A/h36/9F27gk5hGsw9fX0rC1zqI1jhR57uUuEwEkw2Iyfa7GM" target=3D"_blank=
+" rel=3D"noopener noreferrer nofollow">The SEC says it&#39;s been trying to=
+ serve Richard Heart a lawsuit for allegedly selling unregistered securitie=
+s for weeks now</a><span style=3D""><b>. </b></span>The problem? The founde=
+r of Hex and PulseChain is nowhere to be found.=C2=A0<i>It=E2=80=99s Catch =
+Me If You Can, in real life.</i></p></td></tr><tr><td class=3D"dd" align=3D=
+"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p=
+><a class=3D"link" href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtvFxLa=
+Vo0GBqbRPFF2BdQeTlUSLR1wQNr-irgnRtGugIiKz-I466baVWVEcB0wnbl9vLOUBff9EPU9-D8=
+XNO0CbE_KOyfoe5sgmOHlR8DR4rAd0JthFr2-nFgA22LIv7-YxDBvxNaamQ/41o/xPg1kdyqTx-=
+fG5icrZoo8A/h37/DT3HDQ0JKjZHxpnvlntw2dq7mCjmYwsd3l7_Ahdv7RE" target=3D"_bla=
+nk" rel=3D"noopener noreferrer nofollow">Circle partnered with SBI Holdings=
+ to expand the USDC stablecoins presence in Japan</a><span style=3D""><b>. =
+</b></span>SBI is looking to register in Japan to help circulate USDC stabl=
+ecoins, while SBI Shinsei Bank will offer banking services for Circle. </p>=
+</td></tr><tr><td align=3D"center" valign=3D"top" style=3D"padding: 20px 15=
+px 20px; " class=3D"dd"><table role=3D"none" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"center"=
+ valign=3D"top" style=3D"width:630px;"><img src=3D"https://media.beehiiv.co=
+m/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=
+=3D80/uploads/asset/file/f1c36e79-1bca-46b2-8d90-d0c5d7443522/image.png" al=
+t=3D"" height=3D"auto" width=3D"630" style=3D"display:block;width:100%;" bo=
+rder=3D"0"/></td></tr></table></td></tr><tr><td class=3D"dd" align=3D"cente=
+r" valign=3D"top" style=3D"padding:0px 15px;text-align:center;"><h1><b>MILK=
+Y MEMES </b>=F0=9F=A4=A3</h1></td></tr><tr><td align=3D"center" valign=3D"t=
+op" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table role=3D"none" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 au=
+to;"><tr><td align=3D"center" valign=3D"top" style=3D"width:535px;"><img sr=
+c=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto=
+,onerror=3Dredirect,quality=3D80/uploads/asset/file/8a4bff8a-7daa-41b8-a191=
+-7956e75d4fdb/Screenshot_2023-11-28_at_9.57.09_AM.png?t=3D1701182712" alt=
+=3D"" height=3D"auto" width=3D"535" style=3D"display:block;width:100%;" bor=
+der=3D"0"/></td></tr></table></td></tr><tr><td align=3D"center" valign=3D"t=
+op" style=3D"padding: 20px 15px 20px; " class=3D"dd"><table role=3D"none" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 au=
+to;"><tr><td align=3D"center" valign=3D"top" style=3D"width:535px;"><a href=
+=3D"https://elink.milkroad.com/ss/c/XAeQQuQ7nBoK9b8Umu738qsfnRg2WraWMVYO5VC=
+OXdn2jzCW_1F48_AGPCdtYj2yP0c27WGcOTQlcxxp_1imZ4iKnnS0H8FP_qMi_CW9cC967UavvV=
+z-QS7LK_vc_q2R5ThxeEhOKICGNV5B6HILBw/41o/xPg1kdyqTx-fG5icrZoo8A/h38/Zw28mqh=
+Y11tVX5xVVTkRjqvZGzzz15-1yL5TyUx5kZ4" target=3D"_blank" rel=3D"noopener nor=
+eferrer nofollow" style=3D"text-decoration:none;"><img src=3D"https://media=
+.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirec=
+t,quality=3D80/uploads/asset/file/92d88782-8937-4e71-8689-35040674740a/ever=
+y-single-time-v0-k0tz9ad46x2c1.jpeg?t=3D1701182266" alt=3D"" height=3D"auto=
+" width=3D"535" style=3D"display:block;width:100%;" border=3D"0"/></a></td>=
+</tr><tr><td align=3D"center" valign=3D"top" class=3D"t" style=3D"width:535=
+px;"><a href=3D"https://elink.milkroad.com/ss/c/XAeQQuQ7nBoK9b8Umu738qsfnRg=
+2WraWMVYO5VCOXdn2jzCW_1F48_AGPCdtYj2yP0c27WGcOTQlcxxp_1imZ4iKnnS0H8FP_qMi_C=
+W9cC967UavvVz-QS7LK_vc_q2R5ThxeEhOKICGNV5B6HILBw/41o/xPg1kdyqTx-fG5icrZoo8A=
+/h39/XfxyGx8LJBcTPapzyPKHWe5kaSNhdBkopIYgFsACUPQ" target=3D"_blank" rel=3D"=
+noopener noreferrer nofollow" style=3D"text-decoration:underline;text-decor=
+ation-color:#222222;"><p>Source: Reddit</p></a></td></tr></table></td></tr>=
+<tr><td align=3D"center" valign=3D"top" style=3D"padding: 20px 15px 20px; "=
+ class=3D"dd"><table role=3D"none" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"center" valign=3D=
+"top" style=3D"width:630px;"><img src=3D"https://media.beehiiv.com/cdn-cgi/=
+image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/upload=
+s/asset/file/0563732e-fc0d-4697-9d4f-fd4576545eed/image.png" alt=3D"" heigh=
+t=3D"auto" width=3D"630" style=3D"display:block;width:100%;" border=3D"0"/>=
+</td></tr></table></td></tr><tr><td class=3D"dd" align=3D"center" valign=3D=
+"top" style=3D"padding:0px 15px;text-align:center;"><h2><b>RATE TODAY=E2=80=
+=99S EDITION</b></h2></td></tr><tr><td class=3D"e" align=3D"left" valign=3D=
+"top" style=3D"padding:15px 15px 6px;"><h3 style=3D"">What&#39;d you think =
+of today&#39;s edition?</h3></td></tr><tr><td class=3D"ee e " style=3D"padd=
+ing:0px 15px 15px;"><div style=3D"margin-left:0px;" class=3D"edm_outlooklis=
+t"><ul style=3D"list-style-type:disc;padding:0px 0px 0px 0px;margin:0px 0px=
+;"><li class=3D"listItem ff" style=3D"list-style-type:disc;text-align:left;=
+"><a href=3D"https://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipca=
+pnf2esHoaWUbjycwvnUbeUDUuopFmbfD0vqGnshLNCP_IMKn2I_SyjOw2GPLV99ToBFzciM9JNc=
+AEMc7Z4uG-xEexkTTzW9YZdqNQ8b0WDYmxe5sWvxTEzpp29XqIrIvX4Ls2wOOTdvkBEVCqFiVDt=
+npZ7jZfb4MV5e2var00VhEkhea2vVDwkOjSZdKGRVmrwC9nA2xc5O3dBOaltCY9vPvy6p9T4o3K=
+QgFF32l31Gt7WqrSLBBm05Q56i9le_62XlBxcZu7AXkk/41o/xPg1kdyqTx-fG5icrZoo8A/h40=
+/m_FS4kCQM5kvd9rQuIqVp8_mqqYAgX5tGpeuGsTz2vs">=F0=9F=A5=9B=F0=9F=A5=9B=F0=
+=9F=A5=9B=F0=9F=A5=9B=F0=9F=A5=9B F**king great</a></li><li class=3D"listIt=
+em ff" style=3D"list-style-type:disc;text-align:left;"><a href=3D"https://e=
+link.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipcapnf2esHoaWUbjycwvnUbeU=
+DUuopFmbfD0vqGnshLNCP_IMKn2I_SyjOw2GPLV99ToBFzciM9JNcAEMc7Z4uG-xEexkTTzW9YZ=
+dqbaWWZEjD-XBmH4rzVuK15KbndYegBou053hZzNKzh4by_NmONw5e03ZQJzIIVvArDZYaR4QrB=
+WjozD9jsN3z_42kHFtH9BBK6TvHWWw4YGn5ZZnOd5-7nrSOalG98wJYcV3lBoVgstSk_8de_GO5=
+NhAgbnOs69TLgsO0wYPD40/41o/xPg1kdyqTx-fG5icrZoo8A/h41/i0LiPZxafTiDS0FVb-RhV=
+rfM7PJngqnfTzF72yVqPqo">=F0=9F=A5=9B=F0=9F=A5=9B=F0=9F=A5=9B Meh, do better=
+</a></li><li class=3D"listItem ff" style=3D"list-style-type:disc;text-align=
+:left;"><a href=3D"https://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLk=
+Bfipcapnf2esHoaWUbjycwvnUbeUDUuopFmbfD0vqGnshLNCP_IMKn2I_SyjOw2GPLV99ToBFzc=
+iM9JNcAEMc7Z4uG-xEexkTTzW9YZd3zGaQwlmwWYSLmcXChp_wG2vqoojtYmxpwlprf5PzLltuh=
+2KPmYGTaF13HUo8aFtcxBcXDutJ3i05HWAKqWug1naftlsjjzflbA-rp2rQB1PEalUSo1V4j9gU=
+S71GJjrqvlhDygdpB7rlQM3FNeY2lJuz5qBV6LiEcTfg7SoMBw/41o/xPg1kdyqTx-fG5icrZoo=
+8A/h42/ZTGtSY6m1aHJnGaOGicI3SMAZWHUqmHxbl8y4Pha5mE">=F0=9F=A5=9B You didn&#=
+39;t bring the heat</a></li></ul></div></td></tr><tr><td align=3D"center" v=
+align=3D"top"><table role=3D"none" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center"><tr><td align=3D"center" valign=
+=3D"top" style=3D"font-size:0px;line-height:0px;padding:40px 0px;" class=3D=
+"dd"><table class=3D"j" role=3D"none" width=3D"80%%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center"><tr><td> &nbsp; </td></tr></tab=
+le></td></tr><tr><td class=3D"dd" align=3D"left" valign=3D"top" style=3D"pa=
+dding:0px 15px;text-align:left;"><h2>Share Milk Road</h2></td></tr><tr><td =
+class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;word-=
+break:break-word;"><p> You currently have <strong>0</strong> referrals, onl=
+y <strong>1</strong> away from receiving <strong>The Next 10x Opportunity i=
+n Crypto for 2023</strong>. </p></td></tr><tr><td align=3D"left" valign=3D"=
+top" style=3D"padding: 20px 15px 20px; display:none;width:0px;max-height:0p=
+x;overflow:hidden;mso-hide:all;height:0;font-size:0;max-height:0;line-heigh=
+t:0;margin:0 auto;" class=3D"dd"><table role=3D"none" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" style=3D"margin:0 auto 0 0;"><tr><td align=3D"c=
+enter" valign=3D"top" style=3D"width:315px;"><a href=3D"https://elink.milkr=
+oad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipcapnf2esHoaWUbhaJtX8WqPCXE1Y9dem1A=
+PWkDH_2GLuP_B4rmH6_IvtnACmNjju_Wj0pHFs75mfGBKaFiPFaw8qFHEYrl4SBPw8FqhE8ou6a=
+0JFh1IzXKdBrvAmJEBeuYQ-teT7CQB0u9CAdezh8HerbLf4Rux2zm05yh4fs-8Jwx7nQnxITI2t=
+AtclIl5fULJcSjgzqEqerPCia71a5BFo6c0kF4NeavnpHYUKMZips1JabD_SxKFZxMVId2rovph=
+YIcBxrrBDu3yPLcMtPNWcKvPXukxhiZIlxjwpZdLxU1QHDOq3mCI8EYVyRltg0Vr9RbctG5Mx8m=
+Ygai-TfgnkSxCuS3rsX2CCxfG7YCTMTX99-nSGdWn0ixJKAOgpIsjvaVhOyDncNt56-XrxOrdGD=
+4MSL8-9RltzguBlM8XxwvUQrFKGsA_rLA/41o/xPg1kdyqTx-fG5icrZoo8A/h43/iZbiUQAADe=
+QGq8ZwIPCsmg17ebp56F3iTETo_4QNDGU" target=3D"_blank" rel=3D"noopener norefe=
+rrer nofollow" style=3D"text-decoration:none;"><img src=3D"" alt=3D"The Nex=
+t 10x Opportunity in Crypto for 2023" height=3D"auto" width=3D"315" style=
+=3D"display:block;width:100%;" border=3D"0"/></a></td></tr></table></td></t=
+r><tr><td align=3D"left" valign=3D"top" style=3D"padding-bottom:24px;paddin=
+g-left:15px;padding-right:15px;padding-top:24px;text-align:left;width:100%;=
+word-break:break-word;" class=3D"dd"><table role=3D"none" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"left"><tr><td class=3D"v" align=3D=
+"center" valign=3D"middle" height=3D"42" style=3D"height:42px;"><a href=3D"=
+https://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipcapnf2esHoaWUbh=
+aJtX8WqPCXE1Y9dem1APWkDH_2GLuP_B4rmH6_IvtnACmNjju_Wj0pHFs75mfGBKaFiPFaw8qFH=
+EYrl4SBPw8FqhE8ou6a0JFh1IzXKdBrvAmJEBeuYQ-teT7CQB0u9CAdezh8HerbLf4Rux2zm05y=
+h4fs-8Jwx7nQnxITI2tAtclIl5fULJcSjgzqEqerPCia71a5BFo6c0kF4NeavnpHYUKMZips1Ja=
+bD_SxKFZxMVId2rovphYIcBxrrBDu3yPLcMtPNWcKvPXukxhiZIlxjwpZdLxU1QHDOq3mCI8EYV=
+yRltg0Vr9RbctG5Mx8mYgai-TfgnkSxCuS3rsX2CCxfG7YCTMTX99-nSGdWn0ixJKAOgpIsjvaV=
+hOyDncNt56-XrxOrdGD4MSL8-9RltzguBlM8XxwvUQrFKGsA_rLA/41o/xPg1kdyqTx-fG5icrZ=
+oo8A/h44/SKCBz1NVY2dqF7KB5jeV9Kj_llaDPbOtmDynHjHvzLY" target=3D"_blank" rel=
+=3D"noopener noreferrer nofollow" style=3D"color:#FFFFFF;font-size:14px;pad=
+ding:0px 14px;text-decoration:none;"> Click to Share </a></td></tr></table>=
+</td></tr><tr><td class=3D"dd" align=3D"left" style=3D"padding:0px 15px;tex=
+t-align:left;word-break:break-word;"><p> Or copy and paste this link to oth=
+ers: <a class=3D"link" href=3D"https://themilkroad.beehiiv.com/subscribe?re=
+f=3D1noEEQMdgM" target=3D"_blank" rel=3D"noopener noreferrer nofollow" clic=
+ktracking=3D"off">https://themilkroad.beehiiv.com/subscribe?ref=3D1noEEQMdg=
+M</a></p></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"font-si=
+ze:0px;line-height:0px;padding:40px 0px;" class=3D"dd"><table class=3D"j" r=
+ole=3D"none" width=3D"80%%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" align=3D"center"><tr><td> &nbsp; </td></tr></table></td></tr></table></td=
+></tr><tr><td class=3D"dd" align=3D"center" valign=3D"top" style=3D"padding=
+:0px 15px;text-align:center;"><h2><b>ROADER REVIEW OF THE DAY</b></h2></td>=
+</tr><tr><td align=3D"center" valign=3D"top" style=3D"padding: 20px 15px 20=
+px; " class=3D"dd"><table role=3D"none" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"margin:0 auto 0 auto;"><tr><td align=3D"center" vali=
+gn=3D"top" style=3D"width:504px;"><img src=3D"https://media.beehiiv.com/cdn=
+-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/u=
+ploads/asset/file/f03535c6-ca2a-44a4-b621-f6c78a8091f5/Screenshot_2023-11-2=
+8_at_10.11.25_AM.png?t=3D1701183544" alt=3D"" height=3D"auto" width=3D"504"=
+ style=3D"display:block;width:100%;" border=3D"0"/></td></tr></table></td><=
+/tr><tr><td class=3D"dd" align=3D"center" valign=3D"top" style=3D"padding:0=
+px 15px;text-align:center;"><h2><b>VITALIK PIC OF THE DAY</b></h2></td></tr=
+><tr><td class=3D"dd" style=3D"padding: 20px;"><table width=3D"100%" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"max-width:520px;margin=
+:0 auto;"><tr><td class=3D"q" style=3D"padding:20px 20px 11.6px 20px;"><a h=
+ref=3D"https://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaVUF8-tWp_PZ7xXF=
+RxKoEZjaG2LikPo94Q5uQe94d3EAVMieJyiSUaEQHtelu74hmcDSptqsF5k30O3fxcDdUPI/41o=
+/xPg1kdyqTx-fG5icrZoo8A/h45/n8Y19tC2DccpAimmL4ihS6rGg_apQqyY2zadRuqy9FE" st=
+yle=3D"text-decoration:none !important;"><table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" role=3D"none"><tr><td width=3D"100%" =
+style=3D"padding: 0 0 14px 0;text-decoration:none;width:100%;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" role=3D"none"><t=
+r><td width=3D"36" style=3D"width:36px;"><img src=3D"https://pbs.twimg.com/=
+profile_images/1607411354465406976/mGr5I2zz_normal.jpg" alt=3D"tw profile: =
+Milk Road Images" style=3D"display:block;width:36px;height:36px;border-radi=
+us:50%;border:0;"/></td><td width=3D"400" style=3D"padding:0 0 0 8px;text-d=
+ecoration:none;"><span style=3D"display:block;font-size:14px;color:#1c2022;=
+font-weight:700;"> Milk Road Images </span><span style=3D"display:block;col=
+or:#697882;font-size:14px;"> @MilkRoadImages </span></td><td width=3D"24" a=
+lign=3D"right" style=3D"vertical-align:text-top;"><img width=3D"24" height=
+=3D"24" loading=3D"lazy" alt=3D"tw" style=3D"border:0;" src=3D"https://medi=
+a.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredire=
+ct,quality=3D80/static_assets/x_logo.png"/></td></tr></table></td></tr><tr>=
+</tr><tr><td style=3D"word-break:break-word;"><p>Breakfast of Champions</p>=
+</td></tr><tr><td align=3D"center" style=3D"padding:8px 0 0 0;width:480px;"=
+><img src=3D"https://pbs.twimg.com/media/GAB5KaRXQAApHnY.jpg" width=3D"480"=
+ height=3D"auto" style=3D"display:block;border:1px solid #E1E8ED;border-rad=
+ius:5px;width:100%;max-width:480px;height:auto;"/></td></tr><tr><td height=
+=3D"10" style=3D"line-height:1px;font-size:1px;height:10px;">&nbsp;</td></t=
+r><tr><td align=3D"left" valign=3D"top" class=3D"s"><p>Nov 28, 2023</p></td=
+></tr><tr><td height=3D"10" style=3D"line-height: 1px; font-size: 1px; heig=
+ht: 10px;">&nbsp;</td></tr><tr><td height=3D"1" bgcolor=3D"#e1e8ed" style=
+=3D"line-height:0px;font-size:0px;height:1px;"><img src=3D"https://emailanc=
+er.com/edm/beehiiv/fernweh/images/spacer.gif" width=3D"1" height=3D"1" alt=
+=3D"" border=3D"0" style=3D"display:block;"/></td></tr><tr><td height=3D"10=
+" style=3D"line-height:1px;font-size:1px;height:10px;">&nbsp;</td></tr><tr>=
+<td align=3D"left" valign=3D"top" class=3D"s"><p><b style=3D"color:#1C2022"=
+>0</b> Likes &nbsp; <b style=3D"color:#1C2022">0</b> Retweets &nbsp; <b sty=
+le=3D"color:#1C2022">0</b> Replies </p></td></tr></table></a></td></tr></ta=
+ble></td></tr><tr><td align=3D"center" valign=3D"top" style=3D"font-size:0p=
+x;line-height:0px;padding:40px 0px;" class=3D"dd"><table class=3D"j" role=
+=3D"none" width=3D"80%%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"center"><tr><td> &nbsp; </td></tr></table></td></tr><tr><td class=
+=3D"dd" align=3D"center" valign=3D"top" style=3D"padding:0px 15px;text-alig=
+n:center;"><h2><b>WANT TO SPONSOR THIS NEWSLETTER?</b></h2></td></tr><tr><t=
+d class=3D"dd" align=3D"left" style=3D"padding:0px 15px;text-align:left;wor=
+d-break:break-word;"><p> Over 250,000 subscribers are throwing a party, and=
+ your brand is invited! </p></td></tr><tr><td class=3D"dd" align=3D"left" s=
+tyle=3D"padding:0px 15px;text-align:left;word-break:break-word;"><p> Tap in=
+to our network of savvy (and good-looking) crypto &amp; Web3 enthusiasts wh=
+o are eager to learn and invest. </p></td></tr><tr><td class=3D"dd" align=
+=3D"left" style=3D"padding:0px 15px;text-align:left;word-break:break-word;"=
+><p> Your Brand + Our Crypto Clan =3D Magic Waiting To Happen. <b><a class=
+=3D"link" href=3D"https://elink.milkroad.com/ss/c/8uZtYN3d4emetSgrrglemiZWW=
+H1XQUGrUHEGw8XiTdN4qdlPcGGRY8lswNzNzBX-/41o/xPg1kdyqTx-fG5icrZoo8A/h46/amsV=
+HXxZgXUJaXdqyBoP_hIty0odx633rt-BBbbEzdo" target=3D"_blank" rel=3D"noopener =
+noreferrer nofollow">RSVP to the party!</a></b></p></td></tr><tr><td align=
+=3D"center" valign=3D"top" style=3D"font-size:0px;line-height:0px;padding:4=
+0px 0px;" class=3D"dd"><table class=3D"j" role=3D"none" width=3D"80%%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><tr><td> &nbs=
+p; </td></tr></table></td></tr><tr><td class=3D"dd" align=3D"left" style=3D=
+"padding:0px 15px;text-align:left;word-break:break-word;"><p><i><b>DISCLAIM=
+ER: </b></i><i>None of this is financial advice. This newsletter is strictl=
+y educational and is not investment advice or a solicitation to buy or sell=
+ any assets or to make any financial decisions. Please be careful and do yo=
+ur own research. </i></p></td></tr></table></td></tr><tr><td class=3D"b" al=
+ign=3D"center" valign=3D"top" bgcolor=3D"#008CF2" style=3D"padding:0px;bord=
+er-bottom-left-radius:6px;border-bottom-right-radius:6px;"><table role=3D"n=
+one" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center"><tr><td align=3D"center" valign=3D"top" bgcolor=3D"#1400FF" sty=
+le=3D"padding:12px"><table role=3D"none" width=3D"100%" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" align=3D"center"><tr><td><span style=3D"paddi=
+ng-left:1px;"></span></td><td align=3D"center" valign=3D"middle" width=3D"7=
+5" style=3D"width:75px;"><a href=3D"https://elink.milkroad.com/ss/c/4MnwyC8=
+ZLgKS2W4rhpYGaVUF8-tWp_PZ7xXFRxKoEZjQYqikQtKF6M_bDSRa2sGX/41o/xPg1kdyqTx-fG=
+5icrZoo8A/h47/FVkNDXtCccrTvdOesGa5wVnzAPbTHmXq2aCgOnZhAFg" style=3D"text-de=
+coration:none;"><img width=3D"22" alt=3D"tw" border=3D"0" style=3D"display:=
+block;max-width:22px;" src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=
+=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/static_assets/x=
+_dark.png"/></a></td><td align=3D"center" valign=3D"middle" width=3D"75" st=
+yle=3D"width:75px;"><a href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxtv=
+FxLaVo0GBvXiTU5PnNrO3-1lUjjwcmIcnHYwy_D-ifWMMRbQ7iee/41o/xPg1kdyqTx-fG5icrZ=
+oo8A/h48/TROeZvgJ5ajkT2pWISXHzurf3Ye3hrbZ9B1hIc1h7b0" style=3D"text-decorat=
+ion:none;"><img width=3D"22" alt=3D"ig" border=3D"0" style=3D"display:block=
+;max-width:22px;" src=3D"https://media.beehiiv.com/cdn-cgi/image/fit=3Dscal=
+e-down,format=3Dauto,onerror=3Dredirect,quality=3D80/static_assets/instagra=
+m_dark.png"/></a></td><td align=3D"center" valign=3D"middle" width=3D"75" s=
+tyle=3D"width:75px;"><a href=3D"https://elink.milkroad.com/ss/c/AX1lEgEQaxt=
+vFxLaVo0GBvRMKOPKJ_SaqdI5lTdWQ4QnV9iXu_rzXEqON-w4FtJk8PJfS0mRaLYyHMkxnR8VtQ=
+/41o/xPg1kdyqTx-fG5icrZoo8A/h49/SCEr7YYSaGPVsjGhR3qzmbBsegRYsDGHzWa1Aj3QHfU=
+" style=3D"text-decoration:none;"><img width=3D"22" alt=3D"yt" border=3D"0"=
+ style=3D"display:block;max-width:22px;" src=3D"https://media.beehiiv.com/c=
+dn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80=
+/static_assets/youtube_dark.png"/></a></td><td align=3D"center" valign=3D"m=
+iddle" width=3D"75" style=3D"width:75px;"><a href=3D"https://elink.milkroad=
+.com/ss/c/AX1lEgEQaxtvFxLaVo0GBjjxDT3LtxS91NVxujU4ULE-s-oKnBovVWtIKQscc34m/=
+41o/xPg1kdyqTx-fG5icrZoo8A/h50/tY8As6oq0ht4o8sLWgqnKjxXvfX-BLNYv2dbTemE4Oo"=
+ style=3D"text-decoration:none;"><img width=3D"22" alt=3D"tk" border=3D"0" =
+style=3D"display:block;max-width:22px;" src=3D"https://media.beehiiv.com/cd=
+n-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dredirect,quality=3D80/=
+static_assets/tiktok_dark.png"/></a></td><td align=3D"center" valign=3D"mid=
+dle" width=3D"75" style=3D"width:75px;"><a href=3D"https://elink.milkroad.c=
+om/ss/c/AX1lEgEQaxtvFxLaVo0GBqzsqj5ZnUTV_knhG9qu20njpPaCDeB8jBFh_7mWgZfkIDL=
+x2csUNgGemOzhy5duZw/41o/xPg1kdyqTx-fG5icrZoo8A/h51/fmF1Oeb5RCcaPjNlrGB4oC8P=
+27fcubBCqAKx7Q9GNtg" style=3D"text-decoration:none;"><img width=3D"22" alt=
+=3D"in" border=3D"0" style=3D"display:block;max-width:22px;" src=3D"https:/=
+/media.beehiiv.com/cdn-cgi/image/fit=3Dscale-down,format=3Dauto,onerror=3Dr=
+edirect,quality=3D80/static_assets/linkedin_dark.png"/></a></td><td><span s=
+tyle=3D"padding-left:1px;"></span></td></tr></table></td></tr><tr><td heigh=
+t=3D"10" style=3D"line-height:1px;font-size:1px;height:10px;"> &nbsp; </td>=
+</tr><tr><td class=3D"w" align=3D"center" valign=3D"top" style=3D"padding:1=
+5px;"><table role=3D"none" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center"><tr><td align=3D"center" valign=3D"top"><p=
+ style=3D"font-family:'Verdana',Geneva,sans-serif;color:#FFFFFF!important;"=
+> Update your email preferences or unsubscribe <a class=3D"link" href=3D"ht=
+tps://elink.milkroad.com/ss/c/4MnwyC8ZLgKS2W4rhpYGaaLkBfipcapnf2esHoaWUbhaJ=
+tX8WqPCXE1Y9dem1APWkDH_2GLuP_B4rmH6_IvtnACmNjju_Wj0pHFs75mfGBL63A1GsShlg5WL=
+Z6ush-a_I3OPjs2LRCJyB1cHl7gj2eB2FxLn2PF32n0J_HK4x6rHzi0qPSqSRU-5__rVlG0FLL_=
+FSVOPfbefQ2cx4pbEuhc6lK3K2RwbVHAs9lw3qJ4qYXq-GL63AmnzsUnPPMyWacX-zKfxzkAs6-=
+LFKjxSingzSBU3lRtjC6zD6FvYyQ_Kt502-CQnEc2Dnb7NLI_7dDNTtUCWguEEKXEQzh5vXmJaK=
+d2tmmWvtfWTbOP5saRme30wWxYNh5wt1h96WQ0__Hq40wvEUpgKFg2Ye6DulvNn4ypbQjEWMV9s=
+tD0xvv0O4-xNyucB70fliY3am84L4Fe3QbrBmwIUh7x5bzgKchwg5aqF1MnPijEmzyKGZ6vxuvC=
+UbikL_BWf-NpVBh39kHpoC9KrDeNPV-wjPzZ7KA/41o/xPg1kdyqTx-fG5icrZoo8A/h52/rDid=
+zFjqju7jyO_XvyMbUsNvfK51MU9va0ST1fHw-No" style=3D"text-decoration:underline=
+;text-decoration-color:#FFFFFF!important;color:#FFFFFF!important;"> here</a=
+></p><p class=3D"copyright" style=3D"font-family:'Verdana',Geneva,sans-seri=
+f;color:#FFFFFF!important;"> &copy; 2023 Milk Road </p><p style=3D"font-fam=
+ily:'Verdana',Geneva,sans-serif;color:#FFFFFF!important;"> 603 Munger Avenu=
+e Suite 100 #1006<br>Dallas, Texas 75202, United States </p></td></tr></tab=
+le></td></tr></table></td></tr></table></td></tr></table></td></tr></table>=
+</td></tr></table></div></body></html>
+--981d2a2393b7164a50bfa311079df429d1f75cfb3f3a8164222d2690f90b--

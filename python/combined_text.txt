@@ -1,0 +1,1535 @@
+Dissecting Derivatives Data, Crypto Fundraising Brief November 2023, and more.
+
+
+
+
+
+
+
+Activity in the derivatives market continues to trend upwards, with perp DEX 
+volume on pace to reach over $75 billion in total volume, its highest monthly 
+total since February 2022.
+
+
+
+
+
+
+
+Long-time contender dYdX appears poised to take the perps ecosystem lead. 
+During the 2021 bull run, dydX led perp DEX daily volumes with volumes between 
+$4-6 billion, and today, daily volumes hover around $1 billion.
+
+
+
+For more on perp DEX data and key insights from the top players in the 
+landscape,read the full Enterprise report <> from Toe Bautista. 
+
+
+ 
+
+Today in UO!
+
+
+
+
+ * 
+Dissecting Derivatives Data <https://messari.io/article/perp-dex-data-dive>
+
+ * 
+Crypto Fundraising Brief November 2023 
+<https://messari.io/article/crypto-fundraising-brief-november-2023>
+
+ * 
+Infrastructure Sector Brief: All Eyes on AI 
+<https://messari.io/article/infrastructure-sector-brief-all-eyes-on-ai>
+
+ * 
+[Balancer DAO] Ensuring Continued Balance in DAO Snapshot Votes 
+<https://messari.io/governor/proposal/f6781c65-496d-47bf-a4b0-33c2899e4d79>
+
+ * [Aave] Gauntlet <> Aave Renewal 2023 
+<https://messari.io/intel/event/3f0eece7-875a-4c92-a940-b7df62c0c4d7> 
+
+ 
+
+
+
+MESSARI INSIGHTS
+
+
+Crypto Fundraising Brief November 2023. Bitcoin miners catalyzed a large 
+uptick in fundraising volume during November 
+<https://messari.io/article/crypto-fundraising-brief-november-2023>, while a 
+host of promising early-stage deals, including Ritual in the AI space, Privy in 
+the wallet space, and Drift in the derivatives space headlined an active 
+December in the crypto fundraising landscape. 
+
+
+
+
+
+Infrastructure Sector Brief: All Eyes on AI. As AI increasingly becomes a 
+focal point, many investors areexploring ways to get exposure to this space 
+through crypto 
+<https://messari.io/article/infrastructure-sector-brief-all-eyes-on-ai>. 
+Notably, three specific sectors, namely decentralized compute networks, storage 
+networks, and AI infrastructure networks, have recently seen substantial 
+investments driven by their AI-related potential. 
+
+
+
+
+
+[Messari Governance] [Balancer DAO] Ensuring Continued Balance in DAO Snapshot 
+Votes. This proposal from an Aura contributor aims to cap the maximum voting 
+power of any individual Snapshot voter at 40-45% 
+<https://messari.io/governor/proposal/f6781c65-496d-47bf-a4b0-33c2899e4d79> to 
+encourage increased voter activity. The proposal highlights that Aura is 
+approaching 50% of the veBAL supply, and suggests that the Aura Delegate 
+Council moves to vote proportionally to poll results rather than in a block. 
+The proposal mentions that the voting power cap could be extended to include 
+groups of addresses under a single entity.
+
+
+
+
+
+
+[Messari Key Developments] [Aave] Gauntlet <> Aave Renewal 2023. Voting has 
+started on a proposalrequesting $2,000,000, 40% paid in GHO and 60% paid in 
+aUSDC <https://messari.io/intel/event/3f0eece7-875a-4c92-a940-b7df62c0c4d7>, to 
+renew Gauntlet's 12-month engagement with Aave. This is equal in value compared 
+to the current engagement's service fee of $2,000,000, which is set to expire 
+on Dec. 28, 2023. Gauntlet will continue supporting Aave V2 and V3, with a new 
+focus on GHO. Protocol development work and anything beyond the supported 
+parameters and scope are excluded. The proposal explains that an insolvency 
+refund mechanism has been established to enhance alignment with Aave, and 30% 
+of the total compensation (in aUSDC) will be deposited in a vault for 
+insolvency refund. 
+
+
+ 
+
+ALSO POPULAR ON MESSARI
+
+ * Crypto Lobbying <https://messari.io/article/crypto-lobbying>
+ * DeFi Sector Brief: November 8, 2023 
+<https://messari.io/article/defi-sector-brief-november-8-2023>
+ * Crypto Fundraising Brief October 2023 
+<https://messari.io/article/crypto-fundraising-brief-october-2023>
+ * The Week in Crypto Policy: Decentralization & Policy Considerations 
+<https://messari.io/article/the-week-in-crypto-policy-decentralization-and-policy-considerations>
+ * Proposed Tax Rules for Digital Asset "Brokers" 
+<https://messari.io/article/proposed-tax-rules-for-digital-asset-brokers-v2>
+
+
+
+ 
+ 
+<https://polybase.xyz/?utm_source=newsletter&utm_medium=email&utm_campaign=messari&utm_content=evergreen&utm_term=week4>
+
+Polybase is enabling privacy on public blockchains using zero knowledge 
+proofs. Learn more atPolybase.xyz 
+<https://polybase.xyz/?utm_source=newsletter&utm_medium=email&utm_campaign=messari&utm_content=evergreen&utm_term=week4>
+
+
+ 
+
+OTHER NEWS AND TOP READS
+
+ * Blockchain Messaging Platform Wormhole Raises $225M at $2.5B Valuation 
+<https://messari.io/news?id=2c3fa89d-2e93-4329-b9cb-1e2daa18dd84&url=https%3A%2F%2Fwww.coindesk.com%2Fbusiness%2F2023%2F11%2F29%2Fblockchain-messaging-platform-wormhole-raises-225m-at-25b-valuation&date=1701270206&source=CoinDesk&title=Blockchain%20Messaging%20Platform%20Wormhole%20Raises%20%24225M%20at%20%242.5B%20Valuation>
+ * Republic lists profit-sharing digital security on Avalanche 
+<https://messari.io/news?id=bd27ba4b-a840-4652-8641-693d8ff4eb61&url=https%3A%2F%2Fblockworks.co%2Fnews%2Frepublic-profit-sharing-security-avalanche&assets=%5B%7B%22id%22%3A%222db6b38a-681a-4514-9d67-691e319597ee%22%2C%22name%22%3A%22Avalanche%22%2C%22symbol%22%3A%22AVAX%22%2C%22slug%22%3A%22avalanche%22%7D%5D&date=1701270000&source=Blockworks&title=Republic%20lists%20profit-sharing%20digital%20security%20on%20Avalanche>
+ * BNB Chain’s OpBNB Developers Look to More Than Double Speed in New Roadmap 
+<https://messari.io/news?id=93cad7cc-ff37-4dac-8160-9b88ed4729e2&url=https%3A%2F%2Fwww.coindesk.com%2Ftech%2F2023%2F11%2F29%2Fbnb-chains-opbnb-developers-look-to-double-speed-in-new-roadmap&date=1701268200&source=CoinDesk&title=BNB%20Chain%E2%80%99s%20OpBNB%20Developers%20Look%20to%20More%20Than%20Double%20Speed%20in%20New%20Roadmap>
+ * 
+Bitcoin Ordinals Marketplace Bioniq Launches—On Internet Computer 
+<https://messari.io/news?id=c6bc111d-68d2-4bfd-9fdc-899eee816d28&url=https%3A%2F%2Fdecrypt.co%2F207823%2Fbitcoin-ordinals-marketplace-bioniq-launches-internet-computer&assets=%5B%7B%22id%22%3A%221e31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%22Bitcoin%22%2C%22symbol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%2C%7B%22id%22%3A%22f2cfff3b-a8ae-434f-b9e3-1c81a0ba2f81%22%2C%22name%22%3A%22Internet%20Computer%22%2C%22symbol%22%3A%22ICP%22%2C%22slug%22%3A%22internet-computer%22%7D%2C%7B%22id%22%3A%2282709acc-e1fd-4125-b35c-7dd0dae2348a%22%2C%22name%22%3A%22Ordinals%22%2C%22symbol%22%3A%22ordi%22%2C%22slug%22%3A%22ordinals-0%22%7D%5D&date=1701266462&source=Decrypt&title=Bitcoin%20Ordinals%20Marketplace%20Bioniq%20Launches%E2%80%94On%20Internet%20Computer>
+
+ * UK to Hit Crypto Users With Penalties for Unpaid Taxes 
+<https://messari.io/news?id=7d26ac18-f3c6-4117-a39d-fc2bb304219a&url=https%3A%2F%2Fwww.coindesk.com%2Fpolicy%2F2023%2F11%2F29%2Fuk-to-hit-crypto-users-with-penalties-for-unpaid-taxes&date=1701254799&source=CoinDesk&title=UK%20to%20Hit%20Crypto%20Users%20With%20Penalties%20for%20Unpaid%20Taxes>
+ * 
+Aerodrome and Velodrome DeFi platforms experience front-end hacks 
+<https://messari.io/news?id=fb468b4e-c484-471e-ba07-3669d5e6f19b&url=https%3A%2F%2Fcointelegraph.com%2Fnews%2Faerodrome-velodrome-de-fi-platforms-frontend-hacks&date=1701251777&source=Cointelegraph&title=Aerodrome%20and%20Velodrome%20DeFi%20platforms%20experience%20front-end%20hacks>
+ <https://thedefiant.io/bitcoin-spot-etfs-why-do-they-matter>
+ * Binance operates without license in Philippines, regulator says 
+<https://messari.io/news?id=b73dd21d-ef0f-4c96-b05b-3ce4243d78cb&url=https%3A%2F%2Fcointelegraph.com%2Fnews%2Fbinance-operates-no-license-philippines&assets=%5B%7B%22id%22%3A%221e31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%22Bitcoin%22%2C%22symbol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%5D&date=1701246891&source=Cointelegraph&title=Binance%20operates%20without%20license%20in%20Philippines%2C%20regulator%20says>
+ * Binance's Future and Other Questions Post-Settlement 
+<https://messari.io/news?id=155c259a-1898-4908-a281-0bbf86b05387&url=https%3A%2F%2Fwww.coindesk.com%2Fpolicy%2F2023%2F11%2F29%2Fbinances-future-and-other-questions-post-settlement&date=1701233100&source=CoinDesk&title=Binance's%20Future%20and%20Other%20Questions%20Post-Settlement>
+ * SEC Opens Public Comments On Franklin Templeton and Hashdex Spot Bitcoin 
+ETFs 
+<https://messari.io/news?id=8b5fb4f0-cd59-4597-a95e-2c8c690207cb&url=https%3A%2F%2Fthedefiant.io%2Fsec-opens-public-comments-on-franklin-templeton-and-hashdex-spot-bitcoin-etfs&assets=%5B%7B%22id%22%3A%221e31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%22Bitcoin%22%2C%22symbol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%5D&date=1701212460&source=The%20Defiant&title=SEC%20Opens%20Public%20Comments%20On%20Franklin%20Templeton%20and%20Hashdex%20Spot%20Bitcoin%20ETFs>
+ * Shrapnel Game Studio Founders Say Majority Shareholder Is Staging a Coup 
+<https://messari.io/news?id=dc109d20-9883-4088-a732-1f521c3624c5&url=https%3A%2F%2Fdecrypt.co%2F207755%2Fshrapnel-game-studio-founders-say-majority-shareholder-staging-coup&date=1701207940&source=Decrypt&title=Shrapnel%20Game%20Studio%20Founders%20Say%20Majority%20Shareholder%20Is%20Staging%20a%20Coup>
+
+ 
+ 
+<https://polybase.xyz/?utm_source=newsletter&utm_medium=email&utm_campaign=messari&utm_content=evergreen&utm_term=week4>
+
+ 
+
+
+Disclosure: Authors may own cryptoassets named in this newsletter. For more 
+information, please visitmessari.io <https://messari.io/dashboard>.
+
+
+
+Unqualified Opinions, a Messari newsletter, is meant for informational 
+purposes only. It is not meant to serve as investment advice. Please consult 
+with your investment, tax, or legal advisor before making any investment 
+decisions.
+
+
+
+Advertising and sponsorship do not influence editorial decisions or content. 
+Third party advertisements and links to other sites where products or services 
+are advertised are not endorsements or recommendations by Messari. Messari is 
+not responsible for the content of the ads, promises made, or the quality or 
+reliability of the products or services offered in any third party 
+advertisement.
+
+
+
+ <https://twitter.com/MessariCrypto>  <https://www.youtube.com/c/messari> 
+<https://www.linkedin.com/company/messari/>
+
+Copyright © 2023 Messari, All rights reserved.
+
+Our mailing address is:
+Messari
+228 Park Ave S PMB 52631
+New York, New York 10003
+
+Unsubscribe 
+<http://links.messari.io/e/encryptedUnsubscribe?_r=18e87b48d077440e80cd99da76e2bfc2&_s=5b8c282fdf4f40d99b6e8a85b6ab4509&_t=wJQ6Ys1M0f7tmr8xnL_MHiURxb77JONe2y1MFYGypgVAVDE1u8YqarN45CYZlUF44MfY6N0u5-cfqHhufrWr0rWVvwG2X29f8Iu4_SePBaxToZm67FEsndoe3QbPHKFUq4hkrlMJLLV-kGdDOcWE35iOCZBhFcS_Uf_EtUCGTHU%3D>
+408 Broadway, New York, NY 10013-3699
+
+
+---------- Forwarded message ---------
+From: Mint or Skip <mintorskip@mail.beehiiv.com>
+Date: Fri, Nov 10, 2023 at 1:56 PM
+Subject: Big NFT Gaming Update
+To: jadid@metaversal.gg <jadid@metaversal.gg>
+
+
+AAA wagmi energy
+ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+
+November 10, 2023   |   Read Online
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu0_Rt4jcV-BDL15CfsCVX4VU0maktoc41rUn6ogE7CQdXSQpsneBAQKXXqQTaVOpgeobSxi4o9PZ6hVzTcVUCs-wD-vACznSDX2o69XLtumsEfBU30ZYMFQCr-mqMJmnXM19izx_IQp6NJ5Z4waFPcPDCqNrJk3bZSyc7gFKjtJjKZoAToXZwaumYLbRNQ0CAtw46LHxpnsGJX0ZubNX9MHjFizqmxI-DszYyN3XDo1CxlcqaTbOAAxPlLbYUgOsrnH_qSUQjCUIeoNm66mUmXZl8AzzPlzz2VeuzhwpmMDU_v7QZF11Uzbt6PeNfMe5boOAy9LB0UJIRNRGWGD6HAl_I06CYsfffywVXM8IqR0kxu7umuRSWK4B_xu80MA0JtqezPRVqpa9rJpvSqw5YXz494pQzluB_q2Y2Z8rS1agCJl7s_3778XqfAzhVqxV2nrfob0jl2rAN8WzlNKDFn_xnkS6s6qNOnACcBpdm5GkrNgA6Gs7k2m9OVAvHmAnzWtB0/416/ErsS7T15QAeOI6v-hXU9QQ/h0/3pJhXRf6gNzT6V56ziBaKIq5bv-V428bke9zqbjYN2w>
+
+
+Yung Cicero
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu0_RvroKKUkt_Fz9MPnJG439Ps9mUIO8Wo4Bb5valzeBBbJs_L4D1L1-ml7LfJwDDMZd-vOOFR-HA_dD2x4K8k3XxYZyfXrm8jHOE5070nJkRTFOMdv40GcdSUvMIt7tVOrT8sfpIsDJ2xssOP3WlVrpM9Tyn57llww3Rd0etT6HXmbxPA6aTENiR_PmI0HGl7nTpFVisNnjrRJoI9A11lQbWzTxwlnNhdH7Mt7PgwxW2Ovlhe-Q2_Tp7Gank5C5W9HSLPcCTfvEV3Wrb3hi_twDg0Vf24KBjHHy87VqukFxrCpzpL3dzAhhotOOr7ju4f3mJ3SMyXryVvtfPTLqEjMdytuAzkityeU8xHl8hoJqbpotT0euKYnWAz96TJiprX0WmvkEqg6S4nYR4hC_3nyFG05UeL8R1kdVsXkUq_JYmAKXUuCVGFfYk8rb1Sp0QzOJ5PRZ8zr1tlZLpDvdgyNJtSCSv9u3MGPwVyg7FsOd_CYkR4bmkDJzUJdCvl-9oAuNiHmuRylfzOLYZeNOfrOy8C/416/ErsS7T15QAeOI6v-hXU9QQ/h1/yEuffLOwDBRp5P9lRqU97A49HHeaAElCnWQhg5YBQI4>
+November 10, 2023
+
+GM
+
+The Light within me honors the Light within you.
+
+Then it asks it to buy my bags.
+
+*In today’s edition:*
+
+   -
+
+   Big NFT Gaming Update
+   -
+
+   Top 25 (with two new additions)
+   -
+
+   4 new drops
+
+*👉 👉 MINTING TODAY*
+
+*▪ **And The Absurd Was Born
+<https://link.mail.beehiiv.com/ss/c/Y70s5PRXu6OkYV6H6j9LqNEqOtFA-6Dr6XwmnlffKmLI94k1b7hcXde1yJpOOmvLCu8rv5fEz5E4tetZliErnKKJsd2aiEwRF5P_kSVqq3ZistSO9VZONIPD1NK2UcE0_RjfDotq2u6ES9vgXA2QeKn-JDO9WBNvQiLPAh2lAjbWljey61SOBEA-1270jYxfgtCWY37Mhy_kObTZ38J1GLiROTmnv-dGRMEZvhMtTUs/416/ErsS7T15QAeOI6v-hXU9QQ/h2/2UPwwji7LCbHzck9SLaxFjKs2oZhYY75F_hnVl9li00>**
+by Luis Ponce
+<https://link.mail.beehiiv.com/ss/c/Y70s5PRXu6OkYV6H6j9LqNEqOtFA-6Dr6XwmnlffKmLI94k1b7hcXde1yJpOOmvLCu8rv5fEz5E4tetZliErnKKJsd2aiEwRF5P_kSVqq3ZistSO9VZONIPD1NK2UcE0_RjfDotq2u6ES9vgXA2QeKn-JDO9WBNvQiLPAh2lAjbWljey61SOBEA-1270jYxfgtCWY37Mhy_kObTZ38J1GLiROTmnv-dGRMEZvhMtTUs/416/ErsS7T15QAeOI6v-hXU9QQ/h3/LNKgxR3-pmUw9PpqVFIcdEptLKQ623TW02HzEtesJDA>*
+
+*👉 MINTING THIS WEEKEND*
+
+*▪ **Big Boss Burn
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLajed6p2BfSfLkVVV_sjZ9A8mQco3T_q7eEbbeJe5EXUmy9qE_eeRB7vzal_OR_78VIiZ05391LWQNKtannvs34JO5FzD9y7rwc58HTu_BaZLKdJGf0OKLReEYdqO2rJKxdBboWMgGslxQ72wPgb74T0hWeLuQlulrBUmyJorzpav/416/ErsS7T15QAeOI6v-hXU9QQ/h4/Vh4SEVLkJjtGn_C9CIxG35wU0bswvqdznQ1Fq4pXZ2U>**
+by Defaced
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLajed6p2BfSfLkVVV_sjZ9A8mQco3T_q7eEbbeJe5EXUmy9qE_eeRB7vzal_OR_78VIiZ05391LWQNKtannvs34JO5FzD9y7rwc58HTu_BaZLKdJGf0OKLReEYdqO2rJKxdBboWMgGslxQ72wPgb74T0hWeLuQlulrBUmyJorzpav/416/ErsS7T15QAeOI6v-hXU9QQ/h5/Skm9ntElt25CxJXi8rpVP_oeR986tu4mFjfmEpSsPUY>*
+
+*Links for the Top 25 drops are **HERE
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5qxggkmz4L3zvuYYiHgThzx7-qSN66PU1xTKbUcRWdljM4BLWbR0dTb5jxipTzq1UqBUGznUph4ibq4_FH1BjblNOtjNtk4LWVH2g7T-IhYMGjGl35cmJ38uLLCLq3LvZgUJY1nStHxBFM8JFmtkFUvvTwd09MIWHh8-8UfPx0K-5rmMKVGxhmUoHcHkULqf5OCH6RFSmMlNoe76RmTfZjsNA5JI5Criar8WQi-1F3h_j/416/ErsS7T15QAeOI6v-hXU9QQ/h6/zzBq1RbyyHPIVBQmCd3df9ZjLlw_LKuRaSscrw95yis>*
+*.*
+*Did you know?*
+
+We have a premium pass
+<https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10WDJLelr_xHrS48-dW-98vlNhv-b70TZrEkW8rFRf7FCfve7R9IExyLSLdoOTGdWPRvCLTFuw-RNBRRml00-N-Urf7xXO2t3OyY5RIXL5ZugCgxDcmJc-4NJXmAXHVJ3V4MvVthjqSlJFcQo9xQgaAxsYh3gKuV3EJz2pyLq666sSNkg/416/ErsS7T15QAeOI6v-hXU9QQ/h7/r-laPAvujOWknVy4L-wheHIJuaz-c4xiJru9FdJXYK8>
+that gives you access to a directory of every drop we cover, complete with
+detailed information on *how to get on every whitelist* (including those
+underrated ones that aren’t already full).
+
+And for those curatooors out there, you can *get free NFTs* just by finding
+drops that end up on the Mint or Watch list.
+
+Lastly, *hang with me* and the MoS team in a private discord with weekly
+voice chats. The vibes are great.
+*Would you like to be **featured** in Mint or Skip like the above ☝️ ?*
+Then hit us up here
+<https://link.mail.beehiiv.com/ss/c/PAPlyECWq0DDQvb5TVdaeSIie3CmaILFc2jcwe0oly7qyiEi42j9FZt9sIRvnTS1df1VHWQycS6vI72ILQ_jE18IGg9UZVZB8xwD89KpUs5W7BQejtocqIcamAW5IHmk7CGLuDHGkEb42oxOBxBQ0zP11Adi7mMCv_Gvl9tI4txE8lUOMxDIZSh2tbtxQXe7/416/ErsS7T15QAeOI6v-hXU9QQ/h8/SORvyk7Z8EugF5Uv8_fKQDK5M4OXHyV1mdw03_JIpN4>
+*Big NFT Gaming Update*
+
+We mostly talk about indie cryptonative game devs in this newsletter.
+
+But what about all the big AAA game companies – the ones launching the
+GTAs, Fortnites, and Diablos of the world?
+
+Are they coming around to NFTs yet?
+
+Here’s a snapshot update on those publishers, along with some personal
+ratings based on how much wagmi energy they’re each showing as we head into
+2024.
+*Ratings*
+
+⭐ NFTs are unholy scams
+
+⭐⭐ Doesn’t like NFTs but likes money
+
+⭐⭐⭐ Kinda into it 👉👈
+
+⭐⭐⭐⭐ Turbo WAGMI
+
+Let’sa go!
+*Blizzard *⭐
+
+Blizzard’s last official blockchain comment came in 2022, when their
+President tweeted simply:
+
+No one is doing NFTs
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV4WO8yKSEUCp-V2Vujj4LdlMShVXmZ2P4rb5Tz5JbKjGrGzA2z2sBQeK355rZVAKCzwO8EbRBppoBYg4-x0-517pSPxZ69Qxlj2Uf3-lQjl0/416/ErsS7T15QAeOI6v-hXU9QQ/h9/k_ZvA6HoR1lyxZJqICNal1KmrTEBgFJOJLfoGhZNlg8>
+*. *
+
+Not looking great here.
+*Nintendo *⭐
+
+Hired an NFT expert
+<https://link.mail.beehiiv.com/ss/c/yhyjo2kOjjDbg7mnn4e8SOBxLB8nOg-yLoirQffzwgLEz0Va43WiDPb5w7FWpd6NcWlW6JmtqfqFCX-bdYvYPqTsch6Y6YtBbSx3TzZdIIH56ASwyuWzwrMhUlNI2KMysSfndTp-lA4wKNGcb5gcGOoPHC8AWskAEn-FRZoeGHrzidSocJutPUlNaXRlBF8qYF1yYZ_y72W0VJTgOUBeOETJOEP1tHMYHAOgprx60H8/416/ErsS7T15QAeOI6v-hXU9QQ/h10/7mAfeb1EIcfboDyCS8RGbzLeEDOFCe5N4Ig3_HnOuF4>
+earlier this year. But knowing Nintendo I wouldn’t expect anything until
+2050 at the earliest.
+*Steam *⭐
+
+Totally fading blockchain gaming so far. NFTs are still banned on their
+store, although some manage to sneak in
+<https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RFTgHC_absB_8UCg3VfQsw4QEBaC9rtLvETxcSDUTgcMsnBDKstCeEMlRQ9Mz6xuolWp1lhEf7WvfoCy6Ke24UQT1Q16fhLBffnfzFgJ7jLaxua1GZxERl3R9WHqYFjbicDzd8Vy-Dy7qlwnnqlZgysrLDyr2rYlaUVCoXNr_mndtd-wGfw6p2-Jw4hnE6SC7a-xFCil7GeQKWs0IrehtMruW_ZSNWCNRw-j_CiAvvbV/416/ErsS7T15QAeOI6v-hXU9QQ/h11/AHdoi7MeFLMbVcblYvZopRbMr9cn80_ymYKLeNo1pXU>
+anyway.
+*EA *⭐⭐
+
+EA partnered with Nike
+<https://link.mail.beehiiv.com/ss/c/A8FU_oEKAP1BASG6ZwIAHY47PlWQY4LEtZzTfrAMZzmWCwNtKOvlpIuCSHM-rsfcD_dA20fDFHImoaWLqmTLvyBfucNRbHNswIpJW1reBDqXAOTBm7a7MxGDtwuTro8e92tjuPBDEUi8XG_Knfgbt7oAg2AvbzkyhsktCL-8C0fLzBxhUIl4ngF5s8GaGiZXfUD1UoxE4XGJI26Krfyb3Ig5wAMN9J1Vj6xTf_vObro/416/ErsS7T15QAeOI6v-hXU9QQ/h12/ahjKDT3STADFz13KSmd8AW7YU8VtXFjjkx12c0w2IEM>
+on a very limited NFT experiment in June. But otherwise, they seem content
+printing money with web2 loot boxes.
+*Epic Games *⭐⭐
+
+2021: CEO Tim Sweeney calls NFTs
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVwDa849zg4yg98CGHSwXIzhfI7pZCU3wIjCt7B20ZMOHDlL8ghtGEvabljuz1En3QtYMZ07lVwQyM5O3OnaJS3LntozwkvzTwCrK8kULo3Fl6fsTNjeRNvPlcJTJ4PL4d7JhvwyrXwvllTQ6W0ynIW_GPbkbrfJeg7rnwRRdk74q9U3uiBdzhsjHULq9Wb66tWEkq0e96k-stx8ZgoLhhzA/416/ErsS7T15QAeOI6v-hXU9QQ/h13/o34S1ZLquNZf8zAaScOsTo2YTi66hoSW04sUTFVuYvU>
+an “intractable mix of scams”.
+
+2023: Adds dozens
+<https://link.mail.beehiiv.com/ss/c/b7gvTlyjSZuPNTDUnV2KvX5QDrFKpqMQdzwYpbQt4FxcK-wLQXjsDvK4W5uy1KDxdNBnKKxwRHdjjQmWa7EvbVb2vZ4CIuvquLyjh7n6ZgYdEuxBT1iuIdrSIASrRXUIpCSTiIyRjrLmkQYOwRuTfiv_y0OVWmv8PhWeNHYX_aMiebDhG1dLwYxktL6NSVHjwAmbsFI0dSXnCOMh_B5dioepXkWfiTZDCJtqEHVF1e0c1G1N7a4YRGyKQ8n-Qkfg/416/ErsS7T15QAeOI6v-hXU9QQ/h14/cRQAGq8aZvIv8SVC_mJjFomB4kK9W5DULrzknzYpr34>
+of NFT games to the Epic Games Store.
+
+Still no *Fortnite* though.
+*Take-two *⭐⭐
+
+Rumors were floating around that *Grand Theft Auto 6* might include crypto.
+
+Turns out there was 0 evidence
+<https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RPfV8vgQh29FRA-9oW6C5ZxPVXHyIAMqltzYXTsBjAGDmvkpAhcKfHOGHNwmMlNrIrYut1PJxMbZM2MiTUtAMZ0mfzpzYqe_z1m1ucANSr_c326IHqXkoIj1dMXlcWap6WKDHdl9Ur2dVGw28GjaAgZizjHC2Jo3Va1SMgYKGWWzu6zDfNRuLeAPQlXQjnBLYfDiMLHsN3Vx-Va3mD2QrwhYIFEVdZbWDfGfCPNth5_y5Wa2bXYLy1dcV5ZZzhAqjg/416/ErsS7T15QAeOI6v-hXU9QQ/h15/Wo3Ct9iS7puomKbyYbbdaD2YrgWyZd-fOJ0VucAcXVs>
+supporting that.
+
+In reality, Take-Two’s CEO has had mixed things
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLalNrHsky4E1UCq-wCgVQPx9MYLmq5k31mmuiR5mHHchFrecYamOC5XpFL9_ywXT8d8rSxVYTaojF1ByJYmhBWArnnmHlqptlI4kCwBc5Vv4TzVFey56hcyxGT9MZui5EYKZaR8wCfewYh1K3Xf_JDpA-jBNjwXeUFtfSQQQ6MNQRds3HCVmF7EoS-Q4LFZWGqfUCHO_yDhZsrypx1eLugh_pYLYp0wUkRRIDIoqgmvWRGxTJRpSEA7pxHrypyRH5nT_2eFF26clgZISEDr5-aCZWFVZz4GOqtWQ4A7cbrpIj/416/ErsS7T15QAeOI6v-hXU9QQ/h16/KjUCR_uHLKCZLsx0hCO0vTHqfco-ivLWqr-_mhRaXY0>
+to say about NFTs in the past.
+*Konami *⭐⭐⭐
+
+Hyped me up last month when they revealed an upcoming NFT game called *Project
+Zircon
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV1LbC8tSUZAOwlGmcnBoexEb0pphTZ2zBa0iMDLs9_mLJzOofWv1B2rQlJfATmJMlbcgMw5Vlf46ZxarOlRhUg7wB2S2Lq7jlZ_mYTa-Tp6k1ORq43AZ0ypYqTzAjYhEg6PZ7FwgIQfn-6-1qr4J8tVLF9Y_pjkA96Bjh_tan7_6/416/ErsS7T15QAeOI6v-hXU9QQ/h17/TvD2AmJ_X8lukSVWC59bo-b1HlkmAEWHLUnq72z3TPk>*
+.
+
+But their more recent update makes it seem *really *low on their priority
+list, with development not even planned until 2025 or later
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV1LbC8tSUZAOwlGmcnBoexGgmFC2dNNBQ7U70i7lC2VIKfBUcNaF8esy6Gb3QQTu8Loq5b8SPWGOTx08pHEqmeJMit1mfWjsJmCf_1u7sbS7DWXsgsQs-EO7nLvLf8BUBx6zSrquUdVgRHSSaySlV8qHZK2fXeez9yGSy8qyMIfYJzowaeZINREcUqSSgtXN6i029UMpBscx7VCBe1y6xxA/416/ErsS7T15QAeOI6v-hXU9QQ/h18/AbP74bdNL2NDbGc2HJ8gXvl-elQaO2CLBOX0zirngKE>.
+My interest is dropping fast.
+*Roblox *⭐⭐⭐
+
+Made waves yesterday
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV8syvXBDjZMusZpwRInlMMQyV41e722TXj-CKNov-Qz16xmbSkbfOuh41_IfcHUFLmOnD6yfo9IY9xeJMOYcuD-Yr3xdApQQv5tkA_asYnQOd8goouHrJdv7ujCAebpc_3v9_BkswZJB29-emphGBWmTdMApXtWZb730QXK7_WozIAduq4LaMfpz3bv6BcoyLA/416/ErsS7T15QAeOI6v-hXU9QQ/h19/XbdeKJvk7lMqZ9Ca9T7soGhAoL84TmgipBMVN7zitW0>
+when they said that NFTs were a “dream” for them.
+
+I think this happens a little further out, but with 200M monthly users this
+will eventually be a massive participant.
+*CCP Games *⭐⭐⭐⭐
+
+The makers of the 20-year-old hardcore economics space game *EVE Online
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLavCe5JRD64QZiv22ZSE6HmIl3YM0mvp9xVGqJq4X4X-QHqLZhafb5PqECPnSaOkm3E5ENanQ2OuDELBB5383O-DIzA5E-JuY4x15buiKoXTGKCSsHVA3B72GsuqyA3fFFIvrKdkp43fArgNfwL3NxCc/416/ErsS7T15QAeOI6v-hXU9QQ/h20/kCAM-4xx0VYQgqrTYXTAumUt5P1k8R7I1yviI0Hdbxs>*,
+which is more of a metaverse than most things in web3 today.
+
+Recently raised $40m
+<https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RMWDF3YSSXeNE3WcZMXRgpnJP0iRHGxiTSsqiHbA4hj32wuIkjY9nB8FqsplbTD3y4rDnN2pBZYqpnkWgazhm5T88k_unpC-HOVcKL_vvYpnhbykS7eWFjKvlFPqIwxU1QVNnYWOat_GuqIdciY-hhspjvqvk0WitA9ZtybO-Zs31G4Rtm8731Nv-nL2ihcqlSRm8w2DChxeoxHsOmLVjIgIg55TO7jI3yV1hq4RwLgK/416/ErsS7T15QAeOI6v-hXU9QQ/h21/PE1rPshZ0ogsiA7RI7Zryd6_TsXafZORGmJeEbrO5yc>
+to make a blockchain game in the EVE universe. Things seem to be escalating
+quickly.
+*Com2US *⭐⭐⭐⭐
+
+South Korean publisher. Maybe the biggest believer on this list.
+
+Launched *Summoner’s War: Chronicles
+<https://link.mail.beehiiv.com/ss/c/XQtit5lf6C0XXliqbVcGlCZrMpaCDttuQi2ZMUFCPOFcycg765g_9vFBmmIcPumQe09TI56ORJFXggFDxoFCNp9VYPdKWz5vWN8wtphnAX9YigTWeX1h0aIU2Ekka6rFVCqRXsIZwv7NAYlT7iWK9h6z6vx70eNzjoDG6KHQYSDtBKyrW2eKpM9cpezvgPQM/416/ErsS7T15QAeOI6v-hXU9QQ/h22/TFteuv_pfE_2qM-qnSqPrizoCUmBjDVj8_oc7MvvzI8>*
+with web3 components, and was getting 1 million
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLaqdcDpOJmimQl46oyW0ITAcgGKtUWLtsxOdkKtijM8NeFP4ushO7s-fluPZlgk2kv5v-7QYEF7xnZLxzr4Dx41n-dvAI2pyOJ6WiNblarvsADhfnqLfl9UdwCunnOiAsnYyOMTEGatZOE7f0Xi0xp36hpWFbO0s5fuoDliA3QhlFg886fqLwSvTaTLZ5jE3MABdXW5hh93PIgQTy5PQWX7YLJRE8XgWQJrc8tzINRXyx/416/ErsS7T15QAeOI6v-hXU9QQ/h23/7tPq_jejkXMYiNrRWo4DnJPkhHAcqPJnKrUioWB335I>
+daily players after launch.
+
+Actual quote
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLaq70ZSeyEv57xktbPkffS7DhsCUDP77MC5xUpkdy7P9Ku7iuQ9yz0jVSzLNuaQAwjdU8sdugjTha_sX8Iug5F4ttmtdBatq4Gt7V5whLzS4TT6QzprN8_85RDYp74gUfLmVUeVWDS5pycfnjhLpRC5K5VViFR_zI6tz59zYgocxB3AsgizROPIhvw3EVK6hZ2SwS3q1JvXK76PdQ9pYEe2JjH9sP78oAEwt_BItQ6xwk/416/ErsS7T15QAeOI6v-hXU9QQ/h24/pEj2yLiuxpdmkqcmzg8jalhsIH1ME69tMzxKdOL7nWE>:
+
+
+*“Right now, our focus is on: we’re going to bring every single original IP
+to the blockchain.”*
+*Nexon *⭐⭐⭐⭐
+
+Another big believer.
+
+Pivoting the ever-popular *Maplestory
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV07buTjrU6cjXup0G7E1CoGyNKqIlW20b1aygKdKVYq-5gvVlM8vcE8jXhQ5qGY7Ocjv8p2npI98qaRWUckeZy-1N27lxDibRa5jCBqynEyyo-qEGVoJHbIM3omVbWVc7KnUgNyt72fknXGdqCs1bsfRI1U98cB-cMAfOcaU9ADW/416/ErsS7T15QAeOI6v-hXU9QQ/h25/oUWmyHP6QSXpsTaPG64LbfLUPN3RkkWL_T0lM1gMh30>*
+into NFTs and has plans to go fully interoperable with other blockchain
+assets.
+*Square Enix *⭐⭐⭐⭐
+
+Went hard earlier in the year, making lovey-dovey
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLaj2hF6ZTTNaybhSiRsdgTzKcD7blfGl29Y12jkM_3XYnUEhN6jZrFK4k-2vQE74a-a21Tkw2XuPW8ymqiHgcB3swj9uw_ew7o3BfNxnzXk0L4_xlbgLcoV3xjriboGpVtzgCKG_rV694Nkzp02BpdKpUrJ94hBHAg_SJqDZm_tb9EJ1U6BI01PwxawV54CNDNnQzrWH3Z2KRkYwVYnp-J1w/416/ErsS7T15QAeOI6v-hXU9QQ/h26/9qzK6mOVmXe8ypURp_tM3k4HQm5lcxrRT--MRvT9doU>
+comments about web3 and even replacing their CEO with a blockchain expert.
+
+Now they’re finally launching their NFT game *Symbiogenesis
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVyS0HPtUFCNuicTP6kxr8eKc67C4L9CdvZB4JpwN4HJPFvuqApNQaUiz0nKIHwJ3RDm9d0YCm-FMAbcqmAi3Y3Rkjp7klck2fh0fD8zzt3ElT91qfNq-8gnfRcZT0MYJ5oGpDVx3V_3FI2mv0HYB04OiOZk-pgJR3DJEvzqe3ONF/416/ErsS7T15QAeOI6v-hXU9QQ/h27/jLcYjEwrBE11tb3Gd9DaLmcvki_OY_88r_8Dd4PsNkg>*
+– although in a very confusing and low-key fashion.
+
+And they keep experimenting here and there, like these
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLalkrSERKqmX5Vr9-apYoll-eNcoAM6JmsPYHhheBkkfh6d3ObVTIgf52s-yeMbiKbQmius4VdgPLTyiRMm9NAOsI5Eo5vaRV10C1VNlVh69qcw8uVA6UCtCO0CSLcWyPAHqI5A1htb4Nrhu8i_QTD6xftz_cpruwWLV67Ca_jbWbUtaC9ec2eo9rJqeflAt4VSjjzwNPY2ooQLQ9yEuKbcWB7p3T_pJZqhuFLrLWYeZC/416/ErsS7T15QAeOI6v-hXU9QQ/h28/mlozrmlS6T8RNl-NOAIalJ7pdc2WhtYJ1q7XetokuNo>
+ *Final Fantasy* NFT trading cards.
+*Ubisoft *⭐⭐⭐⭐
+
+One of the first to launch an in-game NFT, and get battered
+<https://link.mail.beehiiv.com/ss/c/Xusstc8D6hz_RDFW1aI2QXSXZV_4s5dJ7tTGuZVGnkIgocLLGmSjsY3u9-FRH3ZsjiUPl-qDuh0nd58stWiQbsECVg-lfMdewKhXoquDK5Ru9mXvAU1ID953xeaHSff50N6ho0O-9XIs60rrGBcD-zWIM63b_lvDexmMq3RVp70Rvkq5R7oJkmfmm89AxCng4BvWu50s2Kfv6fFV4SxUhpFP7bFzJwz3FEvfohvj-zo/416/ErsS7T15QAeOI6v-hXU9QQ/h29/VBtuds0e2amFdZsQpMBsBwdLjGHGkw2ikORZ7OnAlYc>
+by anti-NFT gamers. But now they’re back
+<https://link.mail.beehiiv.com/ss/c/Y7FVsDMOUdhiya-x7sA8RHcp47w9Fs7JbEC3wIRMZVMxSRSKJrwbH8wkNVpB2-psz1hswepNrZYLsVYJsh52L7JyLziNmIe1DdZO53aA-75WyYfmwz__IeCJ22e7Nb0EZTcAxC0x98GSqrea6v3PDsTM3fe8o006oSYv3_1KcKE4WMBQR5iUQwVkznm6uGdRcyO2xfuuc7-xXqFKpfRmVGWgn2gC9Yz0HWJQWl6HJz8_ftRwlypm9UETVoMJ42TTtjuHO6lF9Qxcfe6KbkAb_w/416/ErsS7T15QAeOI6v-hXU9QQ/h30/lZnCR1Bh-DbzLVvEpGchZ5wWadpFXcQt5gLFpgmnygc>
+with a new crypto experience on Immutable.
+
+Props for the conviction.
+*Zynga *⭐⭐⭐⭐
+
+Launched an actual NFT platform earlier this year called *Sugartown
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV6d3njXZxLSlqZ-zU3COnNKXSNijyC30wffYb3KQVacmRXRO5YVpVahKaYSdToRfbm5GLswL0Fbilv1ZLxqZtlwjZfJbOo-g6obbj-AYLPerQbRhI5-KdKPhB6Pzub2zLOwfh1PjdsKY0gIr2ksFUPUeV-7rPKzoMJ1herAlBDG6/416/ErsS7T15QAeOI6v-hXU9QQ/h31/0ULVwDOpwhDWl2jpZ2zAvL_Wa3Ppa5Z7RyJS7VAi7Hk>*,
+with its very own 10k collection.
+
+It still feels limited in scope relative to the rest of their portfolio,
+but they’re definitely in the trenches now.
+
+*NOTE: **These drops are lightly curated. Our only requirement is that they
+have recognizable founders. As usual, DYOR. To learn more **go here
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLal_Bwl4BIJDrW5aKBH5h56H9onM3Nuf3ifq7Yx4j0wfS-lzPjFelfO4W2gtz0fchUM3r9QmU0iKaV2X9DE8YBUNdut-2BC99ucolpYdzuidnBedTFH0pKDzmotLTz_Q7x7Kde2nYoh5Ub9YjY--WtkA8HkLxJl9Y-NvIWCAHQ-MXp5o0qfCP7zW9BvJyDJJJBXTMzUjZOvQKrPa7Vd_fkAfXHdI5YAHua5Rr6QlOK-sD/416/ErsS7T15QAeOI6v-hXU9QQ/h32/-HfWxvWwzLq1dqSqp2WmYTmm9dWD5dPNmBupN7d8Md0>**.
+*
+
+*Ambiguity** by SeattleSales*
+
+@seattlesale
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV4QcGmnJshnc8IvSnnw08mPgqCZLDO4e51mI1pK0SkPPohnnwp7Rm1rQg7nGtihnTD_fVJLZ6f8Hr8PiLuyL1daXm1Mjwe-jpkkKuEE_2p1KOiDmHBP-hSABUGZ_-dhvpJwfGd34Sdi0var9qF0MwV1kuSK5-5J-fIzCV4vLbNfK/416/ErsS7T15QAeOI6v-hXU9QQ/h33/D5EQGRp93WyplARqf7s1uzAvukfIPt2w2xUM2LA0NSc>
+
+Pseudonymous artist Seattle Sales, founder of art platform Seize the Culture
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV004STxrpTS02f5pX1mW81MQZko5ePdqZEmbqnmVYQRKKh6d2WPTzYZSLWkkdk1LDKFftK3kymfCyAIF62SPy_xr4Ukwn8TJ0Mu-E3L1dEwXtv-P0xac892rCJWM0e2nUc6whfrzVy-GD1spm4zJoIQUXlUtknGoMwdXvCmxzdRL/416/ErsS7T15QAeOI6v-hXU9QQ/h34/YU1ln4S_WhDk3efPltBxATny40Fln8aN7sDIXgBtkOU>,
+follows up on his recent *Swirls
+<https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10WDJKyByiUXVXbY6dGbDAH93fYBdQkNVoloAY8ZJ02u4C4qBbomXRWBgHB5quxCPQXh1874IWRDKJtZQoRoGI1nkkq3ls4kitS49012czR7Y-ceLcbu5OK5U9s7wdXauqoUYCpdXlkuZM9lyCwp0ogSvqek419fBoGlcB1pjIx47W-_g/416/ErsS7T15QAeOI6v-hXU9QQ/h35/36lo1uzm5gFKQ3XQZGb8Jbx1wdDVGZ7MO1k6sNiv--A>*
+sellout with the *500-supply* *Ambiguity
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2EB_3wi3k5e9NN72ggiE_CeaO7MnzcvVNmM9VRRc58t18kfTCSSFc-zysPK04sFQ2qCejMMBblsJ-Cw8cpENHjbXmkPq9fHZWG2DkF76YvNxr8_1XtsYDkiiXWrz0YYFm1zBXnW44BVMvt03piKbZGaegq8QZ0e7c8ifgfSl1yAs45tR_X-X_PsA3nYYhOpiw/416/ErsS7T15QAeOI6v-hXU9QQ/h36/SldscJjHUmqIV-E4bjSh5vTWMn7mHCqm9vWZKO-sQE0>*
+.
+
+The collection features pieces
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2EB_3wi3k5e9NN72ggiE_CeaO7MnzcvVNmM9VRRc58t-TuJzekzFQ4ntt4a4knFp7gP0_V__MU5A2CogEW8Mj4sD49TWP_1nX0ELgELWjA4FpiyvmxloM1jEKCO1fUxKzhrAh1-w3rtsCPpUW0jgjpZEoq0cTGV_RhdLCGeHJ1l9f5kZYdkVFOFvFyW39vAHw/416/ErsS7T15QAeOI6v-hXU9QQ/h37/u_bFI6XKdZTx1__--9MCD4OswcAP1VysQhEgGfKedh0>
+of various
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2EB_3wi3k5e9NN72ggiE_CeaO7MnzcvVNmM9VRRc58t9pIkURvO3H7ma4qwvXBA-c66n80-cr4WoPAGxHOBwsVI03Vvyv_Dfei83t1yKBN5L-fKQLptRYPq_ELRt5zUU3Al2pefHefXv6YhHwQQjPj65Wjyp3fiiJX9EpncJ-fLP4K7KrjhV6xgHHcBdwz78g/416/ErsS7T15QAeOI6v-hXU9QQ/h38/EtqKVoMaqqCJdNYwaYGQq5l6POe6NmSkRsP5k6oajyA>
+styles created with Midjourney and Photoshop (like his last), as well as 20
+unique pieces by guest AI artists.
+
+One for emerging AI art explorers.
+
+*Courtyard.io Week of Thanks*
+
+@courtyard_nft
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVxCbgGZc8FwgEiIW4MpanhB6lTL6GwS8PoZ9pj2jRXnHoHPDNQt3ws5hE3NxlGB5fCYgcRtgGWwmVaiUoSG50u_5xFo1GGiqxRJ5imRWupwGV2xZkpYlAaGJoGjxn1Y6NE3aUSF6fx1Sb7O0jqxECI5ijdhL1GJ4t6DP6pHWy0gc/416/ErsS7T15QAeOI6v-hXU9QQ/h39/ObZhgFeYwtBOppbCFC207BiE2rE1-owau4UcYkH9z2I>
+
+After selling out all ten of their previous drops, Courtyard.io is giving
+back with *Web3 Week of Thanks
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV_E-3H2_W26g7pkXT3819oZ6fvqFaZRoD8IZyATQ69P8xA36LETK5upWe0Ank5ozt_9vL_y6LunAm9BacwZPHz9FCvJg4njfaDRxd8Xk9w5NmerevCVoRzeZXgrnSxKfV_zu1f_pRYnetfZOlNPIfK9WTxwXPCBnpHhW3SxVm4Wurpj7mGJqFl9PpBCp76iZnQ/416/ErsS7T15QAeOI6v-hXU9QQ/h40/flfc7CmN39qqLH2Jg8lXKkPYQI9qM2Lrj5eO93CLYYQ>*,
+minting *400 tokenized Pokémon cards for free*.
+
+These will be split across four drops
+<https://link.mail.beehiiv.com/ss/c/A8FU_oEKAP1BASG6ZwIAHQ_2tzD4LEViULieMaWsmasjxSHEeDSK0xvyAbMDXQtjYkrWaOFob71xK3ESvXz12raRkIX7FF3nuXYbbrXxAIMVBUVSvBc4oKvnnXQVa-U-TBZLYU3xynRhsMyI4Dy9KjHS0RfEtKsF1tAFoNtPLyg/416/ErsS7T15QAeOI6v-hXU9QQ/h41/yRznEn7xRCyvzh3EjEEpDFo5zt7u2OnSxkfJCGz1ZTo>*next
+week
+<https://link.mail.beehiiv.com/ss/c/A8FU_oEKAP1BASG6ZwIAHQ_2tzD4LEViULieMaWsmasjxSHEeDSK0xvyAbMDXQtjYkrWaOFob71xK3ESvXz12raRkIX7FF3nuXYbbrXxAIMVBUVSvBc4oKvnnXQVa-U-TBZLYU3xynRhsMyI4Dy9KjHS0RfEtKsF1tAFoNtPLyg/416/ErsS7T15QAeOI6v-hXU9QQ/h42/o0IPelHSq7g40rKvMcMcgmCfEB1IJSiliQQONTO2viM>*.
+They’re all FCFS from what I can see, so better get those clicking fingers
+ready.
+
+Who doesn’t like free Pokémon cards?
+
+✨* Added to Top 25 *✨
+
+*Untitled SuperRare Drop by Pindar Van Arman*
+
+@vanarman
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV7IIO811c5UGeKBPjURb9BR78U0KFWlzYeMU3yTfApvmmH4fy-7koVL-j7zBg26JVLEG8Lc4XLkh3ndp5I271Hqi9Vtgg1qghqYzQW6ItGsyg-7ucye9DYb-WATsA2YrPCVBo4gBhbjSIl364JUZfZU/416/ErsS7T15QAeOI6v-hXU9QQ/h43/rQkklW1oGYijmW9R5yrp2SfdxSUiU2TMXR7Qzga3Pss>
+
+Pindar Van Arman, one of the top AI artists in NFTs, unearths a 2018
+project in this upcoming SuperRare collection
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV2vhmQxoNVgPdM6v5p5IVC2xEysPlMEWZiMqt_x6wv4WzMbbnxApcglXa5QsJtK6jTPz_RLHTYksH__T6zSDEB1WccdAMYqisxym-P909O5d9QRQTFAYjkKGgEeH08GK_ZBIwuYnmuH9_CcASZNvOGg-S3iTjbCxgBiy1tRvwPfnwENTAKCwvILZKSEv2tTNmg/416/ErsS7T15QAeOI6v-hXU9QQ/h44/-39mw1l0p5hnd7ykkwZAa3g7aPvuGCu-ZnkOdJ1d67o>
+.
+
+Consisting of *128 robot-drawn face portraits* with muted colors and rough
+outlines, it serves as a time capsule
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV_FsZPBhRpQaBnMPSieBysfh86Mmq-x99iMPUTHFxksxFK3kZTBC2Xv9uKxpS-hnzmIjZAcJq5XgVE-uLvOFaspvpXgZ82FwbjKyCdSTObhbyOMGjZjH38tt-qPEa-9puNLF3_LuPH8PfdmaIvACV1_VFrgg7uc1iNDjak6Uwchl-84m4thO3HNf-_0oWwr1Xg/416/ErsS7T15QAeOI6v-hXU9QQ/h45/_a2XldFTkRPTDvnQtskQ63O44nJTOfBdUTqm9x0jfV0>
+for the tech. Aesthetically, it’s similar to his Bright Moments release
+from May, *AI Imagined Faces
+<https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10WDJLTlySfX3464izBIpxF-Xnt-DM0LMI_eRY6CXysWEe5TluD8aFVSoN_SibazGEi3pQDXVZGrfTzoOstLlqVqIWBOuG7MpGT9c0uQcf9GZQf1zXolWGYS0c9Q6LKm2kIwq7vbqRQEBBq4H7cwwyu-Q5EqbkUEi4mPn4MVlNvG8XjWMxYN2mI8erqlrFmrDMWV7U/416/ErsS7T15QAeOI6v-hXU9QQ/h46/vP7Te1opZE8uS2ALEavYMUKNE9HvZpI5jYgK9wKx8fA>*
+.
+
+It hasn’t been that long since Van Arman was lighting up the market
+with *byteGANs
+<https://link.mail.beehiiv.com/ss/c/OPX4FCOEkE2kP98ui0sGrBRrOrwZqX06mj9zw10WDJK3k08z6xWpFYmHySQxTr4qyCdccwslw9E7AoAMdHmTRTiuhCvZku9Ohvj36Lr88il57fEJdIc1_lgkhPguYDFhPdNiah3ar_NyYw7_3BgHnKjhTlP2gTLsHnsAxAYNjp9osB8naoD_G3o-uZJX1tMz/416/ErsS7T15QAeOI6v-hXU9QQ/h47/rCrGasvy-FNQ626rg3cZJ8PD2fbbb6vN25FHhkXwUrE>*,
+and I could see collectors taking an interest in his earlier work, so I’ve…
+
+✨* Added to Top 25 *✨
+
+*Unigraphs** by Mulan.art*
+
+@mulan_art
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV6EPH27XhUfnS3UMJkh4iOxub_gKruOo2yXO12pi2IcGBNtGY60xmOzXNqW2ABBEiE1-BVppVrcMRB-ZV5Vb9gThJtL0U-5RwmqwViWI_zRBCgjKw6YorpbVPda0MNC3cdAeOogCDjkmExGDXiyyyhg/416/ErsS7T15QAeOI6v-hXU9QQ/h48/WOZOfMJ6vl_dGcqpyFJS_Vpo0pic7UOEQjmy4Ogi29g>
+
+The Ordinals scene is still ripe for artists, but relatively few have taken
+the cross-chain leap.
+
+One who has is Nicole Liu (a.k.a. Mulan.art), and now she’s dropping *Unigraphs
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV6EPH27XhUfnS3UMJkh4iOyBd1Dm-TOkhJjZX7Ba57BztmsC4-jSU5DTXO3gHzKxYo8FSqUWlYBU49hdb5uJfAl8EYgvTiUyKgXwTQR6nZ2C5I_0NrwdA_jU6mKcgVSIXzZ3rWv6zdKj_GlIfpyVBYdiEXvzIfpkFcxOPFhffwXqYrYXnSdMPr-ZZTT_ZuEGWw/416/ErsS7T15QAeOI6v-hXU9QQ/h49/XnTgggt5Ai0m8e6qkaxLCIz7blxrBX0Nt4O3Ny5-Z8s>*
+after selling out her 100-supply *Abstraordinals
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5qxWBgpHr1ocEsWOVwWcGttQAKsOWKKVkw-eNQ6H2WUhYNDUQW8hXSamBU36hyweLRNatb1AagSXP_HX7hJvKVvkGi4bEn2yB7pWEP7pAsS5h7QNxossQucJKx5jYBfzR0GZujQoMY4IiJdc4XYN-oaZm613ptKkq2p0IHFz8Lkttvx2Y25SI4aH9lBUCmxremw/416/ErsS7T15QAeOI6v-hXU9QQ/h50/w43vIHiaV7vAg4nO1mvFzP_pj7YQB5n76dVvv4tSxV8>*
+in May, which is currently sitting at 10x its original mint price.
+
+This upcoming *555-supply* generative collection pairs Bitcoin sats’ ID
+numbers and text names with different shapes and colors, ensuring that each
+abstract piece is unique. You can already check the pieces here
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5qxWBgpHr1ocEsWOVwWcGttQAKsOWKKVkw-eNQ6H2WUhYEiJY5LC8Fvym9mvnbo5XkTF-5DXcQKhjlSgDsPbpGKr39sxazjJeUk7YwlXgmBccqAxwkeediwE8Jce_oQh0TA2F4pDXHhb5J8QFoBIELr-pkY1YBawNLvEYjLd86aFuODKQ21f1jg0VJ8cP6xA8RQ/416/ErsS7T15QAeOI6v-hXU9QQ/h51/pOSDq0Vcmvey8iAMlt1EBcV1yWyTse3ywTs2vZonc08>
+.
+
+One for orange coin believers.
+
+Share Mint or Skip
+
+You currently have *0* referrals, only *1* away from receiving *Understanding
+NFT Value (PDF)*.
+[image: Understanding NFT Value (PDF)]
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu0_RtXoOVsNhy3eJzez8cbeV2W7vZKQaTANRPpsu-K8hcKoBzSu5ilqNW_gr3y98wC4nnQJZH4LRpm_uBg7uAbquIGjN8fwXZdkFwyMi4-OzTldjYrFAwgxuF3vWSxbwAX0Q4N7S6g6q9BxtfyzKyPXi4bpFGUbTosNiYpP4ZuI5f9jZqOs1c4Fy09pGjZFo7gCPV96oOmjVImH8-ggmBZlMo5lEjh0NvuPhuobSWoCK_5bHzAlqM-BS3RhPOuMPRQ7b0rA8BPVNyL0UU2S3ZormUQwupx5g0vV7gxw1NJkoRbr3UOIctbBpijtSDe5Fre7xpFZN7oF7gUnvC_56f6wncJh1Zf7P1BHq-x_vYWQj3b1SJsYfCCEeDv3sxlUj4n5aq0E7dT8Haopean_7wFhVlREdwKljPAmLCdy3EDabNzHQ/416/ErsS7T15QAeOI6v-hXU9QQ/h52/UDFQuAYiJWyFKlXJ-z55RuLtzEJH3QTG8wUvVP6mbL0>
+Click to Share
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu0_RtXoOVsNhy3eJzez8cbeV2W7vZKQaTANRPpsu-K8hcKoBzSu5ilqNW_gr3y98wC4nnQJZH4LRpm_uBg7uAbquIGjN8fwXZdkFwyMi4-OzTldjYrFAwgxuF3vWSxbwAX0Q4N7S6g6q9BxtfyzKyPXi4bpFGUbTosNiYpP4ZuI5f9jZqOs1c4Fy09pGjZFo7gCPV96oOmjVImH8-ggmBZlMo5lEjh0NvuPhuobSWoCK_5bHzAlqM-BS3RhPOuMPRQ7b0rA8BPVNyL0UU2S3ZormUQwupx5g0vV7gxw1NJkoRbr3UOIctbBpijtSDe5Fre7xpFZN7oF7gUnvC_56f6wncJh1Zf7P1BHq-x_vYWQj3b1SJsYfCCEeDv3sxlUj4n5aq0E7dT8Haopean_7wFhVlREdwKljPAmLCdy3EDabNzHQ/416/ErsS7T15QAeOI6v-hXU9QQ/h53/nguu8EG2NQWPh9zTX6mhG9C9SyZgpAo7pH8vDIlSe38>
+
+Or copy and paste this link to others:
+https://mintorskip.beehiiv.com/subscribe?ref=djCchum4JM
+
+*Team*
+
+*Giancarlo Chaux* — @GiancarloChaux
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVwKUZLQsIQIRzUzLhp5rQZkTy_P2COnzPA4QglptQCziyq8r8A25k5LvMRIUlEj9v2PyIIg2fQwLhtOscr9ISBD9EopazmnlX8AOa7qgo2vXb5wgewfLt6oC0zkPDHVFYr55wRwMlLJn2ZYczf_q8YNVOt6Ou_ydhJUW9-hq6-1d/416/ErsS7T15QAeOI6v-hXU9QQ/h54/dJKGzz2QwXZQtI04i89saMalm44IOtKn2YjrqKtpJOw>
+
+*Guillermo Martin* — @pikanxiety
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpV-U2GwAI9sM3Y1ZdchGf_G5Lpo9jy-9bS1NZJCailWvRpN8gJzdWVwfb79IJutRoWzOB5HjRgID3Q7dGmbE5GkKZWn8eLW2BMnzhxsInusRkN7DTtpI4SrCKBZAPwK1tIRrA0yQmLYzDoPrufQBbRF7evGSxmQX40EDn4cql5P7q/416/ErsS7T15QAeOI6v-hXU9QQ/h55/vtxWyEjEAkIksbeBjm14W8yiZPVgm_Zt7ehqh7epizw>
+
+*Jon Yale *— @JonYale
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVx6W3EFVy_dPGWF_FML52btODFIdcsMYBgFfo27WMI6qzNZ4IZPb2HbAg_N3hvWZf34AwKAitKqc22ZT-_eM_D9iSXI7nt0RGHYqmwziIc1kZErNUNYXUGC6Ip8DzN7OW906-09iOzR51yEt0KmrIiU/416/ErsS7T15QAeOI6v-hXU9QQ/h56/76neFw-NiEbGYmbhwyYLwN7XEPyslub1QJwZ0MhpGxM>
+
+
+*Tell us what you **really** think*
+
+What’d you think of this edition? Tap your choice below 👇️
+cringe <gm@mintorskip.com?subject=Big%20NFT%20Gaming%20Update&body=cringe>
+not bad
+<gm@mintorskip.com?subject=Big%20NFT%20Gaming%20Update&body=not%20bad>
+loved it
+<gm@mintorskip.com?subject=Big%20NFT%20Gaming%20Update&body=loved%20it>
+
+[image: tw]
+<https://link.mail.beehiiv.com/ss/c/KinhqNfGHv_nlAGeInQpVwKUZLQsIQIRzUzLhp5rQZkTy_P2COnzPA4QglptQCziyq8r8A25k5LvMRIUlEj9v2PyIIg2fQwLhtOscr9ISBD9EopazmnlX8AOa7qgo2vXb5wgewfLt6oC0zkPDHVFYr55wRwMlLJn2ZYczf_q8YNVOt6Ou_ydhJUW9-hq6-1d/416/ErsS7T15QAeOI6v-hXU9QQ/h57/lmuZ4dNCndUCtkYJ-qF2v-AoScSBDdWWt2QC2HLnPfM>
+
+
+Update your email preferences or unsubscribe here
+<https://link.mail.beehiiv.com/ss/c/cTxdb_h6YFeS8x-ztTM5q7-Wok-HZJqX_bfo_Qu0_RtXoOVsNhy3eJzez8cbeV2W7vZKQaTANRPpsu-K8hcKoBzSu5ilqNW_gr3y98wC4nkq7zaxA4QPF44CB07hZC3NDldKj5rCs7VZWLn0Ec6WQGrxAQBdPnV3dWS7iFuLRDNlN0N-e0D4LvogY6VhhGvHbgQEuHBQzSvSGB7iVF92GiGtOiA1QONbir4jVp6Nks4QDBRZElpHA5PNfwhqwxSrbATzpm-_58lBBDpe3eeTeYDOrjxxN6LCKZ3HOmwjBzi9tpvCvwcfakXceZgVAMPbGreYi_639RmMogG38aHIAsqiiSJjyw-cKeGkxirTQUBlGiIR4K37PWeLAYe5O_oZTOtgbuIV-HfOKFtFCYfOCU3wYo0q3Q9fAcnJQJszqK1iT_RkLdAMjhVCbvr5CExs1OuTaemdkAcUN5Lg6NvOYB6Jf8mnaNsPD9FnxPbi_SXXhuhpTvVE7BND5Yci329khx6J92koqSQk8J-v1d3AfQ/416/ErsS7T15QAeOI6v-hXU9QQ/h58/aa1XqHxglPBJzQtobHCdgjYDOv98gkXridNgAM5PRBo>
+
+© 2023 Mint or Skip
+
+228 Park Ave S, #29976, New York, New York 10003, United States
+[image: beehiiv logo]Powered by beehiiv
+<https://link.mail.beehiiv.com/ss/c/so4PCjQeYhd-a9BYcfaLal92csPoxF93Cj3F1bVz7hQs2KD3n2vOure75Ejl7sALCkXd6fibsEfITElykCOg6jcNa-A6yPM5Jm7sEBjcy0QzerE-ACL0fnbgzPKqlSxZgyxaDDUZDq9s-kiSFMkiQOCGH7qvixEDhyUcxfePKS4/416/ErsS7T15QAeOI6v-hXU9QQ/h59/-KSXbrMD-wET5hd5PoL0IbMrRnsKUKKltKFDGTHUHMQ>
+
+
+---------- Forwarded message ---------
+From: Bubbles <info@joinbubbles.co>
+Date: Thu, Nov 9, 2023 at 4:33 PM
+Subject: 12 new updates from Adam Bomb Squad, Bored Ape Yacht Club
+To: Jadid <jadid@metaversal.gg>
+
+
+See the highlights of the day from your favourite NFT projects and
+communities.
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZopTTsdjzUXUMx0bARQc8jZ9M_TP_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW51tzdm5QkV-2Blu-2FTFI1NaaduNu8I5g-2F01Bi-2BOUvh1pEtcmdMqG24eHaei0YXmTXjJHrAgih4ZGZhZdlbImfJ9WygAmYddd8i0-2F9soZkYLpogONEQEP-2BXPjTvfYsohs-2BS4YfcK1LRgwGaCOTZ8W7bBzNyh8keqhNjQkyBkgoay-2F4gzpDyR30D9g1b1t9Qw9tUk>
+
+Your personalized NFT recap for Thursday, November 9 2023
+
+Hi Jadid 👋
+Let’s catch up with the NFT projects and communities on your watchlist,
+here’s what you might have missed… 👇
+
+Actions waiting for you
+
+You have the following actions waiting for you. The red indicator shows new
+ones.
+
+Total
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TM6jK_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWnJmMUeOBZiFe4gAe7E6-2FT0SO-2BDtOR3GmglLtkqddwPpMKzqzyTIzInWw3zgi2ygJmXRJQz654bkgs6JN2D1P6dGlZlYF5SX3KmYrmjGnNou0LHrOxWPeiuBODyBAiz-2FG1MxVRURd4NwcadlHChmIyyu9RsOpW0XPxIPKAX5UG-2BC-2BFwHPXiVlQPWx2asjsvuH>
+
+10
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TMfKm_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWl0Q3Y5ScDBuoyWbqP9iiC8Bo8V5rz4FXzB0J0HMrp7SREeCSC97MvKiIOmD2bO9L56EkPr8tANpDwh6Cok1yyLiuiUZcne2kob1KXvUfpViR5jR4LkENKPnDxb-2FE0b2gor1O7DI7CNX18-2BVYhon2UOJyA0qMXnN-2FKh2ZKK9V2u05re20YS9CMJAgY-2ByKBeja>
+
+Governance
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5ToOez_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWCbQwjbBG9eJ6-2FqzNObpi-2BsIqfakN8BD1Pw0mym5PK6qQVVjCI1d5ZCSfIsKaSdkJaEg9Nec1KFTakG44W-2FLeNojGNpVW1KLBKk1jTg-2BaqVWozY9tr6EHBHCORE0W3Xzubq5JN0-2B0Fl-2B-2FKXx0TszfxzETiOlW72M8hrMbw-2FKmglPQq0jTwGdvKcfkJvfYNKWm>
+
+10
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZooWfwOYGM79xggKZaoadz5TvjIX_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWkiTXbpUC-2FX6eP1LACtZTXcmm-2FSS8QanOPDGMKR8-2FRWgdwSVtEwlPq6mqYS4ZLhQ9-2BMxYn1-2FbtXgoCxgKT7jpMp0MHPpX1LqGCcaUVFVRpvO3y80RBhsAUSGTYecRzz-2FluJYXcRI2URpZOHzMsMnLlsuY-2FqmpeVnCY9BfRInk0-2BJ1HrwXIy4me9WWUVug3yaH>
+
+Updates from your watchlist
+
+Adam Bomb Squad
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZorNK5KrN5HzXW5NPUrVhPQxaDtO0lG0-2FaGoodoBKgEiAw-3D-3D2ETk_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWJcBdwpKx7Xug3e3nGrxEK6w2qTF-2BOJiKt-2FxRE5xvmzEoSqECODO78jFLjcbMjWTZvHFBc3WyUQk8wr0aIp93cCVtxSB2lVG6ILeS8FPtDub-2BGBcanfKbhwMvF8NkcBdDfV254ZNF7UiedGGYXUwE-2B-2FNinbYlcvgk-2FSWaEd8cpu1ezvRGryNaxwK4cvvYPHA8>
+Discord announcements: 2 new
+
+@ABS Announcements
+
+Get your Squad ready! The Hundreds X Call of Duty: MWIII has arrived for
+ABS and BBS holders — check the #🔓・early-access channel to view the
+collection (Must be verified bomb holder to view channel)
+about 22 hours ago
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZorNK5KrN5HzXW5NPUrVhPQxZOV-2BEeNfkKi9JiWjpxQsIf8veas4zTVrNnvStmQWuMc-3DH-NH_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWCeOX-2Bhxt3AeeLRT6XOA2g3dmU-2BjrarRVumkuFZWMh-2BtMEh-2BtxzfiEo7cOsOXuQNC4CMawuQOs5BvyKbR9VvQDnEr7Tcg-2Ftl3hNAO5V01XpEEGvxM4xy1yGDRofJPXHtM5WeG743VTSLWWt9TVExwf8BMj6tiH3zxjQIJ-2FMWXOYC-2FDIn-2BUc-2B-2BpHOFNHrHeDdf>
+[image: :AdamSiren:] Hey, Squad![image: :AdamSiren:] @ABS Announcements
+
+We are aware that lots of holders looking for the early access link for the
+COD x The Hundreds collection (more info on that can be found in
+#📢・abs-announcements ) can't view the #🔓・early-access channel to access
+the link.
+
+*Here's the solution:*
+
+*1)* Go to #❗・bomb-squad-verified
+
+*2) *Use either Collab.Land or Vulcan to verify your holding of at least
+one BBS or ABS token
+
+*3)* Close...
+about 19 hours ago
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZorNK5KrN5HzXW5NPUrVhPQxZOV-2BEeNfkKi9JiWjpxQsIRJYce71L22yhOkff-2BsZYjKFaIeWEfHN37ttFg-2BZuSm1USlepnphOwCVczmMocCM0EtwhzhSaO6usm-2FPy1lujVg-3D84DB_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWW2wCsrt4gXbrRtOqopemD7bcHOjvQwZBHYaGW-2B4py1PDVy64AVqvyAaKCGBum2sGENwO1bPEaoH2MBkDd7smh6HBhfQBz5EywgLFBKeI-2FrpXkKzjLYxLxL2GMq9hE22xTxqEkrgS0X8d-2Fl53EVSHwRsRMeTJyTeEvE2temhm8MOrgfVT8HsEmS5-2FuHHplx5E>
+
+Bored Ape Yacht Club
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQLepk5-2FvS-2FPqc9OCeNAAZopTbvMhVgnQwLpA-2BnZFjt2HaoGtq4P5uIKHKYWHT2GJaw-3D-3DUg5p_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW9wImirtWLlzqHJ6soV8lRMKM8m6HRqrXCY5L6zIyz7XS7Om3oRY3McCqkX-2B55q-2FWqTYFFg4TOHqETcX-2BDQxufbsZkS3Gwv27668IeI0esZtMo2A1PhL3CU9Agjg1FpnpQ2Abq5YyTvfp-2F9Yi9PN93Ut4xS-2Ba6UFVL-2FCmnxCf4NMGIErIXGFjAwPjleGoEw-2BR>
+Governance Proposals: 5 new, 5 updated
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-347: Enable DAO-Wide Voting for Working Group Stewards
+ABSTRACT
+
+The purpose of this proposal is to give voting rights back to the broader
+ApeCoinDAO community and its delegations for Working Group Steward
+positions.
+
+The Ape Assembly was established as a Governance Working Group Initiative
+outlined in AIP-239, aiming to facilitate Working Group Steward elections.
+However, with as few as twenty active voters in recent weeks, there are
+growing concerns about the legitimacy that those elections would carry.
+Furthermore, we need Stewards who have...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YGz7GfyH9BUV3yTdoTd272qbA5882j-2FAUTSRkbF0PUhdoOXpIHAhyaeHWvPpO7VKZhxN84K9tHok-2BhygzV3KB-2FrAWUrt-2F5GtUnj0kIuCESAs-3DsEi-_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWwR8b3Mbml7z7NX2UiLHShlVst0-2BPiBGPjxQlQscjw9os9EZbuYDQ7gOxguPoH4zYNgTkqpCJZ8-2BaDkk3PqbHCmoN1FAijBnmdWzQlvvJV1L7qPZUssu5cCXn0Jp4OuKJTSDeCwwqk-2BrVtM3QEQLn4W2-2BQoEUOKmYyiD9QCJJelyY1xqtDgbVnaeliiHsG2kn>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-356: ApeCoin Papercraft - Resubmission
+ABSTRACT
+
+The project involves creating a papercraft digital model of the Apecoin
+logo. This digital product will include a comprehensive guide/story of
+Apecoin, an enhanced digital papercraft that can be easily printed, as well
+as assembly instructions. Every element will be meticulously designed in
+alignment with the Apecoin brand. Everything will be available through a
+linktree webpage and we will promote it via a new X account
+(@apepapercraft).
+BENEFIT TO APECOIN ECOSYSTEM...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y6l3s68GTlIDioye93-2BQ80EyVHTw9gwY4LNsIaDQzKrLDwj7E-2B-2BAaAho9lBa3-2F1LocSit-2FvaSnOLyGRJ4BmqducJz4PUQoH22mY2ZQUTBDd4-3Dft0f_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWYYb08Ioa3G5Myqdh5QnYg5C8tbX9JMUIluxRbuC2IxLOfPYm3HxNYfpMampiosaE9ubCHQ-2FDAexxCoJ4a8ORdJaLSmMZ3QJ4icB-2Fclp6MzruYCBO9XbjxPH7pg-2BM6B4JHeouuSbwTCn2KytbpBbxlopGvOo4Qe3K1eKVnsAKKosKFj0hkL7IOFxcHYtBMCIn>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-343: Miami ApeCoin eSports Arena Partnership
+ABSTRACT
+
+The proposal is geared towards forming a strategic partnership with ROK
+eSports Arena in Miami, elevating ApeCoin’s profile and fostering Web3
+gaming awareness. The focus is on titles adopting ApeCoin as in-game
+currency, bridging the gap between traditional and blockchain-based gaming
+landscapes. More about ROK eSports Arena can be found at (
+https://www.rokesports.com/).
+BENEFIT TO APECOIN ECOSYSTEM
+
+This partnership aims to embed ApeCoin within the emerging Web3 gaming...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YaeCy2zHRnwZuGU6e-2BjfgEgeneniMw1dmZ3RBTwbEKLIQvTBTJQZiQE55JnpkGlS4buUgAD3mog4z-2B84VHMt7aSv89pwNHmnC7aLCEzDHkJc-3DOEv__9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWPeLbCnZqQeEdTeI2rhyXTMGHkFFL4uSE51lHcDO9nuguf-2BWGPn8wZuhWjCLPw8YdXq-2F-2FwGaHMUfXktF34277JNkn9Jxu197YPOWuwufWyUyhh2UbQNt1bpUI4jkm8Uhf3yvBSBhWIaFPvdkqC0-2BJa7ri1Va5-2FiM1tccMnXagiebVlUsRyEp04mXqMC-2Fu9KVN>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-341: Bored Brewing Marketing $APE to Beer Drinkers
+ABSTRACT
+
+TL;DR - 2 Years of branded advertising on all Bored Brewing Cans & Free
+Beer for $Ape Holders at collaborated community events.
+
+We want to spread the word of ApeCoin by integrating $APE into the
+packaging of our beer. This will include creating an $APE coin beer, QR
+codes on all cans to share information about the DAO and $APE, expanded IP
+with other NFT collections to merge our common interests...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y4D7ikIR-2BFwYOqurlA9SMHQd3MKWZJr4ra4NP8pg49hoOvqSBM3ZytNwri4oZSH9DIyPlms40xrFkKm7aN92-2B05KVUMbRylJwHwCYLmcgA3I-3DCHvT_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWRiLRW5fG9lkMAR7RnujmDm2h5Yo5zcZ8sMcj7TQpg2hDRp6opgDw17G1cokz9q-2BbmTUkTdsTHQuS5ldwEqOZq3CzFCyexYO7s2HXVjxJt5Xk-2FaXxI-2B9JVSi-2Bh6qq79XU6YA-2Bc5BqzEDocPGr8OuoqrgfDLwnUE9sguU7DuAoL-2FXd1i0cH-2F2wIApPVp9kGFSI>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-325: ApecoinDAO & Mocaverse Cross-Community Spaces & Reward Vault
+ABSTRACT
+
+[image: image1]
+
+[image: image2]
+
+[image: image3]
+
+This AIP aims to sponsor MOCA MONDAY Spaces and establish a rewarding vault
+for the community
+
+With MOCA...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Y35vorwVzYGOC-2Bqt-2BBNQSH39rEYxl6UHXxOuhph3a85kCvShF4T-2FTnwVTRhK-2BzrA64PzS297wgd3g2j1VhPGCU48jJd0ULQxPED5t479Jqus-3D85tk_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWFHTTst529QhLEnUpTcbDoZTlzNPAhvxI-2BiwJ-2BfAycf0ttd6Gan6HdJrahVPx7a6cimngB1bwT4O2z7FWJlgrsaoFSI0VTRH4vGNLOYErh7IQlAP5stlPDbUmSCMx5jy4z196-2Bo5-2Fx0IZT7Q6OtbIgreP0pTDbxAqYTpWACxXA-2FSSa57mFROFrUiNe80q-2Bqvw>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-325: ApecoinDAO & Mocaverse Cross-Community Spaces & Reward Vault
+ABSTRACT
+
+[image: image1]
+
+[image: image2]
+
+[image: image3]
+
+This AIP aims to sponsor MOCA MONDAY Spaces and establish a rewarding vault
+for the community
+
+With MOCA...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YE2UqABHgcQHV3K6-2FAXS8v2I5EThbRYUTy0DcOfoIyR42o7gdj5f5RiJ4cGYLJluUf3Tfg5-2BHS-2F5g0FzDDwpqwPYWeCQTlUpA-2FEGFZbxMG84-3DdfDu_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWENVr6JDhlZ1tX-2FQL18M1yAgEh63mQ22WhuCqcYSfdjurBU0nlNffZc-2Fjel1Zdqx6tWM1LNpFX7SR9LuletQSx2AfGPnXV2ST2YwJ2ULnfQIcwZKPdYuwD2OcLklj25rEC9bvj-2FzR98ysH8spFE6sATThxq-2BmZVW10C4uHMVVE2Um5l3FvKXU6cJbcB3AORBk>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-347: Enable DAO-Wide Voting for Working Group Stewards
+ABSTRACT
+
+The purpose of this proposal is to give voting rights back to the broader
+ApeCoinDAO community and its delegations for Working Group Steward
+positions.
+
+The Ape Assembly was established as a Governance Working Group Initiative
+outlined in AIP-239, aiming to facilitate Working Group Steward elections.
+However, with as few as twenty active voters in recent weeks, there are
+growing concerns about the legitimacy that those elections would carry.
+Furthermore, we need Stewards who have...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YYp-2Bg9Ym9I60JW95-2F9V8aU6-2FEGV9QgZva-2BW-2BQtVL9ulOIteCrPDr3fDVGbhM04-2BjkOSCYImgppb-2BXJ5-2BoAyzUPFA89yPdGhjKpmChAeVdKHg-3DiHaI_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWffJERwLuXCSpkvZt-2BlHBceLloOfdXMavu1Ky6YdMtz5YaVPAAAXBAUIOIQleFg-2BoLpRMQrjIU1GwN-2FasOuwhbW4dwqFboJ3YSv1SwAcerT6YelONLLGtPX-2B-2BD4g-2F6bFPVSkJ5Y9Src86aYX6766LtW98ptKnKzp94cFxv7S4-2BABlRYWgAwUYLW65xkFXws6F>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-356: ApeCoin Papercraft - Resubmission
+ABSTRACT
+
+The project involves creating a papercraft digital model of the Apecoin
+logo. This digital product will include a comprehensive guide/story of
+Apecoin, an enhanced digital papercraft that can be easily printed, as well
+as assembly instructions. Every element will be meticulously designed in
+alignment with the Apecoin brand. Everything will be available through a
+linktree webpage and we will promote it via a new X account
+(@apepapercraft).
+BENEFIT TO APECOIN ECOSYSTEM...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52Ybqis4Lnw0bBMq3-2B6-2BCcA49VtP16QHDGHYham5uwKxCA3XY-2B70H5Q5wOiXuHBkLLYH-2F-2FdcGsbwzQ3EJqdZaUdIa30wbXfRCKGDDcAhs9Inuk-3DEshU_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW3qEnX0GbHNRDL7y2HCFOdLNy64-2F403NR6xmUah4W8FMMOgEYEsneT5wT28S6dH1XIxPZIQy6guP-2B8kb3HCZ2LFFEfksS4-2F4CeBtn-2BDF0q5CE7YEOxbtcEXgX8JyaaICOFdjsz-2FFMx5lwlLEen8T3-2BnmwYwLcUG-2BYLGnwiLkybltq11jGbf9T9BmoY41o6-2FDv>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-343: Miami ApeCoin eSports Arena Partnership
+ABSTRACT
+
+The proposal is geared towards forming a strategic partnership with ROK
+eSports Arena in Miami, elevating ApeCoin’s profile and fostering Web3
+gaming awareness. The focus is on titles adopting ApeCoin as in-game
+currency, bridging the gap between traditional and blockchain-based gaming
+landscapes. More about ROK eSports Arena can be found at (
+https://www.rokesports.com/).
+BENEFIT TO APECOIN ECOSYSTEM
+
+This partnership aims to embed ApeCoin within the emerging Web3 gaming...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YZO5xmqpBJMcSDi3eW2sHiG2pEds6H0R2VfmY57DZcJRdX6icKjm0YE3sa6p8TplCO8cjFkWry6O8keaAABpHDkewGYJw814i7mAPENUDtCw-3DhrXl_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW7nq0H9XEfJN4l6p83aMTIpr58i20-2F0vNceHJ1BUZdVtXGqVRK52dS0g-2F1ZvpH-2B16AcrlrpP3ePfECqwRf5ghYwg2pJKEjW2feI886EYC2-2F7ReZ95ZcCsqkXYSOYfc5zALOOX0roYOr-2BAZ9C5GdngMwHHFPqZ-2BJYuLu789TaRHxBGMYdFvs7Jn6jXE6QauNio>
+PENDING
+in 6 days
+
+ApeCoin DAO
+
+in about 5 hours
+AIP-341: Bored Brewing Marketing $APE to Beer Drinkers
+ABSTRACT
+
+TL;DR - 2 Years of branded advertising on all Bored Brewing Cans & Free
+Beer for $Ape Holders at collaborated community events.
+
+We want to spread the word of ApeCoin by integrating $APE into the
+packaging of our beer. This will include creating an $APE coin beer, QR
+codes on all cans to share information about the DAO and $APE, expanded IP
+with other NFT collections to merge our common interests...
+Read more
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOfVMPEExon4ugVcKgEfyO8nOzzm79gfa0jjm-2FhQc52YoGLUxT82OjsSxW5sQ66KPzuDHrocy48O7swicKqcrXdg8kx1ubwWQCsZdElzdBS3P9SoX333psZVJYDfJI7PWfYhSRQlC10EyGF2TeGVtJ0-3D2CYF_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWLllXnpzNa-2B2oHYhpobKRBYGlq-2Bg7aaHqQ0BzVKxcRYTW-2FUp9QUFjiGvzuXRrv0QjfC1eyTNSUTlSi5FY4-2B2lXi2JtbiNJJGjri3-2Fd1m-2F-2F-2F41Ag-2Fd76n-2FpuQVOueI4Pu9n10hSoFKgd4EHwbXhA0G4sO2FR9qREu-2B7QSi4b4LykmyQyeqcNeoFuO0KEpjNAaM>
+PENDING
+in 6 days
+And that's a wrap! We’ll check in again tomorrow when it’s time for your
+daily recap.
+
+*Interested in more projects and communities?* Select them here
+<http://url9462.joinbubbles.co/ls/click?upn=LvhhPJWKMkWFaON4cXP-2Bvr3i8EPi98Z7X6TV3Vv-2F4y-2F0mzJGDfGK9vTVynd6LAFQX2srB-2BT7Eo2Qzk-2F3i5ujwY1K0HCtQSJleOccdbt-2BQEpacgqOXCvHhKtxaopSsDFH2Z-2FM42vhL6G7uHoQdMkLtpr84r0HLF8jxDzTP8qy1ruqr4XxvFqV4L-2BX-2FiIWSJwdIXQCno7P6ghSpijyI0aS5iHTgfI9s1eMhUZmIFs8KOR1tv2zwHolIDJLkbkz1jBW8KbQNgnuBxTvZbfMyzFcuf4WuwYfhiITDNrQgaiZhPK4lJGgkAuvArPe7MWeGWGtp6e4P9NmFLAv95lRcEthGZlXJBo2RM20xxJzjq-2FY7CavLYnq38XfWpC2f59P8o6EzOrxJ6C33pfrggXfzpvtIJ-2BKVH3yJIOSZJhb7pCwn1SclzrXedcA2FGd-2FK-2BU6PyTBNuokp929MiQt75oJeBZ-2F-2BmT2KCxWRn4CqR93pk0OyieKMp68eITAPYsDF7Zu8kng-2FAxEV4MhPGJAAJQGqhIBPSnbbI56OG-2B8MqP2MyJlzDAuqSXVobEfUst6Q3TeKI72y2eWcfiQFqlYkw4DGW5-2FyZ4UqdkULo5B-2B-2FSxm4Uaf5aNjg9YpjCM6JFv9FimPpTYTeB-2BAzW49R2INAMhOi5ECL-2BkxOjXFy80OFYqe7NXe02xxGOB-2FDw3u7UoHEFMKzOnUa9_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWttgOJvXUH7rIVlR9MS-2B7GtLww8ArIjV3-2BJKmncshRh-2FsJnc2qD76x2WA9cM5ZzFzrlevjc4iQT0r9Vqzt1MyQGpBKnPZVgLKQ5dwPxRfhRdOQz2g9SkI9H6s8Nx-2FVIPnmIQgoXRWWlZve5GLc-2BKRsC-2FrSMhMlIF50OO4IEbiPoqfPWi3t17oSRRKzejhyzfS>
+to stay in the loop.
+[image: Twitter]
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQH2fE3KUmocKbuA8LR1TSAZ6qfgXnVcU5Q2M53FsdrUbiUrl_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQW-2FIA9GV11SzST1HqwbWntDxiDgzy5cjwsGS-2Fg8Ch4eU5PjIjM-2FpVePiCBBJjzzVXejuvTKvawgGxlv5Y3215RhEPy-2Ffe77zwmntQt1-2BAcJLX-2B2PhpIQvBlaGiOHvNJQ3hV625dCRLDwLRdqr02OwjtahpoQk7ZefuOdjhIJwIFr8-2BEaD4qlpQwqdJogTUeFwz>
+[image:
+Instagram]
+<http://url9462.joinbubbles.co/ls/click?upn=yZhGP6XJOXFb0O33ManHQOvjIq1HNKENGKR7vLnK93PU4zUeyeEMEZmyFFj-2FsNDUWTw7_9vBCaSh33TYIVli94zbbq0ADEm-2FBXEzOxmsHfKHejg1eLwprTW8-2B4WMwZRd4fzeTTdVlDpZ0l1shJbfZntnpulvSKjEWZ1iGeuOBA2Yy9cCgUpNiyHvF8SM0zP-2Bff4HCwWFg0zG1jo6aMigrx74z4qFTcVzNGjvtJmaKzQmanh03ctTISkYmSdWQSjTDCYQWVu66WQgP0xluvgzBUR1kGGKCxvpVdnI2kLyxdUgwky27exsl3rxXMSzkAwAKKEDgoWKO-2FZP7u4gGQryv7apExzLCRL-2FNI3rNKNYhXdDbU6bwwcvCZnPmzvU0p-2Fy1tqIHvRgt1kqpx6EhcJwtodnovO7tQTptwvMWlgvX0lh0yy7QJsJ0WBGKCbTojy-2Frrton>
+
+, ,
+
+Unsubscribe
+<http://url9462.joinbubbles.co/asm/unsubscribe/?user_id=26516605&data=eEUytBXbf0zWBn-Wwf7wC3LRcJ-xYns1viyPIUJn5OVoMDAwdTAwMGz5Rmi1vBQGlbFsBGF6YBP_vVyCQhLtpwEs3GUUFeHwRzAonXkU-KooOLdvu1vEmehkxs6p9lIddIM0zQNA-vFdde1p1CJyRhS3cpZYqj2H6uhiYz3zRVkZauSwzdHcD1yEVwrLzdSR2jk4oZ0PmpPwPf7lbfpJE8gagyfoFrBEWd0zi-Gvb1XDTCH9FQGWuB43u57BmKKbxqXoFjePuJedySLVLtnugRrw8XCVqpToSfqf0ebb5ye5mHo1ZDlPVEQmuqMqh4QjasoQ-n2EdaQbfGl-hTdgHPvYhJk2nUC4aY6sLNk_XAcefc8J7SkxEik5t7KNwV48vrQidMJz_hofWDTChYAX3iEgPf3MZVQZvCWc5hrElNZj87zV4jsZj04m8b8kWNufgqPgYD-qOwpHWxEqnWZ2W71ZONyGrEmIraXDX6ZMSTSTnxYdkawyFym-iDGlryLKIcHFT20o7RnGAOxK68_cp_prZOSiJeqwujBidDb84-iMTn2tv9QTWA==>
+- Unsubscribe Preferences
+<http://url9462.joinbubbles.co/asm/?user_id=26516605&data=JqlFTIGJfjOHzIrDu8swb9xTnsYoUfW9HRG9UwVFOg1oMDAwdTAwMHAaZXHo-hzIOejr8NBxVRJrh_AO2PzQ6-FCOUSXOdlyr5i108zXhs_GLNbbnU183tXcjFDJ9oljrKJ4AkG17wqt6SnFzHsLFShjtm-VHNI0dBHMBTWd2eG8Y9frWIWs0ODYpsm_GjIvGkzO79OoTJ0WTqi7lbIuIXQakNpXounymDtQFCL34gG2-9Gx4k-Q_-135Rz_CKpvU1Asi5UYnJ2a7-v8czRtQkZ-pUElYFjxBaEuaayql79TSh8o6-m5K-m-P0lJ7XG3DoTksK14HQ4KwoNr7e1ay2H9WThBRbVfFPAcrx9rWd2uGngbj6cg-CQXfj6UByWwc8hVvcdgZE0r2wk-3hlz_rMVmoTRGdmQqkslYHZgJQUFNll5pvd4LobVLxbu92Lw3L8qNoZm_4Sn_s7omm-Pvxo5ARWb8W8QMH0vH-G316bMMRsm0QEWx9HcRYxMmq2i9XjEfAahxBVdCLfpzmYD025JAsRfd1wt>
+
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fd7a86fd-728d-4f99-b07d-21dc86da6482/Screenshot_2023-11-28_at_8.12.05_AM.png?t=1701177166)
+Follow image link: (https://out.milkroad.com/Phemex1128AdIntro)
+Caption: 
+
+**Today’s edition is brought to you by **[Phemex](https://out.milkroad.com/Phemex1128AdIntro)** - a top exchange for trading crypto and derivatives that is entering the final stage of its Phemex Token To The Moon event.**
+
+[Today's event is live right now!](https://out.milkroad.com/Phemex1128AdCopyCTA)
+
+———————————————————————————
+
+GM. This is Milk Road. We make crypto clearer than your ex’s mixed signals. 
+
+Here’s what we got for you today:
+
+* 3 trends to keep your eyes on 👀
+
+* $600M+ is being unlocked this week 💸
+
+* Bitcoin’s circulating supply in profit hits multi-year high 🍪
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/574cded8-6a14-4e00-9fb6-fd736bc7d3fc/Screenshot_2023-11-28_at_8.30.19_AM.png?t=1701178237)
+Follow image link: (https://milkroad.com/fear-greed/)
+Caption: Prices as of 9:30 AM ET. Click here for our Fear & Greed Index
+
+———————————————————————————
+
+# **3 TRENDS TO KEEP YOUR EYES ON **👀
+
+Graphs are everywhere in crypto. 
+
+**The problem? **They’re hard as f*ck to understand.
+
+It’s like trying to read a book… except, it’s in Spanish. (and I only know about 5 and a half Spanish words).
+
+**Well, today we’re gonna show you 3 important, easy-to-understand graphs. **No Rosetta Stone needed.
+
+Let’s dive in. 
+
+### **1/ INSTITUTIONAL MONEY KEEPS FLOWING INTO CRYPTO**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/013bae98-6253-461d-8c1d-7d57b186197d/Screenshot_2023-11-27_at_5.02.18_PM.png?t=1701182066)
+Follow image link: (https://jbutterfill.medium.com/volume-159-digital-asset-fund-flows-weekly-report-0103828f4a3d)
+Caption: Source: CoinShares
+
+**What happened: **Digital asset investment products saw [$346M in inflows](https://milkroad.com/news/crypto-funds-witness-346000000-inflows-heres-why/) last week. 
+
+According to CoinShare’s [latest report](https://jbutterfill.medium.com/volume-159-digital-asset-fund-flows-weekly-report-0103828f4a3d):
+
+* [**BTC**](https://milkroad.com/bitcoin/)** led the way with $312M in inflows. **Bringing the year-to-date total to $1.5B. 
+
+* [**ETH**](https://milkroad.com/ethereum/)** saw another big week of inflows.** $34M last week and $103M over the last month. (It’s almost evened out the run of outflows earlier this year).
+
+* **Some altcoins also saw minor inflows.** The top tokens (not named BTC or ETH) that saw inflows were [SOL](https://milkroad.com/buy/sol/), [DOT](https://milkroad.com/buy/dot/), and [LINK](https://milkroad.com/buy/link/). 
+
+* **Total assets under management (AUM) rose to $45.3B. **It’s the highest level in 1.5 years. 
+
+**Why this matters: **This was the largest weekly inflow since late 2021. 
+
+Oh, and it also extended the streak to **9 straight weeks of inflows. ****_chest bumps all around**_
+
+CoinShares analysts believe that the run was “spurred by anticipation of a spot-based ETF launch in the U.S.”
+
+We’ll see if the streak continues next week.
+
+### **2/ STABLECOIN SUPPLIES ARE INCREASING**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cbc80c40-f820-4d24-aed8-15b0c8102700/Screenshot_2023-11-28_at_9.06.08_AM.png?t=1701182097)
+Follow image link: (https://studio.glassnode.com/dashboards/mrkt-stablecoin-supplies)
+Caption: Source: Glassnode
+
+**What happened: **[Stablecoin](https://milkroad.com/stablecoins/) supplies are up $2.2B over the last 90 days. 
+
+**Why this matters: **Earlier this month, the 90-day change in stablecoin supplies flipped positive. It was the first time that’s happened since May 2022. 
+
+(You’ll need a magnifying glass to see that sliver of green on the graph, but it’s there. I promise).
+
+This is a positive sign that on-chain liquidity is improving.
+
+### **3/ EVM CHAINS ARE SEEING BIG TRANSACTION COUNT INCREASES**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/958f5bf3-573c-4bb5-9a84-e8baea5612a7/Screenshot_2023-11-28_at_8.09.27_AM.png?t=1701182169)
+Follow image link: (https://www.theblock.co/data/scaling-solutions/evm-chains-stats/transaction-count-for-evm-chains)
+Caption: Source: The Block
+
+**What happened: **Alternative Ethereum Virtual Machine (EVM) chains are seeing BIG increases in transaction counts over the last week. 
+
+* **Fantom** is up 1,321%.
+
+* **Celo** is up 1,277%.
+
+* [**Avalanche**](https://milkroad.com/buy/avax/) is up 857%.
+
+* [**Polygon**](https://milkroad.com/buy/matic/) is up 155%.
+
+**Why this matters: **Ethereum is like the DMV. (aka the Department of Motor Vehicles),
+
+If you don’t know what that is, just imagine hell on Earth. Now add paperwork, super long lines, and voila - that’s the DMV. 
+
+And like the DMV,  Ethereum can be slow (~15 transactions per second) and expensive ($10-$100 [transaction fees](https://milkroad.com/ethereum/gas/)). 
+
+As more people use Ethereum, the slower and more expensive it gets. 
+
+**That’s where EVMs come in. **It’s like having a scanner machine at the front desk of the DMV. It checks all your paperwork and completes your transaction, instead of having you wait in line all day long. 
+
+It’s fast, cheap, and there’s no waiting period. 
+
+(Btw, as we get closer and closer to another bull run we predict that more and more people will look toward EVM solutions as a cheap alternative to Ethereum’s main network).
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7edb708c-9a16-45dc-a6eb-d8b6189631b5/Add_a_subheading-2.png?t=1701177228)
+Caption: 
+
+----------
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ec448164-e12f-41fb-aff5-0a1babd22707/Screenshot_2023-11-28_at_8.14.04_AM.png?t=1701177257)
+Follow image link: (https://out.milkroad.com/Phemex1128AdBanner)
+Caption: 
+
+# **[THE FINAL STAGE OF YOUR MISSION IS HERE](https://out.milkroad.com/Phemex1128AdCopy)**
+
+Phemex is about to kick off what may be the most thrilling week in its history, and they [extend an invitation](https://out.milkroad.com/Phemex1128AdCopyEvent) to all crypto enthusiasts to partake in the exciting lineup of activities set to unfold in the coming days!
+
+First off, the Phemex [PT Bidding](https://out.milkroad.com/Phemex1128AdCopy) is **live right now, and ending soon**. You can join the event for fair and risk-free [PT Bidding](https://out.milkroad.com/Phemex1128AdCopy), which is running between 14:00-20:00 (UTC).
+
+Following this, [PT Staking](https://out.milkroad.com/Phemex1128AdCopyStaking) kick-offs on **November 30th**. Anticipation is running high, given Phemex's commitment to use a portion of its daily USDT contract trading volume for the repurchase of PT. These repurchased tokens will then be distributed as staking rewards.
+
+Last but not least, Phemex invites the entire crypto community to **explore their trading platform**, familiarize themselves with the unique features they offer as they get ready for mission launch on November 30th at 15:00 UTC. 
+
+[Click on through to learn more about Phemex Token to the Moon event and join the fun! ](https://out.milkroad.com/Phemex1128AdCopyCTA)
+
+
+----------View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0563732e-fc0d-4697-9d4f-fd4576545eed/image.png)
+Caption: 
+
+# **$600M+ IS BEING UNLOCKED THIS WEEK **💸
+
+Every crypto trader needs to know about **token unlocks**. 
+
+You see, when a token launches there are early investors, employees, developers, etc, that receive tokens for cheap (sometimes even for free).
+
+**But the tokens are “locked” for a certain period of time.** This is so they don’t immediately dump the tokens, take the profit, and run to the beach to sip on margaritas.
+
+Well, check it out… 
+
+**There’s $600M+ worth of crypto tokens being **[**unlocked**](https://token.unlocks.app/)** over the next week. **Here are the top 7 biggest unlocks that are happening:
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9f2b206a-6e79-412a-a4a1-eb39f6b384ff/F_9Y9BiWwAAB0K1.png?t=1701183054)
+Follow image link: (https://twitter.com/top7ico/status/1729198790962298929)
+Caption: Source: @top7ico
+
+Token unlocks are usually followed by one thing… **price volatility.**
+
+And with some of these projects unlocking $40M+ in tokens, we expect prices to move up and down like it was the Drop of Doom at Six Flags.
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f1c36e79-1bca-46b2-8d90-d0c5d7443522/image.png)
+Caption: 
+
+# **BITE-SIZED COOKIES **🍪
+
+[Bitcoin circulating supply in profit hits multi-year high](https://www.theblock.co/post/264818/bitcoin-circulating-supply-in-profit-hits-multi-year-high)**. **The current percentage of bitcoin held in profit hit 83% - the highest level since November 2021. 
+
+[A U.S. federal judge ruled Changpeng Zhao must stay in the U.S. as he awaits sentencing](https://blockworks.co/news/binance-changpeng-zhao-us)**.** Zhao pleaded guilty to breaking anti-money laundering laws last week and is scheduled to be sentenced in February.
+
+[Jito Foundation announced it's launching a governance token called JTO](https://www.theblock.co/post/264820/solana-mev-developer-jito-launching-governance-token)**.** The token will help manage and develop the Jito Network (a Solana-based liquid staking protocol).
+
+[The SEC says it's been trying to serve Richard Heart a lawsuit for allegedly selling unregistered securities for weeks now](https://www.theblock.co/post/264702/the-sec-is-having-trouble-serving-hex-founder-richard-heart-with-its-lawsuit)**. **The problem? The founder of Hex and PulseChain is nowhere to be found. _It’s Catch Me If You Can, in real life._
+
+[Circle partnered with SBI Holdings to expand the USDC stablecoins presence in Japan](https://www.theblock.co/post/264708/circle-seeks-to-expand-usdc-presence-in-japan-with-sbi-holdings)**. **SBI is looking to register in Japan to help circulate USDC stablecoins, while SBI Shinsei Bank will offer banking services for Circle.
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f1c36e79-1bca-46b2-8d90-d0c5d7443522/image.png)
+Caption: 
+
+# **MILKY MEMES **🤣
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8a4bff8a-7daa-41b8-a191-7956e75d4fdb/Screenshot_2023-11-28_at_9.57.09_AM.png?t=1701182712)
+Caption: 
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/92d88782-8937-4e71-8689-35040674740a/every-single-time-v0-k0tz9ad46x2c1.jpeg?t=1701182266)
+Follow image link: (https://i.redd.it/every-single-time-v0-k0tz9ad46x2c1.jpeg?s=7e0748d0ebe1a98256e58200b9c3facddab9e66d)
+Caption: Source: Reddit
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0563732e-fc0d-4697-9d4f-fd4576545eed/image.png)
+Caption: 
+
+## **RATE TODAY’S EDITION**
+
+———————————————————————————
+
+Share Milk Road
+
+You currently have <strong>0</strong> referrals, only <strong>1</strong> away from receiving <strong>The Next 10x Opportunity in Crypto for 2023</strong>.
+
+Or copy and paste this link to others: https://themilkroad.beehiiv.com/subscribe?ref=1noEEQMdgM
+
+———————————————————————————
+## **ROADER REVIEW OF THE DAY**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f03535c6-ca2a-44a4-b621-f6c78a8091f5/Screenshot_2023-11-28_at_10.11.25_AM.png?t=1701183544)
+Caption: 
+
+## **VITALIK PIC OF THE DAY**
+
+Tweet:  (https://twitter.com/MilkRoadImages/status/1729515505428377922)
+
+———————————————————————————
+
+## **WANT TO SPONSOR THIS NEWSLETTER?**
+
+Over 250,000 subscribers are throwing a party, and your brand is invited!
+
+Tap into our network of savvy (and good-looking) crypto & Web3 enthusiasts who are eager to learn and invest.
+
+Your Brand + Our Crypto Clan = Magic Waiting To Happen. **[RSVP to the party!](https://out.milkroad.com/advertise)**
+
+———————————————————————————
+
+_**DISCLAIMER: **__None of this is financial advice. This newsletter is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. Please be careful and do your own research. _
+
+
+———
+
+You are reading a plain text version of this post. For the best experience, copy and paste this link in your browser to view the post online:
+https://themilkroad.beehiiv.com/p/3-trends-keep-eye
+
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/934026e2-d1c7-46de-9715-5d3f808a0f6b/Screenshot_2023-11-29_at_7.10.53_AM.png?t=1701259897)
+Follow image link: (https://out.milkroad.com/Dopex1129AdIntro)
+Caption: 
+
+**Today’s edition is brought to you by **[Dopex](https://out.milkroad.com/Dopex1129AdIntro)** - a decentralized options exchange with cheap premiums and capital efficient LP returns.**
+
+[Traders: Dopex v2 (CLAMM) is now live!](https://out.milkroad.com/Dopex1129AdCopyCTA)
+
+———————————————————————————
+
+GM. This is Milk Road. We’re the Crypto Whisperers - we break down complex concepts and make them easy to understand.
+
+Here’s what’s on the menu today:
+
+* Happy birthday to the Bitcoin halving! 🎂
+
+* OpenSea’s monthly volume dropped from $5B —> $50M 📉
+
+* Coinbase gets subpoenaed 🍪
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/66def3e9-1b05-4e21-96b8-d2b31e3cbf37/Screenshot_2023-11-29_at_7.21.16_AM.png?t=1701260491)
+Follow image link: (https://milkroad.com/fear-greed/)
+Caption: Prices as of 10:30 AM ET. Click here for our Fear & Greed Index
+
+———————————————————————————
+
+# **HAPPY BIRTHDAY TO THE BITCOIN HALVING! **🎂
+
+**11 years ago**, **[**Bitcoin**](https://milkroad.com/bitcoin/)** had its first halving. **
+
+**NOTE: Ok, ok… Bitcoin Halving’s 11th birthday was _technically_ yesterday. 
+
+But I have _‘Forget-Everyones-Bday’ _syndrome, so if it’s not on Facebook there’s a 100% chance I’ll miss it.
+
+Anyways, happy belated to the Bitcoin Halving.
+
+**The crazy part? **The next halving event is only about 145 days away. 
+
+I know, it’s kind of confusing. So let me explain. 
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/25328856-06cc-4e81-887b-8b8a0dda0beb/Screenshot_2023-11-29_at_9.33.52_AM.png?t=1701269110)
+Follow image link: (https://www.nicehash.com/countdown/btc-halving-2024-05-10-12-00)
+Caption: Source: NiceHash
+
+**First off, wtf is the halving? **It’s an event where [Bitcoin mining](https://milkroad.com/mining/) rewards get cut in half. 
+
+* Bitcoin **miners initially got a 50 BTC “reward”** each time they mined a Bitcoin block. 
+
+* **Each “halving” event cuts these rewards in half.** 
+
+* The Bitcoin **halving happens every 210,000 Bitcoin blocks or ***_**roughly***_** every 4 years. **(Btw, it doesn’t happen on the same date every time. Hence why the first halving happened in November 2012 and the next one is expected for April 2024).
+
+* It will **continue to happen until all 21M Bitcoin have been mined** (expected sometime in 2140).
+
+Here’s a simple analogy to help explain the halving:** it’s a lot like Christmas gifts growing up. **
+
+You see, I’m the oldest one out of all my cousins. So when I was a little kid, my grandparents used to give me all the best Christmas gifts…
+
+Hot Wheels sets. Game Boys. Pokemon cards. You name it. (This is the equivalent of Bitcoin miners getting 50 BTC rewards).
+
+**But after a few years, the supply of “little kids” in the family started going up. **Suddenly, giving us all awesome gifts was unsustainable. 
+
+So to fight inflation (and avoid going broke), my grandparents cut my Christmas gifts in half. 
+
+I went from getting the newest PlayStation → a box of Old Navy clothes → a “Merry Christmas” card with $20 bucks in it. (still grateful, but damn).
+
+Similarly, Bitcoin miners’ rewards have dropped from 50 BTC → 25 BTC → 12.5 BTC → 6.25 BTC (current reward) over the last 10+ years.
+
+**So, why does the Bitcoin halving happen? **Cutting mining rewards in half reduces the amount of new Bitcoin entering circulation, lowering inflation. 
+
+**Why should you care? **The next Bitcoin halving event is right around the corner. 
+
+T-141 days, give or take. 
+
+**And each time a halving happens, Bitcoin’s price usually goes up**. Check it out. 
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/34d8d5d8-944f-4753-8172-46406687ce92/Screenshot_2023-11-29_at_8.38.48_AM.png?t=1701269111)
+Follow image link: (https://www.coindesk.com/learn/bitcoin-halving-explained/)
+Caption: Source: CoinDesk
+
+On average, Bitcoin’s price increases by ~180% heading into the halving event and increases by ~3,000% after the halving event.
+
+We’ll see if history repeats itself.
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bdd174d2-24c9-4f64-9270-8a077916e07d/Add_a_subheading-2.png?t=1701259924)
+Follow image link: (https://out.milkroad.com/Dopex1129AdBanner)
+Caption: 
+
+----------
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/860d3430-c1fa-487f-bfaa-14a28a26e4a7/11_29_Dopex_banner_1701188544.jpeg?t=1701259957)
+Follow image link: (https://out.milkroad.com/Dopex1129AdBanner)
+Caption: 
+
+# [**WHY CLAMM (OPTIONS) IS BETTER THEN TRADING PERPS**](https://out.milkroad.com/Dopex1129AdCopy)
+
+Just like pizza delivery services, perp and options traders care about two things: **speed and price.**
+
+That’s because in trading, these two factors can cause a lot more issues than a cold meal.
+
+**Traders** need to be able to act **quickly**, and benefit from deep **liquidity** and cheap **premiums**. And that’s where [Dopex’s Concentrated Liquidity Automated Market Maker (”CLAMM”)](https://out.milkroad.com/Dopex1129AdCopy) comes in.
+
+**Trade American-style options** on all your favorite tokens, including ETH/USDC, WBTC/ USDC, ARB/USDC.
+
+**BUT why are perp traders moving to **[Dopex](https://out.milkroad.com/Dopex1129AdCopy)**?**
+
+* **No margin** **requirement** (or funding fee)
+
+* **No liquidations** (sleep peacefully with open positions)
+
+* **Premium is paid upfront** (one-time vs 2-way fees)
+
+* **Cheapest premiums** are found on BTC/ARB/ETH
+
+The platform is designed for you to seize **short-term profit opportunities** (1h, 6h, 24h). And soon, you’ll be able to [utilize CLAMM](https://out.milkroad.com/Dopex1129AdCopy) on countless long-tail assets!
+
+[Dopex v2 (CLAMM) is now live. Dive right in!](https://out.milkroad.com/Dopex1129AdCopyCTA)
+
+
+
+----------View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0563732e-fc0d-4697-9d4f-fd4576545eed/image.png)
+Caption: 
+
+# **OPENSEA’S MONTHLY VOLUME DROPPED FROM $5B —> $50M **📉
+
+[OpenSea](https://milkroad.com/reviews/opensea/) was once the King of [NFT Marketplaces](https://milkroad.com/nft/marketplaces/). 
+
+Well, check it out. OpenSea’s monthly volume has plummeted since the beginning of last year.
+
+* **January 2022 **- $5B in volume
+
+* **October 2023 **- $49M in volume
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/73d37527-8328-4aca-883a-7c10fee590ee/Screenshot_2023-11-29_at_10.44.35_AM.png?t=1701273443)
+Follow image link: (https://dune.com/rchen8/opensea)
+Caption: Source: Dune Analytics (@rchen8)
+
+**[According to @Punk9059](https://twitter.com/punk9059/status/1729692880917123531)**** (Milk Road friend and NFT expert), this is due to a combination of three things:**
+
+1/ NFT volumes are generally down.
+
+2/ OpenSea went from having a 95% market share for NFT trading → 35% market share.
+
+3/ Margin compression in platform fees. 
+
+So, now everyone’s wondering the same thing…** is this the end of NFTs? **
+
+Short answer: No. 
+
+Long answer: Hell no. 
+
+**The NFT market just looks different than what it was a year ago.** There are…
+
+* More NFT marketplaces (i.e. [Blur](https://milkroad.com/reviews/blur/)).
+
+* More blockchains implementing NFTs (i.e. [over the last 30 days](https://www.cryptoslam.io/blockchains), there’s been more NFT volume on the [Bitcoin](https://milkroad.com/bitcoin/) blockchain than the [Ethereum](https://milkroad.com/ethereum/) blockchain).
+
+So for us, it’s more of an “OpenSea problem” than an “NFT problem”.
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f1c36e79-1bca-46b2-8d90-d0c5d7443522/image.png)
+Caption: 
+
+# **BITE-SIZED COOKIES **🍪
+
+[Phemex is set to launch PT Staking on November 30th at 14:00 UTC.](https://out.milkroad.com/Phemex1129Classified)** **Brace yourself for a rewarding experience as Phemex vows to use a slice of its daily USDT contract trading volume to buy back PT and distribute them as staking rewards for their loyal community!*
+
+[Coinbase announced it received a subpoena from a U.S. regulator.](https://www.theblock.co/post/265009/coinbase-tells-some-customers-it-received-subpoena-related-to-bybit)** **The crypto exchange says it may respond to the subpoena, “including sending information concerning Coinbase accounts to the Commodity Future Trading Commission (CFTC).
+
+[Changpheng Zhao (aka “CZ”) stepped down as chairman of the board of directors for Binance.US](https://milkroad.com/news/binance-us-remains-unaffected-amidst-legal-drama-cz-steps-down/)**. **The former Binance CEO has transferred his voting rights through a proxy agreement, removing his influence from Binance.US's governance.
+
+[CF Benchmarks launched a new staking index series for institutional clients](https://www.theblock.co/post/264981/cf-benchmarks-launches-staking-index-series-for-institutional-clients)**.** It’s called the ‘CF Staking Reward Rate Series’ and provides investors with reward rates from certain proof-of-stake protocols. 
+
+[The U.S. Securities and Exchange Commission (SEC) has opened up a comment period for Franklin Templeton’s spot Bitcoin ETF proposal](https://blockworks.co/news/sec-frank-templeton-bitcoin-etf)**. **According to the filing, “the commission seeks and encourages interested persons to provide comments on the proposed rule change”. 
+
+[The number of crypto addresses holding DOGE hit 5 million for the first time ever](https://www.coindesk.com/markets/2023/11/28/dogecoin-now-held-at-5m-crypto-addresses-though-concentration-remains-a-concern/)**. **The crazy part? Fewer than 5,000 addresses control more than 80% of DOGE's supply.
+
+*This is sponsored content
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f1c36e79-1bca-46b2-8d90-d0c5d7443522/image.png)
+Caption: 
+
+# **MILKY MEMES **🤣
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d10ac55e-6615-4da9-8f4a-916c9e591889/GACEe1GWcAAB5Rt.jpeg?t=1701269740)
+Follow image link: (https://twitter.com/MinisterOfNFTs/status/1729527926528352278)
+Caption: Source: @MinisterOfNFTs
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d21e798a-900e-4053-9ee0-82a5e7c2b281/tax-season-is-coming-v0-vhjn9xqihx2c1.jpg?t=1701269411)
+Follow image link: (https://i.redd.it/tax-season-is-coming-v0-vhjn9xqihx2c1.jpg?s=078d5166d2f6da108697438f5e9dc6252c70f46b)
+Caption: Source: Reddit
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0563732e-fc0d-4697-9d4f-fd4576545eed/image.png)
+Caption: 
+
+## **RATE TODAY’S EDITION**
+
+———————————————————————————
+
+Share Milk Road
+
+You currently have <strong>0</strong> referrals, only <strong>1</strong> away from receiving <strong>The Next 10x Opportunity in Crypto for 2023</strong>.
+
+Or copy and paste this link to others: https://themilkroad.beehiiv.com/subscribe?ref=1noEEQMdgM
+
+———————————————————————————
+## **ROADER REVIEW OF THE DAY**
+
+View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/93338bf8-9533-45ad-9d35-d9cd76ee0ff8/Screenshot_2023-11-29_at_11.13.32_AM.png?t=1701273666)
+Caption: 
+
+## **VITALIK PIC OF THE DAY**
+
+Tweet:  (https://twitter.com/MilkRoadImages/status/1729894495456551333)
+
+———————————————————————————
+
+## **WANT TO SPONSOR THIS NEWSLETTER?**
+
+Over 250,000 subscribers are throwing a party, and your brand is invited!
+
+Tap into our network of savvy (and good-looking) crypto & Web3 enthusiasts who are eager to learn and invest.
+
+Your Brand + Our Crypto Clan = Magic Waiting To Happen. **[RSVP to the party!](https://out.milkroad.com/advertise)**
+
+———————————————————————————
+
+_**DISCLAIMER: **__None of this is financial advice. This newsletter is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. Please be careful and do your own research. _
+
+
+———
+
+You are reading a plain text version of this post. For the best experience, copy and paste this link in your browser to view the post online:
+https://themilkroad.beehiiv.com/p/happy-birthday-bitcoin-halving
+
+
+Infrastructure Sector Brief: All Eyes on AI, Perp DEX Token Cheat Sheet, and 
+more.
+
+
+
+
+
+
+
+The DePIN sector has witnessed remarkable growth in market capitalization over 
+the last 14 days, with an increase of nearly $3 billion, reaching a total of 
+$9.7 billion.
+
+
+
+Render and Akash have played a substantial role in propelling the compute 
+sector forward, displaying market cap growth rates of 42% and 83%, 
+respectively. Likewise, The Graph and Pocket Network have made noteworthy 
+contributions to the data network sector, registering market cap upticks of 25% 
+and 48%.
+
+
+
+
+
+
+
+Read more about why all eyes are on AI and crypto in our latest Infrastructure 
+Sector Brief 
+<https://messari.io/article/infrastructure-sector-brief-all-eyes-on-ai>. 
+
+
+ 
+
+Today in UO!
+
+
+
+
+ * 
+Infrastructure Sector Brief: All Eyes on AI 
+<https://messari.io/article/infrastructure-sector-brief-all-eyes-on-ai>
+
+ * 
+Perp DEX Token Cheat Sheet 
+<https://messari.io/report/perp-dex-token-cheat-sheet>
+
+ * NEW Diligence Reports <https://messari.io/diligence>
+ * 
+[Aave DAO] New Chain Deployment Framework 
+<https://messari.io/governor/proposal/85839899-049f-47af-a579-8e14eb6ea9ee>
+
+ * [Maple] Maple and Circle Partnership 
+<https://messari.io/intel/event/9b2b096d-7fa7-4458-be4f-1f327abc875f> 
+
+  
+
+
+
+MESSARI INSIGHTS
+
+
+Perp DEX Token Cheat Sheet. The world of perp DEXs is rich for fundamental 
+research and investing. They have a product with proven demand and mechanisms 
+with sustainable cash flows to tokenholders. Many of these assets trade at 
+earnings multiples that even history’s fundamental investors would call cheap — 
+all while offering a high beta to the upside of the crypto markets. The four 
+leading horses, DYDX, SNX, GMX, and GNS, have unique tradeoffs, and there is no 
+shortage of rising competition. This cheat sheet should be agreat resource to 
+determine which assets present the best opportunities 
+<https://messari.io/article/perp-dex-token-cheat-sheet>. 
+
+
+
+
+
+NEW Diligence Reports. What’s new this week with Messari Diligence Reports? 
+Our Diligence team is pleased to share that Diligence Reports onAAVE (Aave) and 
+APT (Aptos) have been released this week. Our Diligence Reports empower users 
+to gain a comprehensive understanding of any asset or protocol through 
+structured in-depth reports that address key aspects such as core project 
+details, legal & regulatory risks, economics, and technology. Enterprise users 
+can purchase either as a bundle with flexible pricing, or choose to purchase 
+individual report access. Current Enterprise subscribers can enjoy five 
+complimentary reports.Explore Diligence today! <https://messari.io/diligence> 
+
+
+
+
+
+[Messari Governance] [Aave DAO] New Chain Deployment Framework. This proposal 
+seeks community approval for a framework to deploy the Aave Protocol 
+<https://messari.io/governor/proposal/85839899-049f-47af-a579-8e14eb6ea9ee> on 
+a new blockchain. It outlines a standardized process for any interested 
+blockchain, establishing a transparent and community-driven approach for 
+evaluating and deploying new instances of Aave V3.
+
+
+
+
+
+
+[Messari Key Developments] [Maple] Maple and Circle Partnership. Maple has 
+announced a partnership with Circle Internet Financial 
+<https://messari.io/intel/event/9b2b096d-7fa7-4458-be4f-1f327abc875f>, the 
+entity behind USDC issuance, to broaden the adoption of USDC through Circle's 
+provision of funding for a loan from its corporate treasury to Maple's Secured 
+Lending pool. 
+
+
+ 
+
+ALSO POPULAR ON MESSARI
+
+ * DeFi Sector Brief: November 8, 2023 
+<https://messari.io/article/defi-sector-brief-november-8-2023>
+ * Crypto Fundraising Brief October 2023 
+<https://messari.io/article/crypto-fundraising-brief-october-2023>
+ * The Week in Crypto Policy: Decentralization & Policy Considerations 
+<https://messari.io/article/the-week-in-crypto-policy-decentralization-and-policy-considerations>
+ * Proposed Tax Rules for Digital Asset "Brokers" 
+<https://messari.io/article/proposed-tax-rules-for-digital-asset-brokers-v2>
+ * Spoiler Alert – Coinbase Q3 Revenue Estimates 
+<https://messari.io/article/spoiler-alert-coinbase-q3-revenue-estimates>
+
+
+
+ 
+ 
+<https://polybase.xyz/?utm_source=newsletter&utm_medium=email&utm_campaign=messari&utm_content=evergreen&utm_term=week4>
+
+Polybase is enabling privacy on public blockchains using zero knowledge 
+proofs. Learn more atPolybase.xyz 
+<https://polybase.xyz/?utm_source=newsletter&utm_medium=email&utm_campaign=messari&utm_content=evergreen&utm_term=week4>
+
+
+ 
+
+OTHER NEWS AND TOP READS
+
+ * A16z Backs Web3 Consumer App Setter in $5M Seed Round 
+<https://messari.io/news?id=9a6d96f8-6d68-4862-9d67-c512bf93a1e6&url=https%3A%2F%2Fwww.coindesk.com%2Fbusiness%2F2023%2F11%2F28%2Fa16z-backs-web3-consumer-app-setter-in-5m-seed-round&date=1701183600&source=CoinDesk&title=A16z%20Backs%20Web3%20Consumer%20App%20Setter%20in%20%245M%20Seed%20Round>
+ * Contango Taps Spark For DeFi Native Perps 
+<https://messari.io/news?id=31fde449-9380-4c1f-a899-e8bf21be0c0e&url=https%3A%2F%2Fthedefiant.io%2Fcontango-taps-spark-for-defi-native-perps&assets=%5B%7B%22id%22%3A%220472643b-1c7a-47a2-a45e-ec1e3e1269cd%22%2C%22name%22%3A%22Aave%22%2C%22symbol%22%3A%22AAVE%22%2C%22slug%22%3A%22aave%22%7D%2C%7B%22id%22%3A%22a3b64831-4288-48bd-a3e7-eb4f77f6f740%22%2C%22name%22%3A%22Dai%22%2C%22symbol%22%3A%22DAI%22%2C%22slug%22%3A%22dai%22%7D%2C%7B%22id%22%3A%2221c795f5-1bfd-40c3-858e-e9d7e820c6d0%22%2C%22name%22%3A%22Ethereum%22%2C%22symbol%22%3A%22ETH%22%2C%22slug%22%3A%22ethereum%22%7D%5D&date=1701176400&source=The%20Defiant&title=Contango%20Taps%20Spark%20For%20DeFi%20Native%20Perps>
+ * CME-Listed Bitcoin, Ether Futures Flash a Rare Bullish Signal 
+<https://messari.io/news?id=46c61d17-fbaa-43a5-8036-7edd080eb42e&url=https%3A%2F%2Fwww.coindesk.com%2Fmarkets%2F2023%2F11%2F28%2Fcme-listed-bitcoin-ether-futures-flash-a-rare-bullish-signal&assets=%5B%7B%22id%22%3A%221e31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%22Bitcoin%22%2C%22symbol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%2C%7B%22id%22%3A%2251f8ea5e-f426-4f40-939a-db7e05495374%22%2C%22name%22%3A%22Tether%22%2C%22symbol%22%3A%22USDT%22%2C%22slug%22%3A%22tether%22%7D%5D&date=1701174739&source=CoinDesk&title=CME-Listed%20Bitcoin%2C%20Ether%20Futures%20Flash%20a%20Rare%20Bullish%20Signal>
+ * 
+Animoca Brands Invests in TON Network, Becomes Largest Validator 
+<https://messari.io/news?id=f945ce6e-b8ab-41cd-ab4b-f3595a1d3358&url=https%3A%2F%2Fwww.coindesk.com%2Fbusiness%2F2023%2F11%2F28%2Fanimoca-brands-invests-in-ton-network-becomes-largest-validator&assets=%5B%7B%22id%22%3A%22cb43529e-f4a4-4f18-a348-116ad35c9351%22%2C%22name%22%3A%22LTO%20Network%22%2C%22symbol%22%3A%22LTO%22%2C%22slug%22%3A%22lto-network%22%7D%5D&date=1701172800&source=CoinDesk&title=Animoca%20Brands%20Invests%20in%20TON%20Network%2C%20Becomes%20Largest%20Validator>
+
+ * Cube.Exchange squares the circle of decentralization 
+<https://messari.io/news?id=39ac25b5-bd42-4e91-beac-03a7f707fefe&url=https%3A%2F%2Fblockworks.co%2Fnews%2Fcube-exchange-crypto-mpc&date=1701169994&source=Blockworks&title=Cube.Exchange%20squares%20the%20circle%20of%20decentralization>
+ * 
+U.S. Treatment of CZ, Binance Is 'Absurd:' Arthur Hayes 
+<https://messari.io/news?id=e431c7e6-d956-4cd5-81e1-e48961efda35&url=https%3A%2F%2Fwww.coindesk.com%2Fpolicy%2F2023%2F11%2F28%2Fus-treatment-of-cz-binance-is-absurd-arthur-hayes&date=1701163009&source=CoinDesk&title=U.S.%20Treatment%20of%20CZ%2C%20Binance%20Is%20'Absurd%3A'%20Arthur%20Hayes>
+ <https://thedefiant.io/bitcoin-spot-etfs-why-do-they-matter>
+ * Web3 Gaming Company OhBaby Partners With Paramount 
+<https://messari.io/news?id=3a53cf68-93a9-4ecf-8170-c196a06aa473&url=https%3A%2F%2Fthedefiant.io%2Fweb3-gaming-company-ohbaby-partners-with-paramount&date=1701132863&source=The%20Defiant&title=Web3%20Gaming%20Company%20OhBaby%20Partners%20With%20Paramount>
+ * Cosmos co-founder splits ATOM after years of infighting 
+<https://messari.io/news?id=d244b271-fb51-453f-848d-bdd1a0cdbc3b&url=https%3A%2F%2Fblockworks.co%2Fnews%2Fcosmos-fork-jae-kwon&assets=%5B%7B%22id%22%3A%223385649f-7e22-4260-9995-309f05650e47%22%2C%22name%22%3A%22Cosmos%22%2C%22symbol%22%3A%22ATOM%22%2C%22slug%22%3A%22cosmos%22%7D%5D&date=1701122506&source=Blockworks&title=Cosmos%20co-founder%20splits%20ATOM%20after%20years%20of%20infighting>
+ * Magic Eden Launches Cross-chain Wallet 
+<https://messari.io/news?id=06d2d9aa-1920-44f0-89be-bc08cac8ff66&url=https%3A%2F%2Fthedefiant.io%2Fmagic-eden-launches-cross-chain-wallet&assets=%5B%7B%22id%22%3A%22b3d5d66c-26a2-404c-9325-91dc714a722b%22%2C%22name%22%3A%22Solana%22%2C%22symbol%22%3A%22SOL%22%2C%22slug%22%3A%22solana%22%7D%2C%7B%22id%22%3A%221e31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%22Bitcoin%22%2C%22symbol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%2C%7B%22id%22%3A%2221c795f5-1bfd-40c3-858e-e9d7e820c6d0%22%2C%22name%22%3A%22Ethereum%22%2C%22symbol%22%3A%22ETH%22%2C%22slug%22%3A%22ethereum%22%7D%2C%7B%22id%22%3A%2282709acc-e1fd-4125-b35c-7dd0dae2348a%22%2C%22name%22%3A%22Ordinals%22%2C%22symbol%22%3A%22ordi%22%2C%22slug%22%3A%22ordinals-0%22%7D%5D&date=1701118619&source=The%20Defiant&title=Magic%20Eden%20Launches%20Cross-chain%20Wallet>
+ * Coinbase Is Dominating a Key Bitcoin ETF Service. Can Anyone Else Join the 
+Race? 
+<https://messari.io/news?id=2f29d41b-e6ed-4fa4-ad27-630c285e4ef8&url=https%3A%2F%2Fwww.coindesk.com%2Fbusiness%2F2023%2F11%2F27%2Fcoinbase-is-dominating-a-key-bitcoin-etf-service-can-anyone-else-join-the-race&assets=%5B%7B%22id%22%3A%221e31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%22Bitcoin%22%2C%22symbol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%5D&date=1701114328&source=CoinDesk&title=Coinbase%20Is%20Dominating%20a%20Key%20Bitcoin%20ETF%20Service.%20Can%20Anyone%20Else%20Join%20the%20Race%3F>
+
+ 
+ 
+<https://polybase.xyz/?utm_source=newsletter&utm_medium=email&utm_campaign=messari&utm_content=evergreen&utm_term=week4>
+
+ 
+
+
+Disclosure: Authors may own cryptoassets named in this newsletter. For more 
+information, please visitmessari.io <https://messari.io/dashboard>.
+
+
+
+Unqualified Opinions, a Messari newsletter, is meant for informational 
+purposes only. It is not meant to serve as investment advice. Please consult 
+with your investment, tax, or legal advisor before making any investment 
+decisions.
+
+
+
+Advertising and sponsorship do not influence editorial decisions or content. 
+Third party advertisements and links to other sites where products or services 
+are advertised are not endorsements or recommendations by Messari. Messari is 
+not responsible for the content of the ads, promises made, or the quality or 
+reliability of the products or services offered in any third party 
+advertisement.
+
+
+
+ <https://twitter.com/MessariCrypto>  <https://www.youtube.com/c/messari> 
+<https://www.linkedin.com/company/messari/>
+
+Copyright © 2023 Messari, All rights reserved.
+
+Our mailing address is:
+Messari
+228 Park Ave S PMB 52631
+New York, New York 10003
+
+Unsubscribe 
+<http://links.messari.io/e/encryptedUnsubscribe?_r=18e87b48d077440e80cd99da76e2bfc2&_s=e43058c3205e44838ee40cc7edbd585c&_t=JXD7pLfC3wZXA-wU1W2tY7JyJmKFnvctFNESXWcQiR49BkCp-f-3C-nQY-ku5kNmEx--DtvCRoHmqAgxtIhQny6rms_RVRinAvnlf96O880nIJp0CxEfgmxexmf-fRGDL-NCQz3ucTd5_MMCh1Sv5VCAn5mrzAi5I4R-I_5K84E%3D>
+408 Broadway, New York, NY 10013-3699
+
+

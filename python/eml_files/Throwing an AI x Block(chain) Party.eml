@@ -1,0 +1,1260 @@
+Delivered-To: zile@metaversal.gg
+Received: by 2002:a05:7300:51f3:b0:f4:557a:3a9b with SMTP id u19csp1388481dyd;
+        Tue, 28 Nov 2023 07:31:57 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHrpVTxyGbvqBUh82Rukz8GBS57yuWKxzdgYXY9l0PWWYoIi9oX3Mixu73B5cQ29JYEmVrS
+X-Received: by 2002:a05:6a20:8f17:b0:189:f553:6cd2 with SMTP id b23-20020a056a208f1700b00189f5536cd2mr18530580pzk.3.1701185516738;
+        Tue, 28 Nov 2023 07:31:56 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1701185516; cv=none;
+        d=google.com; s=arc-20160816;
+        b=NawVjUvgLl83a40q/ZBbLsnYKJRdUVB3uWrctZYX8ecEkt3XkHolxhkb0KTAUFwfZV
+         Af/Ie3yWbQM9OJ/3to25eAG1LzOLMEkKx8i6WBsUf95gPSsfAFvVjf04BV/EaR1W/abi
+         a5ytBgMWrgr+SlB6IHbTonn2w0U9X6S44Ia1JssXeo5mOSFhcAAxZwBfgTnwG0WmBFEx
+         20TIxB66OtZg7I+O5JJgu6c5Tra+TqAGPx3GQB5dLllW8qHoxo6iiiDu5UWQnENdjFWK
+         FcUTQhAq0MC5+XHREEIDRXwcsXA1d+LWdw8vtN1FH6AVxnBbmqf15kD/c8v5XjnHVetb
+         EWiA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:message-id:subject:mime-version:list-unsubscribe:from
+         :feedback-id:date:dkim-signature;
+        bh=6C+IJQJrKCYXwU2ByVxExt9oEWt6yLe7cU1Gluwapvg=;
+        fh=+hTA/vsDRCCbR2Y0nle8GsRpLPf+QPVdsxwWiG6cdq8=;
+        b=YEPtT/irmsyLoAg/kdhLwj8vMddov3x4AekugA8wzFoePnEXGegoHbKYYHART7UPjD
+         hz9LcI1rXbXsj2S7o1ewyVaEjN7hN5qH7GLPrOy6sNW7xuhe8Igmzl5+wyHjKOO2jtw+
+         xRvrwqg8mUdYQdnmG2zkemp0YsM1PqhODh+/CTfpIJzAMhzKlDiRq1rPakHv3wtDmQm9
+         x1CoG6bMxx9R7a+0XFUGSBxUrqM5rNhBO5FFsrY8twy8im5rjg3EmKkdBynNP6w3mhJ+
+         QjDNEW/4ZsxqjwHCEqjQHj78owU52Lt4wFXL3gLz3YiHlPmPGQnwNePramcPweiqphdr
+         HYAQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.messari.io header.s=s1 header.b=W2UJRopm;
+       spf=pass (google.com: domain of bounces+29726695-9a2e-zile=metaversal.gg@em1950.mail.messari.io designates 159.183.97.39 as permitted sender) smtp.mailfrom="bounces+29726695-9a2e-zile=metaversal.gg@em1950.mail.messari.io";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=messari.io
+Return-Path: <bounces+29726695-9a2e-zile=metaversal.gg@em1950.mail.messari.io>
+Received: from wfbtsknt.outbound-mail.sendgrid.net (wfbtsknt.outbound-mail.sendgrid.net. [159.183.97.39])
+        by mx.google.com with ESMTPS id 72-20020a63004b000000b005c221909d4asi12108089pga.830.2023.11.28.07.31.55
+        for <zile@metaversal.gg>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 28 Nov 2023 07:31:56 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+29726695-9a2e-zile=metaversal.gg@em1950.mail.messari.io designates 159.183.97.39 as permitted sender) client-ip=159.183.97.39;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.messari.io header.s=s1 header.b=W2UJRopm;
+       spf=pass (google.com: domain of bounces+29726695-9a2e-zile=metaversal.gg@em1950.mail.messari.io designates 159.183.97.39 as permitted sender) smtp.mailfrom="bounces+29726695-9a2e-zile=metaversal.gg@em1950.mail.messari.io";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=messari.io
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.messari.io;
+	h=content-type:from:list-unsubscribe:mime-version:subject:reply-to:to:
+	cc:content-type:from:subject:to;
+	s=s1; bh=6C+IJQJrKCYXwU2ByVxExt9oEWt6yLe7cU1Gluwapvg=;
+	b=W2UJRopmHg9w+g7hSetMq/2QsyPrfEP17unEMNzzcc2Jx7ddxPqLr2ZgGqEMA0FN7lSZ
+	vVVHW+vYZdN1rnV0ROLieKpsLo2qI0wZozfwk/gsgGcm1HR7IRE1tNkLqtkuekKtd+q7nP
+	yj4jUv+48pLmtcgaekFvlqlc5LD/HcxRpsCdPMwfgkTOIY5De1qK86m0fkegjiRJsCFLey
+	auWT4wDE+bvVYnvPrASANi4cmaLGjO5EvraEKddXpCPBt+x5L6+FS1NNW9Hw6BAZIEnIE+
+	TAqhphvarohh3yYK7jlUgxPVKz0TmuSbOO6J3ugc/p1znPRiEX69vE2pVQF/P/mA==
+Received: by filterdrecv-86554f5b97-9m5kh with SMTP id filterdrecv-86554f5b97-9m5kh-1-656607EA-A8
+        2023-11-28 15:31:54.692628083 +0000 UTC m=+3617430.837606359
+Received: from Mjk3MjY2OTU (unknown)
+	by geopod-ismtpd-57 (SG) with HTTP
+	id daOgrZRoTWuwrN4Z_pGDlg
+	for <zile@metaversal.gg>;
+	Tue, 28 Nov 2023 15:31:54.569 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=40a89d44bc6d430f310de06bf52cba63332457c7d5cbf7be5eaaeaca84bd
+Date: Tue, 28 Nov 2023 15:31:54 +0000 (UTC)
+Feedback-ID: 11154590:8406215:79865:iterable
+From: Ryan Selkis <unqualified.opinions@mail.messari.io>
+List-Unsubscribe: <http://links.messari.io/e/encryptedUnsubscribe?_r=18e87b48d077440e80cd99da76e2bfc2&_s=e43058c3205e44838ee40cc7edbd585c&_t=JXD7pLfC3wZXA-wU1W2tY7JyJmKFnvctFNESXWcQiR49BkCp-f-3C-nQY-ku5kNmEx--DtvCRoHmqAgxtIhQnxTCbB6jWZOkAAdZ8ao61gg%3D>,<mailto:unsubscribe+8406215+11154590@unsubscribe.iterable.com>
+Mime-Version: 1.0
+Subject: Throwing an AI x Block(chain) Party
+X-Campaign-ID: 8406215
+X-Message-ID: e43058c3205e44838ee40cc7edbd585c
+Message-ID: <daOgrZRoTWuwrN4Z_pGDlg@geopod-ismtpd-57>
+Reply-To: unqualified.opinions@messari.io
+X-SG-EID: 
+ =?us-ascii?Q?IknnSp7z1gJyeNaUvUb0VcBGQys4FxvljQWRF8jPdG=2FqBRhqQMIKjjjbGz7RH8?=
+ =?us-ascii?Q?YVW0FyZVUzyPUNpv9+xYNLMujv2xeO6pwk4Y7vA?=
+ =?us-ascii?Q?MViHapD0Ihqug+NKGxC5x7MLv6jy4zGWgFcp=2FHH?=
+ =?us-ascii?Q?ZZCKQuJya3B+1vg7y5ekv0IlKDAT2MGn8vKupI1?=
+ =?us-ascii?Q?5tOS9aFHZQeJmus2s+4Bj75sqXg8km1qyYywHDW?=
+ =?us-ascii?Q?PXwRA18ahKNUmup8zb7IdDHEtoDMtlwBC3KzVgk?=
+ =?us-ascii?Q?kNeXUGapUPr8Qir3CC8pg=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FIARr5ApfQLGQYXi0KvHQ?=
+ =?us-ascii?Q?0zuQ60+9d1pjpeWw7VMKV9CWkACTpW1Eae0y7HS?=
+ =?us-ascii?Q?W=2F7S1yBWKZyO7g4HUZ9AwPEXjKhhKnOHBQtzQr4?=
+ =?us-ascii?Q?YpZIqj3aJ3ryDpuXdAdQeyCg+721s=2FxvzJzLE6L?=
+ =?us-ascii?Q?=2F3YWNHNkrpApzxEe2T07dfA6P+q++D5891A=3D=3D?=
+To: zile@metaversal.gg
+X-Entity-ID: wZ4uwJgBMsBBt8M5mQx5PQ==
+
+--40a89d44bc6d430f310de06bf52cba63332457c7d5cbf7be5eaaeaca84bd
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Infrastructure Sector Brief: All Eyes on AI, Perp DEX Token Cheat Sheet, an=
+d=20
+more.
+
+
+
+
+
+
+
+The DePIN sector has witnessed remarkable growth in market capitalization o=
+ver=20
+the last 14 days, with an increase of nearly $3 billion, reaching a total o=
+f=20
+$9.7 billion.
+
+
+
+Render and Akash have played a substantial role in propelling the compute=20
+sector forward, displaying market cap growth rates of 42% and 83%,=20
+respectively. Likewise, The Graph and Pocket Network have made noteworthy=20
+contributions to the data network sector, registering market cap upticks of=
+ 25%=20
+and 48%.
+
+
+
+
+
+
+
+Read more about why all eyes are on AI and crypto in our latest Infrastruct=
+ure=20
+Sector Brief=20
+<https://messari.io/article/infrastructure-sector-brief-all-eyes-on-ai>.=20
+
+
+=E2=80=8A
+
+Today in UO!
+
+
+
+
+ *=20
+Infrastructure Sector Brief: All Eyes on AI=20
+<https://messari.io/article/infrastructure-sector-brief-all-eyes-on-ai>
+
+ *=20
+Perp DEX Token Cheat Sheet=20
+<https://messari.io/report/perp-dex-token-cheat-sheet>
+
+ * NEW Diligence Reports <https://messari.io/diligence>
+ *=20
+[Aave DAO] New Chain Deployment Framework=20
+<https://messari.io/governor/proposal/85839899-049f-47af-a579-8e14eb6ea9ee>
+
+ * [Maple] Maple and Circle Partnership=20
+<https://messari.io/intel/event/9b2b096d-7fa7-4458-be4f-1f327abc875f>=20
+
+=E2=80=8A=20
+
+
+
+MESSARI INSIGHTS
+
+
+Perp DEX Token Cheat Sheet. The world of perp DEXs is rich for fundamental=20
+research and investing. They have a product with proven demand and mechanis=
+ms=20
+with sustainable cash flows to tokenholders. Many of these assets trade at=20
+earnings multiples that even history=E2=80=99s fundamental investors would =
+call cheap =E2=80=94=20
+all while offering a high beta to the upside of the crypto markets. The fou=
+r=20
+leading horses, DYDX, SNX, GMX, and GNS, have unique tradeoffs, and there i=
+s no=20
+shortage of rising competition. This cheat sheet should be agreat resource =
+to=20
+determine which assets present the best opportunities=20
+<https://messari.io/article/perp-dex-token-cheat-sheet>.=20
+
+
+
+
+
+NEW Diligence Reports. What=E2=80=99s new this week with Messari Diligence =
+Reports?=20
+Our Diligence team is pleased to share that Diligence Reports onAAVE (Aave)=
+ and=20
+APT (Aptos) have been released this week. Our Diligence Reports empower use=
+rs=20
+to gain a comprehensive understanding of any asset or protocol through=20
+structured in-depth reports that address key aspects such as core project=20
+details, legal & regulatory risks, economics, and technology. Enterprise us=
+ers=20
+can purchase either as a bundle with flexible pricing, or choose to purchas=
+e=20
+individual report access. Current Enterprise subscribers can enjoy five=20
+complimentary reports.Explore Diligence today! <https://messari.io/diligenc=
+e>=20
+
+
+
+
+
+[Messari Governance] [Aave DAO] New Chain Deployment Framework. This propos=
+al=20
+seeks community approval for a framework to deploy the Aave Protocol=20
+<https://messari.io/governor/proposal/85839899-049f-47af-a579-8e14eb6ea9ee>=
+ on=20
+a new blockchain. It outlines a standardized process for any interested=20
+blockchain, establishing a transparent and community-driven approach for=20
+evaluating and deploying new instances of Aave V3.
+
+
+
+
+
+
+[Messari Key Developments] [Maple] Maple and Circle Partnership. Maple has=20
+announced a partnership with Circle Internet Financial=20
+<https://messari.io/intel/event/9b2b096d-7fa7-4458-be4f-1f327abc875f>, the=20
+entity behind USDC issuance, to broaden the adoption of USDC through Circle=
+'s=20
+provision of funding for a loan from its corporate treasury to Maple's Secu=
+red=20
+Lending pool.=20
+
+
+=E2=80=8A
+
+ALSO POPULAR ON MESSARI
+
+ * DeFi Sector Brief: November 8, 2023=20
+<https://messari.io/article/defi-sector-brief-november-8-2023>
+ * Crypto Fundraising Brief October 2023=20
+<https://messari.io/article/crypto-fundraising-brief-october-2023>
+ * The Week in Crypto Policy: Decentralization & Policy Considerations=20
+<https://messari.io/article/the-week-in-crypto-policy-decentralization-and-=
+policy-considerations>
+ * Proposed Tax Rules for Digital Asset "Brokers"=20
+<https://messari.io/article/proposed-tax-rules-for-digital-asset-brokers-v2=
+>
+ * Spoiler Alert =E2=80=93 Coinbase Q3 Revenue Estimates=20
+<https://messari.io/article/spoiler-alert-coinbase-q3-revenue-estimates>
+
+
+
+=E2=80=8A
+=20
+<https://polybase.xyz/?utm_source=3Dnewsletter&utm_medium=3Demail&utm_campa=
+ign=3Dmessari&utm_content=3Devergreen&utm_term=3Dweek4>
+
+Polybase is enabling privacy on public blockchains using zero knowledge=20
+proofs. Learn more atPolybase.xyz=20
+<https://polybase.xyz/?utm_source=3Dnewsletter&utm_medium=3Demail&utm_campa=
+ign=3Dmessari&utm_content=3Devergreen&utm_term=3Dweek4>
+
+
+=E2=80=8A
+
+OTHER NEWS AND TOP READS
+
+ * A16z Backs Web3 Consumer App Setter in $5M Seed Round=20
+<https://messari.io/news?id=3D9a6d96f8-6d68-4862-9d67-c512bf93a1e6&url=3Dht=
+tps%3A%2F%2Fwww.coindesk.com%2Fbusiness%2F2023%2F11%2F28%2Fa16z-backs-web3-=
+consumer-app-setter-in-5m-seed-round&date=3D1701183600&source=3DCoinDesk&ti=
+tle=3DA16z%20Backs%20Web3%20Consumer%20App%20Setter%20in%20%245M%20Seed%20R=
+ound>
+ * Contango Taps Spark For DeFi Native Perps=20
+<https://messari.io/news?id=3D31fde449-9380-4c1f-a899-e8bf21be0c0e&url=3Dht=
+tps%3A%2F%2Fthedefiant.io%2Fcontango-taps-spark-for-defi-native-perps&asset=
+s=3D%5B%7B%22id%22%3A%220472643b-1c7a-47a2-a45e-ec1e3e1269cd%22%2C%22name%2=
+2%3A%22Aave%22%2C%22symbol%22%3A%22AAVE%22%2C%22slug%22%3A%22aave%22%7D%2C%=
+7B%22id%22%3A%22a3b64831-4288-48bd-a3e7-eb4f77f6f740%22%2C%22name%22%3A%22D=
+ai%22%2C%22symbol%22%3A%22DAI%22%2C%22slug%22%3A%22dai%22%7D%2C%7B%22id%22%=
+3A%2221c795f5-1bfd-40c3-858e-e9d7e820c6d0%22%2C%22name%22%3A%22Ethereum%22%=
+2C%22symbol%22%3A%22ETH%22%2C%22slug%22%3A%22ethereum%22%7D%5D&date=3D17011=
+76400&source=3DThe%20Defiant&title=3DContango%20Taps%20Spark%20For%20DeFi%2=
+0Native%20Perps>
+ * CME-Listed Bitcoin, Ether Futures Flash a Rare Bullish Signal=20
+<https://messari.io/news?id=3D46c61d17-fbaa-43a5-8036-7edd080eb42e&url=3Dht=
+tps%3A%2F%2Fwww.coindesk.com%2Fmarkets%2F2023%2F11%2F28%2Fcme-listed-bitcoi=
+n-ether-futures-flash-a-rare-bullish-signal&assets=3D%5B%7B%22id%22%3A%221e=
+31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%22Bitcoin%22%2C%22sym=
+bol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%2C%7B%22id%22%3A%2251f8e=
+a5e-f426-4f40-939a-db7e05495374%22%2C%22name%22%3A%22Tether%22%2C%22symbol%=
+22%3A%22USDT%22%2C%22slug%22%3A%22tether%22%7D%5D&date=3D1701174739&source=
+=3DCoinDesk&title=3DCME-Listed%20Bitcoin%2C%20Ether%20Futures%20Flash%20a%2=
+0Rare%20Bullish%20Signal>
+ *=20
+Animoca Brands Invests in TON Network, Becomes Largest Validator=20
+<https://messari.io/news?id=3Df945ce6e-b8ab-41cd-ab4b-f3595a1d3358&url=3Dht=
+tps%3A%2F%2Fwww.coindesk.com%2Fbusiness%2F2023%2F11%2F28%2Fanimoca-brands-i=
+nvests-in-ton-network-becomes-largest-validator&assets=3D%5B%7B%22id%22%3A%=
+22cb43529e-f4a4-4f18-a348-116ad35c9351%22%2C%22name%22%3A%22LTO%20Network%2=
+2%2C%22symbol%22%3A%22LTO%22%2C%22slug%22%3A%22lto-network%22%7D%5D&date=3D=
+1701172800&source=3DCoinDesk&title=3DAnimoca%20Brands%20Invests%20in%20TON%=
+20Network%2C%20Becomes%20Largest%20Validator>
+
+ * Cube.Exchange squares the circle of decentralization=20
+<https://messari.io/news?id=3D39ac25b5-bd42-4e91-beac-03a7f707fefe&url=3Dht=
+tps%3A%2F%2Fblockworks.co%2Fnews%2Fcube-exchange-crypto-mpc&date=3D17011699=
+94&source=3DBlockworks&title=3DCube.Exchange%20squares%20the%20circle%20of%=
+20decentralization>
+ *=20
+U.S. Treatment of CZ, Binance Is 'Absurd:' Arthur Hayes=20
+<https://messari.io/news?id=3De431c7e6-d956-4cd5-81e1-e48961efda35&url=3Dht=
+tps%3A%2F%2Fwww.coindesk.com%2Fpolicy%2F2023%2F11%2F28%2Fus-treatment-of-cz=
+-binance-is-absurd-arthur-hayes&date=3D1701163009&source=3DCoinDesk&title=
+=3DU.S.%20Treatment%20of%20CZ%2C%20Binance%20Is%20'Absurd%3A'%20Arthur%20Ha=
+yes>
+ <https://thedefiant.io/bitcoin-spot-etfs-why-do-they-matter>
+ * Web3 Gaming Company OhBaby Partners With Paramount=20
+<https://messari.io/news?id=3D3a53cf68-93a9-4ecf-8170-c196a06aa473&url=3Dht=
+tps%3A%2F%2Fthedefiant.io%2Fweb3-gaming-company-ohbaby-partners-with-paramo=
+unt&date=3D1701132863&source=3DThe%20Defiant&title=3DWeb3%20Gaming%20Compan=
+y%20OhBaby%20Partners%20With%20Paramount>
+ * Cosmos co-founder splits ATOM after years of infighting=20
+<https://messari.io/news?id=3Dd244b271-fb51-453f-848d-bdd1a0cdbc3b&url=3Dht=
+tps%3A%2F%2Fblockworks.co%2Fnews%2Fcosmos-fork-jae-kwon&assets=3D%5B%7B%22i=
+d%22%3A%223385649f-7e22-4260-9995-309f05650e47%22%2C%22name%22%3A%22Cosmos%=
+22%2C%22symbol%22%3A%22ATOM%22%2C%22slug%22%3A%22cosmos%22%7D%5D&date=3D170=
+1122506&source=3DBlockworks&title=3DCosmos%20co-founder%20splits%20ATOM%20a=
+fter%20years%20of%20infighting>
+ * Magic Eden Launches Cross-chain Wallet=20
+<https://messari.io/news?id=3D06d2d9aa-1920-44f0-89be-bc08cac8ff66&url=3Dht=
+tps%3A%2F%2Fthedefiant.io%2Fmagic-eden-launches-cross-chain-wallet&assets=
+=3D%5B%7B%22id%22%3A%22b3d5d66c-26a2-404c-9325-91dc714a722b%22%2C%22name%22=
+%3A%22Solana%22%2C%22symbol%22%3A%22SOL%22%2C%22slug%22%3A%22solana%22%7D%2=
+C%7B%22id%22%3A%221e31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%2=
+2Bitcoin%22%2C%22symbol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%2C%7=
+B%22id%22%3A%2221c795f5-1bfd-40c3-858e-e9d7e820c6d0%22%2C%22name%22%3A%22Et=
+hereum%22%2C%22symbol%22%3A%22ETH%22%2C%22slug%22%3A%22ethereum%22%7D%2C%7B=
+%22id%22%3A%2282709acc-e1fd-4125-b35c-7dd0dae2348a%22%2C%22name%22%3A%22Ord=
+inals%22%2C%22symbol%22%3A%22ordi%22%2C%22slug%22%3A%22ordinals-0%22%7D%5D&=
+date=3D1701118619&source=3DThe%20Defiant&title=3DMagic%20Eden%20Launches%20=
+Cross-chain%20Wallet>
+ * Coinbase Is Dominating a Key Bitcoin ETF Service. Can Anyone Else Join t=
+he=20
+Race?=20
+<https://messari.io/news?id=3D2f29d41b-e6ed-4fa4-ad27-630c285e4ef8&url=3Dht=
+tps%3A%2F%2Fwww.coindesk.com%2Fbusiness%2F2023%2F11%2F27%2Fcoinbase-is-domi=
+nating-a-key-bitcoin-etf-service-can-anyone-else-join-the-race&assets=3D%5B=
+%7B%22id%22%3A%221e31218a-e44e-4285-820c-8282ee222035%22%2C%22name%22%3A%22=
+Bitcoin%22%2C%22symbol%22%3A%22BTC%22%2C%22slug%22%3A%22bitcoin%22%7D%5D&da=
+te=3D1701114328&source=3DCoinDesk&title=3DCoinbase%20Is%20Dominating%20a%20=
+Key%20Bitcoin%20ETF%20Service.%20Can%20Anyone%20Else%20Join%20the%20Race%3F=
+>
+
+=E2=80=8A
+=20
+<https://polybase.xyz/?utm_source=3Dnewsletter&utm_medium=3Demail&utm_campa=
+ign=3Dmessari&utm_content=3Devergreen&utm_term=3Dweek4>
+
+=E2=80=8A
+
+
+Disclosure: Authors may own cryptoassets named in this newsletter. For more=
+=20
+information, please visitmessari.io <https://messari.io/dashboard>.
+
+
+
+Unqualified Opinions, a Messari newsletter, is meant for informational=20
+purposes only. It is not meant to serve as investment advice. Please consul=
+t=20
+with your investment, tax, or legal advisor before making any investment=20
+decisions.
+
+
+
+Advertising and sponsorship do not influence editorial decisions or content=
+.=20
+Third party advertisements and links to other sites where products or servi=
+ces=20
+are advertised are not endorsements or recommendations by Messari. Messari =
+is=20
+not responsible for the content of the ads, promises made, or the quality o=
+r=20
+reliability of the products or services offered in any third party=20
+advertisement.
+
+
+
+ <https://twitter.com/MessariCrypto>  <https://www.youtube.com/c/messari>=20
+<https://www.linkedin.com/company/messari/>
+
+Copyright =C2=A9 2023 Messari, All rights reserved.
+
+Our mailing address is:
+Messari
+228 Park Ave S PMB 52631
+New York, New York 10003
+
+Unsubscribe=20
+<http://links.messari.io/e/encryptedUnsubscribe?_r=3D18e87b48d077440e80cd99=
+da76e2bfc2&_s=3De43058c3205e44838ee40cc7edbd585c&_t=3DJXD7pLfC3wZXA-wU1W2tY=
+7JyJmKFnvctFNESXWcQiR49BkCp-f-3C-nQY-ku5kNmEx--DtvCRoHmqAgxtIhQny6rms_RVRin=
+Avnlf96O880nIJp0CxEfgmxexmf-fRGDL-NCQz3ucTd5_MMCh1Sv5VCAn5mrzAi5I4R-I_5K84E=
+%3D>
+408 Broadway, New York, NY 10013-3699
+
+--40a89d44bc6d430f310de06bf52cba63332457c7d5cbf7be5eaaeaca84bd
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"u=
+rn:schemas-microsoft-com:office:office" lang=3D"en" style=3D"box-sizing: bo=
+rder-box;"><head><title></title><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"><meta name=3D"viewport" content=3D"width=3D=
+device-width,initial-scale=3D1"><!--[if mso]><xml><o:OfficeDocumentSettings=
+><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettin=
+gs></xml><![endif]--><style>*{box-sizing:border-box}body{margin:0;padding:0=
+}a[x-apple-data-detectors]{color:inherit!important;text-decoration:inherit!=
+important}#MessageViewBody a{color:inherit;text-decoration:none}p{line-heig=
+ht:inherit}.desktop_hide,.desktop_hide table{mso-hide:all;display:none;max-=
+height:0;overflow:hidden}.image_block img+div{display:none}@media(max-width=
+:605px){.social_block.desktop_hide .social-table{display:inline-block!impor=
+tant}.image_block img.fullWidth{max-width:100%!important}.mobile_hide{displ=
+ay:none}.row-content{width:100%!important}.stack .column{width:100%;display=
+:block}.mobile_hide{min-height:0;max-height:0;max-width:0;overflow:hidden;f=
+ont-size:0}.desktop_hide,.desktop_hide table{display:table!important;max-he=
+ight:none!important}}</style></head><body style=3D"box-sizing: border-box; =
+background-color: #fff; margin: 0; padding: 0; -webkit-text-size-adjust: no=
+ne; text-size-adjust: none;"><span style=3D"color:transparent;visibility:hi=
+dden;display:none;opacity:0;height:0;width:0;font-size:0;">Infrastructure S=
+ector Brief: All Eyes on AI, Perp DEX Token Cheat Sheet, and more.</span><i=
+mg src=3D"http://links.messari.io/e/eo?_t=3D18e87b48d077440e80cd99da76e2bfc=
+2&amp;_m=3De43058c3205e44838ee40cc7edbd585c&amp;_e=3DJXD7pLfC3wZXA-wU1W2tY7=
+JyJmKFnvctFNESXWcQiR49BkCp-f-3C-nQY-ku5kNmEx--DtvCRoHmqAgxtIhQn9u0vNMAbECe5=
+Qu-1uXcqL02UBreth2B4mZCEv_KLIWTyrxy8Oy-EXsxfdfddqqJlg%3D%3D" style=3D"borde=
+r:0;width:1px;height:1px;border-width:0px!important;display:none!important;=
+line-height:0!important;" width=3D"1" height=3D"1"/><table class=3D"nl-cont=
+ainer" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso=
+-table-rspace: 0; background-color: #fff;" bgcolor=3D"#fff"><tbody style=3D=
+"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;"><td style=
+=3D"box-sizing: border-box;"><table class=3D"row row-1" align=3D"center" wi=
+dth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rs=
+pace: 0;"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing:=
+ border-box;"><td style=3D"box-sizing: border-box;"><table class=3D"row-con=
+tent stack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace:=
+ 0; mso-table-rspace: 0; border-radius: 0; color: #000; width: 585px; margi=
+n: 0 auto;" width=3D"585"><tbody style=3D"box-sizing: border-box;"><tr styl=
+e=3D"box-sizing: border-box;"><td class=3D"column column-1" width=3D"100%" =
+style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; =
+font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; =
+vertical-align: top; border-top: 0; border-right: 0; border-bottom: 0; bord=
+er-left: 0;" align=3D"left" valign=3D"top"><table class=3D"image_block bloc=
+k-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso=
+-table-rspace: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"pad" =
+style=3D"box-sizing: border-box; width: 100%;" width=3D"100%"><div class=3D=
+"alignment" align=3D"center" style=3D"box-sizing: border-box; line-height: =
+10px;"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integ=
+rators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/18e87b48d077440e80cd99da76e2bfc=
+2/Ad%20Space/UO%20x%20Polybase%20header.png" style=3D"box-sizing: border-bo=
+x; display: block; height: auto; border: 0; max-width: 585px; width: 100%;"=
+ width=3D"585"></div> </td></tr></table></td></tr></tbody></table></td></tr=
+></tbody></table><table class=3D"row row-2" align=3D"center" width=3D"100%"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" sty=
+le=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><t=
+body style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;=
+"><td style=3D"box-sizing: border-box;"><table class=3D"row-content stack" =
+align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-tabl=
+e-rspace: 0; border-radius: 0; color: #000; width: 585px; margin: 0 auto;" =
+width=3D"585"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-siz=
+ing: border-box;"><td class=3D"column column-1" width=3D"100%" style=3D"box=
+-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; font-weight:=
+ 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-ali=
+gn: top; border-top: 0; border-right: 0; border-bottom: 0; border-left: 0;"=
+ align=3D"left" valign=3D"top"><table class=3D"text_block block-1" width=3D=
+"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: =
+0; word-break: break-word;"><tr style=3D"box-sizing: border-box;"><td class=
+=3D"pad" style=3D"box-sizing: border-box; padding-bottom: 5px; padding-top:=
+ 10px;"><div style=3D"box-sizing: border-box; font-family: sans-serif;"><di=
+v class style=3D"box-sizing: border-box; font-size: 14px; font-family: Aria=
+l,Helvetica Neue,Helvetica,sans-serif; mso-line-height-alt: 16.8px; color: =
+#555; line-height: 1.2;"><p style=3D"box-sizing: border-box; line-height: i=
+nherit; margin: 0; mso-line-height-alt: 16.8px;"><span style=3D"box-sizing:=
+ border-box; color: #000000;">The DePIN sector has witnessed remarkable gro=
+wth in market capitalization over the last 14 days, with an increase of nea=
+rly $3 billion, reaching a total of $9.7 billion. </span></p><p style=3D"bo=
+x-sizing: border-box; line-height: inherit; margin: 0; mso-line-height-alt:=
+ 16.8px;">&nbsp;</p><p style=3D"box-sizing: border-box; line-height: inheri=
+t; margin: 0; mso-line-height-alt: 16.8px;"><span style=3D"box-sizing: bord=
+er-box; color: #000000;">Render and Akash have played a substantial role in=
+ propelling the compute sector forward, displaying market cap growth rates =
+of 42% and 83%, respectively. Likewise, The Graph and Pocket Network have m=
+ade noteworthy contributions to the data network sector, registering market=
+ cap upticks of 25% and 48%.</span></p><p style=3D"box-sizing: border-box; =
+line-height: inherit; margin: 0; font-size: 14px; text-align: left; mso-lin=
+e-height-alt: 16.8px;">&nbsp;</p></div></div></td></tr> </table><table clas=
+s=3D"image_block block-2" width=3D"100%" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-t=
+able-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: border-box;"=
+><td class=3D"pad" style=3D"box-sizing: border-box; width: 100%;" width=3D"=
+100%"><div class=3D"alignment" align=3D"center" style=3D"box-sizing: border=
+-box; line-height: 10px;"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net=
+/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/18e87b48d077=
+440e80cd99da76e2bfc2/Report%20Images/0934fc849175cb313f89c1a3de6801e14a0906=
+56-1600x900.png" style=3D"box-sizing: border-box; display: block; height: a=
+uto; border: 0; max-width: 585px; width: 100%;" width=3D"585"></div></td></=
+tr></table><table class=3D"text_block block-3" width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizi=
+ng: border-box; mso-table-lspace: 0; mso-table-rspace: 0; word-break: break=
+-word;"><tr style=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"bo=
+x-sizing: border-box; padding-bottom: 5px; padding-top: 10px;"><div style=
+=3D"box-sizing: border-box; font-family: sans-serif;"><div class style=3D"b=
+ox-sizing: border-box; font-size: 12px; font-family: Arial,Helvetica Neue,H=
+elvetica,sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555=
+; line-height: 1.2;"><p style=3D"box-sizing: border-box; line-height: inher=
+it; margin: 0; font-size: 14px; mso-line-height-alt: 14.399999999999999px;"=
+>&nbsp;</p><p style=3D"box-sizing: border-box; line-height: inherit; margin=
+: 0; font-size: 14px; mso-line-height-alt: 16.8px;"> <span style=3D"box-siz=
+ing: border-box; font-size: 14px; color: #000000;">Read more about why all =
+eyes are on AI and crypto in our latest <a href=3D"http://links.messari.io/=
+u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7=
+edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC6ko_k6dW5RfjvkzUCnGlH9J-UUo-n69m9nCb7D2W=
+ruAUhAiWOGGB9Nu-73j8R1f5VYCVkSkrurRFbjVAFEAeEDBtaZZVvfrmXKAamZduonGJGYOxVS2=
+BQtob8beOREly1eln03nf0Tgb9qGTsU3jGzRVmT9V1mCSRPSbWljftXMWRmE_psZ_kZa07NK--D=
+id_n1Sj6y0gucVr2ISdYvZFYkIympZrD7EvLD-4fah2x1XVd3bD6tpbTpReRzHH8AsEgEsScoyf=
+NFRxEGWyn6R7Zhr0H0RAfDhNpyQdg0HrnNCpxfJIOu-wsLrmbJxQg4ra8GNknpuMJCbQUNRyg99=
+QDTd2V2waVhpeoawXe6vW84qFziz7hF-uvZwSZmVnK41gWbrFBfzcEmTLKucLOuS48%3D" targ=
+et=3D"_blank" style=3D"box-sizing: border-box; text-decoration: underline; =
+color: #0068A5;" rel=3D"noopener">Infrastructure Sector Brief</a>.&nbsp;</s=
+pan></p></div></div></td></tr></table><table class=3D"divider_block block-4=
+" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-tabl=
+e-rspace: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"pad" style=
+=3D"box-sizing: border-box; padding-bottom: 10px; padding-top: 10px;"><div =
+class=3D"alignment" align=3D"center" style=3D"box-sizing: border-box;"><tab=
+le border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" w=
+idth=3D"100%" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-tab=
+le-rspace: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"divider_i=
+nner" style=3D"box-sizing: border-box; font-size: 1px; line-height: 1px; bo=
+rder-top: 1px solid #bbb;"><span style=3D"box-sizing: border-box;">&#8202;<=
+/span></td></tr></table></div></td></tr></table><table class=3D"heading_blo=
+ck block-5" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace: 0=
+; mso-table-rspace: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"=
+pad" style=3D"box-sizing: border-box; text-align: center; width: 100%;" wid=
+th=3D"100%" align=3D"center"><h1 style=3D"box-sizing: border-box; margin: 0=
+; color: #528bb2; direction: ltr; font-family: Arial,Helvetica Neue,Helveti=
+ca,sans-serif; font-size: 23px; font-weight: 700; letter-spacing: normal; l=
+ine-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;"><sp=
+an class=3D"tinyMce-placeholder" style=3D"box-sizing: border-box;">Today in=
+ UO!</span></h1></td></tr></table><table class=3D"text_block block-6" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspac=
+e: 0; word-break: break-word;"><tr style=3D"box-sizing: border-box;"><td cl=
+ass=3D"pad" style=3D"box-sizing: border-box; padding-bottom: 10px; padding-=
+top: 10px;"><div style=3D"box-sizing: border-box; font-family: sans-serif;"=
+><div class style=3D"box-sizing: border-box; font-size: 12px; font-family: =
+Arial,Helvetica Neue,Helvetica,sans-serif; mso-line-height-alt: 14.39999999=
+9999999px; color: #555; line-height: 1.2;"><p style=3D"box-sizing: border-b=
+ox; line-height: inherit; margin: 0; mso-line-height-alt: 14.39999999999999=
+9px;">&nbsp;</p><ul style=3D"box-sizing: border-box; line-height: 1.2; mso-=
+line-height-alt: 14.399999999999999px; font-size: 14px;"> <li class style=
+=3D"box-sizing: border-box;"><p style=3D"box-sizing: border-box; line-heigh=
+t: inherit; margin: 0; mso-line-height-alt: 16.8px;"><a href=3D"http://link=
+s.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205=
+e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC6ko_k6dW5RfjvkzUCnGlH9J-UUo=
+-n69m9nCb7D2WruAUhAiWOGGB9Nu-73j8R1f5VYCVkSkrurRFbjVAFEAeEDBtaZZVvfrmXKAamZ=
+duonGJGYOxVS2BQtob8beOREly1eln03nf0Tgb9qGTsU3jGzRVmT9V1mCSRPSbWljftXMWRmE_p=
+sZ_kZa07NK--Did_n1Sj6y0gucVr2ISdYvZFYkIympZrD7EvLD-4fah2x1XVd3bD6tpbTpReRzH=
+H8AsJ4ErCLh9uUDtCLj30f48lZ5q0vqoXJWy6X2gOxC2LJXqG1nDUt7HvaHbsN5YxVVlHRs9i5v=
+jpJGEfodso_TL9-r2VWzovzelZ9nfDb1r0kG3s2cs71ZVwRXiMzGtqRnB_P-3JaJYafKbV2k8PP=
+2BVk%3D" target=3D"_blank" rel=3D"noopener" style=3D"box-sizing: border-box=
+; text-decoration: underline; color: #0068A5;">Infrastructure Sector Brief:=
+ All Eyes on AI</a></p></li><li class style=3D"box-sizing: border-box;"><p =
+style=3D"box-sizing: border-box; line-height: inherit; margin: 0; mso-line-=
+height-alt: 16.8px;"><a href=3D"http://links.messari.io/u/click?_t=3D18e87b=
+48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBn=
+EM40aic0VCgsSsvC4Tvd8dyTHfk9qw4cx_eSHsAFpxlapzEVYS8x84H0W4b30GCXOzHFEF0NlND=
+hDNOXLsXb0a5doL6GlBAE3JSCy-FM76YeLUe5u8j37GiEKAwQtZrvq-K95KYFAJLbtQRJK1kuhm=
+u_I9_zpUI87c9Q20VlAwugUjjyaFJpTjA6tkF8gKxrSWArMc9kABZAxHx4N16VNwSf5gsWmx-65=
+L6Puf7r4nsmKJkOYqHUn4P8hPW1X2dnCQwRXqDbn5dEVYOxWRYI_PTlHr8ggWAQbke5yZKdVqex=
+2IGX2YYMI12mKrNG28w7Rt_jiJhICEdDccrYnyK72n_K5yzwLc-2OFAp-MXHSzJNJ4RPUsNSDTX=
+4QEK0GK5nLUhoixJeER1GqWYOA%3D%3D" target=3D"_blank" rel=3D"noopener" style=
+=3D"box-sizing: border-box; text-decoration: underline; color: #0068A5;">Pe=
+rp DEX Token Cheat Sheet</a></p> </li><li class style=3D"box-sizing: border=
+-box;"><a href=3D"http://links.messari.io/u/click?_t=3D18e87b48d077440e80cd=
+99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSs=
+vC3cmEH8PtPAS34gNlRVdRBDwuFHY0ov2RMhnQXtbf0CKS63mUnvLv2DL7y4fU9FXePMGWBIVGU=
+mlBupmaw4gEwKs7lkxvceVYm7J2doo4Gn-Y9E3_mAMnojAgHt-wWe_D9IxfSfeUnOoKJpd4MzvC=
+oXMVaOtHo0tCilBTApFej1l3AVJLa9yhSmISTMvzRmtQpCE6DZ5oEkLbKg8-iPLw_geiYwXEjAu=
+Dawfa8uvsMAtzNYFwhmZB8WnlJ3TJ-hdCDBQKOUVDvtVIKQaExyINV8QFBy11jsoNMBWSXy8J9k=
+X0qAeQ6TuSR23vCwc_ydxOFOUcvoY52cRS9PUNkhbZdQ%3D" target=3D"_blank" style=3D=
+"box-sizing: border-box; text-decoration: underline; color: #0068A5;" rel=
+=3D"noopener">NEW Diligence Reports</a></li><li class style=3D"box-sizing: =
+border-box;"><p style=3D"box-sizing: border-box; line-height: inherit; marg=
+in: 0; mso-line-height-alt: 16.8px;"><a href=3D"http://links.messari.io/u/c=
+lick?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edb=
+d585c&_e=3D3lIBnEM40aic0VCgsSsvC5NEDShdxQzdDNv0nT72T825kPD7usDVKv7y6rRa-_em=
+jSHZiGqMCe4MjwS-QyC3VIVLI8J4Tmd_J7YRJ-q1OVc0EIIwPDuZUW6xMGhbfRhzvKiEnDtG-Vk=
+hGottejNWjn6FsYvFFTpovpB0fioUzJlV-bqSEk85F8QeCIe560f8bZfxQG-MxQ_1xSUlEQchac=
+d72mKmeT4cG48Iz7jiu-mjyplD2O8FoI0d1nIWg6aczPtzhmNFvmrRYNm4qhLp1C03BwMcJfMpg=
+-gfWQUSPuPHRJ6QuXEt-tMi7DCFYRNuvwRtD-a0v3SdNJKWi5fzF2M4yT7wZmdF-Ws7gA74UErC=
+DY_Gk1_JivV8EYR90ocyeLzrPCfMty3RnyblKzN61sHi9BgACUw4L3CAZMwa_gg%3D" target=
+=3D"_blank" style=3D"box-sizing: border-box; text-decoration: underline; co=
+lor: #0068A5;" rel=3D"noopener">[Aave DAO] New Chain Deployment Framework</=
+a></p></li><li class style=3D"box-sizing: border-box;"> <a href=3D"http://l=
+inks.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3=
+205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvCxxqBwQmjWfRWDLTTXKVdvCJ0=
+-VpRbZVRDhTedhmQICWb0C50e5sR2lN9NSygyVZ8F0y-fHB2BVnXUjo5vwoDwifRZPkGggW6ZMc=
+GASc_69OVTzlOTjnw4NHl4qhPO8hwDZjS2qzQGRHtPvniOgFA2XkTA5JC61-4gO85qVQDsVPtY9=
+qz-Ns4eWQEj0VNbCZEVynqIx1qyJzIafRCh6Jv9R154T14JprxucY6bA8tujm471GftjbVAl9wq=
+JE0c9YgBP8ha4eHFHChhHogzZzBHS3Lkviwtp5PPu3Tad9t1toi1mPi8KrqSWFysAF2NEc1CjXa=
+LUAhGpxq4RHsUEf921fbPGAIiDei1DgDxSe8LUIR7ZDplWVh7Xm1sOhCPqymdjNeNjC-axe3UOz=
+U1kl2Wc%3D" target=3D"_blank" style=3D"box-sizing: border-box; text-decorat=
+ion: underline; color: #0068A5;" rel=3D"noopener">[Maple] Maple and Circle =
+Partnership</a>&nbsp;</li></ul></div></div></td></tr></table><table class=
+=3D"divider_block block-7" width=3D"100%" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-=
+table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: border-box;=
+"><td class=3D"pad" style=3D"box-sizing: border-box; padding-bottom: 10px; =
+padding-top: 10px;"><div class=3D"alignment" align=3D"center" style=3D"box-=
+sizing: border-box;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" width=3D"100%" style=3D"box-sizing: border-box; mso=
+-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: border-box=
+;"><td class=3D"divider_inner" style=3D"box-sizing: border-box; font-size: =
+1px; line-height: 1px; border-top: 1px solid #bbb;"><span style=3D"box-sizi=
+ng: border-box;">&#8202;</span></td></tr></table></div></td></tr></table></=
+td></tr></tbody></table></td></tr></tbody></table><table class=3D"row row-3=
+" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-ls=
+pace: 0; mso-table-rspace: 0;"><tbody style=3D"box-sizing: border-box;"> <t=
+r style=3D"box-sizing: border-box;"><td style=3D"box-sizing: border-box;"><=
+table class=3D"row-content stack" align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-=
+box; mso-table-lspace: 0; mso-table-rspace: 0; border-radius: 0; color: #00=
+0; width: 585px; margin: 0 auto;" width=3D"585"><tbody style=3D"box-sizing:=
+ border-box;"><tr style=3D"box-sizing: border-box;"><td class=3D"column col=
+umn-1" width=3D"100%" style=3D"box-sizing: border-box; mso-table-lspace: 0;=
+ mso-table-rspace: 0; font-weight: 400; text-align: left; padding-bottom: 5=
+px; padding-top: 5px; vertical-align: top; border-top: 0; border-right: 0; =
+border-bottom: 0; border-left: 0;" align=3D"left" valign=3D"top"><table cla=
+ss=3D"heading_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; ms=
+o-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: border-bo=
+x;"><td class=3D"pad" style=3D"box-sizing: border-box; text-align: center; =
+width: 100%;" width=3D"100%" align=3D"center"><h1 style=3D"box-sizing: bord=
+er-box; margin: 0; color: #528bb2; direction: ltr; font-family: Arial,Helve=
+tica Neue,Helvetica,sans-serif; font-size: 23px; font-weight: 700; letter-s=
+pacing: normal; line-height: 120%; text-align: left; margin-top: 0; margin-=
+bottom: 0;"><span class=3D"tinyMce-placeholder" style=3D"box-sizing: border=
+-box;">MESSARI INSIGHTS</span></h1></td></tr> </table><table class=3D"text_=
+block block-2" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace=
+: 0; mso-table-rspace: 0; word-break: break-word;"><tr style=3D"box-sizing:=
+ border-box;"><td class=3D"pad" style=3D"box-sizing: border-box; padding-bo=
+ttom: 5px; padding-top: 10px;"><div style=3D"box-sizing: border-box; font-f=
+amily: sans-serif;"><div class style=3D"box-sizing: border-box; font-size: =
+14px; font-family: Arial,Helvetica Neue,Helvetica,sans-serif; mso-line-heig=
+ht-alt: 16.8px; color: #555; line-height: 1.2;"><p style=3D"box-sizing: bor=
+der-box; line-height: inherit; margin: 0; mso-line-height-alt: 16.8px;"> <s=
+pan style=3D"box-sizing: border-box; color: #000000;"><strong style=3D"box-=
+sizing: border-box;">Perp DEX Token Cheat Sheet. </strong>The world of perp=
+ DEXs is rich for fundamental research and investing. They have a product w=
+ith proven demand and mechanisms with sustainable cash flows to tokenholder=
+s. Many of these assets trade at earnings multiples that even history=E2=80=
+=99s fundamental investors would call cheap =E2=80=94 all while offering a =
+high beta to the upside of the crypto markets. The four leading horses, DYD=
+X, SNX, GMX, and GNS, have unique tradeoffs, and there is no shortage of ri=
+sing competition. This cheat sheet should be a <a href=3D"http://links.mess=
+ari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838=
+ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC6ko_k6dW5RfjvkzUCnGlH_kLJw-yiOFZJ=
+HaU9Cc6dkI-3EGDG40Sg13_rbwg6Udn7kiHLEUXXpdmcQPtlgO-zMNRRv6a6VvlNS5JOBJxmqhe=
+r44TLGOomy8uABReed4YjNLiJEQaqlzUEmkNy6zO5AbvKMhwLuTdh-1_Foui_k2kmSmpxOZ02s4=
+39n8N8SI86UiK_kNyMG_yPVNTWaIukJ9ZfJsLSBL3CsmnoJ_u0Lsmqfk4J2iwFELcdF-CIB5Jeu=
+yIJqVf0i3fDGLdzl7Fb24zTGlbCItn_J4SMnNlZPqro3eyTO4LzaCxJr9DuEFwt9Gev6Ipb9UgB=
+09L0EoXmelJB1nb0rhroKrA83iP5AAGVImATyQbVNkJ0Lk5OqesA%3D%3D" target=3D"_blan=
+k" style=3D"box-sizing: border-box; text-decoration: underline; color: #006=
+8A5;" rel=3D"noopener">great resource to determine which assets present the=
+ best opportunities</a>.</span> </p><p style=3D"box-sizing: border-box; lin=
+e-height: inherit; margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p><p st=
+yle=3D"box-sizing: border-box; line-height: inherit; margin: 0; mso-line-he=
+ight-alt: 16.8px;">&nbsp;</p><p style=3D"box-sizing: border-box; line-heigh=
+t: inherit; margin: 0; mso-line-height-alt: 16.8px;"> <span style=3D"box-si=
+zing: border-box; color: #000000;"><strong style=3D"box-sizing: border-box;=
+">NEW Diligence Reports. </strong>What=E2=80=99s new this week with Messari=
+ Diligence Reports? Our Diligence team is pleased to share that Diligence R=
+eports on <strong style=3D"box-sizing: border-box;">AAVE (Aave) and APT (Ap=
+tos)</strong> have been released this week. Our Diligence Reports empower u=
+sers to gain a comprehensive understanding of any asset or protocol through=
+ structured in-depth reports that address key aspects such as core project =
+details, legal & regulatory risks, economics, and technology. Enterprise us=
+ers can purchase either as a bundle with flexible pricing, or choose to pur=
+chase individual report access. Current Enterprise subscribers can enjoy fi=
+ve complimentary reports. <a href=3D"http://links.messari.io/u/click?_t=3D1=
+8e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D=
+3lIBnEM40aic0VCgsSsvC3cmEH8PtPAS34gNlRVdRBDwuFHY0ov2RMhnQXtbf0CKS63mUnvLv2D=
+L7y4fU9FXePMGWBIVGUmlBupmaw4gEwKs7lkxvceVYm7J2doo4Gn-Y9E3_mAMnojAgHt-wWe_D9=
+IxfSfeUnOoKJpd4MzvCoXMVaOtHo0tCilBTApFej1l3AVJLa9yhSmISTMvzRmtQj1dHIbZoJHAV=
+EQz7oo6p70l-vOYDRoOmsPvXwUec0XivtNQsSnxJJWY68zNjOXYe8b6q_5IUUFvbET-mKt6qFeh=
+Env8LT-QGjk-9mCGMSxU4jrBHo7o11J-MdtfrWjkiZ-RWtRmvSTQAJfKN5v2EM8%3D" target=
+=3D"_blank" style=3D"box-sizing: border-box; text-decoration: underline; co=
+lor: #0068A5;" rel=3D"noopener">Explore Diligence today!</a> &nbsp;</span><=
+span style=3D"box-sizing: border-box; color: #000000;">&nbsp;</span> </p><p=
+ style=3D"box-sizing: border-box; line-height: inherit; margin: 0; mso-line=
+-height-alt: 16.8px;">&nbsp;</p><p style=3D"box-sizing: border-box; line-he=
+ight: inherit; margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p><p dir=3D=
+"ltr" style=3D"box-sizing: border-box; line-height: inherit; margin: 0; mso=
+-line-height-alt: 16.8px;"> <span style=3D"box-sizing: border-box; color: #=
+000000;"><strong style=3D"box-sizing: border-box;">[Messari Governance] [Aa=
+ve DAO] New Chain Deployment Framework.</strong> This proposal <a href=3D"h=
+ttp://links.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De=
+43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC5NEDShdxQzdDNv0nT=
+72T825kPD7usDVKv7y6rRa-_emjSHZiGqMCe4MjwS-QyC3VIVLI8J4Tmd_J7YRJ-q1OVc0EIIwP=
+DuZUW6xMGhbfRhzvKiEnDtG-VkhGottejNWjn6FsYvFFTpovpB0fioUzJlV-bqSEk85F8QeCIe5=
+60f8bZfxQG-MxQ_1xSUlEQchacd72mKmeT4cG48Iz7jiu-mjyplD2O8FoI0d1nIWg6aczPtzhmN=
+FvmrRYNm4qhLp1AZ7HYZk9GE6rLK6nyAydTBBPDRgMrqXTmJQLnSvD1ItPO9XNaiQ18qQtLExyW=
+Q3RwroSYmHgdK9WPLFGY8Og7fysxP7qrgk4_DiYs7gN5nXCeZWCORfdTQFXvfnrsfDlUHuA20ia=
+-x4zJHmh96lIoM%3D" target=3D"_blank" style=3D"box-sizing: border-box; text-=
+decoration: underline; color: #0068A5;" rel=3D"noopener">seeks community ap=
+proval for a framework to deploy the Aave Protocol</a> on a new blockchain.=
+ It outlines a standardized process for any interested blockchain, establis=
+hing a transparent and community-driven approach for evaluating and deployi=
+ng new instances of Aave V3.&nbsp; <br style=3D"box-sizing: border-box;"></=
+span></p><p dir=3D"ltr" style=3D"box-sizing: border-box; line-height: inher=
+it; margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p><p dir=3D"ltr" style=
+=3D"box-sizing: border-box; line-height: inherit; margin: 0; mso-line-heigh=
+t-alt: 16.8px;">&nbsp;</p><p dir=3D"ltr" style=3D"box-sizing: border-box; l=
+ine-height: inherit; margin: 0; mso-line-height-alt: 16.8px;"> <span style=
+=3D"box-sizing: border-box; color: #000000;"><strong style=3D"box-sizing: b=
+order-box;">[Messari Key Developments] [Maple] Maple and Circle Partnership=
+. </strong>Maple has <a href=3D"http://links.messari.io/u/click?_t=3D18e87b=
+48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBn=
+EM40aic0VCgsSsvCxxqBwQmjWfRWDLTTXKVdvCJ0-VpRbZVRDhTedhmQICWb0C50e5sR2lN9NSy=
+gyVZ8F0y-fHB2BVnXUjo5vwoDwifRZPkGggW6ZMcGASc_69OVTzlOTjnw4NHl4qhPO8hwDZjS2q=
+zQGRHtPvniOgFA2XkTA5JC61-4gO85qVQDsVPtY9qz-Ns4eWQEj0VNbCZEVynqIx1qyJzIafRCh=
+6Jv9R154T14JprxucY6bA8tujm471GftjbVAl9wqJE0c9YgAuhuJ7sejt-CWU6YK2afA8oU8W_7=
+Ry8AXaXlF4yjsqeaWrwd3AmvcWPVujpi5zbH-TyCLP-8Hh9Dg7jNJfvDLS_0bV2tP7ey9G5pEVf=
+TQ57yq21raLg_AkHW-bY_isVrECZD_dGJxysOYVAXH7RtSU%3D" target=3D"_blank" style=
+=3D"box-sizing: border-box; text-decoration: underline; color: #0068A5;" re=
+l=3D"noopener">announced a partnership with Circle Internet Financial</a>, =
+the entity behind USDC issuance, to broaden the adoption of USDC through Ci=
+rcle's provision of funding for a loan from its corporate treasury to Maple=
+'s Secured Lending pool.</span> </p></div></div></td></tr></table><table cl=
+ass=3D"divider_block block-3" width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; m=
+so-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: border-b=
+ox;"><td class=3D"pad" style=3D"box-sizing: border-box; padding-bottom: 10p=
+x; padding-top: 10px;"><div class=3D"alignment" align=3D"center" style=3D"b=
+ox-sizing: border-box;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"100%" style=3D"box-sizing: border-box=
+; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: borde=
+r-box;"><td class=3D"divider_inner" style=3D"box-sizing: border-box; font-s=
+ize: 1px; line-height: 1px; border-top: 1px solid #bbb;"><span style=3D"box=
+-sizing: border-box;">&#8202;</span></td></tr></table></div></td></tr></tab=
+le><table class=3D"text_block block-4" width=3D"100%" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: bord=
+er-box; mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;">=
+<tr style=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing=
+: border-box; padding-bottom: 10px; padding-top: 10px;"><div style=3D"box-s=
+izing: border-box; font-family: sans-serif;"><div class style=3D"box-sizing=
+: border-box; font-size: 12px; font-family: Arial,Helvetica Neue,Helvetica,=
+sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555; line-he=
+ight: 1.2;"><p dir=3D"ltr" style=3D"box-sizing: border-box; line-height: in=
+herit; margin: 0; mso-line-height-alt: 14.399999999999999px;"><span style=
+=3D"box-sizing: border-box; font-size: 14px; color: #000000;"><strong style=
+=3D"box-sizing: border-box;">ALSO POPULAR ON MESSARI</strong></span></p><ul=
+ style=3D"box-sizing: border-box; line-height: 1.2; mso-line-height-alt: 16=
+.8px; font-size: 14px;"><li style=3D"box-sizing: border-box;"> <a href=3D"h=
+ttp://links.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De=
+43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC6ko_k6dW5RfjvkzUC=
+nGlH8b3alQ0yoFYOpGfnrOMdDjN3YY020BpLBOJ3dsOjDHtV_Op9JY62clHzK4UTojkh8dJvbCY=
+tDCdMEwAcdi8Ptp-N-rIsp9K_E_Y59ZbO4Lz_kECGjGsfAwCSjCswE1oFdEux9c17vgO4io0tjY=
+3_jgxGfu6e-UEzRgYRbVSBAYK4_WZ-R5S34_obxJ3g9sciZYLUZOwvGExslH5NVXxKBL5KilTmJ=
+jKDihlrK0gAMOeJpRxXrmFZai8MZ2HKd2GZ6Q3urgM3viGCUBDP9lhWkiKXP9ux0t6LzL3c2M-N=
+lB-Q7yBrhAyHjgYQ1_2tdaUGbTfdb5xuCk4EEPrAMwIcmaKVM4Qy7KW8qIW9GrQ5ycug%3D%3D"=
+ target=3D"_blank" style=3D"box-sizing: border-box; text-decoration: underl=
+ine; color: #0068A5;" rel=3D"noopener">DeFi Sector Brief: November 8, 2023<=
+/a></li><li style=3D"box-sizing: border-box;"><a href=3D"http://links.messa=
+ri.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838e=
+e40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC6ko_k6dW5RfjvkzUCnGlH_OHwK_o3UWXQw=
+yrGHJvDRTrmfXDMrlk1i9KuQ5ce_8dEqC_pcWSz8mUPBkacHsVtc2VlPxiyxG1F--wlBjg09EZ_=
+M8y_gEKqFX5t671_IvYNphbnbW0zjn_KTJeduDdawLj4X7pleaxt4c8JzWcRelGCz0M3yO-iYkN=
+GSLKz4K9lRf1RCQtWJA_E2Oh44VBJxC3I158h-LGamAy1LXRWmCGkmfELtXGPEHnplrQlH9jSti=
+AqUjNppi4OJzsFbw3V1zKRmiQAZx3ic8zK9Y54XKTFC7khl0BQgAuMtVJznhKKMsHlb2lF4GD2b=
+2hSJIP30wVN0qxnw97U1le_wAuNQ7bkcf6bP6wH6N5qmrPhwgQQyIc5wj0QRrk0Yk1DkEU0s%3D=
+" target=3D"_blank" style=3D"box-sizing: border-box; text-decoration: under=
+line; color: #0068A5;" rel=3D"noopener">Crypto Fundraising Brief October 20=
+23</a></li><li style=3D"box-sizing: border-box;"> <a href=3D"http://links.m=
+essari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44=
+838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC6ko_k6dW5RfjvkzUCnGlH_LqB0zudg=
+bA4EZPObx4d4KVfxGFIKEedm0VjyXK4HDoXUj6FURNrqFveMXW2x8GItCtvumFebEQfE6j9JuxO=
+AO8G_R8njWqL144dyjJUJ2DnSMRvpCeVMiHvhfcsr8_nrEcbFlVbUGRujM5KBl6hr5Ov0mlOFl_=
+Y7Sm8E0SmGZx-p8wVcYrSgpBIvDFWvPlvwkoMqS-9QA8iipHFCvRw3q6EwlncyoIWPk2cmDK3ra=
+cib2mo4ZpOzRiGwoVsei1i9ziia4_-wgmFMq-jfjvVId4sgrG7a6U2SlO9PWn97sbwv2UvNNGrP=
+GCTTdBPf0ToYfB8vzONYwl8WI5gNViKs7dg2PgIeD_VSO1SswgJpujmoGruYqqPLMPEZhOT5YFV=
+3klr9i-idXlfJZANC4jqVUvAwLYi44JRz5d3ZiW_7Sdg%3D%3D" target=3D"_blank" style=
+=3D"box-sizing: border-box; text-decoration: underline; color: #0068A5;" re=
+l=3D"noopener">The Week in Crypto Policy: Decentralization & Policy Conside=
+rations</a></li><li style=3D"box-sizing: border-box;"><a href=3D"http://lin=
+ks.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c320=
+5e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC6ko_k6dW5RfjvkzUCnGlH89gPD=
+e88-UVqAp0L8kN0fkCivW5YnS_bmFCG3yzdNgtsbNnWSL4egK_C97CVBHw3a9eJO-W6wFZ6gvar=
+WyXReKlj16ZhO6dwEnm3fEdgVjZBdcgm0kB-7fkIoECsE7SMif_ENZG8sYwZU41rde7CuiDFDTv=
+dtxeJTiOfms1sHtF5Lg7qZ7TERtxripcM0rthpsRdBNR60Ae0Xu1CpVOK03u5z9ohiiPvfflYNL=
+1PGEpotVB1a1Qi5Y8JrR_tUczdcx8pxOuL_Skcvnsq0JH21nXpvfw0FsxCfS6TZsKCig4a3OIXh=
+7KGB2-pBMXckDdOVkP-sRtMLIM9XbtoM8woIAF0xVdTConZp4pCng4aIg2FmL4O5pxaYq1HSXpW=
+6bbUM%3D" target=3D"_blank" style=3D"box-sizing: border-box; text-decoratio=
+n: underline; color: #0068A5;" rel=3D"noopener">Proposed Tax Rules for Digi=
+tal Asset "Brokers"</a></li><li style=3D"box-sizing: border-box;"> <a href=
+=3D"http://links.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_=
+m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC6ko_k6dW5Rfj=
+vkzUCnGlH-sfb2QhIA1EQ4rQEYxF27aycG3zKrgCYPsuifQxUST6sJUKs6zAiKrSAJNtXmak9Kg=
+vseSb-CVZWBTsM8mp0iZu-DiycwDhWRbyKAv-Nf5tDJWvZy35KPwtu8XObUaVLtHjxbH6ex5aWZ=
+Yl6cX8VXFDj-z5JROHC7qcyzslzRpe4nThYTkTFjYBoKoGHyI-I2Mw8S87ROFJxyHPkDg-Lj2Of=
+H_GDHchq3AW4J1j_UdClNXimF1M_4s13JKK_sTR9aPUO6VJmVhtDw7QN0w76VrVt8Jzt6Xfi7V0=
+8VYmGrs4uNzUFI-4XK15aOgMkFpDIqcNVw9QCjY2dVbb7m-30rp-44K34p5D2_gJaTx4DDgFi_S=
+cnzf8nMTec9xAzoE7-s%3D" target=3D"_blank" style=3D"box-sizing: border-box; =
+text-decoration: underline; color: #0068A5;" rel=3D"noopener">Spoiler Alert=
+ =E2=80=93 Coinbase Q3 Revenue Estimates</a></li></ul></div></div></td></tr=
+></table></td></tr></tbody></table></td></tr></tbody></table><table class=
+=3D"row row-4" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box;=
+ mso-table-lspace: 0; mso-table-rspace: 0;"><tbody style=3D"box-sizing: bor=
+der-box;"><tr style=3D"box-sizing: border-box;"><td style=3D"box-sizing: bo=
+rder-box;"><table class=3D"row-content stack" align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-siz=
+ing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; border-radius: 0=
+; color: #000; width: 585px; margin: 0 auto;" width=3D"585"><tbody style=3D=
+"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;"><td class=
+=3D"column column-1" width=3D"100%" style=3D"box-sizing: border-box; mso-ta=
+ble-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; pad=
+ding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0; bor=
+der-right: 0; border-bottom: 0; border-left: 0;" align=3D"left" valign=3D"t=
+op"><table class=3D"divider_block block-1" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: =
+border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-siz=
+ing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box; paddin=
+g-bottom: 10px; padding-top: 10px;"><div class=3D"alignment" align=3D"cente=
+r" style=3D"box-sizing: border-box;"><table border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"box-sizing:=
+ border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-si=
+zing: border-box;"><td class=3D"divider_inner" style=3D"box-sizing: border-=
+box; font-size: 1px; line-height: 1px; border-top: 1px solid #bbb;"><span s=
+tyle=3D"box-sizing: border-box;">&#8202;</span></td></tr></table></div></td=
+></tr></table><table class=3D"image_block block-2" width=3D"100%" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-=
+sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D=
+"box-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box=
+; width: 100%; padding-right: 0; padding-left: 0;" width=3D"100%"><div clas=
+s=3D"alignment" align=3D"center" style=3D"box-sizing: border-box; line-heig=
+ht: 10px;"><a href=3D"http://links.messari.io/u/click?_t=3D18e87b48d077440e=
+80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VC=
+gsSsvC5lf2ODys7jXgHyIuEyXiPmdWb8LyZpmofDyzOydiIBzi1q3Qjp_XHJGA7YdNVpKWiFz5L=
+-RHc9VzlBcdH-Ywhob97a00kkDqjvr-SWqcp2JyXvab3-pifHxToXYnmQVn9w5TcaGlJNVSL1s4=
+IwFDbeHuYgP-p8_moISvOnsyL_PbTrNaRgS9GirAc_kSguh2cF1Jx-kI36vXpuCrxXqCVkE2fDh=
+G0zS1Sxf0RRn51qw6QSIlCMZpZYTmZyLlAeZ0dDGUj8ROeShkOiMswKUl-Fgn4agqFF5ifpSJS7=
+UpwMaxSVKCKXL4l8v_w6XboTFUNMAKrY_z1mmgyfAKXP38nnW7V7tA8FZaePnFP59fBMtiPEH3K=
+3IjyYNkzdM_iNbsi13pbJA7OUqeuL0mdgEJAETDxwcxWtNfwbKbwE-i2zLWciVYh6lgpg_SX0gq=
+vCeMRiM0dlnxqu80iPgj5e1DoA%3D" target=3D"_blank" style=3D"box-sizing: borde=
+r-box; outline: none;" tabindex=3D"-1"><img src=3D"https://d15k2d11r6t6rl.c=
+loudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a=
+/18e87b48d077440e80cd99da76e2bfc2/Ad%20Space/Polybase%20Logo.png" style=3D"=
+box-sizing: border-box; display: block; height: auto; border: 0; max-width:=
+ 234px; width: 100%;" width=3D"234"></a></div></td></tr></table><table clas=
+s=3D"text_block block-3" width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-ta=
+ble-lspace: 0; mso-table-rspace: 0; word-break: break-word;"><tr style=3D"b=
+ox-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box; =
+padding-bottom: 10px; padding-top: 10px;"><div style=3D"box-sizing: border-=
+box; font-family: sans-serif;"><div class style=3D"box-sizing: border-box; =
+font-size: 14px; font-family: Arial,Helvetica Neue,Helvetica,sans-serif; ms=
+o-line-height-alt: 16.8px; color: #555; line-height: 1.2;"><p style=3D"box-=
+sizing: border-box; line-height: inherit; margin: 0; font-size: 14px; text-=
+align: center; mso-line-height-alt: 16.8px;"> <span style=3D"box-sizing: bo=
+rder-box; color: #000000;">Polybase is enabling privacy on public blockchai=
+ns using zero knowledge proofs. Learn more at <a href=3D"http://links.messa=
+ri.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838e=
+e40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC5lf2ODys7jXgHyIuEyXiPmdWb8LyZpmofD=
+yzOydiIBzi1q3Qjp_XHJGA7YdNVpKWiFz5L-RHc9VzlBcdH-Ywhob97a00kkDqjvr-SWqcp2JyX=
+vab3-pifHxToXYnmQVn9w5TcaGlJNVSL1s4IwFDbeHuYgP-p8_moISvOnsyL_PbTrNaRgS9GirA=
+c_kSguh2cF1Jx-kI36vXpuCrxXqCVkE2fDhG0zS1Sxf0RRn51qw6QSIlCMZpZYTmZyLlAeZ0dDG=
+Uj8ROeShkOiMswKUl-Fgn4agqFF5ifpSJS7UpwMaxSVKCKXL4l8v_w6XboTFULsrYmqWzg12Ip1=
+0itFO905oHgur4aRrqkx8_rFTpu9dQJERnhg1SK6mi5waBbQAWx3H6UUmh3RIkxl9gQHUsyhmEx=
+473v_CpYPtPJKeO76fy-8PZb8rfh8BNNAfmRC1hiTBI-Z4v-gYux5cFjwDYxw%3D" target=3D=
+"_blank" style=3D"box-sizing: border-box; text-decoration: underline; color=
+: #0068A5;" rel=3D"noopener">Polybase.xyz</a></span></p></div></div></td></=
+tr></table><table class=3D"divider_block block-4" width=3D"100%" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-s=
+izing: border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"=
+box-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box;=
+ padding-bottom: 10px; padding-top: 10px;"><div class=3D"alignment" align=
+=3D"center" style=3D"box-sizing: border-box;"><table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"bo=
+x-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=
+=3D"box-sizing: border-box;"><td class=3D"divider_inner" style=3D"box-sizin=
+g: border-box; font-size: 1px; line-height: 1px; border-top: 1px solid #bbb=
+;"><span style=3D"box-sizing: border-box;">&#8202;</span></td></tr></table>=
+</div></td></tr></table><table class=3D"text_block block-5" width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; word=
+-break: break-word;"><tr style=3D"box-sizing: border-box;"><td class=3D"pad=
+" style=3D"box-sizing: border-box; padding-bottom: 10px; padding-top: 10px;=
+"><div style=3D"box-sizing: border-box; font-family: sans-serif;"><div clas=
+s style=3D"box-sizing: border-box; font-size: 14px; font-family: Arial,Helv=
+etica Neue,Helvetica,sans-serif; mso-line-height-alt: 16.8px; color: #555; =
+line-height: 1.2;"><p style=3D"box-sizing: border-box; line-height: inherit=
+; margin: 0; mso-line-height-alt: 16.8px;"><span style=3D"box-sizing: borde=
+r-box; font-size: 15px; color: #000000;"><strong style=3D"box-sizing: borde=
+r-box;">OTHER NEWS AND TOP READS</strong></span></p><ul style=3D"box-sizing=
+: border-box; line-height: 1.2; mso-line-height-alt: 18px;"><li style=3D"bo=
+x-sizing: border-box;"><a href=3D"http://links.messari.io/u/click?_t=3D18e8=
+7b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lI=
+BnEM40aic0VCgsSsvCztHMM8A_p4vtFTiqOe9Jwrkn08Q0Zv54Ps-r7MEfJaAZxKgYf3gefvUUy=
+DTFnesVwgp0tpw0tSkVkT_Oqdri3LMZAc4oN8x5Vyrg436WycQjq5E1UU4ozE80AFSkK0hP1jaU=
+yrLkfaYZDUc6aN2d4VLb60rDlENfgQgZoE0mkwQfevcpaUQKXNBUlt2P7hgrwkL5p8x3nq2t1FF=
+osSgHm4OyghOmCXz6bSnEnf3kg4WW1L1MB41_d6DeXrso15srQWOihpTQnMy2NBw5XhTEuZLV4d=
+tm3ro9KZkRPaZyqDUHjHhnSaqLfNsilf-CADBjGMQsLsxrvoh-rB8YOX4DbbIcg1yFemstL-vqg=
+EUrsLH20-hb645rZVLr1uSMJBW8Hj6EsXEULyAm5QpJYrPVAKRiGb3QsVf84tOkGY48eYK1Cyjp=
+Vt_d9BINeYR29Q2w3bV-y_qIGtfnFto9kwG4FHGJ7qCJ1s8hwIt0RT59-rGMy5gtsbWI-vSrUjl=
+CGCwHjDlVSI1_RJdko3OiTqsMdIst1h0sLd5ERdPJtlaR6UTp-9ruq85F4UZRaweVdrwRMpuAf5=
+n3g3bH_ZqaZzFD3CgKTOw2erUbuM-53zuOPckI5VG8ZTKT7BST3Sjc0VmGlXDe05fud69o8kTLp=
+EOpqXpswbeF_0qytqxO0Jem4L9" target=3D"_blank" style=3D"box-sizing: border-b=
+ox; text-decoration: underline; color: #0068A5;" rel=3D"noopener">A16z Back=
+s Web3 Consumer App Setter in $5M Seed Round</a></li><li style=3D"box-sizin=
+g: border-box;"><a href=3D"http://links.messari.io/u/click?_t=3D18e87b48d07=
+7440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40a=
+ic0VCgsSsvCztHMM8A_p4vtFTiqOe9JwqHhFZguvSRclvV2_kmZRJ3yHXm1rjN63b6gofUJGG3t=
+0ae5oY8EwY21XEztd5ZjBBXjg0qaHIWOgJe5Voc-lQ0ALRDJXQi_hTYELZiiBnx0AingbTAvoR_=
+gTXjmDG5X64fQwlxVBIEf95B6t9AGJySrYLCe34FGKG51aQg8vKKctfcZNkUSZc30NRiWy-9bAQ=
+-rgQZZO8aI-UYbsc-NAzEAysOhuf59bxoU1dTpPusAuClKTwiZ4FIPF1fv2WcaLHxl9KdbnMTnz=
+MTS1Ugsz0ncXKGq5V65xtivhvKCP6cKpjFTs210kMgCSz-1dvv0qF3j1zlXYHokGrNZ0N4T2g0I=
+sEdjuEkXgoKJh_G2z6hMYUS_4H9z8mTSR_4uGao9trNVc1KeppvlwgWGoDDeXkd9yCrArfWS665=
+VoFWsxDj2N0cP1BafCsQoScRdMntm33RttgKt1DjSMWHIF_volqioeZAKIdEo8MPok6-L7hVBNb=
+CdWYVMdXnPHIBUc0TT3_Ftjsmm443yIyrcA-3vTF-xOrDQcS0W_ACzeiacm7v0hNrEpOi1Hb7oD=
+yOnWjV41fgmtZ7T8nZjOKeDTXQW3LkyVf3h04FmGEulvnYPzrgO-_F8c1wmq9SY_FwO8K0p9Dgt=
+2d02GoWqjkgG38BL_4FqZUj3JdFScXT-y5g-pZCmGXFhVTSnpP4O5iHm-NyItaO3FpLq26ylXud=
+_w0EyOZDN8YV5n3SPSTQimDSMvjNilIIFOAJ0lQ2ZY7NLAFk7WyvvqUTB5hHsReFJNCqZ6VRJHY=
+z8FR7qp92jgEU59Xn-sb7qed4SzCuAHF7n9gJ7dU4u8cxpNqwCFlaGno9YZLjpsx4g_sCNxsWRY=
+Zoj7a5js4iW_G8Qh0u_0_it6biR28-vdrpxlKkmJJ1jcnjYr0Jhijes2Ll0UX0GaImrIf6gLolZ=
+RRakVseijkyP0KWxkVhw043W-ERuXGIVIztjcxRXQne42CqcpEYly7emhnnMY0oSBvhpYMx1zLT=
+8bOAmT0_tNzrs_Ycx-z_ZznfjORNUsxPsf8QMZvxTu0Ym9ZcHw%3D%3D" target=3D"_blank"=
+ style=3D"box-sizing: border-box; text-decoration: underline; color: #0068A=
+5;" rel=3D"noopener">Contango Taps Spark For DeFi Native Perps</a></li><li =
+style=3D"box-sizing: border-box;"> <a href=3D"http://links.messari.io/u/cli=
+ck?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd5=
+85c&_e=3D3lIBnEM40aic0VCgsSsvCztHMM8A_p4vtFTiqOe9JwqwDPE3HYVK0-28LaJucHydPy=
+Bvrr9xJzI66b1nUjNkqYQLa8QupvvblIOQ240nzeqmBd3dqb4PxAzBw6Ee44rH6KuI4H41e6IIK=
+rDheNs_67QIUT-6VbyYiVnzDZoevk9k11W6s53SqmbaJOV79Fg6xUk4PhGt0Xqlb0ne1TONeaP9=
+MDFN1UmVtPa4NSpbYV6p8SZd_vWT0wo04Ft3_lACQYdY_-PcOm9pNT1LV7MuyNcIfwQh5XgMwaa=
+7Rt1Ad2IzpagFrYjzxE8is6EPi-5yq1zMI9a2eb982FQ-r75iDoF-j91ImzonndH3WQxGVXbOGr=
+7RF_qw5jgDsTMZjRpkCYIcBcXUTbBdDsDl1R0jhNUyg7KRK7Dvfcfa5x4GQOi0uvKKNlPGbdSU-=
+Lt0Pk9LdhN4SY1ETTuEQ3GrW0RkXRd6yO5lO_b-YXvXUuSz_x2J1vhmWwAF3-5YbehqbFNON3SB=
+lnRESMdBwkI_cHjMUHH8p3L4BWRSY91m26A5XKbWS0P6BnFp9bvHfV1Gqp-rBB66j5HKxD-Z1xg=
+HibC7zlV-9QiAO9D0aBGZJGG61kQ7nZK4QbCktfb36JoHs05aeU15_GO0l6VM04iAPtQozP56WW=
+DXNeLCS92Ock5JoOYu98wxKlKE0X79DWf1gflpByUxRDK2ub5Byh0KopC-AhHIss09sJvVhNgID=
+r5cRziSqaS-ia7jsoq1ubL1u90v34kxTqhXsRkui0CRL8SQFTcAS8Rax65R95mYvs3MiwataV8s=
+nYt7lXbTQx069UNCZZOYwmF8f2R1x4ISVSg59x9cBcg0RFQoFx7fBW-RHljRvIuJhShQ5axsccN=
+bNfqpTnJ2cpFYkazSBPZ3nZCsctP031BjnEw05PmdnE26CUq25UXhAdTlr9rU2AAv66wE4Rh2je=
+uL4-d9QuJRX0DNYVW5GNu_RdcS-IFp6SIZb0D2dSbQiL-CU4PW5hKey16-yRP5HCmS7usg5ethb=
+c9QVg%3D%3D" target=3D"_blank" style=3D"box-sizing: border-box; text-decora=
+tion: underline; color: #0068A5;" rel=3D"noopener">CME-Listed Bitcoin, Ethe=
+r Futures Flash a Rare Bullish Signal</a></li><li style=3D"box-sizing: bord=
+er-box;"><p style=3D"box-sizing: border-box; line-height: inherit; margin: =
+0; mso-line-height-alt: 18px;"><a href=3D"http://links.messari.io/u/click?_=
+t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&=
+_e=3D3lIBnEM40aic0VCgsSsvCztHMM8A_p4vtFTiqOe9Jwrcy7-vqTpdqRVHnVDvFAt22XWjP-=
+_MbGcutrPUEmveNfQafKJ6JExKCqUFL9AFfSZlQDMNusF8affPRjrWV98EjebPNgaPeX2FB2ZH5=
+vAwoVkkPARrM91yeRgLt_JqfhjiybqASmj_uQzHSuXsPUm_F9uLANU6-gj5QCZHFw1hzXeQCoWY=
+pcU6mwLLPz4CccOzDdwfRN8bfJg_gyk0ZLg8MJr8wERjgH6552go7v3SywHnakojgUm61PGDHuk=
+S-43jdNV5DPiPMamLkcmPyFpQFJc-KFtDy7xmL84HkeMJTDRRJK4Rcedi2WExbDUwBCm_4lTEJP=
+A9r7dcPir_X8Xtyjz9d45Jc6hQst54ypchoSWZC-MnOaeIHGhB3QzGNF63fxNWMp18cKZgRnWGf=
+krVpcSyegPgRyLceZIYl3FmsWzMi7leEIb2hY8gLYJ1K5Y3nzmzB0l7P4vxoUC_Qdg3MSQ2lUb-=
+7KBSQKv6lRiAnK7mFDn9Z5EttK0xihUyuvbT4MVJepp5NxFeMd7EwHIyQgIVuH2muxarXYTwZxZ=
+ahV7CCLCrsAchieqtJ4dykI030rPcEGJbYB0F6C_YPLr164zOzUeQLP1Hja6MP3puHyXEKufNqy=
+YZ3IoLX04pjeKcC-toJoWEZLhl_hrqy5_seohsJHMSkCddPlCzcTIO6yFjTEhsABkr6rfh7Xk_n=
+A7hmkIW41V0vi9cw0G-FDHK6ODY_hcthYbWUxUbTrXxC8pxJEKdlVNS1AqtGClv9TLeGo0pMhKn=
+5upu67XZPwRnDFDaLV1zp26A_HThWGKKy4PKUyhMb5a3Xt4YTE6PpIV_c7jt06EoEwGDIT8AxzH=
+EnvoJr7dasO296LEi7n8BGg%3D%3D" target=3D"_blank" style=3D"box-sizing: borde=
+r-box; text-decoration: underline; color: #0068A5;" rel=3D"noopener">Animoc=
+a Brands Invests in TON Network, Becomes Largest Validator</a></p></li><li =
+style=3D"box-sizing: border-box;"> <a href=3D"http://links.messari.io/u/cli=
+ck?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd5=
+85c&_e=3D3lIBnEM40aic0VCgsSsvCztHMM8A_p4vtFTiqOe9Jwq8xbFrr9G1Jw8QKWIjIsHl5c=
+K9ePZ83i_EiFXhKhV_jnJfb3XbAOrNgD7cLy3A2DWGrWjoTBjlGsSRiiSzAKbhtp_QKJngIIZmO=
+T0ZxY5Uy1NGnraoZr2B1a5bTm5suuP5F6TwU_SqBmsUnMgeD4aegwMn9ByuQki7ljCpFgQerqCc=
+mszppy7hW0GIwPXboAtqvkonLgN_FgEMU-AHwFW8iyobAHlAk_rahLJHuWA8DQuzozubV7LSqWR=
+ZAPLb5HIt_pZjQqlk2tzL00zQdGgx88w-s6kZthTkO4RXYS2ZtXLtXIrs0Y1FMv3NZKiLlGJk6Z=
+es5QNvd8V5dPGYUYMSbg52E9CevCFTmceJgFxt5spg7LEJV5NTOvVoD8EwNDDD1cfL8voHrKqwu=
+tG8OMPLzkCyaS9jR5fsbNKoPuYJYtw0WUUaR8oZ2g4bO4bycDXh_GflQfCFTH2uDjhvGrd4bAtt=
+22nVhXnnRQd_gG3HXQm-8aqrRe30y7e8J8ybhNSuJJOgvjdQN2FIzcMdkoNgE3LGsqa-VmFzZ6m=
+xweObmr2LOOWaadtfdFa2-v1Ghjo%3D" target=3D"_blank" style=3D"box-sizing: bor=
+der-box; text-decoration: underline; color: #0068A5;" rel=3D"noopener">Cube=
+.Exchange squares the circle of decentralization</a></li><li style=3D"box-s=
+izing: border-box;"><p style=3D"box-sizing: border-box; line-height: inheri=
+t; margin: 0; mso-line-height-alt: 18px;"><a href=3D"http://links.messari.i=
+o/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40c=
+c7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvCztHMM8A_p4vtFTiqOe9JwpMT5mH4gydKfkOw4F=
+0WVjWmFgaytkhs4Yuu98unUK4M1wrhS9UAuIpFrKfWvR7xAubYDDRD7kDDIRLH3-f0P0gsJxBOe=
+3nPO_p57MykU9kZaMqiHZCypjEr7ctpHvWdzEPEzXy29giQP2CKDndVtPR39TGPRa9hkV2FCS4Z=
+qFVWgneKDnohhWJXYiYG9mW4CLQwodPoorhez6LjJXCplf4tK7t0RSNUfO4DZ2lOe8YrLiNqLmv=
+IL6WhL2Ap8CBgKjJUhND_UpPXTgjg5bNtt01kYCUT6LeTRe0QhpgJos9FHfuOEmaOvQOaNwk-W5=
+RkrzeQIsrWkF07gDOzjZWJgHAnpN-L3O6rCIpjKrJUXWmXg2YTWF4v9a5NKFsgvlXsKdteA_foB=
+iJkJNNrYlxT5hXmaOCJ8EIP9LWUIoZ83CAIaaEwjWvV921PraHaw6bLJIh65KHogJ7HPbuPpiM3=
+MiYfo7PNXV8RAm_OhTHfU8-uZxgLOW9DaS955bfy74wWRtzpuqeQio5vixXo4qwLL1hnfqVrGVt=
+Ef8yOmX8KDKypVgW-P63iv7Ty0sgN3hex6GmPbNjS4wyyXlDp_1Fi_ITSVzBMKhaHoYAnW1sY2H=
+XTWELP5tMRFmKQV91QltbZBw%3D" target=3D"_blank" style=3D"box-sizing: border-=
+box; text-decoration: underline; color: #0068A5;" rel=3D"noopener">U.S. Tre=
+atment of CZ, Binance Is 'Absurd:' Arthur Hayes</a></p> <a href=3D"http://l=
+inks.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3=
+205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvCxSnIQDsvVbRXAjQkCVboPLyI=
+fvzfFJ2DEQgDxDQWEJe26aPyu1G6V9ETfGUHqkT4jcQ3R45GGzplUvD8q2UP68XAzXRJw3NSIYn=
+SVd1Z1haGQ22SSlZxgeT5AXJsdupP7Vy1gwb6rywS-_ihJDDoC6_2VbRDdTq2ptctuH3c8mw8_h=
+yFZCHob8mRWOagT6Fs2HsQQlNwb5adTy7AhGL0NSKYta2Um-OZhWc_Dx_mEJegWNQEpvntOM9cZ=
+5bPPZc9IiwKkhkb3L9s4Xr-7t6yNZufBSA0iBWnUwOLLbMpS5AVewCP9PIbw-zed8D7MeBd2IWA=
+j-XsYilCLvDp1HYMSw258eNBlmyEFHx3BxWNpTTEGxShPCf_0rDYYEi179NeQ%3D%3D" rel=3D=
+"noreferrer noopener" target=3D"_blank" type=3D"button" style=3D"box-sizing=
+: border-box; text-decoration: underline; color: #0068A5;"></a></li><li sty=
+le=3D"box-sizing: border-box;"><a href=3D"http://links.messari.io/u/click?_=
+t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&=
+_e=3D3lIBnEM40aic0VCgsSsvCztHMM8A_p4vtFTiqOe9JwoK-CABtC1v2zXDZsKFVPCy9YYcFO=
+Yq9qb27XQiEr8wVRmOGIoNXdqFx6FYYeQbn0zhc-lVEqvTENbcFXaIxzjh5DCULJjpYnlzef-Ui=
+_RTA6xSWFWF829xCyBqohY9pUfLvqVETrOoptBa-EKgEOazH_iIrEHH-pa5zdRkadSu6wWu_L64=
+jhPmvNCPoMKSPsyjUlP7o_EKl5tAHT52XFqPkpDlJNC-bNa6mLiz1VJVi00hgyuovEz9G_PeZBx=
+JufGGXB-5lonaePUEsbKCRfYs-RU_wM2dFNbizRaEbZCobeUee7o-oL5G1nUqZfeewxndkwI-6G=
+19wWLCZy6JJJo2lS3LKjkdO-R-AjxYfBFrKXfyG3atLO2HhfoDFq_ZzqtU0C965sLqTNG91swXu=
+k_sjQeZt2IfcY1nD297_JruMSaO3nY5RWYRGuMQ38DtzNov3dlZul6LRziYSDYtkMdwL1UcepjC=
+ZOJ0mcEsQ9qUlsLciJy_F8XPjI-TmAEs-gT9oXsqbOD88S2ijHjgMlMoktdiGCOwoc3BuUruVvL=
+Tgw_ErDYsUXjnbJRb-tJp7vY80UatAuew4pay4ReUrCjTBjZfsepVXZFdEgYkZB1Cuw%3D%3D" =
+target=3D"_blank" style=3D"box-sizing: border-box; text-decoration: underli=
+ne; color: #0068A5;" rel=3D"noopener">Web3 Gaming Company OhBaby Partners W=
+ith Paramount</a></li><li style=3D"box-sizing: border-box;"> <a href=3D"htt=
+p://links.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43=
+058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvCztHMM8A_p4vtFTiqOe9=
+JwpQEPAOd_YPB3ve2MIXN9Ln_XZqzkszSOqCLy_Z6u-w5kCYZ0yBhmDmHun8EwSfRnaFxMN8Nev=
+PfEWIoEBy-jtwygKvS3ll2Etdfyb7fGyFzOfObAodX4bz8ACMbtPLMGv89hXr25kku8MIHfhr4W=
+EZhrxaPvuXMfhPup5PjAeN61MP3w21Is4yzXTQ4uZWlxBNnDYuxeL8n9KZw4A6kh6D68HCWy5ay=
+UuczlKgo9aTf68KnIgGNLRcCOE6Gvh4ni7JpJy0BJkxafIwimq13xhq35o0gOSUkS13XLm-a8On=
+wefFyjC8mP_GJmyvtKZFlqyQxW64wu4VyXmyy9_KzRaUdR6AsWSofMHUTe3kuCX_OT5XT4spZv_=
+JfyeCijBNCs1FS_T-E8MdDwoc46e66Hbpaw40usqNyg9kEXjNKbm5JETaoqVDQ0ut4s6-96D6LJ=
+IhqjIZ7BJCKsPuB6U4BjiOfk0co_NqnTobTadLLjxbLssRf0x-tD7ia4UBUxhOSnVLztsXVYUt3=
+5_IWeoEUwnEV1Au3EXrXUE36NjSclvzwbjM5rgf8TMUxbL9AoFpmPCe-EaoQ94y2BKIVknao3Yn=
+IWwKVgK84TqrU1vnjYyv5x5pVWTPn1pDAHA5TbVrscr2i_Bdy01NOlgYWxY7EAt92YkFzkGceSR=
+KQAAeBgd3g6bfmmNVYaw5LEMylDGToECxxQ7Cmsf9XCTHG-YuQ7BtL24bpD95a2k1yhl7iDNpW_=
+Api1sOFgA_riK-pFplovs%3D" target=3D"_blank" style=3D"box-sizing: border-box=
+; text-decoration: underline; color: #0068A5;" rel=3D"noopener">Cosmos co-f=
+ounder splits ATOM after years of infighting</a></li><li style=3D"box-sizin=
+g: border-box;"><a href=3D"http://links.messari.io/u/click?_t=3D18e87b48d07=
+7440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40a=
+ic0VCgsSsvCztHMM8A_p4vtFTiqOe9Jwqa-bUS_P9Ak6BiMdboRoRaF6GEYqYZqGM4oGd1ozwan=
+s7q53EqQ541z7PxiFE_Hhvt_bdT7liVdMHImU2KWYnVfK1jxqVyPHtgdbY3FWpo9xHzLOj64PRa=
+awRmdlxosHY_KGviqTdx5SE9111c78WT_92Q8C_JvxMvZNYp3mBh1gi3yvKuNcr2uBfEBZIWsNy=
+2G-ttcTCXa78--dTQ1Jqi7jH6j3bkzdVuT_nUgwgIjX7deYBkl9NX4-oyIhsBDEs_iDa3lJvo8E=
+S3GAiTTLqO8jILe6iKjCbivinkvzPCd9-fmTXoyEpBxhDEsZ2e7UBhb1aIk3QWWNdBeeAIlrZ-B=
+9QSSiOK7VZWXIBaV3g46OdJHa3NeRhF49FOuiiaQ1cU89CHQ0ngf_5VaohSu96yyuIAUk5kvRE2=
+TTMx5yzKDos-tZlAvQ9s91ds_75qe12gezuB_TK7EoQzHj90OQuFRJvsMeVloYNXr1mcS7K-sY3=
+NzUKCJILqcLlijsqy_7AdYlBL46ZY1L8Dd2GeiuEsG8XByKjQCvHYJso_cmCREUEQa7LpOQoMlN=
+Y9y9Ggdz493x3qXDaJEeMYJZYZgdAYBzL4ZmwW41tGWc2aI02rypaLVh_Wxykw4GasAPhL5sngT=
+q7sCm_LPw_GeG2uzXCdw3z3yQKSZKO9tlgcwEZwUaDOPypN6wiDOCIvw8u1OXZ8R7YMjEg3Wfim=
+Bljy6oJVC5XF4q4p7ncY-Jl1dwOdr4eHmuXaJo4Y9G-oYvkzab41UHdAxp4QEDEY2rllWqbtLxG=
+2O-vS628ZNzrEH9LAhI7Rkqy7xiBvEiP4lxd-2lg6i3eUxDGSFB3leXQB0mJoNiPXzBeEHkuCuc=
+rKfEAwSlzOeMt4bCFT-qn06d5cJkqwReeRv-il4HhFSkIYlC8JC1fsN1q8UiWMj3cMo75tHv8Ax=
+2_peqPkIShf0gEFh9bfVsVILoJbKmLKzZYwSU24hVzPMo7VvpcETTDAiYCH16-GfZVgz210Srh2=
+lW_Lri29KUzIH5AGp9ajkYAU5QLr2L-ou6s4wj0Ad1eMYG9w6jlH_sj2V4GfAWBxfNe_HyKRdQm=
+XtYBUxmw4XQiU9Hgx5_6YVR9gi9xTntNIF6w0eD6pNLqVIVypR4kDlqrif6K2ow2iQ7NzUp9QE4=
+D-qxDnQcL8H_hDolvsHZ3_Z9hpq3gvBXlcF2I1sNrAIrb9Vws%3D" target=3D"_blank" sty=
+le=3D"box-sizing: border-box; text-decoration: underline; color: #0068A5;" =
+rel=3D"noopener">Magic Eden Launches Cross-chain Wallet</a></li><li style=
+=3D"box-sizing: border-box;"> <a href=3D"http://links.messari.io/u/click?_t=
+=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_=
+e=3D3lIBnEM40aic0VCgsSsvCztHMM8A_p4vtFTiqOe9JwoHTucScCwjnyRXxKDFb3auUYaDA_1=
+vOY9a09Gg2FU6nMVjL_FpYuYDUY3cfb0_mpXJ2varVGnI1JVONQ5h8y5sDErRks_MN9WuPjr6jQ=
+depXND9k2yjN9XgdFLXP3NqLpguywwM2SrRf3dy-zHXYOpUBT6MaeLQnfdvxB65GprZ5Y1voYH7=
+pW-napYKnF7w2-oMH9tgefcoeXP62rtWhKaRkAzUMcPd3i6n95fbBtJKPwMH3vEUB23pgTNk-Oo=
+0984iUu_jB3sEncTX9NPdIIvQnvbv9yOWd_yhF549mQEdBnnPOV3F8wITxlR7hBBsykDe7GuvEo=
+_kd33kWg1qBL2qNJrJq9HMVJ7rZS-BxR8Cfqwb21N_1booGbRVyUqQRsUWD97q7P2-j1cNNQY96=
+1Y8uVuHm7BYzjVwR93WpYKENcuPyLHBiNsYyxWB3Kff-xHCzFl1kWlCWnHQuTKVDphl2Wylu2g9=
+P3kmfbUq-UF65AI_81l-sXAyvc4lM8VrroszwUjn5kgW1hI0zT66rV5EadnicdF1Osm9v-cDUtd=
+y6a7HmKrI9JrR54Ld_A9K38T7p0xJ56beNpcPHb1ESzFUlhH_bxo6hxTI_Jku5FFwo7SAMjVIgb=
+Hzfmb9VuL-895Cla_ft16qVfhT3hCjBpPeiNtuXoaqP6MzA0YIZA_nLDyjZvrjokAkDPiofdW7g=
+Pex7xE6KM6hBbmm0VBQl58Kix6S7S4KKiGqxFJNY7PgwaBX_O3MCcYapRLpqCMjFyhmtO4GQIs5=
+nr1SipAYpnET1dFqLUorRz1bNL1pT1Jefde2GjTNUTILGe5_91RU9XMpjJMxb6-3kgObTbgKrIG=
+AvfQrrQ58MxzMN8DRjcTf886vTmX3OwbdtLsV0ITZSSH0LDkYKvc1hZT5T36ctB2" target=3D=
+"_blank" style=3D"box-sizing: border-box; text-decoration: underline; color=
+: #0068A5;" rel=3D"noopener">Coinbase Is Dominating a Key Bitcoin ETF Servi=
+ce. Can Anyone Else Join the Race?</a></li></ul></div></div></td></tr></tab=
+le><table class=3D"divider_block block-6" width=3D"100%" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: b=
+order-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizi=
+ng: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box; padding=
+-bottom: 10px; padding-top: 10px;"><div class=3D"alignment" align=3D"center=
+" style=3D"box-sizing: border-box;"><table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"box-sizing: =
+border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-siz=
+ing: border-box;"><td class=3D"divider_inner" style=3D"box-sizing: border-b=
+ox; font-size: 1px; line-height: 1px; border-top: 1px solid #bbb;"><span st=
+yle=3D"box-sizing: border-box;">&#8202;</span></td></tr></table></div></td>=
+</tr></table><table class=3D"image_block block-7" width=3D"100%" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-s=
+izing: border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"=
+box-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box;=
+ width: 100%; padding-right: 0; padding-left: 0;" width=3D"100%"><div class=
+=3D"alignment" align=3D"center" style=3D"box-sizing: border-box; line-heigh=
+t: 10px;"><a href=3D"http://links.messari.io/u/click?_t=3D18e87b48d077440e8=
+0cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCg=
+sSsvC5lf2ODys7jXgHyIuEyXiPmdWb8LyZpmofDyzOydiIBzi1q3Qjp_XHJGA7YdNVpKWiFz5L-=
+RHc9VzlBcdH-Ywhob97a00kkDqjvr-SWqcp2JyXvab3-pifHxToXYnmQVn9w5TcaGlJNVSL1s4I=
+wFDbeHuYgP-p8_moISvOnsyL_PbTrNaRgS9GirAc_kSguh2cF1Jx-kI36vXpuCrxXqCVkE2fDhG=
+0zS1Sxf0RRn51qw6QSIlCMZpZYTmZyLlAeZ0dDGUj8ROeShkOiMswKUl-Fgn4agqFF5ifpSJS7U=
+pwMaxSVKCKXL4l8v_w6XboTFUCOBhkAamQ20SOQOK6p8hl5EhT-qS3SPxyoFvb00-h0dJvYMaYk=
+LoJhuCFyN6Wp9JInjnk6seroh0fENHQwwXO1bN9LLYVaF5rRErFCBNb3tFR5gIU3Djk-WpJ1ArL=
+_5Cha6opiTMJWWRXGSY6GH2ig%3D" target=3D"_blank" style=3D"box-sizing: border=
+-box; outline: none;" tabindex=3D"-1"><img class=3D"fullWidth" src=3D"https=
+://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46b=
+b-bd7e-c542cff6dd6a/18e87b48d077440e80cd99da76e2bfc2/Ad%20Space/polybase%20=
+banner%20week%201%20and%204.png" style=3D"box-sizing: border-box; display: =
+block; height: auto; border: 0; max-width: 585px; width: 100%;" width=3D"58=
+5"></a></div></td></tr></table><table class=3D"divider_block block-8" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspac=
+e: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"box=
+-sizing: border-box; padding-bottom: 10px; padding-top: 10px;"><div class=
+=3D"alignment" align=3D"center" style=3D"box-sizing: border-box;"><table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+=3D"100%" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-r=
+space: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"divider_inner=
+" style=3D"box-sizing: border-box; font-size: 1px; line-height: 1px; border=
+-top: 1px solid #bbb;"><span style=3D"box-sizing: border-box;">&#8202;</spa=
+n></td></tr></table></div></td></tr></table><table class=3D"text_block bloc=
+k-9" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso=
+-table-rspace: 0; word-break: break-word;"><tr style=3D"box-sizing: border-=
+box;"><td class=3D"pad" style=3D"box-sizing: border-box; padding-bottom: 10=
+px; padding-top: 10px;"><div style=3D"box-sizing: border-box; font-family: =
+sans-serif;"><div class style=3D"box-sizing: border-box; font-size: 14px; f=
+ont-family: Arial,Helvetica Neue,Helvetica,sans-serif; mso-line-height-alt:=
+ 16.8px; color: #555; line-height: 1.2;"><p style=3D"box-sizing: border-box=
+; line-height: inherit; margin: 0; text-align: center; font-size: 13px; mso=
+-line-height-alt: 15.6px;"><br style=3D"box-sizing: border-box;"> <span sty=
+le=3D"box-sizing: border-box; font-size: 13px; color: #808080;">Disclosure:=
+ Authors may own cryptoassets named in this newsletter. For more informatio=
+n, please visit <a href=3D"http://links.messari.io/u/click?_t=3D18e87b48d07=
+7440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40a=
+ic0VCgsSsvC3BJ8HcK31V5MqWDCEZNViLpv4h0ekWF-oWsaDFj-kNQhLXPLMj5pvnYXLeloMYCv=
+MaxudKMdmPR30qupu9-C3BaJ1OW5Kssu93dn4CxA91VSU7ei9pBYhx6k1WKiIDjiFej8YvMu88c=
+Cv-ffXuc5mEd10U5FTul5KGrZvi2Qlv_U3D8lUIMeSfFVBRu9a1_rO4Q5gZg27e0bMzedDtNDpt=
+hVdwumyQM7mijC2N9ySvfEnIzbvdIQkGQs6D8-NOIWVPlbMmhZA5lUmnlDBYdxHdzD4U56O5gz4=
+ZsFoNusp9CrElSstfUj36rsHtpqQKozRiz4dWoso5XXmAn4_VdHzA%3D" target=3D"_blank"=
+ style=3D"box-sizing: border-box; text-decoration: underline; color: #80808=
+0;" rel=3D"noopener">messari.io</a>.</span></p><p style=3D"box-sizing: bord=
+er-box; line-height: inherit; margin: 0; text-align: center; font-size: 13p=
+x; mso-line-height-alt: 16.8px;">&nbsp;</p><p style=3D"box-sizing: border-b=
+ox; line-height: inherit; margin: 0; text-align: center; font-size: 13px; m=
+so-line-height-alt: 15.6px;"> <span style=3D"box-sizing: border-box; font-s=
+ize: 13px; color: #808080;">Unqualified Opinions, a Messari newsletter, is =
+meant for informational purposes only. It is not meant to serve as investme=
+nt advice. Please consult with your investment, tax, or legal advisor befor=
+e making any investment decisions.</span></p><p style=3D"box-sizing: border=
+-box; line-height: inherit; margin: 0; text-align: center; font-size: 13px;=
+ mso-line-height-alt: 16.8px;">&nbsp;</p><p style=3D"box-sizing: border-box=
+; line-height: inherit; margin: 0; text-align: center; font-size: 13px; mso=
+-line-height-alt: 15.6px;"> <span style=3D"box-sizing: border-box; font-siz=
+e: 13px; color: #808080;">Advertising and sponsorship do not influence edit=
+orial decisions or content. Third party advertisements and links to other s=
+ites where products or services are advertised are not endorsements or reco=
+mmendations by Messari. Messari is not responsible for the content of the a=
+ds, promises made, or the quality or reliability of the products or service=
+s offered in any third party advertisement.</span></p></div></div></td></tr=
+></table><table class=3D"image_block block-10" width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizi=
+ng: border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box=
+-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box; pa=
+dding-left: 5px; width: 100%; padding-right: 0;" width=3D"100%"><div class=
+=3D"alignment" align=3D"center" style=3D"box-sizing: border-box; line-heigh=
+t: 10px;"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/In=
+tegrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/18e87b48d077440e80cd99da76e2=
+bfc2/Logo%20%281%29.png" style=3D"box-sizing: border-box; display: block; h=
+eight: auto; border: 0; max-width: 58.5px; width: 100%;" width=3D"58.5"></d=
+iv></td></tr></table><table class=3D"social_block block-11" width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr=
+ style=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: b=
+order-box; padding-bottom: 10px; padding-top: 10px; text-align: center; pad=
+ding-right: 0; padding-left: 0;" align=3D"center"><div class=3D"alignment" =
+align=3D"center" style=3D"box-sizing: border-box;"><table class=3D"social-t=
+able" width=3D"108px" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso=
+-table-rspace: 0; display: inline-block;"><tr style=3D"box-sizing: border-b=
+ox;"><td style=3D"box-sizing: border-box; padding: 0 2px 0 2px;"><a href=3D=
+"http://links.messari.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=
+=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvCx9gTWkrkGdpJn=
+AC5Ivnky40e7PWy5EK1KEL492BGx8omXpOrtwi3Pzpc4oeNNUzsCt7nXlL-wrazKnc1rz7KMhRD=
+SVWrn0ldb4Ii_IsEISBtb7aC7zgL6l_7b2Lbl01XA-kvx2DMxJqVXOQvLsGHDjr2e9IoRKEXRJw=
+ExRNvuseKGdtXjr-RtjKu1w1iM-vt2MOP1hnY8ZPRV8uMsrF_O4ThVBeJ8-fx4xL5XbR_iQP83d=
+DrQoXF4h1m8qft9v7iZHTTPYyDtAG7CNMOByTAr6JTB0T660R2yuDRe_TKxBl8apPmHmyhH46s1=
+cyKvug-gEP69M4_d1BIO5C-D4ORl_7s7gdfHc2u1XEvps-TKAb" target=3D"_blank" style=
+=3D"box-sizing: border-box;"><img src=3D"https://app-rsrc.getbee.io/public/=
+resources/social-networks-icon-sets/circle-gray/twitter@2x.png" width=3D"32=
+" height=3D"32" alt=3D"Twitter" title=3D"Twitter" style=3D"box-sizing: bord=
+er-box; display: block; height: auto; border: 0;"></a></td><td style=3D"box=
+-sizing: border-box; padding: 0 2px 0 2px;"> <a href=3D"http://links.messar=
+i.io/u/click?_t=3D18e87b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee=
+40cc7edbd585c&_e=3D3lIBnEM40aic0VCgsSsvC_SnOJ3uJ4n92kDyDDATPQgmMiHABSFR43vk=
+krY7Mfr6j0R1gTPEoVTHuDWui4BYOxkx2b_nngJfr0VptJVVGwa770mTtIJ8o3lpdBVG55j03_5=
+8tQ7w3E4e06-z-ba1mNUgAe1JGdOKQEIlM-9onPiUfpZs-nhvVRv0wMRYvaVhlMY8Ezl7UdWFyX=
+Y4tNyza8R-vgt40YL1C0UzP9dQMfkl0wKEM6LDzzeKX8fj8bECDir6Wcbkm1BaYcYMGhMrGyatK=
+vdsyR_CDvovL9bkX-Hx_XEzp5j-rhqPbG3ptximm9Y5QAnZd2__cPNh77WrbiIsIQIL0wAmGD9E=
+b40VY99IfiLAPt59yEkOg1-r70GP" target=3D"_blank" style=3D"box-sizing: border=
+-box;"><img src=3D"https://app-rsrc.getbee.io/public/resources/social-netwo=
+rks-icon-sets/circle-gray/youtube@2x.png" width=3D"32" height=3D"32" alt=3D=
+"YouTube" title=3D"YouTube" style=3D"box-sizing: border-box; display: block=
+; height: auto; border: 0;"></a></td><td style=3D"box-sizing: border-box; p=
+adding: 0 2px 0 2px;"><a href=3D"http://links.messari.io/u/click?_t=3D18e87=
+b48d077440e80cd99da76e2bfc2&_m=3De43058c3205e44838ee40cc7edbd585c&_e=3D3lIB=
+nEM40aic0VCgsSsvC8FWTNaUdIyHy6PpWcu0AMSrq4EO9vvS7wxQGl_mB00VD04bIFdE8ZhvzBx=
+xz91Q3iQSVpMJjillr5Yd74hq8BB9MGpMc0AYR5keKs5UhooQaCng0WihbEg-kXP95T8uCGc0ry=
+_54n8WjMr-GkNhUEKDS8ZzdGiJ5eVQ1eLeaHsr4H0wou58bj54rKaOQx5XnJu4JrrB5AECw5Wxu=
+IWs5rBMJ_i2ZQokEuUIuKtJ4OVOZbZK6djvKXcPvuPZp5FFMofK4zEf0vzqm84qnh6pyS-Mge5v=
+qYYrXReTT3Nqirl0jnt4c04e2JFubLJGH6dJqQMG-9kOMTDDmEuIrH_19vt3V2KOvlk5xFYoHa0=
+-tXnL" target=3D"_blank" style=3D"box-sizing: border-box;"><img src=3D"http=
+s://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-gr=
+ay/linkedin@2x.png" width=3D"32" height=3D"32" alt=3D"LinkedIn" title=3D"Li=
+nkedIn" style=3D"box-sizing: border-box; display: block; height: auto; bord=
+er: 0;"></a></td></tr></table></div></td></tr></table><table class=3D"text_=
+block block-12" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-lsp=
+ace: 0; mso-table-rspace: 0; word-break: break-word;"><tr style=3D"box-sizi=
+ng: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box; padding=
+-bottom: 10px; padding-top: 10px;"><div style=3D"box-sizing: border-box; fo=
+nt-family: sans-serif;"><div class style=3D"box-sizing: border-box; font-si=
+ze: 14px; font-family: Arial,Helvetica Neue,Helvetica,sans-serif; mso-line-=
+height-alt: 16.8px; color: #555; line-height: 1.2;"><p style=3D"box-sizing:=
+ border-box; line-height: inherit; margin: 0; font-size: 14px; text-align: =
+center; mso-line-height-alt: 16.8px;"><span style=3D"box-sizing: border-box=
+; font-size: 12px; color: #808080;">Copyright&nbsp;=C2=A9 2023&nbsp;Messari=
+,&nbsp;All rights reserved.</span><br style=3D"box-sizing: border-box;"><br=
+ style=3D"box-sizing: border-box;"><span style=3D"box-sizing: border-box; f=
+ont-size: 12px; color: #808080;">Our mailing address is:</span><br style=3D=
+"box-sizing: border-box;"> <span style=3D"box-sizing: border-box; font-size=
+: 12px; color: #808080;">Messari</span><br style=3D"box-sizing: border-box;=
+"><span style=3D"box-sizing: border-box; font-size: 12px; color: #808080;">=
+228 Park Ave S PMB 52631</span><br style=3D"box-sizing: border-box;"><span =
+style=3D"box-sizing: border-box; font-size: 12px; color: #808080;">New York=
+,&nbsp;New York&nbsp;10003</span><br style=3D"box-sizing: border-box;"><br =
+style=3D"box-sizing: border-box;"><span style=3D"box-sizing: border-box; co=
+lor: #0068a5;"><a href=3D"http://links.messari.io/e/encryptedUnsubscribe?_r=
+=3D18e87b48d077440e80cd99da76e2bfc2&_s=3De43058c3205e44838ee40cc7edbd585c&_=
+t=3DJXD7pLfC3wZXA-wU1W2tY7JyJmKFnvctFNESXWcQiR49BkCp-f-3C-nQY-ku5kNmEx--Dtv=
+CRoHmqAgxtIhQny6rms_RVRinAvnlf96O880nIJp0CxEfgmxexmf-fRGDL-NCQz3ucTd5_MMCh1=
+Sv5VCAn5mrzAi5I4R-I_5K84E%3D" target=3D"_blank" style=3D"box-sizing: border=
+-box; text-decoration: underline; color: #0068A5;" rel=3D"noopener"><span s=
+tyle=3D"box-sizing: border-box; font-size: 12px;">Unsubscribe</span></a></s=
+pan><br style=3D"box-sizing: border-box;"> <span style=3D"box-sizing: borde=
+r-box; font-size: 12px; color: #808080;">408 Broadway, New York, NY 10013-3=
+699</span></p></div></div></td></tr></table></td></tr></tbody></table></td>=
+</tr></tbody></table></td></tr></tbody></table><!-- End --><img src=3D"http=
+://url2142.mail.messari.io/wf/open?upn=3DVH0Za6BH0QWmqrMmZJ8Jo6gUmHMJ-2FYLj=
+YKIioMDygb3seZs236wbMnfiFR3tNZ7HgocVpz5TpjCvsPXK2lK8NlWUpMxKsMRNhd5aw5PSUSx=
+WHCDX-2FVEkJrjrRe0v6-2FuK8MuxyNMqaEe43H9LF69LSCQ-2BNg6S8XsxiFxjKcEsscXKEea9=
+8iiwufijouU-2Bx76XNPHVM-2BJxrHjdOuB9rGtEN6RbFF0VM64YjF94M47cxWVe-2F4GB7dP62=
+gKDjMRp3yPqP-2B-2Fw9IuFY-2BsugnNHqGlRTMSH0J6DjFoVzsL3xgWGaHsZDRWBefTMrUdLAw=
+uHvmzLmuZMnWVdU-2B2aZAuIBD3serUGnTNinZLMgYzNjoBTPYVa-2FdrS-2FXuGcsvUZGRpRV7=
+3" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !impo=
+rtant;width:1px !important;border-width:0 !important;margin-top:0 !importan=
+t;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !impor=
+tant;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !=
+important;padding-left:0 !important;"/></body></html>
+--40a89d44bc6d430f310de06bf52cba63332457c7d5cbf7be5eaaeaca84bd--
